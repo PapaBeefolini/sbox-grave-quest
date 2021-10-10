@@ -2,7 +2,7 @@ Help Papa send ghouls, skeletons and the undead back into the ground with some t
 
 Originally created in Unity, but now available in S&box.
 
-Controls:
+**Controls:
 
 WASD - Drive Around
-Spacebar - Throw Explosive Pizzas
+Spacebar - Throw Explosive Pizzas**
