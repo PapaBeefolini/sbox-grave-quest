@@ -1,0 +1,141 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"unnamed_1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 100.0
+						meshes = 
+						[
+							"unnamed_2",
+						]
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "mb_106.vmat"
+								to = "materials/orange.vmat"
+							},
+							{
+								from = "mb_106_1o3157.vmat"
+								to = "materials/face_jackolantern.vmat"
+							},
+							{
+								from = "mb_138.vmat"
+								to = "materials/brown.vmat"
+							},
+							{
+								from = "mb_199.vmat"
+								to = "materials/black.vmat"
+							},
+							{
+								from = "mb_26.vmat"
+								to = "materials/black.vmat"
+							},
+							{
+								from = "mb_28.vmat"
+								to = "materials/green_plant.vmat"
+							},
+							{
+								from = "mb_28_1o1187.vmat"
+								to = "materials/orange_pumpkin.vmat"
+							},
+							{
+								from = "mb_330.vmat"
+								to = "materials/brown.vmat"
+							},
+							{
+								from = "mb_38.vmat"
+								to = "materials/black.vmat"
+							},
+							{
+								from = "mb_41.vmat"
+								to = "materials/black.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/yellow.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/pumpkin_lod0.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "models/pumpkin_lod1.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 80.0
+						center = [ -2.195885, -2.451324, 11.4123 ]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+	}
+}

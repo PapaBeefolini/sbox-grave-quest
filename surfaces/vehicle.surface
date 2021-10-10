@@ -1,0 +1,19 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	data = 
+	{
+		Base = "vehicle"
+		Friction = 0.2
+		Elasticity = 0.25
+		Density = 2000.0
+		Thickness = -1.0
+		Dampening = 0.0
+		BounceThreshold = 2.0
+		ImpactEffects = 
+		{
+		}
+		Sounds = 
+		{
+		}
+	}
+}
