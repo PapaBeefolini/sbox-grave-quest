@@ -13,6 +13,7 @@ namespace Papa.UI
 				ChatBox chat = RootPanel.AddChild<ChatBox>();
 				chat.Style.FontFamily = "FredokaOne-Regular";
 				RootPanel.AddChild<VoiceList>();
+				RootPanel.AddChild<NameTags>();
 
 				RootPanel.AddChild<Timer>();
 				RootPanel.AddChild<Score>();
