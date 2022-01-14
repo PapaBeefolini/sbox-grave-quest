@@ -18,8 +18,19 @@ namespace Papa
 					return;
 				}
 
-				ForwardInput = (Input.Down( InputButton.Forward ) ? 1 : 0) + (Input.Down( InputButton.Back ) ? -1 : 0);
-				TurnInput = (Input.Down( InputButton.Left ) ? 1 : 0) + (Input.Down( InputButton.Right ) ? -1 : 0);
+				ForwardInput = Input.Forward;
+				TurnInput = Input.Left;
+
+				if ( Input.UsingController )
+				{
+					if ( Input.Down( InputButton.Attack1 ) )
+						ForwardInput = 1;
+					else if ( Input.Down( InputButton.Attack2 ) )
+						ForwardInput = -1;
+					else
+						ForwardInput = 0;
+				}
+
 				if ( Input.Pressed( InputButton.Jump ) )
 					((Vehicle)Pawn).ThrowPizza();
 			}

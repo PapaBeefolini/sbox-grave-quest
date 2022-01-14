@@ -1,6 +1,12 @@
-Help Papa send ghouls, skeletons and the undead back into the ground with some tasty pizza pies.
+**Update 1/13/22**
 
-Originally created in Unity, but now available in S&box.
+Added simple controller support. 🎮
+
+-------------------
+
+Help Papa send ghouls, skeletons and the undead back into the ground with some tasty pizza pies. 🍕
+
+Originally created in Unity, but now available in s&box.
 
 **Controls:**
 **WASD - Drive Around**
