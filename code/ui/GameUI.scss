@@ -1,8 +1,7 @@
-Timer 
-{
+Timer {
 	position: absolute;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	top: 64px;
 	left: 0px;
 	right: 0px;
@@ -11,38 +10,41 @@ Timer
 		font-family: FredokaOne-Regular;
 		font-size: 48px;
 		color: white;
+		text-shadow: 0px 0px 10px rgba( black, 0.6 );
+		text-stroke-color: #000000;
+		text-stroke-width: 12px;
 	}
 }
 
-Score 
-{
+Score {
 	position: absolute;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	top: 64px;
 	left: 128px;
 
 	label {
 		font-family: FredokaOne-Regular;
 		font-size: 48px;
+		text-shadow: 0px 0px 10px rgba( black, 0.6 );
+		text-stroke-color: #000000;
+		text-stroke-width: 12px;
 		color: white;
-		text-shadow: 4px 4px 1px #00000;
 		padding-left: 12px;
 	}
 
 	image {
-        width: 96px;
-        height: 96px;
+		width: 96px;
+		height: 96px;
 		background-size: cover;
 		background-repeat: no-repeat;
-    }
+	}
 }
 
-GameOver 
-{
+GameOver {
 	position: absolute;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	top: 0px;
 	bottom: 128px;
 	left: 0px;
@@ -52,6 +54,8 @@ GameOver
 		font-family: FredokaOne-Regular;
 		font-size: 64px;
 		color: white;
-		text-shadow: 4px 4px 1px #00000;
+		text-shadow: 0px 0px 10px rgba( black, 0.6 );
+		text-stroke-color: #000000;
+		text-stroke-width: 12px;
 	}
 }
