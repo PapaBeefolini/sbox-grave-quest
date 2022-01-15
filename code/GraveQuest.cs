@@ -120,6 +120,9 @@ namespace Papa
 
 		private void SpawnSkeleton()
 		{
+			if ( !NavMesh.IsLoaded )
+				return;
+
 			Skeleton skele = new Skeleton();
 			skele.Position = NavMesh.GetPointWithinRadius( Vector3.Zero, 1000, 10000 ).Value;
 			skele.Rotation = Rotation.FromYaw( Rand.Float( -180, 180 ) );

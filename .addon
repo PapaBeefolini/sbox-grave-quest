@@ -1,4 +1,13 @@
 {
-    "sharedassets": "*.*",
-    "type": "game"
+  "SharedAssets": "*.*",
+  "Title": "Sbox Grave Quest",
+  "Type": "game",
+  "Org": "local",
+  "Ident": "sbox-grave-quest",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "HasCode": true,
+  "CodePath": "code",
+  "RootNamespace": "Sandbox"
 }
