@@ -2,7 +2,7 @@
   "Title": "Grave Quest",
   "Type": "game",
   "Org": "local",
-  "Ident": "grave-quest",
+  "Ident": "sbox-grave-quest",
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
