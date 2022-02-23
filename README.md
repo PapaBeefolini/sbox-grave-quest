@@ -1,3 +1,7 @@
+**Update 2/23/22**
+
+Fixes due to pain day 2 update. 📃
+
 **Update 1/13/22**
 
 Added simple controller support. 🎮
