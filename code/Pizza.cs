@@ -25,7 +25,7 @@ namespace Papa
 			Particles.Create( "particles/explosion.vpcf", Position );
 			Sound.FromWorld( "roblox_explosion", Position );
 
-			var entities = Physics.GetEntitiesInSphere( Position, 400 );
+			var entities = FindInSphere( Position, 400 );
 
 			foreach ( Entity entity in entities )
 			{

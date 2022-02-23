@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LA98xD2kH6wFNoI18Ld/AZTpOA+/OEZZlAwTbAwLw/touDkcH6cdZxCFLB7naNgB1EIIkxwVPLO+SeG78rG4SA==",
+  "dgSpecHash": "JTbb9Z8PdqoybD1pestMTVC/UKSKaTibUXuaCSR0nr66SFyjwCz8LJSZ9vyEVc0aJd020DvpvG7hmz85kNJ3Iw==",
   "success": true,
-  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\sbox-grave-quest\\code\\sbox-grave-quest.csproj",
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\sbox-grave-quest\\code\\grave-quest.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

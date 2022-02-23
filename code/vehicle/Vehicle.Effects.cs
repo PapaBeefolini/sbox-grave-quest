@@ -16,8 +16,8 @@ namespace Papa
 			Forward = MathX.LerpTo( Forward, Controller.ForwardInput, 10 * Time.Delta );
 			Steer = MathX.LerpTo( Steer, Controller.TurnInput, 10 * Time.Delta );
 
-			papa.SetAnimFloat( "Speed", Forward );
-			papa.SetAnimFloat( "Steering", -Steer );
+			papa.SetAnimParameter( "Speed", Forward );
+			papa.SetAnimParameter( "Steering", -Steer );
 		}
 
 		[Event.Tick.Client]
@@ -53,7 +53,7 @@ namespace Papa
 
 		private void ThrowPizzaEffects()
 		{
-			papa.SetAnimBool( "Throw", true );
+			papa.SetAnimParameter( "Throw", true );
 			Sound.FromEntity( "throw", this );
 		}
 	}

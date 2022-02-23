@@ -21,7 +21,7 @@ namespace Papa
 			var client = entity.Client;
 
 			NameLabel = Add.Label( $"{client.Name}" );
-			Avatar = Add.Image( $"avatar:{client.SteamId}" );
+			Avatar = Add.Image( $"avatar:{client.PlayerId}" );
 		}
 
 		public virtual void UpdateFromPlayer( Entity entity )
@@ -46,7 +46,7 @@ namespace Papa
 			var deleteList = new List<Entity>();
 			deleteList.AddRange(ActiveTags.Keys);
 
-			foreach (var entity in Entity.All.OfType<Vehicle>().OrderBy(x => Vector3.DistanceBetween(x.EyePos, CurrentView.Position ) ))
+			foreach (var entity in Entity.All.OfType<Vehicle>().OrderBy(x => Vector3.DistanceBetween(x.EyePosition, CurrentView.Position ) ))
 			{
 				if (UpdateNameTag(entity))
 					deleteList.Remove(entity);

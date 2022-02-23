@@ -55,10 +55,10 @@ namespace Papa
 
 			PhysicsBody.Mass = 20000;
 
-			Camera = new Camera();
+			Components.Create<Camera>();
 			Controller = new VehicleController();
 
-			EyePosLocal = new Vector3( -6, 0, 100 );
+			EyeLocalPosition = new Vector3( -6, 0, 100 );
 
 			// Headlights so papa b can see
 			headlights = new SpotLightEntity
@@ -88,6 +88,13 @@ namespace Papa
 			BackLeft.Setup( this, new Transform( new Vector3( -64.5f, 56, 24.5f ), Rotation.From( 0, -90, 0 ) ), "models/wheel_big.vmdl", 28, 24, false );
 			BackRight = new Wheel();
 			BackRight.Setup( this, new Transform( new Vector3( -64.5f, -56, 24.5f ), Rotation.From( 0, 90, 0 ) ), "models/wheel_big.vmdl", 28, 24, false );
+		}
+
+		public override void ClientSpawn()
+		{
+
+
+			base.ClientSpawn();
 		}
 
 		public override void Simulate( Client owner )

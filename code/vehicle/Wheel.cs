@@ -55,7 +55,7 @@ namespace Papa
 			{
 				Grounded = true;
 
-				SurfaceImpactPoint = tr.EndPos;
+				SurfaceImpactPoint = tr.EndPosition;
 				SurfaceImpactNormal = tr.Normal;
 				SurfaceImpactDistance = tr.Distance;
 
@@ -64,7 +64,7 @@ namespace Papa
 				vehicle.PhysicsBody.ApplyForceAt( SurfaceImpactPoint, Vector3.Up * force * PIDValue );
 
 				if ( Vehicle.debug_car )
-					DebugOverlay.Line( tr.StartPos, tr.EndPos, Color.Red, 0, false );
+					DebugOverlay.Line( tr.StartPosition, tr.EndPosition, Color.Red, 0, false );
 			}
 			else
 			{

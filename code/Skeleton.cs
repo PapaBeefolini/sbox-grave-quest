@@ -58,8 +58,8 @@ namespace Papa
 
 				CurrentPoint = 0;
 
-				Vector3 target = NavMesh.GetPointWithinRadius( groundTrace.EndPos, 1000, 5000 ).Value;
-				NavMesh.BuildPath( groundTrace.EndPos, target, Points );
+				Vector3 target = NavMesh.GetPointWithinRadius( groundTrace.EndPosition, 1000, 5000 ).Value;
+				NavMesh.BuildPath( groundTrace.EndPosition, target, Points );
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace Papa
 				if ( CurrentPoint >= Points.Count )
 					return;
 
-				Position = groundTrace.EndPos;
+				Position = groundTrace.EndPosition;
 				Position += Rotation.Forward * 200 * Time.Delta;
 
 				Vector3 direction = (Points[CurrentPoint] - Position);
@@ -101,9 +101,9 @@ namespace Papa
 			if ( debug_skeleton )
 			{
 				if ( groundTrace.Hit )
-					DebugOverlay.Line( groundTrace.StartPos, groundTrace.EndPos, Color.Green );
+					DebugOverlay.Line( groundTrace.StartPosition, groundTrace.EndPosition, Color.Green );
 				else
-					DebugOverlay.Line( groundTrace.StartPos, groundTrace.EndPos, Color.Red );
+					DebugOverlay.Line( groundTrace.StartPosition, groundTrace.EndPosition, Color.Red );
 
 				foreach ( Vector3 point in Points )
 					DebugOverlay.Sphere( point, 25, Color.Blue );

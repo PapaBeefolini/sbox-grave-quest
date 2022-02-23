@@ -32,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\sbox-grave-quest\\code\\sbox-grave-quest.csproj",
-      "projectName": "sbox-grave-quest",
-      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\sbox-grave-quest\\code\\sbox-grave-quest.csproj",
+      "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\sbox-grave-quest\\code\\grave-quest.csproj",
+      "projectName": "grave-quest",
+      "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\sbox-grave-quest\\code\\grave-quest.csproj",
       "packagesPath": "C:\\Users\\sarge\\.nuget\\packages\\",
       "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\sbox-grave-quest\\code\\obj\\",
       "projectStyle": "PackageReference",
