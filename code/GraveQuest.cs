@@ -123,9 +123,9 @@ namespace Papa
 			if ( !NavMesh.IsLoaded )
 				return;
 
-			Skeleton skele = new Skeleton();
-			skele.Position = NavMesh.GetPointWithinRadius( Vector3.Zero, 1000, 10000 ).Value;
-			skele.Rotation = Rotation.FromYaw( Rand.Float( -180, 180 ) );
+			Skeleton skeleton = new Skeleton();
+			skeleton.Position = NavMesh.GetPointWithinRadius( Vector3.Zero, 1000, 10000 ).Value;
+			skeleton.Rotation = Rotation.FromYaw( Rand.Float( -180, 180 ) );
 		}
 
 		[Event("papa.skeletonkilled")]

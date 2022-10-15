@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Papa
 {
-	public partial class Skeleton : AnimEntity
+	public partial class Skeleton : AnimatedEntity
 	{
 		[ConVar.Replicated( "debug_skeleton" )]
 		public static bool debug_skeleton { get; set; } = false;
@@ -23,11 +23,10 @@ namespace Papa
 		{
 			base.Spawn();
 
-			Tags.Add( "Skeleton" );
+			Tags.Add( "skeleton" );
 
 			SetModel( "models/skeleton.vmdl" );
 			SetupPhysicsFromCapsule( PhysicsMotionType.Keyframed, Capsule.FromHeightAndRadius( 100, 16 ) );
-			CollisionGroup = CollisionGroup.Debris;
 
 			_ = Spawning();
 
@@ -47,7 +46,7 @@ namespace Papa
 		{
 			if ( Points.Count > 0 && CurrentPoint < Points.Count )
 			{
-				if ( Position.IsNearlyEqual( Points[CurrentPoint], 30 ) )
+				if ( Position.AlmostEqual( Points[CurrentPoint], 30 ) )
 					CurrentPoint++;
 
 				return;
@@ -145,10 +144,9 @@ namespace Papa
 			if ( speed < 1400 )
 			{
 				ModelEntity ragdoll = new ModelEntity( "models/skeleton.vmdl" );
-				ragdoll.Tags.Add( "Ragdoll" );
+				ragdoll.Tags.Add( "ragdoll" );
 				ragdoll.Transform = Transform;
 				ragdoll.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
-				ragdoll.CollisionGroup = CollisionGroup.Prop;
 				ragdoll.CopyBonesFrom( this );
 
 				ragdoll.Velocity = (Position - hitPosition) * 20;
@@ -171,10 +169,9 @@ namespace Papa
 				for ( int i = 0; i < mdls.Length; i++ )
 				{
 					ModelEntity mdl = new ModelEntity( mdls[i] );
-					mdl.Tags.Add( "Ragdoll" );
+					mdl.Tags.Add( "ragdoll" );
 					mdl.Transform = Transform;
 					mdl.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
-					mdl.CollisionGroup = CollisionGroup.Prop;
 
 					mdl.Velocity = (Position - hitPosition) * 4;
 					mdl.DeleteAsync( 20.0f );
@@ -184,10 +181,9 @@ namespace Papa
 			if ( chosenHat != string.Empty )
 			{
 				ModelEntity hat = new ModelEntity( chosenHat );
-				hat.Tags.Add( "Ragdoll" );
+				hat.Tags.Add( "ragdoll" );
 				hat.Transform = Transform;
 				hat.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
-				hat.CollisionGroup = CollisionGroup.Prop;
 				hat.Velocity = (Position - hitPosition) * 10 + Vector3.Up * 8;
 				hat.ApplyLocalAngularImpulse( (Position - hitPosition) * 10 );
 				hat.DeleteAsync( 20.0f );

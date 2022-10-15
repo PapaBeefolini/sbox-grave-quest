@@ -8,11 +8,10 @@ namespace Papa
 		{
 			base.Spawn();
 
-			Tags.Add( "Pizza" );
+			Tags.Add( "pizza" );
 
 			SetModel( "models/pizza.vmdl" );
 			SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
-			CollisionGroup = CollisionGroup.Debris;
 		}
 
 		protected override void OnPhysicsCollision( CollisionEventData eventData )

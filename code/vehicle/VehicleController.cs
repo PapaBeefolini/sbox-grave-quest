@@ -23,9 +23,9 @@ namespace Papa
 
 				if ( Input.UsingController )
 				{
-					if ( Input.Down( InputButton.Attack1 ) )
+					if ( Input.Down( InputButton.PrimaryAttack ) )
 						ForwardInput = 1;
-					else if ( Input.Down( InputButton.Attack2 ) )
+					else if ( Input.Down( InputButton.SecondaryAttack ) )
 						ForwardInput = -1;
 					else
 						ForwardInput = 0;

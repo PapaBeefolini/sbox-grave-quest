@@ -10,9 +10,9 @@ public class PID
 	
 	public PID(float pFactor, float iFactor, float dFactor) 
 	{
-		this.PFactor = pFactor;
-		this.IFactor = iFactor;
-		this.DFactor = dFactor;
+		PFactor = pFactor;
+		IFactor = iFactor;
+		DFactor = dFactor;
 	}
 	
 	public float Update(float setpoint, float actual, float timeFrame) 

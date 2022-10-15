@@ -34,7 +34,7 @@ namespace Papa
 
 		// Entities
 		private SpotLightEntity headlights;
-		private AnimEntity papa;
+		private AnimatedEntity papa;
 
 		//----------//
 
@@ -44,13 +44,12 @@ namespace Papa
 		{
 			base.Spawn();
 
-			Tags.Add( "Vehicle" );
+			Tags.Add( "vehicle" );
 
 			string modelName = "models/car.vmdl";
 
 			SetModel( modelName );
 			SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
-			CollisionGroup = CollisionGroup.Player;
 			EnableSelfCollisions = false;
 
 			PhysicsBody.Mass = 20000;
@@ -72,7 +71,7 @@ namespace Papa
 			};
 
 			// The man himself
-			papa = new AnimEntity
+			papa = new AnimatedEntity
 			{
 				Parent = this,
 				Transform = new Transform( new Vector3( -22, 0, 3.5f ), Rotation.Identity ),
@@ -88,13 +87,6 @@ namespace Papa
 			BackLeft.Setup( this, new Transform( new Vector3( -64.5f, 56, 24.5f ), Rotation.From( 0, -90, 0 ) ), "models/wheel_big.vmdl", 28, 24, false );
 			BackRight = new Wheel();
 			BackRight.Setup( this, new Transform( new Vector3( -64.5f, -56, 24.5f ), Rotation.From( 0, 90, 0 ) ), "models/wheel_big.vmdl", 28, 24, false );
-		}
-
-		public override void ClientSpawn()
-		{
-
-
-			base.ClientSpawn();
 		}
 
 		public override void Simulate( Client owner )
@@ -211,7 +203,7 @@ namespace Papa
 		[ClientRpc]
 		public void CameraShake(float amount)
 		{
-			_ = new Sandbox.ScreenShake.Perlin(0.5f, 3, amount );
+			//_ = new Sandbox.ScreenShake.Perlin(0.5f, 3, amount );
 		}
 
 		private void ClampAngles()
