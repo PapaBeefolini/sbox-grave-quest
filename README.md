@@ -1,3 +1,7 @@
+**Update 10/15/22**
+
+Fixes due to pain day 3 update & more. 🤡
+
 **Update 2/23/22**
 
 Fixes due to pain day 2 update. 📃
