@@ -49,6 +49,7 @@ namespace Papa
 			string modelName = "models/car.vmdl";
 
 			SetModel( modelName );
+			SetMaterialGroup( Rand.Int( 0, MaterialGroupCount ) );
 			SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 			EnableSelfCollisions = false;
 
@@ -195,7 +196,7 @@ namespace Papa
 			if ( other is Skeleton skeleton )
 			{
 				skeleton.Kill( Position, SpeedAbsolute );
-				PhysicsBody.ApplyForceAt( skeleton.Position, (Position - skeleton.Position) * PhysicsBody.Mass * 100 );
+				PhysicsBody.ApplyForceAt( skeleton.Position, (Position - skeleton.Position) * PhysicsBody.Mass * 150 );
 				CameraShake( To.Single( Client ), 1.0f + (SpeedAbsolute / 250) );
 			}
 		}

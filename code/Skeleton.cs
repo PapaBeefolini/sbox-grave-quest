@@ -173,7 +173,7 @@ namespace Papa
 					mdl.Transform = Transform;
 					mdl.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 
-					mdl.Velocity = (Position - hitPosition) * 4;
+					mdl.Velocity = (Position - hitPosition) * 10;
 					mdl.DeleteAsync( 20.0f );
 				}
 			}

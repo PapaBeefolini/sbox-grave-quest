@@ -6,7 +6,9 @@
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
-  "ResourcePaths": null,
+  "ResourcePaths": [
+    "/ui/*"
+  ],
   "HasCode": true,
   "CodePath": "code",
   "RootNamespace": "Sandbox",
@@ -71,7 +73,7 @@
         {
           "a": "vehicle",
           "b": "ragdoll",
-          "r": "Ignore"
+          "r": "Collide"
         },
         {
           "a": "skeleton",

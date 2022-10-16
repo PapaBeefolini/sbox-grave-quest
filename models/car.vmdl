@@ -49,6 +49,61 @@
 						use_global_default = false
 						global_default_material = ""
 					},
+					{
+						_class = "MaterialGroup"
+						name = "blue"
+						remaps = 
+						[
+							{
+								from = "materials/red.vmat"
+								to = "materials/blue.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "yellow"
+						remaps = 
+						[
+							{
+								from = "materials/red.vmat"
+								to = "materials/yellow.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "green"
+						remaps = 
+						[
+							{
+								from = "materials/red.vmat"
+								to = "materials/green_plant.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "orange"
+						remaps = 
+						[
+							{
+								from = "materials/red.vmat"
+								to = "materials/orange.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "black"
+						remaps = 
+						[
+							{
+								from = "materials/red.vmat"
+								to = "materials/black.vmat"
+							},
+						]
+					},
 				]
 			},
 			{
@@ -97,7 +152,7 @@
 						_class = "PhysicsShapeCapsule"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						radius = 24.0
 						point0 = [ 90.0, -40.0, 47.0 ]
 						point1 = [ 90.0, 40.0, 47.0 ]
@@ -106,7 +161,7 @@
 						_class = "PhysicsShapeCapsule"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						radius = 24.0
 						point0 = [ 70.0, -40.0, 47.0 ]
 						point1 = [ 70.0, 40.0, 47.0 ]
@@ -115,7 +170,7 @@
 						_class = "PhysicsShapeCapsule"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						radius = 24.0
 						point0 = [ 50.0, -40.0, 47.0 ]
 						point1 = [ 50.0, 40.0, 47.0 ]
@@ -124,7 +179,7 @@
 						_class = "PhysicsShapeBox"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						origin = [ 59.407269, 0.0, 47.927315 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						dimensions = [ 61.0919, 100.0, 48.4617 ]
@@ -133,7 +188,7 @@
 						_class = "PhysicsShapeBox"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						origin = [ -14.864725, 0.0, 61.284233 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						dimensions = [ 87.3853, 100.0, 71.800797 ]
@@ -142,7 +197,7 @@
 						_class = "PhysicsShapeBox"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						origin = [ -79.804306, 0.0, 49.661987 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						dimensions = [ 41.907799, 100.0, 51.931 ]
@@ -151,7 +206,7 @@
 						_class = "PhysicsShapeCapsule"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						radius = 24.0
 						point0 = [ -80.0, -40.0, 47.0 ]
 						point1 = [ -80.0, 40.0, 47.0 ]
@@ -160,7 +215,7 @@
 						_class = "PhysicsShapeCapsule"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						radius = 24.0
 						point0 = [ -60.0, -40.0, 47.0 ]
 						point1 = [ -60.0, 40.0, 47.0 ]
@@ -169,7 +224,7 @@
 						_class = "PhysicsShapeCapsule"
 						parent_bone = ""
 						surface_prop = "vehicle"
-						collision_prop = "default"
+						collision_tags = "solid"
 						radius = 24.0
 						point0 = [ -100.0, -40.0, 47.0 ]
 						point1 = [ -100.0, 40.0, 47.0 ]
@@ -196,5 +251,6 @@
 		model_archetype = ""
 		primary_associated_entity = ""
 		anim_graph_name = ""
+		base_model_name = ""
 	}
 }

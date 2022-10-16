@@ -96,9 +96,9 @@ namespace Papa
 			tag.Style.Opacity = 1;
 
 			var transform = new PanelTransform();
-			transform.AddTranslateY(Length.Fraction(-1.0f));
+			transform.AddTranslateY(Length.Fraction(-0.5f));
 			transform.AddScale(objectSize);
-			transform.AddTranslateX(Length.Fraction(-0.5f));
+			transform.AddTranslateX(Length.Fraction(-1.0f));
 
 			tag.Style.Transform = transform;
 			tag.Style.Dirty();
