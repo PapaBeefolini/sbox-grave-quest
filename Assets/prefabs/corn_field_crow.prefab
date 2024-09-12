@@ -1,0 +1,25 @@
+{
+  "RootObject": {
+    "__guid": "7f20f7bf-49bc-439a-8df3-a8f56be0f656",
+    "Flags": 0,
+    "Name": "corn_field_crow",
+    "Position": "-1728,64,2.729997",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "3f7185e0-6324-45f6-9104-d4493ca9ac4d",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/corn_field_crow.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

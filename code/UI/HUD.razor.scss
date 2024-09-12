@@ -1,0 +1,72 @@
+HUD {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: Fredoka One;
+
+	Score {
+		position: absolute;
+		align-items: center;
+		top: 32px;
+		left: 64px;
+
+		label {
+			font-size: 48px;
+			text-shadow: 0px 0px 16px rgba( black, 0.6 );
+			text-stroke-color: black;
+			text-stroke-width: 12px;
+			padding-left: 16px;
+		}
+
+		img {
+			width: 128px;
+			height: 128px;
+			animation: rotate 0.6s ease infinite alternate;
+		}
+
+		.shake {
+			animation: flash 0.2s ease 1;
+		}
+	}
+
+	Timer {
+		position: absolute;
+		top: 128px;
+
+		label {
+			font-size: 72px;
+			text-shadow: 0px 0px 16px rgba( black, 0.6 );
+			text-stroke-color: black;
+			text-stroke-width: 14px;
+		}
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(-10deg);
+	}
+
+	100% {
+		transform: rotate(10deg);
+	}
+}
+
+@keyframes flash {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

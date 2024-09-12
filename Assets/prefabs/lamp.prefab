@@ -1,0 +1,47 @@
+{
+  "RootObject": {
+    "__guid": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
+    "Flags": 0,
+    "Name": "lamp",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/lamp.vmdl",
+        "RenderType": "Off",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "0,0,152",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "b78d7ee3-9e2e-4344-af28-ae460c486132",
+            "Attenuation": 2,
+            "FogMode": "Enabled",
+            "FogStrength": 2,
+            "LightColor": "24,17.57023,7.92558,1",
+            "Radius": 500,
+            "Shadows": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -1,0 +1,34 @@
+{
+  "RootObject": {
+    "__guid": "6e5da265-ae3d-4785-a90b-ff29505ace88",
+    "Flags": 0,
+    "Name": "terrain",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "90d3ea28-4908-4c6c-ab4d-f271855177e0",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/terrain.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "7a5becd0-e5d2-4598-bb5f-ce3249316b55",
+        "IsTrigger": false,
+        "Model": "models/terrain.vmdl",
+        "Static": true,
+        "Surface": "surfaces/grass.surface"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -1,0 +1,42 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using System.Threading.Tasks;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits Panel
+
+
+<root onclick=@(() => ScoreKill())>
+    <div @ref=SkullPanel class="score">
+        <img src="ui/skull.png" />
+     </div>
+    <label>@CurrentScore</label>
+</root>
+
+
+@code
+{
+    public int CurrentScore { get; set; } = 0;
+    public Panel SkullPanel { get; set; }
+
+
+    public void ScoreKill()
+    {
+        CurrentScore++;
+
+        _ = Bruh();
+    }
+
+
+    public async Task Bruh()
+    {
+        if (!SkullPanel.IsValid())
+            return;
+        SkullPanel.AddClass("shake");
+        await Task.DelayRealtimeSeconds(0.5f);
+        SkullPanel.RemoveClass("shake");
+    }
+
+
+    //protected override int BuildHash() => System.HashCode.Combine(CurrentScore);
+}

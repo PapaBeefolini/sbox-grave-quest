@@ -1,0 +1,26 @@
+{
+  "RootObject": {
+    "__guid": "a43ae81c-b0cd-4e03-8074-54e9284c7e75",
+    "Flags": 0,
+    "Name": "pumpkins",
+    "Position": "775.5309,-1696.383,0.0299936",
+    "Rotation": "0,0,-0.9659259,-0.2588189",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "752b9774-9e2e-4bed-9839-c3cc73709e37",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/pumpkins.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

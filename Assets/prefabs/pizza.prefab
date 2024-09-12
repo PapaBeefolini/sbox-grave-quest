@@ -1,0 +1,25 @@
+{
+  "RootObject": {
+    "__guid": "9c5d25cb-3f61-4326-b4b1-d6d12af957e8",
+    "Flags": 0,
+    "Name": "pizza",
+    "Position": "-24,88,0.02999683",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "398bcd91-7a48-424c-b120-b31583d3eea1",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/pizza.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

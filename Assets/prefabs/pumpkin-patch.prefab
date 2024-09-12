@@ -1,0 +1,67 @@
+{
+  "RootObject": {
+    "__guid": "1795fe82-cbb9-4daa-9f41-b7d084e3e086",
+    "Flags": 0,
+    "Name": "pumpkin-patch",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "db07d7ae-17af-4fe6-a9ba-857c36dcb68d",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/pumpkin_patch.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "78bb5902-fc1c-4b81-925c-979f4e2928ad",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "0,0,144",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "06a58812-f6c4-49ec-bd41-dc811f993039",
+            "Attenuation": 2,
+            "FogMode": "Disabled",
+            "FogStrength": 1,
+            "LightColor": "32,19.2,0,1",
+            "Radius": 600,
+            "Shadows": true
+          }
+        ]
+      },
+      {
+        "__guid": "8100c987-fd6a-4171-8d63-c4c1154d49e3",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "0,0,32",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "5316d2ef-9f74-4a7c-ab65-80b3e9d87363",
+            "Attenuation": 2,
+            "FogMode": "WithoutShadows",
+            "FogStrength": 1,
+            "LightColor": "12,6.8,0,1",
+            "Radius": 400,
+            "Shadows": false
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
