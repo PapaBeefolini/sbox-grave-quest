@@ -1,0 +1,46 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/treeline.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderPrimitivePlane"
+						name = "plane"
+						parent_bone = ""
+						material_name = "dev/helper/testgrid.vmat"
+						origin = [ 0.0, 0.0, 135.0 ]
+						angles = [ 90.0, 0.0, 0.0 ]
+						max_u = 1.0
+						max_v = 1.0
+						width = 600.0
+						height = 600.0
+						segments_x = 1
+						segments_y = 1
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

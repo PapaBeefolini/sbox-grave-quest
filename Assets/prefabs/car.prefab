@@ -11,6 +11,12 @@
         "__guid": "8fe98f45-bf61-4d53-9a2d-481deb684b40",
         "BodyGroups": 18446744073709551615,
         "Model": "models/car.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
@@ -56,12 +62,25 @@
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.ModelRenderer",
-            "__guid": "007bbf9c-0721-4198-b5e6-35ee1900e381",
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee",
             "BodyGroups": 18446744073709551615,
+            "CreateBoneObjects": false,
             "Model": "models/minifig.vmdl",
+            "Morphs": {},
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
             "RenderType": "On",
-            "Tint": "1,1,1,1"
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          },
+          {
+            "__type": "MightyBrick.GraveQuest.Minifig",
+            "__guid": "bb332f37-7215-4b9e-a70e-5e43c5f20dc9"
           }
         ]
       },
@@ -120,6 +139,12 @@
                 "__guid": "f1452dc6-1a98-4870-b77f-e1a4f8ecb382",
                 "BodyGroups": 18446744073709551615,
                 "Model": "models/wheel_small.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
@@ -161,6 +186,12 @@
                 "__guid": "cbf783ff-a6c7-4744-a986-9bff9f02c2f2",
                 "BodyGroups": 18446744073709551615,
                 "Model": "models/wheel_small.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
@@ -201,6 +232,12 @@
                 "__guid": "18ecb574-1d3d-4d68-a3e8-30a8f1f8f6ad",
                 "BodyGroups": 18446744073709551615,
                 "Model": "models/wheel_big.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
@@ -242,6 +279,12 @@
                 "__guid": "75bd542a-cc40-4bbf-8f38-0d337fc4fc44",
                 "BodyGroups": 18446744073709551615,
                 "Model": "models/wheel_big.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }

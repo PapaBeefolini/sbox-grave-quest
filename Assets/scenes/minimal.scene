@@ -455,6 +455,54 @@
       ]
     },
     {
+      "__guid": "563c064d-f97f-496e-89a7-7b731e5cda67",
+      "Flags": 0,
+      "Name": "lamps",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
+          "Flags": 0,
+          "Name": "lamp",
+          "Position": "1600.89,-1584,4.469998",
+          "Rotation": "0,0,-0.3826834,0.9238796",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1fb49192-b796-45e6-a886-6945f3a14058",
+          "Flags": 0,
+          "Name": "lamp (1)",
+          "Position": "-1595.233,-1595.232,5.00002",
+          "Rotation": "0,0,0.3826833,0.9238794",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2661048b-1bfc-4284-8bc1-cf0d5d7e9b28",
+          "Flags": 0,
+          "Name": "lamp (2)",
+          "Position": "-1584,1584,5.00046",
+          "Rotation": "0,0,-0.3826835,0.9238795",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "507d331d-f3af-4773-8afb-ad518aafa4c6",
+          "Flags": 0,
+          "Name": "lamp (3)",
+          "Position": "1608,1592,4.999539",
+          "Rotation": "0,0,0.3826835,0.9238795",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
       "__guid": "ac45ceda-74fc-4a21-945b-775b3fe43b43",
       "Flags": 0,
       "Name": "trees",
@@ -634,53 +682,322 @@
           "Enabled": true,
           "__Prefab": "prefabs/tree.prefab",
           "__PrefabVariables": {}
-        }
-      ]
-    },
-    {
-      "__guid": "563c064d-f97f-496e-89a7-7b731e5cda67",
-      "Flags": 0,
-      "Name": "lamps",
-      "Enabled": true,
-      "Children": [
+        },
         {
-          "__guid": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
+          "__guid": "69158741-1c05-4f08-93c9-5b5fee99bd9d",
           "Flags": 0,
-          "Name": "lamp",
-          "Position": "1600.89,-1584,4.469998",
-          "Rotation": "0,0,-0.3826834,0.9238796",
+          "Name": "tree (1)",
+          "Position": "2330.329,-366.3748,-7.308969",
+          "Rotation": "0.0000000000621644,-0.0000000002320006,0.9659259,0.2588192",
           "Enabled": true,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": "prefabs/tree.prefab",
           "__PrefabVariables": {}
         },
         {
-          "__guid": "1fb49192-b796-45e6-a886-6945f3a14058",
+          "__guid": "2abc422d-d6dc-4ef4-af90-8e5c91e72851",
           "Flags": 0,
-          "Name": "lamp (1)",
-          "Position": "-1595.233,-1595.232,5.00002",
-          "Rotation": "0,0,0.3826833,0.9238794",
+          "Name": "tree (2)",
+          "Position": "1269.319,-2734.67,81.33701",
+          "Rotation": "-0.00000006649396,-0.00000005578713,0.642734,0.7660894",
           "Enabled": true,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": "prefabs/tree.prefab",
           "__PrefabVariables": {}
         },
         {
-          "__guid": "2661048b-1bfc-4284-8bc1-cf0d5d7e9b28",
+          "__guid": "66e5e7d1-23cd-4bfa-9dfd-5866c035030b",
           "Flags": 0,
-          "Name": "lamp (2)",
-          "Position": "-1584,1584,5.00046",
-          "Rotation": "0,0,-0.3826835,0.9238795",
+          "Name": "tree (3)",
+          "Position": "644.8478,-2793.148,47.26628",
           "Enabled": true,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": "prefabs/tree.prefab",
           "__PrefabVariables": {}
         },
         {
-          "__guid": "507d331d-f3af-4773-8afb-ad518aafa4c6",
+          "__guid": "d2e71d32-342e-4d1b-a789-ff8449289b41",
           "Flags": 0,
-          "Name": "lamp (3)",
-          "Position": "1608,1592,4.999539",
-          "Rotation": "0,0,0.3826835,0.9238795",
+          "Name": "tree (4)",
+          "Position": "-276.5304,-2898.049,69.84111",
           "Enabled": true,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2d4b2dc0-7af6-43fb-9130-0bc98b59b7bc",
+          "Flags": 0,
+          "Name": "tree (5)",
+          "Position": "279.5789,-2459.826,-1.231815",
+          "Rotation": "0.00000002878683,0.000000007713413,0.9659257,0.2588192",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "c847da77-0b5c-4a31-b706-8a57f17af190",
+          "Flags": 0,
+          "Name": "tree (6)",
+          "Position": "-1040.741,2792.051,22.39741",
+          "Rotation": "0.00000002016687,-0.00000002459948,-0.7733402,0.6339912",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "769be497-0802-4b28-9e9e-6f166222dad2",
+          "Flags": 0,
+          "Name": "tree (7)",
+          "Position": "91.83344,2643.125,28.19594",
+          "Rotation": "0.000000003443757,0.00000001509009,-0.222493,0.9749343",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "7e7ff25b-654f-4586-b9f5-b9ed0e891a1f",
+          "Flags": 0,
+          "Name": "tree (8)",
+          "Position": "-2492.777,336.9914,-3.801348",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "ddde89f2-86e1-452e-a3b8-da1317dc9fee",
+          "Flags": 0,
+          "Name": "tree (9)",
+          "Position": "-2377.61,-163.9748,-3.620682",
+          "Rotation": "0.006627591,0.006627593,0.7070756,0.7070757",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2faa09ea-ef15-4b6d-af68-78a41dff4519",
+          "Flags": 0,
+          "Name": "tree (10)",
+          "Position": "-1924.322,-2324.864,-2.370222",
+          "Rotation": "0,0,0.1305262,0.9914449",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "82387e82-1cd7-4c47-b118-eee4ba034c83",
+          "Flags": 0,
+          "Name": "tree (1)",
+          "Position": "1936.078,-1776.415,-3.241802",
+          "Rotation": "0.001924784,0.001477006,-0.7933376,0.6087771",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1e09209a-f494-4360-b2f4-afb152defbcc",
+          "Flags": 0,
+          "Name": "tree",
+          "Position": "751.6953,2539.521,37.97707",
+          "Rotation": "0.00000001827187,-0.00000001413884,-0.6119806,0.7908728",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "a011971b-ade5-4f85-ac0e-989541c3a84e",
+          "Flags": 0,
+          "Name": "treeline (6)",
+          "Position": "2938.207,-1971.371,234.3526",
+          "Rotation": "-0.000000112174,-0.00000006351197,0.963715,0.2669333",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "030d38dd-8929-4162-97f3-7224f14f3f4d",
+          "Flags": 0,
+          "Name": "treeline (7)",
+          "Position": "3169.371,-1422.736,247.8246",
+          "Rotation": "0,0,0.986772,0.1621139",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "77502c8a-418a-482b-af31-3f4bd238f2f1",
+          "Flags": 0,
+          "Name": "treeline (8)",
+          "Position": "-49.56196,-3816.104,138.4831",
+          "Rotation": "-0.0000001666084,-0.0000001666084,0.7071068,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4e6a9cc1-f82e-4feb-9581-4362c5cc7165",
+          "Flags": 0,
+          "Name": "treeline (5)",
+          "Position": "-3194.79,-777.4142,162.8781",
+          "Rotation": "-0.00000001116288,-0.000000002094084,0.1843773,0.9828556",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "66d40b46-3d02-4e97-9ada-e2410c75582b",
+          "Flags": 0,
+          "Name": "treeline (9)",
+          "Position": "-3458.858,-98.35364,177.8353",
+          "Rotation": "-0.00000001079405,-0.000000003533217,0.05451156,0.9985134",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "006f0015-e7ed-417f-abd1-fc940f513744",
+          "Flags": 0,
+          "Name": "treeline (1)",
+          "Position": "-3411.295,-532.6689,178.8071",
+          "Rotation": "-0.00000001116289,-0.000000002094084,0.1843773,0.9828559",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "3cdd6b2d-7efd-4450-aa86-1b8f3af0db1b",
+          "Flags": 0,
+          "Name": "treeline (2)",
+          "Position": "-3683.885,445.7272,201.64",
+          "Rotation": "-0.0000000004942382,0.00000000001299763,-0.02628921,0.9996544",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "48f77ed5-7903-4aea-9ef0-74a23416025b",
+          "Flags": 0,
+          "Name": "treeline (10)",
+          "Position": "-3495.255,1793.365,234.3144",
+          "Rotation": "0.00000000283117,-0.0000000003324042,-0.1166078,0.993178",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "d111e88c-1027-4e96-b3a6-80a91f1f3649",
+          "Flags": 0,
+          "Name": "treeline (11)",
+          "Position": "-2830.077,-2058.423,-8.919196",
+          "Rotation": "0,0,0.3152265,0.9490165",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "bc6f7f04-d36c-4276-b44a-2a69bd8ed7e5",
+          "Flags": 0,
+          "Name": "treeline (12)",
+          "Position": "-2460.408,-2569.561,-3.042776",
+          "Rotation": "0,0,0.4364012,0.8997522",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4b17d287-649c-42b7-9cf0-cda44ce9ad21",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-653.2803,-3506.099,124.913",
+          "Rotation": "0,-0,-0.7071144,-0.7070991",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "461b1f08-576d-44c0-9a7d-711def72da5c",
+          "Flags": 0,
+          "Name": "treeline (13)",
+          "Position": "574.8093,-3590.771,103.693",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "46d157fe-05fe-4216-9b88-07e995a0d533",
+          "Flags": 0,
+          "Name": "treeline",
+          "Position": "2897.404,708.87,151.3854",
+          "Rotation": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "7fd3198d-a67a-44ce-8f55-b1d35b61eda4",
+          "Flags": 0,
+          "Name": "treeline (1)",
+          "Position": "2733.002,1322.431,142.6572",
+          "Rotation": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "6d7985d4-b6c2-407c-bc39-fd76ff5f9f82",
+          "Flags": 0,
+          "Name": "treeline (2)",
+          "Position": "34.78907,3811.114,268.9883",
+          "Rotation": "-0.00000001330279,-0.00000001330279,0.7071068,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "cab0f741-0196-449e-b5e1-f56ad2499093",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-677.5786,3768.673,214.2133",
+          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "208ac1fa-8606-47e9-a4df-e4282c0aa992",
+          "Flags": 0,
+          "Name": "treeline (4)",
+          "Position": "-2650.122,3194.16,20.40092",
+          "Rotation": "0,0,-0.5,0.8660256",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "c957c6e5-51d0-446d-8f12-ffef5c878ab5",
+          "Flags": 0,
+          "Name": "treeline (2)",
+          "Position": "1155.81,3180.219,204.6244",
+          "Rotation": "0.0000000483078,-0.0000000351381,-0.8837544,0.467951",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1b9792f9-ccd4-48b0-90b0-1c5622a53523",
+          "Flags": 0,
+          "Name": "treeline (1)",
+          "Position": "3230.881,-65.86086,78.35118",
+          "Rotation": "0.00000009301353,0.00000002180918,-0.9993542,0.0359296",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b2483302-20e7-4ef3-8c50-89d87cce5d9a",
+          "Flags": 0,
+          "Name": "treeline",
+          "Position": "-2073.751,-2995.101,24.47852",
+          "Rotation": "-0.00000001980644,0.00000002740214,0.4048731,0.9143729",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
           "__PrefabVariables": {}
         }
       ]

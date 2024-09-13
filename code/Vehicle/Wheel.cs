@@ -129,6 +129,8 @@ public sealed class Wheel : Component
 		}
 
 		float power = Vehicle.Power / Vehicle.Wheels.Count();
+		if ( LocalVelocity.Length < 25 )
+			power *= 0.25f;
 		Vector3 desiredPower = Inverted ? -power : power;
 		driveForce = Vehicle.InputForward * Transform.Rotation.Forward * desiredPower;
 	}
@@ -155,7 +157,7 @@ public sealed class Wheel : Component
 		WheelModel.Transform.Position = Transform.Position + Transform.Rotation.Up * zOffset;
 
 		float circumference = 2 * MathF.PI * WheelRadius;
-		float rotationSpeed = Vehicle.LocalVelocity.x / circumference * (Inverted ? -360 : 360);
+		float rotationSpeed = (Vehicle.LocalVelocity.x + Vehicle.InputForward * 200) / circumference * (Inverted ? -360 : 360);
 		WheelModel.Transform.Rotation *= Rotation.FromAxis( Vector3.Left, rotationSpeed * Time.Delta );
 	}
 
