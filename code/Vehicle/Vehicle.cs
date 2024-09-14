@@ -9,6 +9,14 @@ public sealed class Vehicle : Component
 	[RequireComponent]
 	public Rigidbody Rigidbody { get; private set; }
 	public Wheel[] Wheels { get; private set; }
+	public Minifig Minifig { get; private set; }
+
+	[Property, Category( "Pizza Throwing" )]
+	public GameObject PizzaPrefab { get; private set; }
+	[Property, Category( "Pizza Throwing" )]
+	public Vector3 ThrowForce { get; private set; } = new Vector3( 600.0f, 0.0f, 300.0f );
+	[Property, Category( "Pizza Throwing" )]
+	public Vector3 ThrowOffset { get; private set; } = new Vector3( 50.0f, 0.0f, 50.0f );
 
 	public bool Grounded { get; private set; } = false;
 	public Vector3 LocalVelocity => Rigidbody.IsValid ? Rigidbody.Velocity * Transform.Rotation.Inverse : Vector3.Zero;
@@ -37,6 +45,8 @@ public sealed class Vehicle : Component
 
 		FollowCamera.Instance.Target = this;
 		Wheels = GameObject.Components.GetAll<Wheel>( FindMode.EverythingInChildren ).ToArray();
+		Minifig = GameObject.Components.GetInChildren<Minifig>();
+		Minifig?.SetIsDriving( true );
 	}
 
 
@@ -48,16 +58,19 @@ public sealed class Vehicle : Component
 		UpdateInputs();
 		UpdateGrounded();
 
+		//if ( Input.Pressed( "Jump" ) )
+			//Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
+
 		if ( Input.Pressed( "Jump" ) )
-			Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
+			ThrowPizza();
 	}
 
 
 	protected override void OnUpdate()
 	{
-		Gizmo.Draw.ScreenText( InputRight.ToString(), Vector2.Zero );
-		Gizmo.Draw.ScreenText( Rigidbody.AngularDamping.ToString(), new Vector2( 0, 20 ) );
-		Gizmo.Draw.ScreenText( Rigidbody.Velocity.Length.ToString(), new Vector2( 0, 40 ) );
+		//Gizmo.Draw.ScreenText( InputRight.ToString(), Vector2.Zero );
+		//Gizmo.Draw.ScreenText( Rigidbody.AngularDamping.ToString(), new Vector2( 0, 20 ) );
+		//Gizmo.Draw.ScreenText( Rigidbody.Velocity.Length.ToString(), new Vector2( 0, 40 ) );
 	}
 
 
@@ -91,5 +104,15 @@ public sealed class Vehicle : Component
 		if ( !Rigidbody.IsValid )
 			return Vector3.Zero;
 		return Rigidbody.GetVelocityAtPoint( point );
+	}
+
+
+	private void ThrowPizza()
+	{
+		GameObject pizza = PizzaPrefab.Clone( Minifig.Transform.Position + Transform.Rotation * ThrowOffset, Transform.Rotation );
+		Rigidbody pizzaRigidbody = pizza.Components.Get<Rigidbody>();
+		if ( !pizzaRigidbody.IsValid )
+			return;
+		pizzaRigidbody.Velocity = Rigidbody.Velocity + Transform.Rotation * ThrowForce;
 	}
 }

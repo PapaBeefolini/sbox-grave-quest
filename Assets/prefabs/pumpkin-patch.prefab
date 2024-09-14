@@ -10,8 +10,22 @@
         "__guid": "db07d7ae-17af-4fe6-a9ba-857c36dcb68d",
         "BodyGroups": 18446744073709551615,
         "Model": "models/pumpkin_patch.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "570d309a-b8d0-40a5-9bff-85bedb49d978",
+        "IsTrigger": false,
+        "Model": "models/pumpkin_patch.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
       }
     ],
     "Children": [

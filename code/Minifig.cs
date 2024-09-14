@@ -7,17 +7,31 @@ namespace MightyBrick.GraveQuest;
 public sealed class Minifig : Component
 {
 	public SkinnedModelRenderer SkinnedModelRenderer { get; set; }
+	public SkinnedModelRenderer Hat { get; set; }
 
 
 	protected override void OnAwake()
 	{
 		SkinnedModelRenderer = Components.Get<SkinnedModelRenderer>();
+		Hat = Components.GetInChildren<SkinnedModelRenderer>();
 	}
 
 
 	protected override void OnUpdate()
 	{
-		SkinnedModelRenderer.Set( "Horizontal", -Input.AnalogMove.y );
-		SkinnedModelRenderer.Set( "Vertical", Input.AnalogMove.x );
+		SkinnedModelRenderer?.Set( "Horizontal", -Input.AnalogMove.y );
+		SkinnedModelRenderer?.Set( "Vertical", Input.AnalogMove.x );
+	}
+
+
+	public void SetIsDriving( bool value )
+	{
+		SkinnedModelRenderer?.Set( "Sitting", value );
+	}
+
+
+	public void Crash()
+	{
+		SkinnedModelRenderer?.Set( "Crash", true );
 	}
 }

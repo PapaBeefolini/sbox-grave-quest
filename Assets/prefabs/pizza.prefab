@@ -3,7 +3,7 @@
     "__guid": "9c5d25cb-3f61-4326-b4b1-d6d12af957e8",
     "Flags": 0,
     "Name": "pizza",
-    "Position": "-24,88,0.02999683",
+    "Tags": "pizza",
     "Enabled": true,
     "Components": [
       {
@@ -11,10 +11,40 @@
         "__guid": "398bcd91-7a48-424c-b120-b31583d3eea1",
         "BodyGroups": 18446744073709551615,
         "Model": "models/pizza.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "a98dfa5e-6662-4d22-b49d-df3228b81c55",
+        "IsTrigger": false,
+        "Model": "models/pizza.vmdl",
+        "Static": false,
+        "Surface": "surfaces/plastic.surface"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "e80fee69-1be0-4088-b02d-dcd709ab8ecc",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 10,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
       }
-    ]
+    ],
+    "Children": [],
+    "__variables": []
   },
   "ShowInMenu": false,
   "MenuPath": null,

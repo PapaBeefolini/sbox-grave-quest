@@ -10,8 +10,22 @@
         "__guid": "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1",
         "BodyGroups": 18446744073709551615,
         "Model": "models/lamp.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "Off",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "75039fed-3cbc-45f6-8997-ac77cfcd1772",
+        "IsTrigger": false,
+        "Model": "models/lamp.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
       }
     ],
     "Children": [

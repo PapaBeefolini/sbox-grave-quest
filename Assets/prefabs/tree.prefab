@@ -3,7 +3,6 @@
     "__guid": "82cf1e96-1eef-4265-95f1-5da544324a1e",
     "Flags": 0,
     "Name": "tree",
-    "Position": "1288,-1752,0.01328999",
     "Enabled": true,
     "Components": [
       {
@@ -11,10 +10,26 @@
         "__guid": "292d6918-ae3c-4e2e-b8b3-01ea7d487201",
         "BodyGroups": 18446744073709551615,
         "Model": "models/tree.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "bb729e89-9481-436c-989e-a43bf756988f",
+        "IsTrigger": false,
+        "Model": "models/tree.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
       }
-    ]
+    ],
+    "Children": [],
+    "__variables": []
   },
   "ShowInMenu": false,
   "MenuPath": null,

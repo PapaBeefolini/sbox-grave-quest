@@ -1,0 +1,67 @@
+{
+  "RootObject": {
+    "__guid": "82300eea-715e-4f62-9b84-3ccd83223505",
+    "Flags": 0,
+    "Name": "skeleton",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "96f7fe81-b15c-4893-bc6a-1870cdbc7470",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/skeleton.vmdl",
+        "Morphs": {},
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a",
+        "Flags": 0,
+        "Name": "hat",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "2d5324b1-b09f-4e36-95e7-489118b9ed0d",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": {
+              "_type": "component",
+              "component_id": "96f7fe81-b15c-4893-bc6a-1870cdbc7470",
+              "go": "82300eea-715e-4f62-9b84-3ccd83223505",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "CreateBoneObjects": false,
+            "Model": "models/hat_pirate.vmdl",
+            "Morphs": {},
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

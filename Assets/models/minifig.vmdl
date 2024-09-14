@@ -245,8 +245,46 @@
 						take = 5
 						reverse = false
 					},
+					{
+						_class = "AnimFile"
+						name = "stand_idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/minifig.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 8
+						reverse = false
+					},
 				]
 				default_root_bone_name = ""
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "Hat"
+						parent_bone = "Bone_Headwear"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ -90.0, 0.0, -90.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
 			},
 		]
 		model_archetype = ""

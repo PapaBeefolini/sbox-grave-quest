@@ -1,0 +1,33 @@
+{
+  "BaseSurface": "surfaces/default.surface",
+  "AudioSurface": "Linoleum",
+  "Description": "",
+  "Friction": 0.8,
+  "Elasticity": 0.2,
+  "Density": 2000,
+  "Thickness": -1,
+  "Dampening": 0,
+  "BounceThreshold": 0,
+  "ImpactEffects": {
+    "Regular": [],
+    "Bullet": [
+      "particles/impact.generic.vpcf"
+    ],
+    "BulletDecal": [
+      "decals/bullet-plastic.decal"
+    ]
+  },
+  "ScrapeEffects": {
+    "RoughnessFactor": 0.25,
+    "RoughThreshold": 0.5
+  },
+  "Sounds": {
+    "ImpactHard": "sounds/impacts/bullets/impact-bullet-plastic.sound"
+  },
+  "Breakables": {
+    "BreakSound": ""
+  },
+  "Tags": null,
+  "__references": [],
+  "__version": 0
+}

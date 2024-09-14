@@ -120,6 +120,20 @@
 					},
 				]
 			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 48.0
+						center = [ -2.0, -2.0, 25.0 ]
+					},
+				]
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""

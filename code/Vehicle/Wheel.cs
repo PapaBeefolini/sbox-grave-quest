@@ -65,7 +65,7 @@ public sealed class Wheel : Component
 
 	protected override void OnUpdate()
 	{
-		Gizmo.Draw.LineCircle( WheelModel.Transform.Position, WheelModel.Transform.Rotation.Right, WheelRadius );
+		//Gizmo.Draw.LineCircle( WheelModel.Transform.Position, WheelModel.Transform.Rotation.Right, WheelRadius );
 	}
 
 
@@ -74,7 +74,7 @@ public sealed class Wheel : Component
 		Vector3 tracePosition = Transform.Position + Transform.Rotation.Up * 1.5f;
 		SceneTraceResult trace = Scene.Trace.Ray( tracePosition, tracePosition + Vector3.Down * SuspensionRestLength )
 			.IgnoreGameObjectHierarchy( GameObject )
-			.WithoutTags( "Player", "Car" )
+			.WithoutTags( "Player", "Car", "Pizza" )
 			.Run();
 
 		if ( trace.Hit == false )

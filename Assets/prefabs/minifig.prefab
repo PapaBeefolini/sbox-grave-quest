@@ -1,0 +1,71 @@
+{
+  "RootObject": {
+    "__guid": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
+    "Flags": 0,
+    "Name": "minifig",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/minifig.vmdl",
+        "Morphs": {},
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "MightyBrick.GraveQuest.Minifig",
+        "__guid": "bb332f37-7215-4b9e-a70e-5e43c5f20dc9"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "d8a38e08-1954-4001-9f49-f1b067e2b0c2",
+        "Flags": 0,
+        "Name": "hat",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "88ab7d77-1c47-480e-be54-09bbe5f9b433",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": {
+              "_type": "component",
+              "component_id": "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee",
+              "go": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "CreateBoneObjects": false,
+            "Model": "models/hat_chef.vmdl",
+            "Morphs": {},
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

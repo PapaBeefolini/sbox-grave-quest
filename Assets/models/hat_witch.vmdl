@@ -11,19 +11,9 @@
 				[
 					{
 						_class = "DefaultMaterialGroup"
-						remaps = 
-						[
-							{
-								from = "gray.vmat"
-								to = "materials/gray.vmat"
-							},
-							{
-								from = "light.vmat"
-								to = "materials/light.vmat"
-							},
-						]
-						use_global_default = false
-						global_default_material = "materials/default.vmat"
+						remaps = [  ]
+						use_global_default = true
+						global_default_material = "materials/white.vmat"
 					},
 				]
 			},
@@ -33,7 +23,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/lamp.fbx"
+						filename = "models/hat_witch.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -46,7 +36,7 @@
 							exclude_by_default = true
 							exception_list = 
 							[
-								"lamp",
+								"hat_witch",
 							]
 						}
 					},
@@ -58,7 +48,7 @@
 				[
 					{
 						_class = "PhysicsHullFile"
-						name = "lamp"
+						name = "hat_witch"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_tags = "solid"
@@ -68,11 +58,11 @@
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						filename = "models/lamp.fbx"
+						filename = "models/hat_witch.fbx"
 						import_scale = 1.0
 						faceMergeAngle = 10.0
 						maxHullVertices = 0
-						import_mode = "HullPerElement"
+						import_mode = "SingleHull"
 						optimization_algorithm = "QEM"
 						import_filter = 
 						{

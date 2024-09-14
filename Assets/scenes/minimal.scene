@@ -24,6 +24,15 @@
       ]
     },
     {
+      "__guid": "c61477c2-0402-441c-8340-56f80363786d",
+      "Flags": 0,
+      "Name": "minifig",
+      "Position": "-1064.428,716.8447,0.05183792",
+      "Enabled": true,
+      "__Prefab": "prefabs/minifig.prefab",
+      "__PrefabVariables": {}
+    },
+    {
       "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
       "Flags": 0,
       "Name": "Sky",
@@ -116,8 +125,8 @@
       "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Flags": 0,
       "Name": "Camera",
-      "Position": "-802.8395,591.4924,95.99555",
-      "Rotation": "-0.02386342,0.008422333,0.9426891,0.3327115",
+      "Position": "-797.3684,624.5176,69.77353",
+      "Rotation": "-0.004701478,0.00165934,0.9429794,0.3328139",
       "Enabled": true,
       "Components": [
         {
@@ -141,6 +150,7 @@
           "__type": "Sandbox.Tonemapping",
           "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
           "__version": 1,
+          "AutoExposureEnabled": true,
           "ExposureBias": 2,
           "ExposureCompensation": 0,
           "ExposureMethod": "RGB",
@@ -217,9 +227,94 @@
       ]
     },
     {
+      "__guid": "baa622bd-469e-4054-930b-caa93c2ae04b",
+      "Flags": 0,
+      "Name": "World Border",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "f31b7aa3-7b80-452c-9913-5496db51dd8e",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "0,1565,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "69a52b7d-e8ab-4045-b6ed-092202c7453a",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "3200,50,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface"
+            }
+          ]
+        },
+        {
+          "__guid": "527fdfde-7422-4913-9a72-20cf8a1897df",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "0,-1565,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "1a03ca48-02a7-4fd6-bec6-83d0a05c9b3e",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "3200,50,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface"
+            }
+          ]
+        },
+        {
+          "__guid": "78384a5c-8507-43ad-bae3-9464e637889a",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "-1565,0,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "aca99416-340e-4ec1-b2b4-87fea0c3542c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,3200,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface"
+            }
+          ]
+        },
+        {
+          "__guid": "efdd022b-b788-4b66-9f73-240c09be5d98",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "1580,0,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "91836bbd-51b9-4f34-b899-13fa01eb4922",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,3200,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__guid": "6e5da265-ae3d-4785-a90b-ff29505ace88",
       "Flags": 0,
       "Name": "terrain",
+      "Tags": "ground",
       "Enabled": true,
       "__Prefab": "prefabs/terrain.prefab",
       "__PrefabVariables": {}
@@ -684,44 +779,6 @@
           "__PrefabVariables": {}
         },
         {
-          "__guid": "69158741-1c05-4f08-93c9-5b5fee99bd9d",
-          "Flags": 0,
-          "Name": "tree (1)",
-          "Position": "2330.329,-366.3748,-7.308969",
-          "Rotation": "0.0000000000621644,-0.0000000002320006,0.9659259,0.2588192",
-          "Enabled": true,
-          "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "2abc422d-d6dc-4ef4-af90-8e5c91e72851",
-          "Flags": 0,
-          "Name": "tree (2)",
-          "Position": "1269.319,-2734.67,81.33701",
-          "Rotation": "-0.00000006649396,-0.00000005578713,0.642734,0.7660894",
-          "Enabled": true,
-          "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "66e5e7d1-23cd-4bfa-9dfd-5866c035030b",
-          "Flags": 0,
-          "Name": "tree (3)",
-          "Position": "644.8478,-2793.148,47.26628",
-          "Enabled": true,
-          "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "d2e71d32-342e-4d1b-a789-ff8449289b41",
-          "Flags": 0,
-          "Name": "tree (4)",
-          "Position": "-276.5304,-2898.049,69.84111",
-          "Enabled": true,
-          "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
-        },
-        {
           "__guid": "2d4b2dc0-7af6-43fb-9130-0bc98b59b7bc",
           "Flags": 0,
           "Name": "tree (5)",
@@ -766,16 +823,6 @@
           "Name": "tree (9)",
           "Position": "-2377.61,-163.9748,-3.620682",
           "Rotation": "0.006627591,0.006627593,0.7070756,0.7070757",
-          "Enabled": true,
-          "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "2faa09ea-ef15-4b6d-af68-78a41dff4519",
-          "Flags": 0,
-          "Name": "tree (10)",
-          "Position": "-1924.322,-2324.864,-2.370222",
-          "Rotation": "0,0,0.1305262,0.9914449",
           "Enabled": true,
           "__Prefab": "prefabs/tree.prefab",
           "__PrefabVariables": {}
@@ -961,10 +1008,40 @@
           "__PrefabVariables": {}
         },
         {
+          "__guid": "e04a4fff-7955-4941-a76b-2e91ff8f2cf3",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-1391.488,3609.917,199.3234",
+          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1c345d69-1cd5-4055-804d-e7088cc35e05",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-1086.188,3897.498,200.3574",
+          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
           "__guid": "208ac1fa-8606-47e9-a4df-e4282c0aa992",
           "Flags": 0,
           "Name": "treeline (4)",
           "Position": "-2650.122,3194.16,20.40092",
+          "Rotation": "0,0,-0.5,0.8660256",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "ccc356db-90b0-4ef4-896b-69003300a72c",
+          "Flags": 0,
+          "Name": "treeline (4)",
+          "Position": "-3052.49,3318.043,20.96049",
           "Rotation": "0,0,-0.5,0.8660256",
           "Enabled": true,
           "__Prefab": "prefabs/treeline.prefab",
@@ -1001,6 +1078,15 @@
           "__PrefabVariables": {}
         }
       ]
+    },
+    {
+      "__guid": "82300eea-715e-4f62-9b84-3ccd83223505",
+      "Flags": 0,
+      "Name": "skeleton",
+      "Position": "192.5598,0,0",
+      "Enabled": true,
+      "__Prefab": "prefabs/skeleton.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
@@ -1012,14 +1098,14 @@
     "TimeScale": 1,
     "UseFixedUpdate": true,
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
       "AgentHeight": 64,
-      "AgentRadius": 16,
+      "AgentRadius": 12,
       "AgentStepSize": 18,
-      "AgentMaxSlope": 40,
+      "AgentMaxSlope": 48,
       "ExcludedBodies": "",
       "IncludedBodies": ""
     }

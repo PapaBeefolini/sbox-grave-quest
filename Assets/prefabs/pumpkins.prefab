@@ -3,8 +3,6 @@
     "__guid": "a43ae81c-b0cd-4e03-8074-54e9284c7e75",
     "Flags": 0,
     "Name": "pumpkins",
-    "Position": "775.5309,-1696.383,0.0299936",
-    "Rotation": "0,0,-0.9659259,-0.2588189",
     "Enabled": true,
     "Components": [
       {
@@ -12,10 +10,26 @@
         "__guid": "752b9774-9e2e-4bed-9839-c3cc73709e37",
         "BodyGroups": 18446744073709551615,
         "Model": "models/pumpkins.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "6e55a15f-2094-4101-a14f-2b202cd9c91d",
+        "IsTrigger": false,
+        "Model": "models/pumpkins.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
       }
-    ]
+    ],
+    "Children": [],
+    "__variables": []
   },
   "ShowInMenu": false,
   "MenuPath": null,

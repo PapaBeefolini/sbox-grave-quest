@@ -1,0 +1,41 @@
+{
+  "BaseSurface": "surfaces/default.surface",
+  "AudioSurface": "Wood",
+  "Description": "",
+  "Friction": 0.4,
+  "Elasticity": 0.4,
+  "Density": 700,
+  "Thickness": -1,
+  "Dampening": 0,
+  "BounceThreshold": 0,
+  "ImpactEffects": {
+    "Regular": [],
+    "Bullet": [
+      "particles/impact.wood.vpcf"
+    ],
+    "BulletDecal": [
+      "decals/bullet-wood.decal"
+    ]
+  },
+  "ScrapeEffects": {
+    "RoughnessFactor": 0.25,
+    "RoughThreshold": 0.5
+  },
+  "Sounds": {
+    "FootLeft": "sounds/footsteps/footstep-concrete.sound",
+    "FootRight": "sounds/footsteps/footstep-wood.sound",
+    "FootLaunch": "sounds/footsteps/footstep-wood.sound",
+    "FootLand": "sounds/footsteps/footstep-wood.sound",
+    "Bullet": "sounds/impacts/bullets/impact-bullet-wood.sound",
+    "ImpactHard": "sounds/impacts/melee/impact-melee-wood.sound",
+    "ImpactSoft": "sounds/footsteps/footstep-wood.sound"
+  },
+  "Breakables": {
+    "GenericGibs": [
+      null
+    ]
+  },
+  "Tags": null,
+  "__references": [],
+  "__version": 0
+}

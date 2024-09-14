@@ -10,8 +10,22 @@
         "__guid": "1bd60c0a-9202-42db-8e5a-6d12996b6766",
         "BodyGroups": 18446744073709551615,
         "Model": "models/graves_small.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
         "RenderType": "On",
         "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "6f04b0a6-5e28-447c-8fea-5824fe5cc596",
+        "IsTrigger": false,
+        "Model": "models/graves_small.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
       }
     ],
     "Children": [

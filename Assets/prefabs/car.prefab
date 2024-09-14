@@ -26,7 +26,7 @@
         "IsTrigger": false,
         "Model": "models/car.vmdl",
         "Static": false,
-        "Surface": "surfaces/plastic.surface"
+        "Surface": "surfaces/vehicle.surface"
       },
       {
         "__type": "Sandbox.Rigidbody",
@@ -48,9 +48,15 @@
         "AngularDampingAirborne": 0.5,
         "AngularDampingGrounded": 4,
         "MaxSpeed": 1200,
+        "PizzaPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/pizza.prefab"
+        },
         "Power": 1500000,
         "PowerLerpSpeed": 14,
-        "SteerLerpSpeed": 12
+        "SteerLerpSpeed": 12,
+        "ThrowForce": "600,0,300",
+        "ThrowOffset": "50,0,50"
       }
     ],
     "Children": [
@@ -60,29 +66,8 @@
         "Name": "minifig",
         "Position": "-12.9907,0,1.710571",
         "Enabled": true,
-        "Components": [
-          {
-            "__type": "Sandbox.SkinnedModelRenderer",
-            "__guid": "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee",
-            "BodyGroups": 18446744073709551615,
-            "CreateBoneObjects": false,
-            "Model": "models/minifig.vmdl",
-            "Morphs": {},
-            "RenderOptions": {
-              "GameLayer": true,
-              "OverlayLayer": false,
-              "BloomLayer": false,
-              "AfterUILayer": false
-            },
-            "RenderType": "On",
-            "Tint": "1,1,1,1",
-            "UseAnimGraph": true
-          },
-          {
-            "__type": "MightyBrick.GraveQuest.Minifig",
-            "__guid": "bb332f37-7215-4b9e-a70e-5e43c5f20dc9"
-          }
-        ]
+        "__Prefab": "prefabs/minifig.prefab",
+        "__PrefabVariables": {}
       },
       {
         "__guid": "164dc177-94fd-4c6b-9563-3c5e5e1d6427",
@@ -291,6 +276,12 @@
             ]
           }
         ]
+      },
+      {
+        "__guid": "e202c0dc-af7a-4414-8fcf-bbc19d4c0526",
+        "Flags": 0,
+        "Name": "GameObject",
+        "Enabled": true
       }
     ],
     "__variables": []

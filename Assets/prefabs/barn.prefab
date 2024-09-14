@@ -24,7 +24,7 @@
         "__guid": "5da5f9d8-ea06-45f2-b80a-6bd25adf62fd",
         "IsTrigger": false,
         "Model": "models/barn.vmdl",
-        "Static": false,
+        "Static": true,
         "Surface": "surfaces/plastic.surface"
       }
     ],
