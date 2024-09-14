@@ -11,13 +11,6 @@ public sealed class Vehicle : Component
 	public Wheel[] Wheels { get; private set; }
 	public Minifig Minifig { get; private set; }
 
-	[Property, Category( "Pizza Throwing" )]
-	public GameObject PizzaPrefab { get; private set; }
-	[Property, Category( "Pizza Throwing" )]
-	public Vector3 ThrowForce { get; private set; } = new Vector3( 600.0f, 0.0f, 300.0f );
-	[Property, Category( "Pizza Throwing" )]
-	public Vector3 ThrowOffset { get; private set; } = new Vector3( 50.0f, 0.0f, 50.0f );
-
 	public bool Grounded { get; private set; } = false;
 	public Vector3 LocalVelocity => Rigidbody.IsValid ? Rigidbody.Velocity * Transform.Rotation.Inverse : Vector3.Zero;
 
@@ -33,6 +26,13 @@ public sealed class Vehicle : Component
 	public float AngularDampingGrounded { get; set; } = 4.0f;
 	[Property]
 	public float AngularDampingAirborne { get; set; } = 0.5f;
+
+	[Property, Category( "Pizza Throwing" )]
+	public GameObject PizzaPrefab { get; private set; }
+	[Property, Category( "Pizza Throwing" )]
+	public Vector3 ThrowForce { get; private set; } = new Vector3( 600.0f, 0.0f, 300.0f );
+	[Property, Category( "Pizza Throwing" )]
+	public Vector3 ThrowOffset { get; private set; } = new Vector3( 50.0f, 0.0f, 50.0f );
 
 	public float InputForward { get; set; } = 0.0f;
 	public float InputRight { get; set; } = 0.0f;
@@ -109,6 +109,7 @@ public sealed class Vehicle : Component
 
 	private void ThrowPizza()
 	{
+		Minifig?.Throw();
 		GameObject pizza = PizzaPrefab.Clone( Minifig.Transform.Position + Transform.Rotation * ThrowOffset, Transform.Rotation );
 		Rigidbody pizzaRigidbody = pizza.Components.Get<Rigidbody>();
 		if ( !pizzaRigidbody.IsValid )

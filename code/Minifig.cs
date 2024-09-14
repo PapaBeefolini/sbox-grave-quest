@@ -6,8 +6,8 @@ namespace MightyBrick.GraveQuest;
 
 public sealed class Minifig : Component
 {
-	public SkinnedModelRenderer SkinnedModelRenderer { get; set; }
-	public SkinnedModelRenderer Hat { get; set; }
+	public SkinnedModelRenderer SkinnedModelRenderer { get; private set; }
+	public SkinnedModelRenderer Hat { get; private set; }
 
 
 	protected override void OnAwake()
@@ -27,6 +27,12 @@ public sealed class Minifig : Component
 	public void SetIsDriving( bool value )
 	{
 		SkinnedModelRenderer?.Set( "Sitting", value );
+	}
+
+
+	public void Throw()
+	{
+		SkinnedModelRenderer?.Set( "Throw", true );
 	}
 
 

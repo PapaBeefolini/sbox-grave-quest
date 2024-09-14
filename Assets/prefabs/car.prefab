@@ -56,7 +56,7 @@
         "PowerLerpSpeed": 14,
         "SteerLerpSpeed": 12,
         "ThrowForce": "600,0,300",
-        "ThrowOffset": "50,0,50"
+        "ThrowOffset": "30,0,60"
       }
     ],
     "Children": [
@@ -282,6 +282,30 @@
         "Flags": 0,
         "Name": "GameObject",
         "Enabled": true
+      },
+      {
+        "__guid": "13bb5940-6886-4279-a5c5-e613c0b6f6b7",
+        "Flags": 0,
+        "Name": "pizza",
+        "Position": "-53.91306,-0.000003366811,39.33324",
+        "Rotation": "0,-0.3125566,0,0.9498993",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "6fadb277-0873-4d77-b242-c63edc713c1e",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/pizza.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
       }
     ],
     "__variables": []
