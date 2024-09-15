@@ -130,7 +130,7 @@ public sealed class Wheel : Component
 
 		float power = Vehicle.Power / Vehicle.Wheels.Count();
 		if ( LocalVelocity.Length < 25 )
-			power *= 0.25f;
+			power *= 0.5f;
 		Vector3 desiredPower = Inverted ? -power : power;
 		driveForce = Vehicle.InputForward * Transform.Rotation.Forward * desiredPower;
 	}

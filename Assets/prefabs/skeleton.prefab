@@ -3,6 +3,7 @@
     "__guid": "82300eea-715e-4f62-9b84-3ccd83223505",
     "Flags": 0,
     "Name": "skeleton",
+    "Tags": "enemy",
     "Enabled": true,
     "Components": [
       {
@@ -21,6 +22,79 @@
         "RenderType": "On",
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.ModelPhysics",
+        "__guid": "d25b51fd-9572-4fab-9935-d26c27ce0887",
+        "Locking": {},
+        "Model": "models/skeleton.vmdl",
+        "MotionEnabled": false,
+        "Renderer": {
+          "_type": "component",
+          "component_id": "96f7fe81-b15c-4893-bc6a-1870cdbc7470",
+          "go": "82300eea-715e-4f62-9b84-3ccd83223505",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "RigidbodyFlags": 0
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "4a27e203-8b10-422d-a431-1f4f8a941b4d",
+        "Acceleration": 150,
+        "Height": 64,
+        "MaxSpeed": 200,
+        "Radius": 12,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "MightyBrick.GraveQuest.Skeleton",
+        "__guid": "7a56482a-a4bd-447d-a326-4651ef4b2e5c",
+        "Hats": [
+          {
+            "Model": "models/hat_archer.vmdl",
+            "Colors": [
+              "0.25581,0.25581,0.25581,1"
+            ]
+          },
+          {
+            "Model": "models/hat_cap.vmdl",
+            "Colors": [
+              "1,0,0,1",
+              "0,0.08333,1,1",
+              "1,0.93333,0,1",
+              "0.1476,0.52093,0,1"
+            ]
+          },
+          {
+            "Model": "models/hat_medieval_01.vmdl",
+            "Colors": [
+              "0.25581,0.25581,0.25581,1"
+            ]
+          },
+          {
+            "Model": "models/hat_medieval_02.vmdl",
+            "Colors": [
+              "0.25581,0.25581,0.25581,1"
+            ]
+          },
+          {
+            "Model": "models/hat_pirate.vmdl",
+            "Colors": []
+          },
+          {
+            "Model": "models/hat_pumpkin.vmdl",
+            "Colors": []
+          },
+          {
+            "Model": "models/hat_witch.vmdl",
+            "Colors": [
+              "0,0,0,1",
+              "0.27969,0,0.3814,1"
+            ]
+          }
+        ]
       }
     ],
     "Children": [
@@ -33,6 +107,7 @@
           {
             "__type": "Sandbox.SkinnedModelRenderer",
             "__guid": "2d5324b1-b09f-4e36-95e7-489118b9ed0d",
+            "__enabled": false,
             "BodyGroups": 18446744073709551615,
             "BoneMergeTarget": {
               "_type": "component",
@@ -41,7 +116,6 @@
               "component_type": "SkinnedModelRenderer"
             },
             "CreateBoneObjects": false,
-            "Model": "models/hat_pirate.vmdl",
             "Morphs": {},
             "RenderOptions": {
               "GameLayer": true,

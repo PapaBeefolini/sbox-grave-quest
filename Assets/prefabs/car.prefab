@@ -63,10 +63,10 @@
       {
         "__guid": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
         "Flags": 0,
-        "Name": "minifig",
+        "Name": "papa",
         "Position": "-12.9907,0,1.710571",
         "Enabled": true,
-        "__Prefab": "prefabs/minifig.prefab",
+        "__Prefab": "prefabs/papa.prefab",
         "__PrefabVariables": {}
       },
       {

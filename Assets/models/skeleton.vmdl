@@ -133,6 +133,175 @@
 				]
 				default_root_bone_name = ""
 			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Arm_L"
+						anchor_origin = [ 12.0, 22.65, 0.0 ]
+						anchor_angles = [ 0.0, 25.0, 90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = false
+						swing_limit = 90.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = false
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Arm_R"
+						anchor_origin = [ -12.0, 22.65, 0.0 ]
+						anchor_angles = [ 0.0, -25.0, 90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = false
+						swing_limit = 90.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = false
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Head"
+						anchor_origin = [ 0.000007, 26.999994, -0.000002 ]
+						anchor_angles = [ -90.0, 0.0, -90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = true
+						swing_limit = 1.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Leg_L"
+						anchor_origin = [ 6.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, -90.0, -90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = true
+						swing_limit = 1.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Leg_R"
+						anchor_origin = [ -6.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, -90.0, 90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = true
+						swing_limit = 1.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Torso"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 15.611935, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 16.0, 21.776131, 8.0 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "Bone_Arm_L"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 3.5
+						point0 = [ 0.0, 0.0, 0.0 ]
+						point1 = [ 2.0, 20.0, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "Bone_Arm_R"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 3.5
+						point0 = [ 0.0, 0.0, 0.0 ]
+						point1 = [ -2.0, 20.0, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "Bone_Head"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 8.0
+						point0 = [ 0.0, 6.0, 0.0 ]
+						point1 = [ 0.0, 9.0, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_L"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 8.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 17.0, 7.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_L"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 14.243632, -1.218517 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 4.512726, 9.437033 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_R"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 8.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 17.0, 7.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_R"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 14.243632, -1.218517 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 4.512726, 9.437033 ]
+					},
+				]
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""

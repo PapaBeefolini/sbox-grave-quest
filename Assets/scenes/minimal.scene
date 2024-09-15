@@ -26,10 +26,10 @@
     {
       "__guid": "c61477c2-0402-441c-8340-56f80363786d",
       "Flags": 0,
-      "Name": "minifig",
+      "Name": "papa",
       "Position": "-1064.428,716.8447,0.05183792",
       "Enabled": true,
-      "__Prefab": "prefabs/minifig.prefab",
+      "__Prefab": "prefabs/papa.prefab",
       "__PrefabVariables": {}
     },
     {
@@ -150,7 +150,7 @@
           "__type": "Sandbox.Tonemapping",
           "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
           "__version": 1,
-          "AutoExposureEnabled": true,
+          "AutoExposureEnabled": false,
           "ExposureBias": 2,
           "ExposureCompensation": 0,
           "ExposureMethod": "RGB",
@@ -1080,10 +1080,12 @@
       ]
     },
     {
-      "__guid": "82300eea-715e-4f62-9b84-3ccd83223505",
+      "__guid": "cbddfe43-b5e5-4e55-aa05-1e03539b8172",
       "Flags": 0,
       "Name": "skeleton",
-      "Position": "192.5598,0,0",
+      "Position": "561.1261,-224.0646,19.29742",
+      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
+      "Tags": "enemy",
       "Enabled": true,
       "__Prefab": "prefabs/skeleton.prefab",
       "__PrefabVariables": {}
@@ -1104,9 +1106,9 @@
       "EditorAutoUpdate": true,
       "AgentHeight": 64,
       "AgentRadius": 12,
-      "AgentStepSize": 18,
-      "AgentMaxSlope": 48,
-      "ExcludedBodies": "",
+      "AgentStepSize": 8,
+      "AgentMaxSlope": 64,
+      "ExcludedBodies": "enemy,world-border",
       "IncludedBodies": ""
     }
   },

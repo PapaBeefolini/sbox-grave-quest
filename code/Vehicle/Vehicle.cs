@@ -6,10 +6,12 @@ namespace MightyBrick.GraveQuest;
 
 public sealed class Vehicle : Component
 {
+	public static Vehicle Local { get; private set; }
+
 	[RequireComponent]
 	public Rigidbody Rigidbody { get; private set; }
 	public Wheel[] Wheels { get; private set; }
-	public Minifig Minifig { get; private set; }
+	public Papa Papa { get; private set; }
 
 	public bool Grounded { get; private set; } = false;
 	public Vector3 LocalVelocity => Rigidbody.IsValid ? Rigidbody.Velocity * Transform.Rotation.Inverse : Vector3.Zero;
@@ -26,6 +28,8 @@ public sealed class Vehicle : Component
 	public float AngularDampingGrounded { get; set; } = 4.0f;
 	[Property]
 	public float AngularDampingAirborne { get; set; } = 0.5f;
+	[Property]
+	public float KeepUprightAngle { get; set; } = 55.0f;
 
 	[Property, Category( "Pizza Throwing" )]
 	public GameObject PizzaPrefab { get; private set; }
@@ -43,10 +47,11 @@ public sealed class Vehicle : Component
 		if ( IsProxy )
 			return;
 
+		Local = this;
 		FollowCamera.Instance.Target = this;
 		Wheels = GameObject.Components.GetAll<Wheel>( FindMode.EverythingInChildren ).ToArray();
-		Minifig = GameObject.Components.GetInChildren<Minifig>();
-		Minifig?.SetIsDriving( true );
+		Papa = GameObject.Components.GetInChildren<Papa>();
+		Papa?.SetIsDriving( true );
 	}
 
 
@@ -57,9 +62,10 @@ public sealed class Vehicle : Component
 
 		UpdateInputs();
 		UpdateGrounded();
+		KeepUpright();
 
-		//if ( Input.Pressed( "Jump" ) )
-			//Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
+		if ( Input.Pressed( "Jump" ) )
+			Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
 
 		if ( Input.Pressed( "Jump" ) )
 			ThrowPizza();
@@ -107,10 +113,19 @@ public sealed class Vehicle : Component
 	}
 
 
+	private void KeepUpright()
+	{
+		Angles angles = Rigidbody.PhysicsBody.Rotation.Angles();
+		angles.pitch = angles.pitch.Clamp( -KeepUprightAngle, KeepUprightAngle );
+		angles.roll = angles.roll.Clamp( -KeepUprightAngle, KeepUprightAngle );
+		Rigidbody.PhysicsBody.Rotation = angles.ToRotation();
+	}
+
+
 	private void ThrowPizza()
 	{
-		Minifig?.Throw();
-		GameObject pizza = PizzaPrefab.Clone( Minifig.Transform.Position + Transform.Rotation * ThrowOffset, Transform.Rotation );
+		Papa?.Throw();
+		GameObject pizza = PizzaPrefab.Clone( Papa.Transform.Position + Transform.Rotation * ThrowOffset, Transform.Rotation );
 		Rigidbody pizzaRigidbody = pizza.Components.Get<Rigidbody>();
 		if ( !pizzaRigidbody.IsValid )
 			return;

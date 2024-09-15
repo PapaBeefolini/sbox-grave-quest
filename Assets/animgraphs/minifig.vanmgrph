@@ -175,7 +175,7 @@
 									{
 										m_id = 1882629660
 									}
-									m_bReset = true
+									m_bReset = false
 									m_resetCycleOption = "Beginning"
 									m_flFixedCycleValue = 0.0
 									m_blendCurve = 
