@@ -238,22 +238,22 @@
 						dimensions = [ 16.0, 21.776131, 8.0 ]
 					},
 					{
-						_class = "PhysicsShapeCapsule"
+						_class = "PhysicsShapeBox"
 						parent_bone = "Bone_Arm_L"
 						surface_prop = "default"
 						collision_tags = "solid"
-						radius = 3.5
-						point0 = [ 0.0, 0.0, 0.0 ]
-						point1 = [ 2.0, 20.0, 0.0 ]
+						origin = [ 1.0, 10.0, 0.0 ]
+						angles = [ 0.0, -5.0, 0.0 ]
+						dimensions = [ 5.0, 24.0, 5.0 ]
 					},
 					{
-						_class = "PhysicsShapeCapsule"
+						_class = "PhysicsShapeBox"
 						parent_bone = "Bone_Arm_R"
 						surface_prop = "default"
 						collision_tags = "solid"
-						radius = 3.5
-						point0 = [ 0.0, 0.0, 0.0 ]
-						point1 = [ -2.0, 20.0, 0.0 ]
+						origin = [ -1.0, 10.0, 0.0 ]
+						angles = [ 0.0, 5.0, 0.0 ]
+						dimensions = [ 5.0, 24.0, 5.0 ]
 					},
 					{
 						_class = "PhysicsShapeCapsule"

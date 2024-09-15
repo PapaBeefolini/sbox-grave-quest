@@ -76,7 +76,7 @@ public sealed class FollowCamera : Component
 		Vector3 targetPosition = startPosition + cameraZoom * Transform.Rotation.Backward;
 		SceneTraceResult trace = Scene.Trace.Ray( startPosition, targetPosition )
 			.IgnoreGameObjectHierarchy( GameObject )
-			.WithoutTags( "Player", "Car", "Pizza", "Enemy", "World-Border" )
+			.WithoutTags( "Player", "Car", "Pizza", "Enemy", "Misc", "World-Border" )
 			.Radius( 8.0f )
 			.Run();
 

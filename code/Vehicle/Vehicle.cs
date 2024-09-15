@@ -3,7 +3,6 @@ using System;
 
 namespace MightyBrick.GraveQuest;
 
-
 public sealed class Vehicle : Component
 {
 	public static Vehicle Local { get; private set; }
@@ -41,7 +40,6 @@ public sealed class Vehicle : Component
 	public float InputForward { get; set; } = 0.0f;
 	public float InputRight { get; set; } = 0.0f;
 
-
 	protected override void OnStart()
 	{
 		if ( IsProxy )
@@ -54,7 +52,6 @@ public sealed class Vehicle : Component
 		Papa?.SetIsDriving( true );
 	}
 
-
 	protected override void OnFixedUpdate()
 	{
 		if ( !Rigidbody.IsValid )
@@ -64,13 +61,12 @@ public sealed class Vehicle : Component
 		UpdateGrounded();
 		KeepUpright();
 
-		if ( Input.Pressed( "Jump" ) )
-			Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
+		//if ( Input.Pressed( "Jump" ) )
+		//	Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
 
-		if ( Input.Pressed( "Jump" ) )
+		if ( Input.Pressed( "attack1" ) || Input.Pressed( "jump" ) )
 			ThrowPizza();
 	}
-
 
 	protected override void OnUpdate()
 	{
@@ -79,13 +75,12 @@ public sealed class Vehicle : Component
 		//Gizmo.Draw.ScreenText( Rigidbody.Velocity.Length.ToString(), new Vector2( 0, 40 ) );
 	}
 
-
 	private void UpdateInputs()
 	{
-		InputForward = InputForward.LerpTo( Input.AnalogMove.x, PowerLerpSpeed * Time.Delta );
+		float forward = Input.AnalogMove.x + Input.GetAnalog( InputAnalog.RightTrigger ) - Input.GetAnalog( InputAnalog.LeftTrigger );
+		InputForward = InputForward.LerpTo( forward, PowerLerpSpeed * Time.Delta );
 		InputRight = InputRight.LerpTo( Input.AnalogMove.y, SteerLerpSpeed * Time.Delta );
 	}
-
 
 	private void UpdateGrounded()
 	{
@@ -104,14 +99,12 @@ public sealed class Vehicle : Component
 		Rigidbody.OverrideMassCenter = Grounded;
 	}
 
-
 	public Vector3 GetVelocityAtPoint( Vector3 point )
 	{
 		if ( !Rigidbody.IsValid )
 			return Vector3.Zero;
 		return Rigidbody.GetVelocityAtPoint( point );
 	}
-
 
 	private void KeepUpright()
 	{
@@ -120,7 +113,6 @@ public sealed class Vehicle : Component
 		angles.roll = angles.roll.Clamp( -KeepUprightAngle, KeepUprightAngle );
 		Rigidbody.PhysicsBody.Rotation = angles.ToRotation();
 	}
-
 
 	private void ThrowPizza()
 	{

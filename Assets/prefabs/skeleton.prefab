@@ -38,11 +38,21 @@
         "RigidbodyFlags": 0
       },
       {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "8f02848b-6812-4170-b58a-5f39f8cd0178",
+        "End": "0,0,48",
+        "IsTrigger": true,
+        "Radius": 12,
+        "Start": "0,0,12",
+        "Static": false,
+        "Surface": "surfaces/plastic.surface"
+      },
+      {
         "__type": "Sandbox.NavMeshAgent",
         "__guid": "4a27e203-8b10-422d-a431-1f4f8a941b4d",
-        "Acceleration": 150,
+        "Acceleration": 400,
         "Height": 64,
-        "MaxSpeed": 200,
+        "MaxSpeed": 150,
         "Radius": 12,
         "Separation": 0.25,
         "UpdatePosition": true,
@@ -102,6 +112,7 @@
         "__guid": "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a",
         "Flags": 0,
         "Name": "hat",
+        "Tags": "misc",
         "Enabled": true,
         "Components": [
           {
@@ -126,6 +137,28 @@
             "RenderType": "On",
             "Tint": "1,1,1,1",
             "UseAnimGraph": true
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "34ef2c86-246d-464b-a98f-55da206516f8",
+            "__enabled": false,
+            "IsTrigger": false,
+            "Static": false,
+            "Surface": "surfaces/plastic.surface"
+          },
+          {
+            "__type": "Sandbox.Rigidbody",
+            "__guid": "571d10b0-f1ea-491e-a709-14aed4926c75",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassCenterOverride": "0,0,0",
+            "MassOverride": 10,
+            "MotionEnabled": false,
+            "OverrideMassCenter": false,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
           }
         ]
       }

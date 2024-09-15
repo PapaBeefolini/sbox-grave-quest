@@ -47,6 +47,7 @@
         "__guid": "7b13a2b6-8426-4b76-8998-6b8c39f3a721",
         "AngularDampingAirborne": 0.5,
         "AngularDampingGrounded": 4,
+        "KeepUprightAngle": 55,
         "MaxSpeed": 1200,
         "PizzaPrefab": {
           "_type": "gameobject",
@@ -107,7 +108,7 @@
             "SteerAngle": 35,
             "Steering": true,
             "SuspensionRestLength": 16,
-            "WheelGrip": 12,
+            "WheelGrip": 14,
             "WheelRadius": 12
           }
         ],
@@ -154,7 +155,7 @@
             "SteerAngle": 35,
             "Steering": true,
             "SuspensionRestLength": 16,
-            "WheelGrip": 12,
+            "WheelGrip": 14,
             "WheelRadius": 12
           }
         ],
@@ -200,7 +201,7 @@
             "SteerAngle": 35,
             "Steering": false,
             "SuspensionRestLength": 20,
-            "WheelGrip": 18,
+            "WheelGrip": 20,
             "WheelRadius": 16
           }
         ],
@@ -247,7 +248,7 @@
             "SteerAngle": 35,
             "Steering": false,
             "SuspensionRestLength": 20,
-            "WheelGrip": 18,
+            "WheelGrip": 20,
             "WheelRadius": 16
           }
         ],

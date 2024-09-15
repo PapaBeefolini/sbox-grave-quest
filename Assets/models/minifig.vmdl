@@ -312,7 +312,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = "animgraphs/minifig.vanmgrph"
+		anim_graph_name = "animgraphs/papa.vanmgrph"
 		base_model_name = ""
 	}
 }
