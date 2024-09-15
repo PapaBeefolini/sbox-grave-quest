@@ -1,16 +1,15 @@
 using Sandbox;
-using Sandbox.Navigation;
 using Sandbox.Physics;
-using System.Numerics;
 
 namespace MightyBrick.GraveQuest;
-
 
 public sealed class Skeleton : Minifig
 {
 	public ModelPhysics ModelPhysics { get; private set; }
 	public NavMeshAgent Agent { get; private set; }
 
+	[Property]
+	public Hat[] Hats { get; private set; }
 	public struct Hat
 	{
 		public Model Model { get; set; }
@@ -26,11 +25,8 @@ public sealed class Skeleton : Minifig
 			return Model?.Name;
 		}
 	}
-	[Property]
-	public Hat[] Hats { get; private set; }
 
 	private TimeSince timeSinceLastMove = 0.0f;
-
 
 	protected override void OnAwake()
 	{
@@ -38,7 +34,6 @@ public sealed class Skeleton : Minifig
 		ModelPhysics = Components.Get<ModelPhysics>( true );
 		Agent = Components.Get<NavMeshAgent>( true );
 	}
-
 
 	protected override void OnStart()
 	{
@@ -51,7 +46,6 @@ public sealed class Skeleton : Minifig
 
 		//BreakApart();
 	}
-
 
 	protected override void OnUpdate()
 	{
@@ -67,8 +61,7 @@ public sealed class Skeleton : Minifig
 		}
 	}
 
-
-	public void WearRandomHat()
+	private void WearRandomHat()
 	{
 		if ( Hats.Length <= 0 )
 			return;
@@ -78,12 +71,10 @@ public sealed class Skeleton : Minifig
 		HatRenderer.Enabled = true;
 	}
 
-
-	public void BreakApart()
+	private void BreakApart()
 	{
 		foreach ( PhysicsJoint joint in ModelPhysics.PhysicsGroup.Joints )
 		{
-			joint.OnBreak += () => Log.Info( "Fart" );
 			joint.Remove();
 		}	
 	}

@@ -4,22 +4,18 @@
 @namespace MightyBrick.GraveQuest.UI
 @inherits Panel
 
-
 <root>
     <label>@CurrentTime</label>
 </root>
-
 
 @code
 {
     public float CurrentTime { get; set; } = 0;
 
-
     public override void Tick()
     {
 
     }
-
 
     //protected override int BuildHash() => System.HashCode.Combine(Time);
 }

@@ -3,7 +3,6 @@ using System.Diagnostics;
 
 namespace MightyBrick.GraveQuest;
 
-
 public sealed class FollowCamera : Component
 {
 	public static FollowCamera Instance { get; private set; }
@@ -43,7 +42,6 @@ public sealed class FollowCamera : Component
 	private TimeUntil timeUntilAutoFocus = 0.0f;
 	private bool isDrivingBackwards = false;
 
-
 	protected override void OnStart()
 	{
 		Instance = this;
@@ -51,7 +49,6 @@ public sealed class FollowCamera : Component
 		cameraZoom = (MinZoom + MaxZoom) / 2.0f;
 		EyeAngles = AutoFocusRotationOffset;
 	}
-
 
 	protected override void OnUpdate()
 	{
@@ -63,13 +60,11 @@ public sealed class FollowCamera : Component
 		AutoFocus();
 	}
 
-
 	private void Zoom()
 	{
 		cameraZoom -= Input.MouseWheel.y * ZoomSpeed;
 		cameraZoom = cameraZoom.Clamp( MinZoom, MaxZoom );
 	}
-
 
 	private void Look()
 	{
@@ -92,7 +87,6 @@ public sealed class FollowCamera : Component
 		Transform.LocalPosition = startPosition + Transform.Rotation.Backward * cameraDistance;
 		Transform.Rotation *= new Angles(-8, 0, 0);
 	}
-	
 
 	private void AutoFocus()
 	{

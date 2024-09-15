@@ -4,25 +4,21 @@
 @namespace MightyBrick.GraveQuest.UI
 @inherits PanelComponent
 
-
 <root>
     <Score CurrentScore=@CurrentScore></Score>
     <Timer CurrentTime=@CurrentTime></Timer>
 </root>
-
 
 @code
 {
     public int CurrentScore { get; set; } = 0;
     public float CurrentTime { get; set; } = 0;
 
-
     protected override void OnUpdate()
     {
         CurrentScore++;
         CurrentTime = Time.Now;
     }
-
 
     protected override int BuildHash() => System.HashCode.Combine(CurrentScore);
 }

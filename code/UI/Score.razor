@@ -5,7 +5,6 @@
 @namespace MightyBrick.GraveQuest.UI
 @inherits Panel
 
-
 <root onclick=@(() => ScoreKill())>
     <div @ref=SkullPanel class="score">
         <img src="ui/skull.png" />
@@ -13,12 +12,10 @@
     <label>@CurrentScore</label>
 </root>
 
-
 @code
 {
     public int CurrentScore { get; set; } = 0;
     public Panel SkullPanel { get; set; }
-
 
     public void ScoreKill()
     {
@@ -26,7 +23,6 @@
 
         _ = Bruh();
     }
-
 
     public async Task Bruh()
     {
@@ -36,7 +32,6 @@
         await Task.DelayRealtimeSeconds(0.5f);
         SkullPanel.RemoveClass("shake");
     }
-
 
     //protected override int BuildHash() => System.HashCode.Combine(CurrentScore);
 }

@@ -1,11 +1,7 @@
 using Sandbox;
 using System;
-using System.Diagnostics;
-using System.IO;
-using System.Numerics;
 
 namespace MightyBrick.GraveQuest;
-
 
 public sealed class Wheel : Component
 {
@@ -40,13 +36,11 @@ public sealed class Wheel : Component
 	private Vector3 tractionForce = Vector3.Zero;
 	private Vector3 driveForce = Vector3.Zero;
 
-
 	protected override void OnAwake()
 	{
 		Vehicle = GameObject.Components.GetInParent<Vehicle>();
 		WheelModel = GameObject.Components.GetInChildren<ModelRenderer>();
 	}
-
 
 	protected override void OnFixedUpdate()
 	{
@@ -62,12 +56,10 @@ public sealed class Wheel : Component
 		ApplyForce();
 	}
 
-
 	protected override void OnUpdate()
 	{
 		//Gizmo.Draw.LineCircle( WheelModel.Transform.Position, WheelModel.Transform.Rotation.Right, WheelRadius );
 	}
-
 
 	private void Raycast()
 	{
@@ -89,7 +81,6 @@ public sealed class Wheel : Component
 		SurfaceImpactDistance = trace.Distance;
 	}
 
-
 	private void Lift()
 	{
 		if ( !Grounded )
@@ -105,7 +96,6 @@ public sealed class Wheel : Component
 		liftForce = Vector3.Up * force;
 	}
 
-
 	private void Traction()
 	{
 		if ( !Grounded )
@@ -118,7 +108,6 @@ public sealed class Wheel : Component
 		float desiredSidewaysVelocity = -sidewaysVelocity * WheelGrip;
 		tractionForce = Transform.Rotation.Right * desiredSidewaysVelocity * 100.0f;
 	}
-
 
 	private void Drive()
 	{
@@ -135,7 +124,6 @@ public sealed class Wheel : Component
 		driveForce = Vehicle.InputForward * Transform.Rotation.Forward * desiredPower;
 	}
 
-
 	private void Steer()
 	{
 		if ( !Steering )
@@ -146,7 +134,6 @@ public sealed class Wheel : Component
 			angle += 180.0f;
 		Transform.LocalRotation = Rotation.FromAxis( Vector3.Up, angle );
 	}
-
 
 	private void UpdateModel()
 	{
@@ -160,7 +147,6 @@ public sealed class Wheel : Component
 		float rotationSpeed = (Vehicle.LocalVelocity.x + Vehicle.InputForward * 200) / circumference * (Inverted ? -360 : 360);
 		WheelModel.Transform.Rotation *= Rotation.FromAxis( Vector3.Left, rotationSpeed * Time.Delta );
 	}
-
 
 	private void ApplyForce()
 	{
