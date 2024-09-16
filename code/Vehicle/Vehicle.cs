@@ -59,6 +59,8 @@ public partial class Vehicle : Component
 
 		if ( Input.Pressed( "ThrowPizza" ) )
 			ThrowPizza();
+
+		Papa?.SetInputs( InputForward, InputRight );
 	}
 
 	protected override void OnUpdate()

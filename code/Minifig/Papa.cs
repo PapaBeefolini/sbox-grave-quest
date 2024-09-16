@@ -4,10 +4,10 @@ namespace MightyBrick.GraveQuest;
 
 public sealed class Papa : Minifig
 {
-	protected override void OnUpdate()
+	public void SetInputs(float vertical, float horizontal)
 	{
-		Renderer?.Set( "Horizontal", -Input.AnalogMove.y );
-		Renderer?.Set( "Vertical", Input.AnalogMove.x );
+		Renderer?.Set( "Vertical", vertical );
+		Renderer?.Set( "Horizontal", -horizontal );
 	}
 
 	public void SetIsDriving( bool value )
