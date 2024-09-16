@@ -1,0 +1,12 @@
+{
+  "Sequences": [
+    {
+      "Source": "textures/particles/smoke.png",
+      "FlipBook": true,
+      "Columns": 1,
+      "Rows": 1,
+      "Frames": 4
+    }
+  ],
+  "OutputTypeString": "2D"
+}

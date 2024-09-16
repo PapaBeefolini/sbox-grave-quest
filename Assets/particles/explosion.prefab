@@ -1,0 +1,26 @@
+{
+  "RootObject": {
+    "__guid": "436067df-8dd6-4749-9281-895c7d67d96c",
+    "Flags": 0,
+    "Name": "explosion",
+    "Position": "20.56342,338.1846,10.00002",
+    "Tags": "particles",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.LegacyParticleSystem",
+        "__guid": "a596ac6d-ba40-4a0c-8010-282800959c2d",
+        "ControlPoints": [],
+        "Looped": false,
+        "Particles": "particles/explosion.vpcf",
+        "PlaybackSpeed": 1
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

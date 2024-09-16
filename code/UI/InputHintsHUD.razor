@@ -1,0 +1,38 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits PanelComponent
+
+<root>
+    <div class="panel">
+        @if ( Input.UsingController )
+	    {
+		    <InputHint @Action="Throttle" />
+		    <InputHint @Action="Brake" />
+            <InputHint @Analog=@InputAnalog.LeftStickX @Text="Steer" />
+
+	    }
+	    else
+	    {
+		    <InputHint @Action="Throttle" />
+		    <InputHint @Action="Brake" />
+		    <InputHint @Action="Left" />
+		    <InputHint @Action="Right" />
+	    }
+    </div>
+
+	<div style="flex-grow: 1;" />
+
+    <div class="panel">
+        <br />
+		<InputHint @Action="ThrowPizza" @Text="Throw Pizza" />
+        <InputHint @Action="ZoomIn" @Text="Zoom In" />
+        <InputHint @Action="ZoomOut" @Text="Zoom Out" />
+	</div>
+</root>
+
+@code
+{
+    protected override int BuildHash() => System.HashCode.Combine(Input.UsingController);
+}

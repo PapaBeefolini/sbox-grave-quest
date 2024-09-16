@@ -3,7 +3,7 @@ using System;
 
 namespace MightyBrick.GraveQuest;
 
-public sealed class Vehicle : Component
+public partial class Vehicle : Component
 {
 	public static Vehicle Local { get; private set; }
 
@@ -29,13 +29,6 @@ public sealed class Vehicle : Component
 	public float AngularDampingAirborne { get; set; } = 0.5f;
 	[Property]
 	public float KeepUprightAngle { get; set; } = 55.0f;
-
-	[Property, Category( "Pizza Throwing" )]
-	public GameObject PizzaPrefab { get; private set; }
-	[Property, Category( "Pizza Throwing" )]
-	public Vector3 ThrowForce { get; private set; } = new Vector3( 600.0f, 0.0f, 300.0f );
-	[Property, Category( "Pizza Throwing" )]
-	public Vector3 ThrowOffset { get; private set; } = new Vector3( 50.0f, 0.0f, 50.0f );
 
 	public float InputForward { get; set; } = 0.0f;
 	public float InputRight { get; set; } = 0.0f;
@@ -64,7 +57,7 @@ public sealed class Vehicle : Component
 		//if ( Input.Pressed( "Jump" ) )
 		//	Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
 
-		if ( Input.Pressed( "attack1" ) || Input.Pressed( "jump" ) )
+		if ( Input.Pressed( "ThrowPizza" ) )
 			ThrowPizza();
 	}
 
@@ -77,9 +70,20 @@ public sealed class Vehicle : Component
 
 	private void UpdateInputs()
 	{
-		float forward = Input.AnalogMove.x + Input.GetAnalog( InputAnalog.RightTrigger ) - Input.GetAnalog( InputAnalog.LeftTrigger );
+		float forward = Input.Down( "Throttle" ) ? 1.0f : 0.0f;
+		if ( Input.Down( "Brake" ) )
+			forward = -1.0f;
+		float steer = Input.Down( "Left" ) ? 1.0f : 0.0f;
+		if ( Input.Down( "Right" ) )
+			steer = -1.0f;
+		if ( Input.UsingController )
+		{
+			forward = Input.GetAnalog( InputAnalog.RightTrigger ) + -Input.GetAnalog( InputAnalog.LeftTrigger );
+			steer = -Input.GetAnalog( InputAnalog.LeftStickX );
+		}
+
 		InputForward = InputForward.LerpTo( forward, PowerLerpSpeed * Time.Delta );
-		InputRight = InputRight.LerpTo( Input.AnalogMove.y, SteerLerpSpeed * Time.Delta );
+		InputRight = InputRight.LerpTo( steer, SteerLerpSpeed * Time.Delta );
 	}
 
 	private void UpdateGrounded()
@@ -112,15 +116,5 @@ public sealed class Vehicle : Component
 		angles.pitch = angles.pitch.Clamp( -KeepUprightAngle, KeepUprightAngle );
 		angles.roll = angles.roll.Clamp( -KeepUprightAngle, KeepUprightAngle );
 		Rigidbody.PhysicsBody.Rotation = angles.ToRotation();
-	}
-
-	private void ThrowPizza()
-	{
-		Papa?.Throw();
-		GameObject pizza = PizzaPrefab.Clone( Papa.Transform.Position + Transform.Rotation * ThrowOffset, Transform.Rotation );
-		Rigidbody pizzaRigidbody = pizza.Components.Get<Rigidbody>();
-		if ( !pizzaRigidbody.IsValid )
-			return;
-		pizzaRigidbody.Velocity = Rigidbody.Velocity + Transform.Rotation * ThrowForce;
 	}
 }

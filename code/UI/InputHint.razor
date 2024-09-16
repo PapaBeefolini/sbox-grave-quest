@@ -1,0 +1,48 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits Panel
+
+<root>
+    <img @ref="Glyph" />
+    <label>@Text</label>
+</root>
+
+@code
+{
+    public string Action { get; set; }
+    public InputAnalog Analog { get; set; }
+    public string Text { get; set; }
+
+    private Image Glyph { get; set; }
+
+    protected override void OnAfterTreeRender(bool firstTime)
+    {
+        Update();
+    }
+
+    private void Update()
+    {
+        Texture texture = null;
+        if (string.IsNullOrEmpty(Action))
+        {
+            texture = Input.GetGlyph(Analog, InputGlyphSize.Medium, false);
+            if (string.IsNullOrEmpty(Text))
+                Text = Analog.ToString();
+        }
+        else
+        {
+            texture = Input.GetGlyph(Action, InputGlyphSize.Medium, false);
+            if (string.IsNullOrEmpty(Text))
+                Text = Action;
+        }
+        if (texture is null)
+            return;
+        if (!Glyph.IsValid())
+            return;
+        Glyph.Texture = texture;
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(Action, Analog, Input.UsingController);
+}

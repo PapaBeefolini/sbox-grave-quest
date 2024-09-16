@@ -2,6 +2,18 @@
   "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
   "GameObjects": [
     {
+      "__guid": "8dbd1569-f166-4ca7-8204-d2f4a8d21f39",
+      "Flags": 0,
+      "Name": "Game Manager",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MightyBrick.GraveQuest.GameManager",
+          "__guid": "e6d1753e-3542-4989-aeae-1c8842ed64a3"
+        }
+      ]
+    },
+    {
       "__guid": "2f307fb0-4b3a-407a-a0fd-47e18b9b4203",
       "Flags": 0,
       "Name": "HUD",
@@ -20,6 +32,10 @@
         {
           "__type": "MightyBrick.GraveQuest.UI.HUD",
           "__guid": "c56a0e29-a236-4e9a-a8ff-22d66c297387"
+        },
+        {
+          "__type": "MightyBrick.GraveQuest.UI.InputHintsHUD",
+          "__guid": "d331082e-2803-419f-8f9c-190faee02475"
         }
       ]
     },

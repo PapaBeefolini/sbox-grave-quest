@@ -1,5 +1,4 @@
 using Sandbox;
-using System.Diagnostics;
 
 namespace MightyBrick.GraveQuest;
 
@@ -62,7 +61,11 @@ public sealed class FollowCamera : Component
 
 	private void Zoom()
 	{
-		cameraZoom -= Input.MouseWheel.y * ZoomSpeed;
+		float zoomSpeed = ZoomSpeed;
+		if ( Input.UsingController )
+			zoomSpeed /= 8.0f;
+		cameraZoom -= Input.Down("ZoomIn" ) ? zoomSpeed : 0.0f;
+		cameraZoom += Input.Down( "ZoomOut" ) ? zoomSpeed : 0.0f;
 		cameraZoom = cameraZoom.Clamp( MinZoom, MaxZoom );
 	}
 

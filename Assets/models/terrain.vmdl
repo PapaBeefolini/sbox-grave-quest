@@ -60,7 +60,7 @@
 						align_origin_z_type = "None"
 						filename = "models/terrain_navmesh.fbx"
 						import_scale = 1.0
-						maxMeshVertices = 512
+						maxMeshVertices = 0
 						qemError = 0.0
 						import_filter = 
 						{

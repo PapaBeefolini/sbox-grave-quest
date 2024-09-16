@@ -1,0 +1,9 @@
+{
+  "Sequences": [
+    {
+      "Source": "textures/particles/boom.png",
+      "Frames": 64
+    }
+  ],
+  "OutputTypeString": "2D"
+}

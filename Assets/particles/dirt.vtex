@@ -1,0 +1,9 @@
+{
+  "Sequences": [
+    {
+      "Source": "textures/particles/dirt.png",
+      "Frames": 64
+    }
+  ],
+  "OutputTypeString": "2D"
+}
