@@ -51,7 +51,7 @@ public sealed class FollowCamera : Component
 
 	protected override void OnUpdate()
 	{
-		if ( !Target.IsValid )
+		if ( !Target.IsValid() )
 			return;
 
 		Zoom();

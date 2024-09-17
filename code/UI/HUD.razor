@@ -1,24 +1,42 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using Sandbox.Events;
 
 @namespace MightyBrick.GraveQuest.UI
 @inherits PanelComponent
+@implements IGameEventHandler<PizzaThrownEvent> 
+@implements IGameEventHandler<SkeletonDiedEvent>
 
 <root>
-    <Score CurrentScore=@CurrentScore></Score>
+    <Score @ref="ScorePanel"/>
     <Timer CurrentTime=@CurrentTime></Timer>
+    <Pizza @ref="PizzaPanel"/>
 </root>
 
 @code
 {
-    public int CurrentScore { get; set; } = 0;
     public float CurrentTime { get; set; } = 0;
+    public Score ScorePanel { get; set; }
+    public Pizza PizzaPanel { get; set; }
 
     protected override void OnUpdate()
     {
-        CurrentScore++;
         CurrentTime = Time.Now;
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(CurrentScore);
+    public void OnGameEvent(PizzaThrownEvent args)
+    {
+        if (!PizzaPanel.IsValid())
+            return;
+        _ = PizzaPanel.Shake();
+    }
+
+    public void OnGameEvent(SkeletonDiedEvent args)
+    {
+        if (!ScorePanel.IsValid())
+            return;
+        ScorePanel.Increment();
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(CurrentTime);
 }

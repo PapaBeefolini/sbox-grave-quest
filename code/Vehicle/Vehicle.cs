@@ -1,4 +1,5 @@
 using Sandbox;
+using Sandbox.Events;
 using System;
 
 namespace MightyBrick.GraveQuest;
@@ -13,7 +14,7 @@ public partial class Vehicle : Component
 	public Papa Papa { get; private set; }
 
 	public bool Grounded { get; private set; } = false;
-	public Vector3 LocalVelocity => Rigidbody.IsValid ? Rigidbody.Velocity * Transform.Rotation.Inverse : Vector3.Zero;
+	public Vector3 LocalVelocity => Rigidbody.IsValid() ? Rigidbody.Velocity * Transform.Rotation.Inverse : Vector3.Zero;
 
 	[Property]
 	public float MaxSpeed { get; set; } = 1200.0f;
@@ -47,7 +48,7 @@ public partial class Vehicle : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if ( !Rigidbody.IsValid )
+		if ( !Rigidbody.IsValid() )
 			return;
 
 		UpdateInputs();
@@ -107,7 +108,7 @@ public partial class Vehicle : Component
 
 	public Vector3 GetVelocityAtPoint( Vector3 point )
 	{
-		if ( !Rigidbody.IsValid )
+		if ( !Rigidbody.IsValid() )
 			return Vector3.Zero;
 		return Rigidbody.GetVelocityAtPoint( point );
 	}

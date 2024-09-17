@@ -9,7 +9,7 @@ public sealed class Wheel : Component
 	public ModelRenderer WheelModel { get; set; }
 
 	public bool Grounded { get; private set; }
-	public Vector3 LocalVelocity => Vehicle.IsValid ? Vehicle.GetVelocityAtPoint( Transform.Position ) : Vector3.Zero;
+	public Vector3 LocalVelocity => Vehicle.IsValid() ? Vehicle.GetVelocityAtPoint( Transform.Position ) : Vector3.Zero;
 
 	[Property]
 	public float SuspensionRestLength { get; set; } = 20.0f;
@@ -44,7 +44,7 @@ public sealed class Wheel : Component
 
 	protected override void OnFixedUpdate()
 	{
-		if ( !Vehicle.IsValid )
+		if ( !Vehicle.IsValid() )
 			return;
 
 		Raycast();
@@ -137,7 +137,7 @@ public sealed class Wheel : Component
 
 	private void UpdateModel()
 	{
-		if ( !WheelModel.IsValid )
+		if ( !WheelModel.IsValid() )
 			return;
 
 		float zOffset = Grounded ? (-1 * SurfaceImpactDistance + WheelRadius) : (-1 * SuspensionRestLength + WheelRadius);

@@ -28,10 +28,6 @@ HUD {
 			height: 128px;
 			animation: rotate 0.6s ease infinite alternate;
 		}
-
-		.shake {
-			animation: flash 0.2s ease 1;
-		}
 	}
 
 	Timer {
@@ -45,6 +41,41 @@ HUD {
 			text-stroke-width: 14px;
 		}
 	}
+
+	Pizza {
+		position: absolute;
+		align-items: center;
+		top: 32px;
+		right: 64px;
+
+		div {
+			position: relative;
+			width: 112px;
+			height: 112px;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 112px;
+			height: 112px;
+			animation: grow 1.0s ease infinite alternate;
+
+			&.fg {
+				mask-image: linear-gradient(white, black);
+				mask-position: 100%;
+			}
+
+			&.bg {
+				opacity: 0.2;
+			}
+		}
+	}
+}
+
+.shake {
+	animation: flash 0.2s ease 1;
 }
 
 @keyframes rotate {
@@ -54,6 +85,28 @@ HUD {
 
 	100% {
 		transform: rotate(10deg);
+	}
+}
+
+@keyframes grow {
+	0% {
+		transform: scale(1.0) rotate(-5deg);
+	}
+
+	25% {
+		transform: scale(1.0375) rotate(5deg);
+	}
+
+	50% {
+		transform: scale(1.075) rotate(-5deg);
+	}
+
+	75% {
+		transform: scale(1.125) rotate(5deg);
+	}
+
+	100% {
+		transform: scale(1.15) rotate(-5deg);
 	}
 }
 

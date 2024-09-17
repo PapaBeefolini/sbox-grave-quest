@@ -1,0 +1,35 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using System.Threading.Tasks;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits Panel
+
+<root>
+    <div @ref=PizzaPanel>
+        <img src="ui/pizza.png" class="bg"/>
+        <img src="ui/pizza.png" class="fg" style="mask-position: @PizzaReload %" />
+    </div>
+</root>
+
+@code
+{
+    public Panel PizzaPanel { get; set; }
+    public float PizzaReload => GetThrowCooldown();
+
+    public async Task Shake()
+    {
+        if (!PizzaPanel.IsValid())
+            return;
+        PizzaPanel.AddClass("shake");
+        await Task.DelayRealtimeSeconds(0.5f);
+        PizzaPanel.RemoveClass("shake");
+    }
+
+    private float GetThrowCooldown()
+    {
+        return 200.0f * Vehicle.Local.GetThrowCooldown() - 100.0f;
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(PizzaReload);
+}

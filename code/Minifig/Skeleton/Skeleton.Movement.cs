@@ -9,7 +9,7 @@ public partial class Skeleton
 
 	private void Move()
 	{
-		if ( IsDead || !Agent.IsValid || Scene.NavMesh.IsGenerating )
+		if ( IsDead || !Agent.IsValid() || Scene.NavMesh.IsGenerating )
 			return;
 
 		if ( timeUntilMove )

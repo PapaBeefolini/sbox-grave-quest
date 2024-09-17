@@ -1,4 +1,5 @@
 ﻿using Sandbox;
+using Sandbox.Events;
 using System;
 
 namespace MightyBrick.GraveQuest;
@@ -14,19 +15,25 @@ public partial class Vehicle
 	[Property, Category( "Pizza Throwing" )]
 	public float ThrowCooldown { get; private set; } = 1.0f;
 
-	private TimeUntil timeUntilCanThrow = 0.0f;
+	public TimeUntil timeUntilCanThrow = 0.0f;
 
 	private void ThrowPizza()
 	{
 		if ( !timeUntilCanThrow )
 			return;
 		timeUntilCanThrow = ThrowCooldown;
+		Scene.Dispatch( new PizzaThrownEvent() );
 
 		Papa?.Throw();
 		GameObject pizza = PizzaPrefab.Clone( Papa.Transform.Position + Transform.Rotation * ThrowOffset, Transform.Rotation );
 		Rigidbody pizzaRigidbody = pizza.Components.Get<Rigidbody>();
-		if ( !pizzaRigidbody.IsValid )
+		if ( !pizzaRigidbody.IsValid() )
 			return;
 		pizzaRigidbody.Velocity = Rigidbody.Velocity + Transform.Rotation * ThrowForce;
+	}
+
+	public float GetThrowCooldown()
+	{
+		return timeUntilCanThrow.Fraction;
 	}
 }

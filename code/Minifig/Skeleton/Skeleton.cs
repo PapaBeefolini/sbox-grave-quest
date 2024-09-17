@@ -1,4 +1,5 @@
 using Sandbox;
+using Sandbox.Events;
 using Sandbox.Physics;
 using System;
 
@@ -6,8 +7,6 @@ namespace MightyBrick.GraveQuest;
 
 public partial class Skeleton : Minifig, Component.ITriggerListener
 {
-	public static Action OnDied { get; set; }
-
 	[RequireComponent]
 	public ModelPhysics ModelPhysics { get; private set; }
 
@@ -36,7 +35,7 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 	public void OnTriggerEnter( Collider collider )
 	{
 		Vehicle hitVehicle = collider.GameObject.Components.Get<Vehicle>();
-		if ( hitVehicle == null || !hitVehicle.IsValid )
+		if ( !hitVehicle.IsValid() )
 			return;
 		Vector3 hitForce = Vector3.Direction( Transform.Position, hitVehicle.Transform.Position ) * -5000.0f + Vector3.Up * 5000.0f;
 		Die( hitForce, hitVehicle.LocalVelocity.Length );
@@ -48,12 +47,11 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 			return;
 
 		Renderer.UseAnimGraph = false;
-		Log.Info( hitSpeed );
 		Ragdoll( force, hitSpeed > 900.0f );
 		Agent.Destroy();
 
 		IsDead = true;
-		OnDied?.Invoke();
+		Scene.Dispatch( new SkeletonDiedEvent() );
 	}
 
 
