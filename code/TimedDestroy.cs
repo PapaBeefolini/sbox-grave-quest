@@ -7,7 +7,7 @@ public sealed class TimedDestroy : Component
 	[Property] 
 	public bool FadeOut { get; set; } = false;
 	[Property, ReadOnly]
-	public TimeUntil TimeUntilDestroy { get; private set; } = 0;
+	public TimeUntil TimeUntilDestroy { get; private set; } = 0.0f;
 	public ModelRenderer[] Renderers { get; private set; }
 
 	protected override void OnStart()
