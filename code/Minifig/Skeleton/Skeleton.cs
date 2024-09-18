@@ -65,6 +65,9 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 
 		IsDead = true;
 		Scene.Dispatch( new SkeletonDiedEvent() );
+
+		HatRenderer.GameObject.DestroyDelayed( 10.0f, true );
+		GameObject.DestroyDelayed( 10.0f, true );
 	}
 
 
