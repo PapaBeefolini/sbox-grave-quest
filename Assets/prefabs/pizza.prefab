@@ -48,7 +48,8 @@
         "ExplosionPrefab": {
           "_type": "gameobject",
           "prefab": "particles/explosion.prefab"
-        }
+        },
+        "ExplosionSound": "sounds/explosion.sound"
       }
     ],
     "Children": [],

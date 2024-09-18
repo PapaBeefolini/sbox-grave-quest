@@ -1,0 +1,23 @@
+{
+  "UI": false,
+  "Volume": "2",
+  "Pitch": "0.95 1.05",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/enemy/death_01.vsnd",
+    "sounds/enemy/death_02.vsnd",
+    "sounds/enemy/death_03.vsnd",
+    "sounds/enemy/death_04.vsnd",
+    "sounds/enemy/death_05.vsnd",
+    "sounds/enemy/death_06.vsnd",
+    "sounds/enemy/death_07.vsnd"
+  ],
+  "Occlusion": false,
+  "AirAbsorption": true,
+  "Transmission": true,
+  "OcclusionRadius": 64,
+  "DistanceAttenuation": true,
+  "__references": [],
+  "__version": 0
+}

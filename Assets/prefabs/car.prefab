@@ -58,7 +58,8 @@
         "SteerLerpSpeed": 12,
         "ThrowCooldown": 1,
         "ThrowForce": "600,0,300",
-        "ThrowOffset": "30,0,60"
+        "ThrowOffset": "30,0,60",
+        "ThrowSound": "sounds/vehicle/throw.sound"
       }
     ],
     "Children": [
@@ -278,12 +279,6 @@
             ]
           }
         ]
-      },
-      {
-        "__guid": "e202c0dc-af7a-4414-8fcf-bbc19d4c0526",
-        "Flags": 0,
-        "Name": "GameObject",
-        "Enabled": true
       },
       {
         "__guid": "13bb5940-6886-4279-a5c5-e613c0b6f6b7",

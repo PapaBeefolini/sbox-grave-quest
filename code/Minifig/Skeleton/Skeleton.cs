@@ -9,6 +9,12 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 {
 	[RequireComponent]
 	public ModelPhysics ModelPhysics { get; private set; }
+	[Property]
+	public SoundEvent CrashSound { get; private set; }
+	[Property]
+	public SoundEvent DeathSound { get; private set; }
+	[Property]
+	public SoundEvent BreakSound { get; private set; }
 
 	public bool IsDead { get; private set; }
 
@@ -40,8 +46,10 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 		Vehicle hitVehicle = collider.GameObject.Components.Get<Vehicle>();
 		if ( !hitVehicle.IsValid() )
 			return;
-		Vector3 hitForce = Vector3.Direction( Transform.Position, hitVehicle.Transform.Position ) * -3000.0f + Vector3.Up * 4000.0f;
-		Die( hitForce, hitVehicle.LocalVelocity.Length );
+		Vector3 direction = Vector3.Direction( hitVehicle.Transform.Position, Transform.Position );
+		Vector3 force = direction * hitVehicle.LocalVelocity.Length * 4.0f + Vector3.Up * 2000.0f;
+		Die( force, hitVehicle.LocalVelocity.Length );
+		Sound.Play( CrashSound, Transform.Position );
 	}
 
 	private void Die( Vector3 force, float hitSpeed )
@@ -50,8 +58,10 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 			return;
 
 		Renderer.UseAnimGraph = false;
-		Ragdoll( force, hitSpeed > 900.0f );
+		Ragdoll( force, hitSpeed > 1000.0f );
 		Agent.Destroy();
+
+		Sound.Play( DeathSound, Transform.Position );
 
 		IsDead = true;
 		Scene.Dispatch( new SkeletonDiedEvent() );
@@ -69,12 +79,15 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 		HatCollider.Enabled = true;
 		HatRigidbody.MotionEnabled = true;
 
-		if ( breakApart )
+		foreach ( PhysicsJoint joint in ModelPhysics.PhysicsGroup.Joints )
 		{
-			foreach ( PhysicsJoint joint in ModelPhysics.PhysicsGroup.Joints )
+			float strength = 4500.0f;
+			if ( breakApart )
 			{
-				joint.Strength = 5000.0f;
+				strength = 500.0f;
+				Sound.Play( BreakSound, Transform.Position );
 			}
+			joint.Strength = strength;
 		}
 	}
 }

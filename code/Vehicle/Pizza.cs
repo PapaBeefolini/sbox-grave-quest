@@ -9,6 +9,8 @@ public sealed class Pizza : Component, Component.ITriggerListener
 	public GameObject ExplosionPrefab { get; set; }
 	[RequireComponent]
 	public Rigidbody Rigidbody { get; private set; }
+	[Property]
+	public SoundEvent ExplosionSound { get; set; }
 
 	protected override void OnStart()
 	{
@@ -23,6 +25,7 @@ public sealed class Pizza : Component, Component.ITriggerListener
 	private void Explode()
 	{
 		GameObject explosion = ExplosionPrefab.Clone( Transform.Position, Transform.Rotation );
+		Sound.Play( ExplosionSound, Transform.Position );
 		GameObject.Destroy();
 	}
 }

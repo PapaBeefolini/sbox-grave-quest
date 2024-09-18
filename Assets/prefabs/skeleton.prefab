@@ -62,6 +62,9 @@
       {
         "__type": "MightyBrick.GraveQuest.Skeleton",
         "__guid": "7a56482a-a4bd-447d-a326-4651ef4b2e5c",
+        "BreakSound": "sounds/brick_explode.sound",
+        "CrashSound": "sounds/vehicle/crash.sound",
+        "DeathSound": "sounds/enemy/death.sound",
         "Hats": [
           {
             "Model": "models/hat_archer.vmdl",

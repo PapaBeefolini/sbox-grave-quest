@@ -395,6 +395,40 @@
       "__PrefabVariables": {}
     },
     {
+      "__guid": "0be2ea70-26f7-4d32-9885-20dd359cc0bc",
+      "Flags": 0,
+      "Name": "crickets",
+      "Position": "-1852.146,66.9637,84.47704",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "d6d5192d-a73c-4827-acc7-c4c9d39ea150",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/crickets.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "game",
+            "Id": "e7413d64-02d1-4514-b8f3-cd7bdfaac757"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
       "__guid": "7d3cd9a7-0c40-441e-8b09-254d43f767f3",
       "Flags": 0,
       "Name": "corn_field",

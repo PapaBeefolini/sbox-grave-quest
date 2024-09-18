@@ -14,6 +14,8 @@ public partial class Vehicle
 	public Vector3 ThrowOffset { get; private set; } = new Vector3( 50.0f, 0.0f, 50.0f );
 	[Property, Category( "Pizza Throwing" )]
 	public float ThrowCooldown { get; private set; } = 1.0f;
+	[Property, Category( "Pizza Throwing" )]
+	public SoundEvent ThrowSound { get; private set; }
 
 	public TimeUntil timeUntilCanThrow = 0.0f;
 
@@ -30,6 +32,8 @@ public partial class Vehicle
 		if ( !pizzaRigidbody.IsValid() )
 			return;
 		pizzaRigidbody.Velocity = Rigidbody.Velocity + Transform.Rotation * ThrowForce;
+
+		Sound.Play( ThrowSound, Transform.Position );
 	}
 
 	public float GetThrowCooldown()
