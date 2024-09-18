@@ -11,6 +11,7 @@
         "__guid": "96f7fe81-b15c-4893-bc6a-1870cdbc7470",
         "BodyGroups": 18446744073709551615,
         "CreateBoneObjects": false,
+        "MaterialGroup": "default",
         "Model": "models/skeleton.vmdl",
         "Morphs": {},
         "RenderOptions": {
@@ -154,7 +155,7 @@
             "LinearDamping": 0,
             "Locking": {},
             "MassCenterOverride": "0,0,0",
-            "MassOverride": 10,
+            "MassOverride": 5,
             "MotionEnabled": false,
             "OverrideMassCenter": false,
             "RigidbodyFlags": 0,

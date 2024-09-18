@@ -28,7 +28,7 @@
 
     private float GetThrowCooldown()
     {
-        return 200.0f * Vehicle.Local.GetThrowCooldown() - 100.0f;
+        return -200.0f * Vehicle.Local.GetThrowCooldown() + 100.0f;
     }
 
     protected override int BuildHash() => System.HashCode.Combine(PizzaReload);

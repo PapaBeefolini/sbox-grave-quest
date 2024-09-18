@@ -48,14 +48,15 @@
         "AngularDampingAirborne": 0.5,
         "AngularDampingGrounded": 4,
         "KeepUprightAngle": 55,
-        "MaxSpeed": 1200,
+        "MaxSpeed": 1100,
         "PizzaPrefab": {
           "_type": "gameobject",
           "prefab": "prefabs/pizza.prefab"
         },
-        "Power": 1500000,
+        "Power": 1400000,
         "PowerLerpSpeed": 14,
         "SteerLerpSpeed": 12,
+        "ThrowCooldown": 1,
         "ThrowForce": "600,0,300",
         "ThrowOffset": "30,0,60"
       }

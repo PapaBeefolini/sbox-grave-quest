@@ -14,13 +14,16 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 
 	protected override void OnStart()
 	{
-		ModelPhysics.Enabled = false;
+		if ( !IsDead )
+			ModelPhysics.Enabled = false;
 
-		// 50/50 chance at wearing a hat
+		// 50% chance at wearing a hat
 		if ( Game.Random.Int( 1 ) == 0 )
 			WearRandomHat();
 
-		//Renderer.SceneObject.Attributes.Set( "SkeletonTint", Color.Random );
+		// 25% chance at being a dark skeleton
+		if ( Game.Random.Int( 3 ) == 0 )
+			Renderer.MaterialGroup = "dark";
 	}
 
 	protected override void OnUpdate()
@@ -37,7 +40,7 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 		Vehicle hitVehicle = collider.GameObject.Components.Get<Vehicle>();
 		if ( !hitVehicle.IsValid() )
 			return;
-		Vector3 hitForce = Vector3.Direction( Transform.Position, hitVehicle.Transform.Position ) * -5000.0f + Vector3.Up * 5000.0f;
+		Vector3 hitForce = Vector3.Direction( Transform.Position, hitVehicle.Transform.Position ) * -3000.0f + Vector3.Up * 4000.0f;
 		Die( hitForce, hitVehicle.LocalVelocity.Length );
 	}
 
@@ -59,7 +62,7 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 	{
 		ModelPhysics.Enabled = true;
 		ModelPhysics.MotionEnabled = true;
-		ModelPhysics.PhysicsGroup.Mass = 150.0f;
+		ModelPhysics.PhysicsGroup.Mass = 50.0f;
 		ModelPhysics.PhysicsGroup.ApplyImpulse( force );
 		HatRenderer.GameObject.SetParent( null );
 		HatRenderer.BoneMergeTarget = null;

@@ -9,7 +9,11 @@
       "Components": [
         {
           "__type": "MightyBrick.GraveQuest.GameManager",
-          "__guid": "e6d1753e-3542-4989-aeae-1c8842ed64a3"
+          "__guid": "e6d1753e-3542-4989-aeae-1c8842ed64a3",
+          "SkeletonPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/skeleton.prefab"
+          }
         }
       ]
     },
@@ -1124,94 +1128,6 @@
           "__PrefabVariables": {}
         }
       ]
-    },
-    {
-      "__guid": "cbddfe43-b5e5-4e55-aa05-1e03539b8172",
-      "Flags": 0,
-      "Name": "skeleton",
-      "Position": "561.1261,-224.0646,19.29742",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "9c1a3ca9-9e65-4d0a-80e6-3f39e338ecf2",
-      "Flags": 0,
-      "Name": "skeleton (1)",
-      "Position": "661.4398,-224.0638,19.29762",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "c67e05d0-677d-492c-a800-cfd5bf83be81",
-      "Flags": 0,
-      "Name": "skeleton (2)",
-      "Position": "725.0671,-224.0633,19.29774",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "a97a9a6d-f820-4b85-afa3-f6b0549c6e49",
-      "Flags": 0,
-      "Name": "skeleton (3)",
-      "Position": "808.6387,-224.0627,19.2979",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "eca307f4-17cf-4191-8004-4620d3a7a8c2",
-      "Flags": 0,
-      "Name": "skeleton (4)",
-      "Position": "808.6397,-361.961,15.41974",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "57e39528-1b07-463f-acf3-226b67650dd1",
-      "Flags": 0,
-      "Name": "skeleton (5)",
-      "Position": "727.6262,-361.9617,15.41958",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "fa975c3e-c21e-41f1-984d-ceb7eb53eada",
-      "Flags": 0,
-      "Name": "skeleton (6)",
-      "Position": "639.5889,-361.9624,15.41941",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "085f78e4-c7c9-4f98-a4e1-cea9735603e8",
-      "Flags": 0,
-      "Name": "skeleton (7)",
-      "Position": "574.034,-361.963,15.41928",
-      "Rotation": "0.009940803,0.009939492,-0.7070341,0.7070397",
-      "Tags": "enemy",
-      "Enabled": true,
-      "__Prefab": "prefabs/skeleton.prefab",
-      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

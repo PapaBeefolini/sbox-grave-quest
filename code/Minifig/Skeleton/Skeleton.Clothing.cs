@@ -30,7 +30,6 @@ public partial class Skeleton
 		HatRenderer.Model = chosenHat.Model;
 		HatRenderer.Tint = chosenHat.GetColor();
 		HatRenderer.Enabled = true;
-		HatCollider.Enabled = true;
 		HatCollider.Model = chosenHat.Model;
 	}
 }

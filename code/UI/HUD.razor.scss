@@ -63,12 +63,11 @@ HUD {
 			animation: grow 1.0s ease infinite alternate;
 
 			&.fg {
-				mask-image: linear-gradient(white, black);
-				mask-position: 100%;
+				mask-image: linear-gradient(black, white);
 			}
 
 			&.bg {
-				opacity: 0.2;
+				opacity: 0.1;
 			}
 		}
 	}

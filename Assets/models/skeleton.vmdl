@@ -11,6 +11,7 @@
 				[
 					{
 						_class = "DefaultMaterialGroup"
+						name = "Light"
 						remaps = 
 						[
 							{
@@ -24,6 +25,21 @@
 						]
 						use_global_default = false
 						global_default_material = "materials/default.vmat"
+					},
+					{
+						_class = "MaterialGroup"
+						name = "Dark"
+						remaps = 
+						[
+							{
+								from = "materials/white.vmat"
+								to = "materials/black.vmat"
+							},
+							{
+								from = "materials/minifig/face_skeleton.vmat"
+								to = "materials/minifig/face_skeleton_dark.vmat"
+							},
+						]
 					},
 				]
 			},

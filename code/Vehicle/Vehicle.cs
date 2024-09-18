@@ -17,9 +17,9 @@ public partial class Vehicle : Component
 	public Vector3 LocalVelocity => Rigidbody.IsValid() ? Rigidbody.Velocity * Transform.Rotation.Inverse : Vector3.Zero;
 
 	[Property]
-	public float MaxSpeed { get; set; } = 1200.0f;
+	public float MaxSpeed { get; set; } = 1100.0f;
 	[Property]
-	public float Power { get; set; } = 1500000.0f;
+	public float Power { get; set; } = 1400000.0f;
 	[Property]
 	public float PowerLerpSpeed { get; set; } = 14.0f;
 	[Property]
