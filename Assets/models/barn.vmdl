@@ -113,7 +113,7 @@
 				children = 
 				[
 					{
-						_class = "PhysicsHullFile"
+						_class = "PhysicsMeshFile"
 						name = "barn_lod1"
 						parent_bone = ""
 						surface_prop = "default"
@@ -126,10 +126,8 @@
 						align_origin_z_type = "None"
 						filename = "models/barn_lod1.fbx"
 						import_scale = 1.0
-						faceMergeAngle = 10.0
-						maxHullVertices = 0
-						import_mode = "HullPerElement"
-						optimization_algorithm = "QEM"
+						maxMeshVertices = 0
+						qemError = 0.0
 						import_filter = 
 						{
 							exclude_by_default = false
