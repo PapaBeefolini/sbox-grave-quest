@@ -3,6 +3,7 @@
     "__guid": "1e84228b-9dbb-4707-923a-5043a847b53f",
     "Flags": 0,
     "Name": "fence",
+    "Tags": "wall",
     "Enabled": true,
     "Components": [
       {
@@ -67,6 +68,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

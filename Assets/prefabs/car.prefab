@@ -47,6 +47,7 @@
         "__guid": "7b13a2b6-8426-4b76-8998-6b8c39f3a721",
         "AngularDampingAirborne": 0.5,
         "AngularDampingGrounded": 4,
+        "CrashSound": "sounds/vehicle/crash.sound",
         "KeepUprightAngle": 55,
         "MaxSpeed": 1100,
         "PizzaPrefab": {
@@ -310,6 +311,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

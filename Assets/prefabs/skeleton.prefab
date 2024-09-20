@@ -25,20 +25,6 @@
         "UseAnimGraph": true
       },
       {
-        "__type": "Sandbox.ModelPhysics",
-        "__guid": "d25b51fd-9572-4fab-9935-d26c27ce0887",
-        "Locking": {},
-        "Model": "models/skeleton.vmdl",
-        "MotionEnabled": false,
-        "Renderer": {
-          "_type": "component",
-          "component_id": "96f7fe81-b15c-4893-bc6a-1870cdbc7470",
-          "go": "82300eea-715e-4f62-9b84-3ccd83223505",
-          "component_type": "SkinnedModelRenderer"
-        },
-        "RigidbodyFlags": 0
-      },
-      {
         "__type": "Sandbox.CapsuleCollider",
         "__guid": "8f02848b-6812-4170-b58a-5f39f8cd0178",
         "End": "0,0,48",
@@ -141,28 +127,6 @@
             "RenderType": "On",
             "Tint": "1,1,1,1",
             "UseAnimGraph": true
-          },
-          {
-            "__type": "Sandbox.ModelCollider",
-            "__guid": "34ef2c86-246d-464b-a98f-55da206516f8",
-            "__enabled": false,
-            "IsTrigger": false,
-            "Static": false,
-            "Surface": "surfaces/plastic.surface"
-          },
-          {
-            "__type": "Sandbox.Rigidbody",
-            "__guid": "571d10b0-f1ea-491e-a709-14aed4926c75",
-            "AngularDamping": 0,
-            "Gravity": true,
-            "LinearDamping": 0,
-            "Locking": {},
-            "MassCenterOverride": "0,0,0",
-            "MassOverride": 5,
-            "MotionEnabled": false,
-            "OverrideMassCenter": false,
-            "RigidbodyFlags": 0,
-            "StartAsleep": false
           }
         ]
       }
@@ -172,6 +136,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

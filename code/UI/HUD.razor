@@ -15,20 +15,20 @@
 
 @code
 {
-    public float CurrentTime { get; set; } = 0;
+    public int CurrentTime { get; set; } = 0;
     public Score ScorePanel { get; set; }
     public Pizza PizzaPanel { get; set; }
 
     protected override void OnUpdate()
     {
-        CurrentTime = Time.Now;
+        CurrentTime = MathX.FloorToInt(20 - Time.Now);
     }
 
     public void OnGameEvent(PizzaThrownEvent args)
     {
         if (!PizzaPanel.IsValid())
             return;
-        _ = PizzaPanel.Shake();
+        PizzaPanel.Animate();
     }
 
     public void OnGameEvent(SkeletonDiedEvent args)

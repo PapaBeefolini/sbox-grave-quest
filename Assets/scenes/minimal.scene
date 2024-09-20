@@ -250,6 +250,7 @@
       "__guid": "baa622bd-469e-4054-930b-caa93c2ae04b",
       "Flags": 0,
       "Name": "World Border",
+      "Tags": "wall",
       "Enabled": true,
       "Children": [
         {
@@ -354,6 +355,7 @@
       "Flags": 0,
       "Name": "fence",
       "Position": "-1300,-1552,-2",
+      "Tags": "wall",
       "Enabled": true,
       "__Prefab": "prefabs/fence.prefab",
       "__PrefabVariables": {}

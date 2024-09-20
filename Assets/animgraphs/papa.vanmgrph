@@ -415,7 +415,7 @@
 					m_sNote = ""
 					m_tagSpans = [  ]
 					m_sequenceName = "crash"
-					m_playbackSpeed = 1.0
+					m_playbackSpeed = 1.25
 					m_bLoop = false
 				}
 			},
@@ -576,7 +576,7 @@
 			},
 			{
 				_class = "CBoolAnimParameter"
-				m_name = "Crashed"
+				m_name = "Crash"
 				m_id = 
 				{
 					m_id = 1007013929

@@ -21,16 +21,9 @@
     {
         CurrentScore++;
 
-        _ = Bruh();
-    }
-
-    public async Task Bruh()
-    {
         if (!SkullPanel.IsValid())
             return;
-        SkullPanel.AddClass("shake");
-        await Task.DelayRealtimeSeconds(0.15f);
-        SkullPanel.RemoveClass("shake");
+        SkullPanel.FlashClass("shake", 0.15f);
     }
 
     protected override int BuildHash() => System.HashCode.Combine(CurrentScore);

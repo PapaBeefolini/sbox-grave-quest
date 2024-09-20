@@ -1,4 +1,6 @@
-﻿namespace MightyBrick.GraveQuest;
+﻿using Sandbox;
+
+namespace MightyBrick.GraveQuest;
 
 public partial class Skeleton
 {
@@ -30,6 +32,18 @@ public partial class Skeleton
 		HatRenderer.Model = chosenHat.Model;
 		HatRenderer.Tint = chosenHat.GetColor();
 		HatRenderer.Enabled = true;
-		HatCollider.Model = chosenHat.Model;
+	}
+
+	private void DropHat()
+	{
+		ModelCollider collider = HatRenderer.Components.Create<ModelCollider>();
+		collider.Model = HatRenderer.Model;
+		collider.Surface = Surface.FindByName( "plastic" );
+
+		HatRenderer.GameObject.SetParent( null );
+		HatRenderer.BoneMergeTarget = null;
+
+		Rigidbody rigidbody = HatRenderer.Components.Create<Rigidbody>();
+		rigidbody.MassOverride = 5.0f;
 	}
 }

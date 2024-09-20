@@ -4,7 +4,7 @@ using System;
 
 namespace MightyBrick.GraveQuest;
 
-public partial class Vehicle : Component
+public partial class Vehicle : Component, Component.ITriggerListener, Component.ICollisionListener
 {
 	public static Vehicle Local { get; private set; }
 
@@ -30,6 +30,8 @@ public partial class Vehicle : Component
 	public float AngularDampingAirborne { get; set; } = 0.5f;
 	[Property]
 	public float KeepUprightAngle { get; set; } = 55.0f;
+	[Property]
+	public SoundEvent CrashSound { get; private set; }
 
 	public float InputForward { get; set; } = 0.0f;
 	public float InputRight { get; set; } = 0.0f;
@@ -55,20 +57,29 @@ public partial class Vehicle : Component
 		UpdateGrounded();
 		KeepUpright();
 
-		//if ( Input.Pressed( "Jump" ) )
-		//	Rigidbody.PhysicsBody.ApplyImpulse( Vector3.Up * 400000.0f );
-
-		if ( Input.Pressed( "ThrowPizza" ) )
-			ThrowPizza();
-
 		Papa?.SetInputs( InputForward, InputRight );
 	}
 
-	protected override void OnUpdate()
+	public void OnTriggerEnter( Collider collider )
 	{
-		//Gizmo.Draw.ScreenText( InputRight.ToString(), Vector2.Zero );
-		//Gizmo.Draw.ScreenText( Rigidbody.AngularDamping.ToString(), new Vector2( 0, 20 ) );
-		//Gizmo.Draw.ScreenText( Rigidbody.Velocity.Length.ToString(), new Vector2( 0, 40 ) );
+		Vector3 direction = Vector3.Direction( collider.Transform.Position, Transform.Position );
+		Vector3 force = direction * LocalVelocity.Length * 4.0f + Vector3.Up * 2000.0f;
+
+		if ( collider.Components.TryGet<Skeleton>( out Skeleton skeleton ) )
+		{
+			skeleton.Kill( force, LocalVelocity.Length );
+			Sound.Play( CrashSound, Transform.Position );
+		}
+	}
+
+	public void OnCollisionStart( Collision collision )
+	{
+		float dot = Vector3.Dot( Transform.Rotation.Backward, collision.Contact.Normal );
+		if ( collision.Contact.Speed.Length >= 700.0f && collision.Other.GameObject.Tags.Has( "wall" ) && dot > 0.7f )
+		{
+			Papa?.Crash();
+			Sound.Play( CrashSound, Transform.Position );
+		}
 	}
 
 	private void UpdateInputs()
@@ -87,6 +98,9 @@ public partial class Vehicle : Component
 
 		InputForward = InputForward.LerpTo( forward, PowerLerpSpeed * Time.Delta );
 		InputRight = InputRight.LerpTo( steer, SteerLerpSpeed * Time.Delta );
+
+		if ( Input.Pressed( "ThrowPizza" ) )
+			ThrowPizza();
 	}
 
 	private void UpdateGrounded()

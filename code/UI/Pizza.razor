@@ -17,13 +17,11 @@
     public Panel PizzaPanel { get; set; }
     public float PizzaReload => GetThrowCooldown();
 
-    public async Task Shake()
+    public void Animate()
     {
         if (!PizzaPanel.IsValid())
             return;
-        PizzaPanel.AddClass("shake");
-        await Task.DelayRealtimeSeconds(0.5f);
-        PizzaPanel.RemoveClass("shake");
+        PizzaPanel.FlashClass("shake", 0.5f);
     }
 
     private float GetThrowCooldown()
