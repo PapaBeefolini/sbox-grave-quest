@@ -7,13 +7,13 @@ public sealed class Pizza : Component, Component.ITriggerListener
 	[RequireComponent]
 	public Rigidbody Rigidbody { get; private set; }
 	[Property]
-	public float ExplosionRadius { get; set; } = 250.0f;
+	public float ExplosionRadius { get; set; } = 200.0f;
 	[Property]
 	public SoundEvent ExplosionSound { get; set; }
 
 	protected override void OnStart()
 	{
-		Rigidbody.PhysicsBody.SpeculativeContactEnabled = true;
+		GameObject.DestroyDelayed( 10.0f );
 	}
 
 	public void OnTriggerEnter( Collider collider )
@@ -23,7 +23,7 @@ public sealed class Pizza : Component, Component.ITriggerListener
 
 	private void Explode()
 	{
-		GameObject explosion = ExplosionPrefab.Clone( Transform.Position, Transform.Rotation );
+		GameObject explosion = ExplosionPrefab.Clone( Transform.Position, Rotation.FromPitch( -90 ) );
 
 		SceneTraceResult[] hitObjects = Scene.Trace.Sphere( ExplosionRadius, Transform.Position, Transform.Position )
 			.IgnoreGameObjectHierarchy( GameObject )

@@ -3,7 +3,7 @@
   "clampv": false,
   "clampw": false,
   "nolod": false,
-  "nomip": false,
+  "nomip": true,
   "nocompress": false,
   "brightness": 1
 }

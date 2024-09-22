@@ -23,7 +23,7 @@
 					m_sNote = ""
 					m_tagSpans = [  ]
 					m_sequenceName = "stand_idle"
-					m_playbackSpeed = 1.0
+					m_playbackSpeed = 0.4
 					m_bLoop = true
 				}
 			},

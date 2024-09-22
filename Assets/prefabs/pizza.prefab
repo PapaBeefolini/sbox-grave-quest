@@ -21,10 +21,11 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "Sandbox.ModelCollider",
-        "__guid": "a98dfa5e-6662-4d22-b49d-df3228b81c55",
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "9c43d1ca-bf82-4a67-87f9-1e5e79a330fc",
+        "Center": "0,0,2.5",
         "IsTrigger": true,
-        "Model": "models/pizza.vmdl",
+        "Scale": "24,24,12",
         "Static": false,
         "Surface": "surfaces/plastic.surface"
       },
@@ -47,8 +48,9 @@
         "__guid": "5e6747b9-8e7f-4691-b282-339a2c54d259",
         "ExplosionPrefab": {
           "_type": "gameobject",
-          "prefab": "particles/explosion.prefab"
+          "prefab": "prefabs/explosion.prefab"
         },
+        "ExplosionRadius": 200,
         "ExplosionSound": "sounds/explosion.sound"
       }
     ],
@@ -58,6 +60,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

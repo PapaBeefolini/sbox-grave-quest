@@ -1,3 +1,9 @@
 {
-	"nomip": 1
+  "clampu": false,
+  "clampv": false,
+  "clampw": false,
+  "nolod": false,
+  "nomip": true,
+  "nocompress": false,
+  "brightness": 1
 }

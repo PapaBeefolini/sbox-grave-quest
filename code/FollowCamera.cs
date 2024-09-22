@@ -1,4 +1,5 @@
 using Sandbox;
+using static Sandbox.Citizen.CitizenAnimationHelper;
 
 namespace MightyBrick.GraveQuest;
 
@@ -41,10 +42,13 @@ public sealed class FollowCamera : Component
 	private TimeUntil timeUntilAutoFocus = 0.0f;
 	private bool isDrivingBackwards = false;
 
-	protected override void OnStart()
+	protected override void OnAwake()
 	{
 		Instance = this;
+	}
 
+	protected override void OnStart()
+	{
 		cameraZoom = (MinZoom + MaxZoom) / 2.0f;
 		EyeAngles = AutoFocusRotationOffset;
 	}
@@ -57,6 +61,11 @@ public sealed class FollowCamera : Component
 		Zoom();
 		Look();
 		AutoFocus();
+
+		shakeOffset = shakeOffset.LerpTo( Vector3.Zero, 12.0f * Time.Delta );
+
+		//if ( Input.Pressed( "Brake" ) )
+		//	Shake( 32 );
 	}
 
 	private void Zoom()
@@ -87,7 +96,7 @@ public sealed class FollowCamera : Component
 		if ( cameraDistance > trace.Distance && trace.Hit )
 			cameraDistance = trace.Distance;
 
-		Transform.LocalPosition = startPosition + Transform.Rotation.Backward * cameraDistance;
+		Transform.LocalPosition = startPosition + Transform.Rotation.Backward * cameraDistance + shakeOffset;
 		Transform.Rotation *= new Angles(-8, 0, 0);
 	}
 
@@ -114,5 +123,29 @@ public sealed class FollowCamera : Component
 			angles.yaw = isDrivingBackwards ? angles.yaw + 180.0f : angles.yaw;
 			EyeAngles = EyeAngles.LerpTo( angles + AutoFocusRotationOffset, AutoFocusSpeed * Time.Delta );
 		}
+	}
+	Vector3 shakeOffset;
+	public void Shake(float amount)
+	{
+		// Define the intensity of the shake
+		float shakeIntensity = amount;
+
+		// Create random shake values for X, Y, and Z axis
+		float shakeX = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
+		float shakeY = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
+		float shakeZ = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
+
+		// Apply the shake offset to the camera's local position
+		shakeOffset = new Vector3( shakeX, shakeY, shakeZ );
+		//Transform.LocalPosition += shakeOffset;
+
+		// Optionally, you could also apply a small rotation shake if desired
+		float shakePitch = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
+		float shakeYaw = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
+		float shakeRoll = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
+
+		// Apply the rotation shake to the camera's rotation
+		//Angles shakeRotation = new Angles( shakePitch, shakeYaw, shakeRoll );
+		//Transform.Rotation *= shakeRotation.ToRotation();
 	}
 }
