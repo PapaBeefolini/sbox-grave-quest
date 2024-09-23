@@ -1174,7 +1174,7 @@
       "AgentRadius": 12,
       "AgentStepSize": 16,
       "AgentMaxSlope": 48,
-      "ExcludedBodies": "enemy,world-border",
+      "ExcludedBodies": "enemy,world-border,car",
       "IncludedBodies": ""
     }
   },
