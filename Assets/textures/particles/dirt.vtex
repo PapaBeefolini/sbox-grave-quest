@@ -2,6 +2,7 @@
   "Sequences": [
     {
       "Source": "textures/particles/dirt.png",
+      "IsLooping": true,
       "Frames": 64
     }
   ],

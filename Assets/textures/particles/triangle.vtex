@@ -1,11 +1,11 @@
 {
   "Sequences": [
     {
-      "Source": "textures/particles/smoke.png",
+      "Source": "textures/particles/triangle.png",
       "FlipBook": true,
-      "Columns": 1,
+      "Columns": 8,
       "Rows": 1,
-      "Frames": 4
+      "Frames": 7
     }
   ],
   "OutputTypeString": "2D"
