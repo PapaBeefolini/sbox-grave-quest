@@ -13,7 +13,7 @@ public partial class Vehicle
 	[Property, Category( "Pizza Throwing" )]
 	public Vector3 ThrowOffset { get; private set; } = new Vector3( 50.0f, 0.0f, 50.0f );
 	[Property, Category( "Pizza Throwing" )]
-	public float ThrowCooldown { get; private set; } = 1.0f;
+	public float ThrowCooldown { get; private set; } = 1.5f;
 	[Property, Category( "Pizza Throwing" )]
 	public SoundEvent ThrowSound { get; private set; }
 

@@ -57,7 +57,7 @@
         "Power": 1400000,
         "PowerLerpSpeed": 14,
         "SteerLerpSpeed": 12,
-        "ThrowCooldown": 1,
+        "ThrowCooldown": 1.5,
         "ThrowForce": "600,0,300",
         "ThrowOffset": "30,0,60",
         "ThrowSound": "sounds/vehicle/throw.sound"
