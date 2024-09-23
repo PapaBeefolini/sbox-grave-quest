@@ -93,7 +93,9 @@
               "0.27969,0,0.3814,1"
             ]
           }
-        ]
+        ],
+        "MaxSpeedMultiplier": 1.2,
+        "MinSpeedMultiplier": 0.8
       }
     ],
     "Children": [

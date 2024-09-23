@@ -7,9 +7,9 @@ public partial class Skeleton : Minifig
 {
 	[RequireComponent]
 	public CapsuleCollider Collider { get; private set; }
-	[Property]
+	[Property, Category( "Sounds" )]
 	public SoundEvent DeathSound { get; private set; }
-	[Property]
+	[Property, Category( "Sounds" )]
 	public SoundEvent BreakSound { get; private set; }
 
 	public bool IsDead { get; private set; }
@@ -23,6 +23,8 @@ public partial class Skeleton : Minifig
 		// 25% chance at being a dark skeleton
 		if ( Game.Random.Int( 3 ) == 0 )
 			Renderer.MaterialGroup = "dark";
+
+		SetRandomMoveSpeed();
 	}
 
 	protected override void OnUpdate()

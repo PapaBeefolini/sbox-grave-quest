@@ -10,7 +10,7 @@
   "EditorReferences": null,
   "IsWhitelistDisabled": false,
   "Metadata": {
-    "MaxPlayers": 64,
+    "MaxPlayers": 1,
     "MinPlayers": 1,
     "TickRate": 50,
     "GameNetworkType": "Multiplayer",
@@ -22,7 +22,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/minimal.scene",
+    "StartupScene": "scenes/main-menu.scene",
     "ControlModes": {
       "Keyboard": true,
       "Gamepad": true
@@ -73,6 +73,7 @@
         }
       ],
       "__guid": "187f9a41-94a1-4497-904b-df2ba9901001"
-    }
+    },
+    "LaunchMode": "Normal"
   }
 }

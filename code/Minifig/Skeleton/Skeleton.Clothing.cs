@@ -1,10 +1,8 @@
-﻿using Sandbox;
-
-namespace MightyBrick.GraveQuest;
+﻿namespace MightyBrick.GraveQuest;
 
 public partial class Skeleton
 {
-	[Property]
+	[Property, Category( "Hats" )]
 	public Hat[] Hats { get; private set; }
 
 	public struct Hat

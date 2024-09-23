@@ -9,13 +9,45 @@
 			{
 				key = 
 				{
+					m_id = 303462587
+				}
+				value = 
+				{
+					_class = "CSpeedScaleAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -304.0, 0.0 ]
+					m_nNodeID = 
+					{
+						m_id = 303462587
+					}
+					m_sNote = ""
+					m_inputConnection = 
+					{
+						m_nodeID = 
+						{
+							m_id = 1416620247
+						}
+						m_outputID = 
+						{
+							m_id = 4294967295
+						}
+					}
+					m_param = 
+					{
+						m_id = 620391283
+					}
+				}
+			},
+			{
+				key = 
+				{
 					m_id = 487904992
 				}
 				value = 
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -480.0, 64.0 ]
+					m_vecPosition = [ -480.0, 80.0 ]
 					m_nNodeID = 
 					{
 						m_id = 487904992
@@ -36,7 +68,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -480.0, -64.0 ]
+					m_vecPosition = [ -480.0, -80.0 ]
 					m_nNodeID = 
 					{
 						m_id = 639005120
@@ -57,7 +89,7 @@
 				{
 					_class = "CStateMachineAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -192.0, -16.0 ]
+					m_vecPosition = [ 16.0, -16.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1106108300
@@ -181,7 +213,7 @@
 							{
 								m_nodeID = 
 								{
-									m_id = 1416620247
+									m_id = 303462587
 								}
 								m_outputID = 
 								{
@@ -281,7 +313,7 @@
 					m_sNote = ""
 					m_tagSpans = [  ]
 					m_sequenceName = "run"
-					m_playbackSpeed = 1.0
+					m_playbackSpeed = 1.2
 					m_bLoop = true
 				}
 			},
@@ -294,7 +326,7 @@
 				{
 					_class = "CRootAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 64.0, -16.0 ]
+					m_vecPosition = [ 272.0, -16.0 ]
 					m_nNodeID = 
 					{
 						m_id = 2033137295
@@ -333,6 +365,20 @@
 				m_fDefaultValue = 0.0
 				m_fMinValue = 0.0
 				m_fMaxValue = 1000.0
+			},
+			{
+				_class = "CFloatAnimParameter"
+				m_name = "SpeedMultiplier"
+				m_id = 
+				{
+					m_id = 620391283
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bUseMostRecentValue = false
+				m_bAutoReset = false
+				m_fDefaultValue = 0.0
+				m_fMinValue = 0.0
+				m_fMaxValue = 1.0
 			},
 		]
 	}
