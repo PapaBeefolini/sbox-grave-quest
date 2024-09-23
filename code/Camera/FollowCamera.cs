@@ -1,6 +1,3 @@
-using Sandbox;
-using static Sandbox.Citizen.CitizenAnimationHelper;
-
 namespace MightyBrick.GraveQuest;
 
 public sealed class FollowCamera : Component

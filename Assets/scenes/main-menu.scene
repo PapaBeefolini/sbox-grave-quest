@@ -112,8 +112,13 @@
           "Smoothness": 1
         },
         {
-          "__type": "MightyBrick.GraveQuest.CameraSway",
-          "__guid": "f7fca2cc-a68e-474f-a37f-cb3f85d5a884",
+          "__type": "MightyBrick.GraveQuest.MenuCamera",
+          "__guid": "b72e5f6d-b178-45ac-aea2-2e85c47a01b2",
+          "CustomizationTransform": {
+            "_type": "gameobject",
+            "go": "55449a3b-a0f9-4d74-b24e-5e33e054a10f"
+          },
+          "IsCustomizing": false,
           "SwayAmount": 1,
           "SwaySpeed": 0.5
         }
@@ -152,6 +157,14 @@
           "Volume": 1
         }
       ]
+    },
+    {
+      "__guid": "55449a3b-a0f9-4d74-b24e-5e33e054a10f",
+      "Flags": 0,
+      "Name": "Customization Spot",
+      "Position": "-984.6487,803.2031,39.97226",
+      "Rotation": "-0.004981524,0.0002042379,0.8035132,0.5952661",
+      "Enabled": true
     },
     {
       "__guid": "c61477c2-0402-441c-8340-56f80363786d",
