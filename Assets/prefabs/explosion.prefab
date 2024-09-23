@@ -3,7 +3,6 @@
     "__guid": "6e7dcebf-4384-4cb7-9e54-d020f078f4b0",
     "Flags": 0,
     "Name": "explosion",
-    "Rotation": "0,-0.7071068,0,0.7071068",
     "Tags": "particles",
     "Enabled": true,
     "Components": [
@@ -638,14 +637,14 @@
             "Additive": false,
             "Alignment": "LookAtCamera",
             "BlurAmount": 0.5,
-            "BlurOpacity": 0.91,
-            "BlurSpacing": 0.73,
+            "BlurOpacity": 0.4,
+            "BlurSpacing": 0.4,
             "DepthFeather": 0,
             "FaceVelocity": true,
             "FogStrength": 1,
             "LeadingTrail": true,
             "Lighting": false,
-            "MotionBlur": false,
+            "MotionBlur": true,
             "Opaque": false,
             "RenderOptions": {
               "GameLayer": true,
@@ -700,8 +699,8 @@
             "FadeOut": false,
             "Time": 0.1,
             "TimeUntilDestroy": {
-              "Relative": -2131.5437,
-              "Passed": 2131.5437,
+              "Relative": -2372.175,
+              "Passed": 2372.175,
               "Fraction": 1
             }
           }
