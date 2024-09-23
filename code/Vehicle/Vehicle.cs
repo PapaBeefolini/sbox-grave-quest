@@ -65,7 +65,7 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 		Vector3 direction = Vector3.Direction( collider.Transform.Position, Transform.Position );
 		Vector3 force = direction * LocalVelocity.Length * 4.0f + Vector3.Up * 2000.0f;
 
-		if ( collider.Components.TryGet<Skeleton>( out Skeleton skeleton ) )
+		if ( collider.Components.TryGet<Skeleton>( out Skeleton skeleton ) && LocalVelocity.Length > 100.0f )
 		{
 			skeleton.Kill( force, LocalVelocity.Length );
 			Sound.Play( CrashSound, Transform.Position );
