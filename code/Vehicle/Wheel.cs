@@ -27,19 +27,27 @@ public sealed class Wheel : Component
 	public bool Steering { get; set; } = false;
 	[Property, ToggleGroup( "Steering" )]
 	public float SteerAngle { get; set; } = 35.0f;
+	[Property]
+	public GameObject DirtParticleEffectPrefab { get; set; }
 
 	public Vector3 SurfaceImpactPoint { get; private set; }
 	public Vector3 SurfaceImpactNormal { get; private set; }
 	public float SurfaceImpactDistance { get; private set; }
+	public ParticleEffect DirtParticleEffect { get; private set; }
 
 	private Vector3 liftForce = Vector3.Zero;
 	private Vector3 tractionForce = Vector3.Zero;
 	private Vector3 driveForce = Vector3.Zero;
+	private float rotationSpeed = 0.0f;
 
 	protected override void OnAwake()
 	{
 		Vehicle = GameObject.Components.GetInParent<Vehicle>();
 		WheelModel = GameObject.Components.GetInChildren<ModelRenderer>();
+
+		GameObject particles = DirtParticleEffectPrefab.Clone( Transform.Position );
+		particles.SetParent( GameObject );
+		DirtParticleEffect = particles.Components.Get<ParticleEffect>();
 	}
 
 	protected override void OnFixedUpdate()
@@ -53,6 +61,7 @@ public sealed class Wheel : Component
 		Drive();
 		Steer();
 		UpdateModel();
+		UpdateParticles();
 		ApplyForce();
 	}
 
@@ -144,8 +153,22 @@ public sealed class Wheel : Component
 		WheelModel.Transform.Position = Transform.Position + Transform.Rotation.Up * zOffset;
 
 		float circumference = 2 * MathF.PI * WheelRadius;
-		float rotationSpeed = (Vehicle.LocalVelocity.x + Vehicle.InputForward * 200) / circumference * (Inverted ? -360 : 360);
+		rotationSpeed = (Vehicle.LocalVelocity.x + Vehicle.InputForward * 200) / circumference * (Inverted ? -360 : 360);
 		WheelModel.Transform.Rotation *= Rotation.FromAxis( Vector3.Left, rotationSpeed * Time.Delta );
+	}
+
+	private void UpdateParticles()
+	{
+		if ( !Grounded || float.Abs( rotationSpeed ) < 600.0f || Vehicle.LocalVelocity.Length > 800.0f )
+			return;
+
+		DirtParticleEffect.Transform.Position = SurfaceImpactPoint + SurfaceImpactNormal * 4.0f;
+
+		for ( int i = 0; i < 3; i++ )
+		{
+			Particle particle = DirtParticleEffect.Emit( DirtParticleEffect.Transform.Position, Time.Delta );
+			particle.Velocity += Vehicle.Transform.Rotation.Backward * Vehicle.LocalVelocity.x;
+		}
 	}
 
 	private void ApplyForce()

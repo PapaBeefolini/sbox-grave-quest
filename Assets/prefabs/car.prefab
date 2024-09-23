@@ -105,6 +105,10 @@
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "1d73a668-07ae-4a84-8679-9df2e4c07213",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
             "Inverted": false,
             "SpringDamper": 2500,
             "SpringStrength": 100000,
@@ -152,6 +156,10 @@
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "60742be5-dacf-4b86-a750-84322eaf5052",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
             "Inverted": true,
             "SpringDamper": 2500,
             "SpringStrength": 100000,
@@ -198,6 +206,10 @@
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "0eb94ed7-ef83-4c2b-9e05-371e2694b282",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
             "Inverted": false,
             "SpringDamper": 2500,
             "SpringStrength": 100000,
@@ -245,6 +257,10 @@
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "3b6aade5-e6a1-4508-94ce-8ef684b95afe",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
             "Inverted": true,
             "SpringDamper": 2500,
             "SpringStrength": 100000,
