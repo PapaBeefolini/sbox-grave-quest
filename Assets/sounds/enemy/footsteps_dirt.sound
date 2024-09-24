@@ -1,0 +1,27 @@
+{
+  "UI": false,
+  "Volume": "0.4",
+  "Pitch": "0.9 1.1",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/enemy/footstep_dirt_01.vsnd",
+    "sounds/enemy/footstep_dirt_02.vsnd",
+    "sounds/enemy/footstep_dirt_03.vsnd",
+    "sounds/enemy/footstep_dirt_04.vsnd",
+    "sounds/enemy/footstep_dirt_05.vsnd",
+    "sounds/enemy/footstep_dirt_06.vsnd",
+    "sounds/enemy/footstep_dirt_07.vsnd",
+    "sounds/enemy/footstep_dirt_08.vsnd",
+    "sounds/enemy/footstep_dirt_09.vsnd",
+    "sounds/enemy/footstep_dirt_10.vsnd"
+  ],
+  "Occlusion": false,
+  "AirAbsorption": true,
+  "Transmission": true,
+  "OcclusionRadius": 64,
+  "DistanceAttenuation": true,
+  "__references": [],
+  "IsValid": true,
+  "__version": 0
+}
