@@ -10,6 +10,7 @@ MainMenu {
 	font-size: 26px;
 	font-family: Poppins;
 	font-weight: bold;
+	text-transform: uppercase;
 
 	.blur-background {
 		position: absolute;
@@ -20,7 +21,6 @@ MainMenu {
 	}
 
 	.buttons-parent {
-		text-transform: uppercase;
 		position: absolute;
 		top: 45%;
 		left: 8%;
@@ -31,24 +31,28 @@ MainMenu {
 	}
 
 	button {
-		text-stroke: 14px black;
 		color: $orange;
 		border: none;
 		border-radius: 16px;
 		padding: 16px 0px;
 		cursor: pointer;
+		text-stroke: 14px black;
 		transition: all 0.05s linear;
 
 		&:hover {
 			sound-in: 'hover';
 			color: $purple;
+			padding-left: 32px;
+			transform: scale(1.1);
 			transition: all 0.05s linear;
 		}
 
 		&:active {
-			sound-in: 'hover';
+			sound-in: 'click';
 			color: $dark-purple;
-			transition: all 0.05s linear;
+			padding-left: 16px;
+			transform: scale(1);
+			transition: all 0.01s linear;
 		}
 	}
 
@@ -57,8 +61,8 @@ MainMenu {
 		background-repeat: no-repeat;
 		background-size: contain;
 		width: 600px;
-		margin-left: 2%;
-		margin-top: 8%;
+		top: 8%;
+		left: 2%;
 		animation: logo 1s ease infinite alternate;
 	}
 
@@ -69,6 +73,15 @@ MainMenu {
 		color: white;
 		font-size: 18px;
 		margin: 24px;
+		text-stroke: 10px black;
+	}
+
+	.discord {
+		position: absolute;
+		top: 6%;
+		right: 2%;
+		margin: 24px;
+		animation: discord 1s ease infinite alternate;
 	}
 }
 
@@ -79,5 +92,15 @@ MainMenu {
 
 	100% {
 		transform: rotate(-10deg) scale(1.1);
+	}
+}
+
+@keyframes discord {
+	0% {
+		transform: rotate(4deg) scale(1.0);
+	}
+
+	100% {
+		transform: rotate(6deg) scale(1.1);
 	}
 }

@@ -1,0 +1,18 @@
+{
+  "UI": true,
+  "Volume": "0.6",
+  "Pitch": "0.95 1.05",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/ui/hover.vsnd"
+  ],
+  "Occlusion": true,
+  "AirAbsorption": true,
+  "Transmission": true,
+  "OcclusionRadius": 64,
+  "DistanceAttenuation": true,
+  "__references": [],
+  "IsValid": true,
+  "__version": 0
+}

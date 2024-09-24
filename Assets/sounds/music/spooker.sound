@@ -13,5 +13,6 @@
   "OcclusionRadius": 64,
   "DistanceAttenuation": true,
   "__references": [],
+  "IsValid": true,
   "__version": 0
 }
