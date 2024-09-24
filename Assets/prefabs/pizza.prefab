@@ -51,7 +51,7 @@
           "prefab": "prefabs/explosion.prefab"
         },
         "ExplosionRadius": 200,
-        "ExplosionSound": "sounds/explosion.sound"
+        "ExplosionSound": "sounds/explosions/explosion.sound"
       }
     ],
     "Children": [],
@@ -63,5 +63,6 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }
