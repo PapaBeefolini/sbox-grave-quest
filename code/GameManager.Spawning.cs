@@ -8,13 +8,18 @@ public partial class GameManager
 	public GameObject SkeletonPrefab { get; set; }
 	public TimeUntil TimeUntilNextSkeletonSpawn { get; set; } = 0.0f;
 
+	private float spawnRadius = 1550.0f;
+
 	private async Task SpawnInitialSkeletons()
 	{
 		while ( Scene.NavMesh.IsGenerating )
 			await Task.Yield();
 
 		for ( int i = 0; i < 5; i++ )
+		{
 			SpawnSkeleton();
+			await Task.DelaySeconds( Game.Random.Float( 0.1f, 0.2f ) );
+		}
 	}
 
 	private void SpawnSkeleton()
