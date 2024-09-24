@@ -17,9 +17,8 @@ HUD {
 
 		label {
 			font-size: 48px;
-			text-shadow: 0px 0px 16px rgba( black, 0.6 );
-			text-stroke-color: black;
-			text-stroke-width: 12px;
+			text-shadow: 0px 0px 16px rgba( black, 0.8 );
+			text-stroke: 12px black;
 			padding-left: 16px;
 		}
 
@@ -36,9 +35,8 @@ HUD {
 
 		label {
 			font-size: 72px;
-			text-shadow: 0px 0px 16px rgba( black, 0.6 );
-			text-stroke-color: black;
-			text-stroke-width: 14px;
+			text-shadow: 0px 0px 16px rgba( black, 0.8 );
+			text-stroke: 14px black;
 		}
 	}
 
