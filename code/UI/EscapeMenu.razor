@@ -6,8 +6,9 @@
 <root>
     <h2>PAUSED</h2>
     <div class="options">
-        <p>Resume</p>
-        <p>Quit</p>
+        <Button Text="Resume" OnClick=@(() => GameManager.Instance.ToggleEscapeMenu()) />
+        <Button Text="Options" OnClick=@(() => Log.Info("Options")) />
+        <Button Text="Quit" OnClick=@(() => GameManager.Instance.LoadMainMenuScene()) />
     </div>
 </root>
 

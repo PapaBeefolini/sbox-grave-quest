@@ -3,6 +3,7 @@ global using Sandbox.Utility;
 global using System;
 global using System.Linq;
 global using System.Threading.Tasks;
+using MightyBrick.GraveQuest.UI;
 
 namespace MightyBrick.GraveQuest;
 
@@ -14,6 +15,7 @@ public partial class GameManager : Component
 	public ScreenPanel MainMenuUI { get; private set; }
 	[Property, Category( "UI" )]
 	public ScreenPanel GameUI { get; private set; }
+	public EscapeMenu EscapeMenu { get; private set; }
 	[Property, Category( "UI" )]
 	public SoundPointComponent MusicSoundPoint { get; private set; }
 
@@ -27,6 +29,15 @@ public partial class GameManager : Component
 		Game
 	}
 
+	protected override void OnEnabled()
+	{
+		if ( Instance.IsValid() && Instance != this )
+		{
+			GameObject.Destroy();
+			return;
+		}
+	}
+
 	protected override void OnAwake()
 	{
 		if ( Instance.IsValid() && Instance != this )
@@ -34,13 +45,10 @@ public partial class GameManager : Component
 			GameObject.Destroy();
 			return;
 		}
-
 		Instance = this;
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
-	}
 
-	protected override void OnStart()
-	{
+		EscapeMenu = GameUI.Components.Get<EscapeMenu>();
 		RefreshUI();
 	}
 
@@ -49,7 +57,7 @@ public partial class GameManager : Component
 		if ( Input.EscapePressed )
 		{
 			Input.EscapePressed = false;
-			LoadMainMenuScene();
+			ToggleEscapeMenu();
 		}
 
 		if ( State == GameState.Game )
@@ -69,9 +77,22 @@ public partial class GameManager : Component
 		RefreshUI();
 	}
 
+	public void ToggleEscapeMenu()
+	{
+		EscapeMenu.Enabled = !EscapeMenu.Enabled;
+		Scene.TimeScale = EscapeMenu.Enabled ? 0.0f : 1.0f;
+	}
+
 	private void RefreshUI()
 	{
-		MainMenuUI.GameObject.Enabled = State == GameState.MainMenu;
-		GameUI.GameObject.Enabled = State == GameState.Game;
+		MainMenuUI.Enabled = State == GameState.MainMenu;
+		GameUI.Enabled = State == GameState.Game;
+		EscapeMenu.Enabled = false;
+	}
+
+	private void HideUI()
+	{ 
+		MainMenuUI.Enabled = false;
+		GameUI.Enabled = false;
 	}
 }

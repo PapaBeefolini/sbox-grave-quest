@@ -55,10 +55,6 @@
             {
               "__type": "MightyBrick.GraveQuest.UI.MainMenu",
               "__guid": "429b6b84-d79e-4f50-a8f5-72dff2c7fbfc"
-            },
-            {
-              "__type": "MightyBrick.GraveQuest.UI.EscapeMenu",
-              "__guid": "51cff7e1-6ed5-4e83-be6c-3dc3089c438e"
             }
           ]
         },
@@ -84,6 +80,10 @@
             {
               "__type": "MightyBrick.GraveQuest.UI.InputHintsHUD",
               "__guid": "1f29b5fb-e803-4025-9397-a8e56cc9b531"
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.EscapeMenu",
+              "__guid": "434d3643-a1ce-46d5-b859-4cba1b345b1e"
             }
           ]
         },

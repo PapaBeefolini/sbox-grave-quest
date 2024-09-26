@@ -38,6 +38,7 @@ public partial class GameManager : ISceneLoadingEvents
 	{
 		if ( !scene.IsValid() )
 			return;
+		HideUI();
 		Game.ActiveScene.Load( scene );
 		Game.ActiveScene.Name = scene.Title;
 	}

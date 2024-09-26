@@ -8,17 +8,19 @@ EscapeMenu {
 	bottom: 0;
 	background-color: rgba(black, 0.8);
 	pointer-events: all;
-	color: $orange;
-	font-family: Fredoka One;
-	font-size: 64px;
-	text-stroke: 14px black;
-	text-shadow: 0px 0px 16px black;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	gap: 48px;
 
 	h2 {
-		font-size: 96px;
+		color: $dark-purple;
+		font-family: Fredoka One;
+		font-size: 72px;
+		font-weight: bold;
+		text-stroke: 14px black;
+		text-shadow: 0px 0px 16px black;
+		text-transform: uppercase;
 	}
 
 	.options {

@@ -9,19 +9,19 @@
     @if (GameManager.Instance.IsCustomizing)
     {
         <div class="customization-parent">
-            <MenuButton Text="Next Hat" OnClick=@(() => ChangeHat(1)) />
-            <MenuButton Text="Previous Hat" OnClick=@(() => ChangeHat(-1)) />
-            <MenuButton Text="Back" OnClick=@(() => OnCustomize()) />
+            <Button class="right" Text="Next Hat" OnClick=@(() => ChangeHat(1)) />
+            <Button class="right" Text="Previous Hat" OnClick=@(() => ChangeHat(-1)) />
+            <Button class="bigger right" Text="Back" OnClick=@(() => OnCustomize()) />
         </div>
         return;
     }
 
     <img class="logo" src="ui/logo.png" />
     <div class="buttons-parent">
-        <MenuButton Text="Start Game" OnClick=@(() => OnStartGame()) />
-        <MenuButton Text="Customize" OnClick=@(() => OnCustomize()) />
-        <MenuButton Text="Options" OnClick=@(() => OnOptions()) />
-        <MenuButton Text="Quit" OnClick=@(() => OnQuit()) />
+        <Button class="left bigger" Text="Start Game" OnClick=@(() => OnStartGame()) />
+        <Button class="left" Text="Customize" OnClick=@(() => OnCustomize()) />
+        <Button class="left" Text="Options" OnClick=@(() => OnOptions()) />
+        <Button class="left" Text="Quit" OnClick=@(() => OnQuit()) />
     </div>
 
     <div class="discord">
@@ -33,7 +33,6 @@
 {
     private void OnStartGame()
     {
-        Log.Info("Start Game");
         GameManager.Instance.LoadGameScene();
     }
 
@@ -44,12 +43,12 @@
 
     private void OnOptions()
     {
-        Log.Info("Test");
+        Log.Info("Options");
     }
 
     private void OnQuit()
     {
-        Log.Info("Test");
+        Game.Close();
     }
 
     private void ChangeHat(int offset)
