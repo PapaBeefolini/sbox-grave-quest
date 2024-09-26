@@ -47,6 +47,7 @@ public sealed class FollowCamera : Component
 	protected override void OnStart()
 	{
 		cameraZoom = (MinZoom + MaxZoom) / 2.0f;
+		cameraDistance = cameraZoom;
 		EyeAngles = AutoFocusRotationOffset;
 	}
 
