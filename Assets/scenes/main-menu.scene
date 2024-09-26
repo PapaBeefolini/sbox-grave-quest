@@ -11,7 +11,25 @@
           "__type": "MightyBrick.GraveQuest.GameManager",
           "__guid": "a2344e3b-0169-48e7-b16f-718560c16aec",
           "GameScene": "scenes/game-world.scene",
+          "GameUI": {
+            "_type": "component",
+            "component_id": "ccf7533c-2c08-4aa2-a080-1bdda0870856",
+            "go": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
+            "component_type": "ScreenPanel"
+          },
           "MainMenuScene": "scenes/main-menu.scene",
+          "MainMenuUI": {
+            "_type": "component",
+            "component_id": "8a217c27-5846-48a9-901a-84fcdb985b75",
+            "go": "71cf2983-b8f7-45d4-ae8d-8a1f1024652a",
+            "component_type": "ScreenPanel"
+          },
+          "MusicSoundPoint": {
+            "_type": "component",
+            "component_id": "c8388ea4-be6e-4821-862e-9442935a069a",
+            "go": "a2a9bfa8-9e30-4296-9a13-648026779349",
+            "component_type": "SoundPointComponent"
+          },
           "SkeletonPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/skeleton.prefab"
