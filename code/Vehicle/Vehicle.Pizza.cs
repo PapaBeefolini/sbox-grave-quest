@@ -1,8 +1,4 @@
-﻿using Sandbox;
-using Sandbox.Events;
-using System;
-
-namespace MightyBrick.GraveQuest;
+﻿namespace MightyBrick.GraveQuest;
 
 public partial class Vehicle
 {

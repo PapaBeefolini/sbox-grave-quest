@@ -1,6 +1,3 @@
-using Sandbox;
-using System;
-
 namespace MightyBrick.GraveQuest;
 
 public sealed class Wheel : Component
@@ -9,7 +6,8 @@ public sealed class Wheel : Component
 	public ModelRenderer WheelModel { get; set; }
 
 	public bool Grounded { get; private set; }
-	public Vector3 LocalVelocity => Vehicle.IsValid() ? Vehicle.GetVelocityAtPoint( Transform.Position ) : Vector3.Zero;
+	public Vector3 Velocity => Vehicle.IsValid() ? Vehicle.GetVelocityAtPoint( Transform.Position ) : Vector3.Zero;
+	public Vector3 LocalVelocity => Velocity * Transform.Rotation.Inverse;
 
 	[Property]
 	public float SuspensionRestLength { get; set; } = 20.0f;
@@ -38,6 +36,7 @@ public sealed class Wheel : Component
 	private Vector3 liftForce = Vector3.Zero;
 	private Vector3 tractionForce = Vector3.Zero;
 	private Vector3 driveForce = Vector3.Zero;
+	private Vector3 brakeForce = Vector3.Zero;
 	private float rotationSpeed = 0.0f;
 
 	protected override void OnAwake()
@@ -60,6 +59,7 @@ public sealed class Wheel : Component
 		Traction();
 		Drive();
 		Steer();
+		AutoBraking();
 		UpdateModel();
 		UpdateParticles();
 		ApplyForce();
@@ -100,7 +100,7 @@ public sealed class Wheel : Component
 
 		Vector3 projectedDirection = Transform.Rotation.Up.ProjectOnNormal( SurfaceImpactNormal );
 		float offset = SuspensionRestLength - SurfaceImpactDistance;
-		float velocity = Vector3.Dot( projectedDirection, LocalVelocity );
+		float velocity = Vector3.Dot( projectedDirection, Velocity );
 		float force = (offset * SpringStrength) - (velocity * SpringDamper);
 		liftForce = Vector3.Up * force;
 	}
@@ -113,7 +113,7 @@ public sealed class Wheel : Component
 			return;
 		}
 
-		float sidewaysVelocity = Vector3.Dot( Transform.Rotation.Right, LocalVelocity );
+		float sidewaysVelocity = Vector3.Dot( Transform.Rotation.Right, Velocity );
 		float desiredSidewaysVelocity = -sidewaysVelocity * WheelGrip;
 		tractionForce = Transform.Rotation.Right * desiredSidewaysVelocity * 100.0f;
 	}
@@ -127,7 +127,7 @@ public sealed class Wheel : Component
 		}
 
 		float power = Vehicle.Power / Vehicle.Wheels.Count();
-		if ( LocalVelocity.Length < 25 )
+		if ( Velocity.Length < 25 )
 			power *= 0.5f;
 		Vector3 desiredPower = Inverted ? -power : power;
 		driveForce = Vehicle.InputForward * Transform.Rotation.Forward * desiredPower;
@@ -142,6 +142,16 @@ public sealed class Wheel : Component
 		if ( Inverted )
 			angle += 180.0f;
 		Transform.LocalRotation = Rotation.FromAxis( Vector3.Up, angle );
+	}
+
+	private void AutoBraking()
+	{
+		brakeForce = 0.0f;
+
+		if ( Vehicle.LocalVelocity.Length <= 100.0f )
+		{
+			brakeForce = Transform.Rotation.Backward * LocalVelocity.x * 700;
+		}
 	}
 
 	private void UpdateModel()
@@ -173,6 +183,6 @@ public sealed class Wheel : Component
 
 	private void ApplyForce()
 	{
-		Vehicle.Rigidbody.ApplyForceAt( Transform.Position, liftForce + tractionForce + driveForce );
+		Vehicle.Rigidbody.ApplyForceAt( Transform.Position, liftForce + tractionForce + driveForce + brakeForce );
 	}
 }
