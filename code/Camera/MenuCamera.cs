@@ -10,8 +10,6 @@ public sealed class MenuCamera : Component
 	[Property]
 	public GameObject CustomizationTransform { get; set; }
 	public Transform CurrentTransform { get; set; }
-	[Property]
-	public bool IsCustomizing { get; set; } = false;
 
 	private float swayTime = 0.0f;
 	private TimeSince timeSinceRandomSway = 0.0f;
@@ -28,7 +26,7 @@ public sealed class MenuCamera : Component
 
 	protected override void OnUpdate()
 	{
-		CurrentTransform = IsCustomizing ? CustomizationTransform.Transform.World : InitialTransform;
+		CurrentTransform = GameManager.Instance.IsCustomizing ? CustomizationTransform.Transform.World : InitialTransform;
 
 		swayTime += Time.Delta * SwaySpeed;
 		float swayPitch = float.Sin( swayTime ) * SwayAmount * currentSwayAmount;
@@ -39,10 +37,15 @@ public sealed class MenuCamera : Component
 
 		Rotation rotation = CurrentTransform.Rotation * Rotation.From( swayPitch, swayYaw, 0 );
 		Vector3 position = CurrentTransform.Position;
-
 		CurrentTransform = new Transform( position, rotation );
+
 		Transform.LerpTo( CurrentTransform, 4.0f * Time.Delta );
 
+		Sway();
+	}
+
+	private void Sway()
+	{
 		if ( timeSinceRandomSway > 0.5f )
 			SetRandomSway();
 	}

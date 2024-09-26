@@ -1,4 +1,3 @@
-using Sandbox.Events;
 using Sandbox.Physics;
 
 namespace MightyBrick.GraveQuest;

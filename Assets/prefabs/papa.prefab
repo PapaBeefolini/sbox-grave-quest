@@ -24,7 +24,17 @@
       },
       {
         "__type": "MightyBrick.GraveQuest.Papa",
-        "__guid": "eb9d45ec-0d73-4416-a948-ef6415a4d765"
+        "__guid": "eb9d45ec-0d73-4416-a948-ef6415a4d765",
+        "Hats": [
+          "models/hat_chef.vmdl",
+          "models/hat_cap.vmdl",
+          "models/hat_archer.vmdl",
+          "models/hat_medieval_01.vmdl",
+          "models/hat_medieval_02.vmdl",
+          "models/hat_pirate.vmdl",
+          "models/hat_pumpkin.vmdl",
+          "models/hat_witch.vmdl"
+        ]
       }
     ],
     "Children": [
@@ -65,7 +75,9 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
+  "IsValid": true,
   "__version": 1
 }

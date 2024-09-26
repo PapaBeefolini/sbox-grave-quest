@@ -2,23 +2,102 @@
   "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
   "GameObjects": [
     {
-      "__guid": "71cf2983-b8f7-45d4-ae8d-8a1f1024652a",
+      "__guid": "52172345-5045-4fe1-83d0-5180e775ef98",
       "Flags": 0,
-      "Name": "Main Menu UI",
+      "Name": "Game Manager",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.ScreenPanel",
-          "__guid": "8a217c27-5846-48a9-901a-84fcdb985b75",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ScaleStrategy": "ConsistentHeight",
-          "ZIndex": 100
+          "__type": "MightyBrick.GraveQuest.GameManager",
+          "__guid": "a2344e3b-0169-48e7-b16f-718560c16aec",
+          "GameScene": "scenes/game-world.scene",
+          "MainMenuScene": "scenes/main-menu.scene",
+          "SkeletonPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/skeleton.prefab"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "71cf2983-b8f7-45d4-ae8d-8a1f1024652a",
+          "Flags": 0,
+          "Name": "Main Menu UI",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "8a217c27-5846-48a9-901a-84fcdb985b75",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.MainMenu",
+              "__guid": "429b6b84-d79e-4f50-a8f5-72dff2c7fbfc"
+            }
+          ]
         },
         {
-          "__type": "MightyBrick.GraveQuest.UI.MainMenu",
-          "__guid": "429b6b84-d79e-4f50-a8f5-72dff2c7fbfc"
+          "__guid": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
+          "Flags": 0,
+          "Name": "Game UI",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "ccf7533c-2c08-4aa2-a080-1bdda0870856",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.HUD",
+              "__guid": "9da77445-42ca-49c4-87e1-3fb89950429c"
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.InputHintsHUD",
+              "__guid": "1f29b5fb-e803-4025-9397-a8e56cc9b531"
+            }
+          ]
+        },
+        {
+          "__guid": "a2a9bfa8-9e30-4296-9a13-648026779349",
+          "Flags": 0,
+          "Name": "Music",
+          "Position": "296.1387,586.3163,31.68331",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundPointComponent",
+              "__guid": "c8388ea4-be6e-4821-862e-9442935a069a",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": false,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/music/spooker.sound",
+              "SoundOverride": false,
+              "StopOnNew": false,
+              "TargetMixer": {
+                "Name": "music",
+                "Id": "3c2d37d7-d2de-4c4e-8811-99e59ba00e61"
+              },
+              "Volume": 1
+            }
+          ]
         }
       ]
     },
@@ -118,43 +197,8 @@
             "_type": "gameobject",
             "go": "55449a3b-a0f9-4d74-b24e-5e33e054a10f"
           },
-          "IsCustomizing": false,
           "SwayAmount": 1,
           "SwaySpeed": 0.5
-        }
-      ]
-    },
-    {
-      "__guid": "a2a9bfa8-9e30-4296-9a13-648026779349",
-      "Flags": 0,
-      "Name": "Music",
-      "Position": "296.1387,586.3163,31.68331",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.SoundPointComponent",
-          "__guid": "c8388ea4-be6e-4821-862e-9442935a069a",
-          "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
-          "Force2d": false,
-          "MaxRepeatTime": 1,
-          "MinRepeatTime": 1,
-          "Occlusion": false,
-          "OcclusionOverride": false,
-          "OcclusionRadius": 32,
-          "Pitch": 1,
-          "PlayOnStart": true,
-          "ReflectionOverride": false,
-          "Reflections": false,
-          "Repeat": false,
-          "SoundEvent": "sounds/music/spooker.sound",
-          "SoundOverride": false,
-          "StopOnNew": false,
-          "TargetMixer": {
-            "Name": "music",
-            "Id": "3c2d37d7-d2de-4c4e-8811-99e59ba00e61"
-          },
-          "Volume": 1
         }
       ]
     },
@@ -162,8 +206,8 @@
       "__guid": "55449a3b-a0f9-4d74-b24e-5e33e054a10f",
       "Flags": 0,
       "Name": "Customization Spot",
-      "Position": "-984.6487,803.2031,39.97226",
-      "Rotation": "-0.004981524,0.0002042379,0.8035132,0.5952661",
+      "Position": "-940.8497,821.4027,38",
+      "Rotation": "0,0,0.8679136,0.4967152",
       "Enabled": true
     },
     {
@@ -1404,7 +1448,7 @@
       "IncludedBodies": ""
     }
   },
-  "Title": "minimal",
+  "Title": "main-menu",
   "Description": "",
   "ResourceVersion": 1,
   "__references": [],

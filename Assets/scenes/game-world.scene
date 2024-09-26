@@ -2,48 +2,6 @@
   "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
   "GameObjects": [
     {
-      "__guid": "8dbd1569-f166-4ca7-8204-d2f4a8d21f39",
-      "Flags": 0,
-      "Name": "Game Manager",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "MightyBrick.GraveQuest.GameManager",
-          "__guid": "e6d1753e-3542-4989-aeae-1c8842ed64a3",
-          "SkeletonPrefab": {
-            "_type": "gameobject",
-            "prefab": "prefabs/skeleton.prefab"
-          }
-        }
-      ]
-    },
-    {
-      "__guid": "2f307fb0-4b3a-407a-a0fd-47e18b9b4203",
-      "Flags": 0,
-      "Name": "HUD",
-      "Position": "0,0,100",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ScreenPanel",
-          "__guid": "5a3c26b7-18ef-4198-bff5-4db86948d005",
-          "AutoScreenScale": true,
-          "Opacity": 1,
-          "Scale": 1,
-          "ScaleStrategy": "ConsistentHeight",
-          "ZIndex": 100
-        },
-        {
-          "__type": "MightyBrick.GraveQuest.UI.HUD",
-          "__guid": "c56a0e29-a236-4e9a-a8ff-22d66c297387"
-        },
-        {
-          "__type": "MightyBrick.GraveQuest.UI.InputHintsHUD",
-          "__guid": "d331082e-2803-419f-8f9c-190faee02475"
-        }
-      ]
-    },
-    {
       "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Flags": 0,
       "Name": "Camera",
@@ -1178,7 +1136,7 @@
       "IncludedBodies": ""
     }
   },
-  "Title": "minimal",
+  "Title": "game-world",
   "Description": "",
   "ResourceVersion": 1,
   "__references": [],

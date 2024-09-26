@@ -1,0 +1,17 @@
+@using Sandbox.UI;
+@using System;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits Panel
+
+<root onclick=@(() => { OnClick?.Invoke(); })>
+    <label>@Text</label>
+</root>
+
+@code
+{
+    public string Text { get; set; } = "Button";
+    new public Action OnClick { get; set; }
+
+    //protected override int BuildHash() => System.HashCode.Combine( );
+}

@@ -12,14 +12,6 @@ MainMenu {
 	font-weight: bold;
 	text-transform: uppercase;
 
-	.blur-background {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.4);
-		backdrop-filter: blur(8px);
-	}
-
 	.buttons-parent {
 		position: absolute;
 		top: 45%;
@@ -30,30 +22,14 @@ MainMenu {
 		font-size: 48px;
 	}
 
-	button {
-		color: $orange;
-		border: none;
-		border-radius: 16px;
-		padding: 16px 0px;
-		cursor: pointer;
-		text-stroke: 14px black;
-		transition: all 0.05s linear;
-
-		&:hover {
-			sound-in: 'hover';
-			color: $purple;
-			padding-left: 32px;
-			transform: scale(1.1);
-			transition: all 0.05s linear;
-		}
-
-		&:active {
-			sound-in: 'click';
-			color: $dark-purple;
-			padding-left: 16px;
-			transform: scale(1);
-			transition: all 0.01s linear;
-		}
+	.customization-parent {
+		position: absolute;
+		top: 45%;
+		right: 12%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		font-size: 48px;
 	}
 
 	.logo {

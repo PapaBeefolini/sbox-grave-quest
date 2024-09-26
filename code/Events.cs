@@ -1,4 +1,4 @@
-﻿using Sandbox.Events;
+﻿global using Sandbox.Events;
 
 namespace MightyBrick.GraveQuest;
 
