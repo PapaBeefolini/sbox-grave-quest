@@ -13,8 +13,10 @@ public partial class Skeleton : Minifig
 
 	public bool IsDead { get; private set; }
 
-	protected override void OnStart()
+	protected override void OnAwake()
 	{
+		base.OnAwake();
+
 		// 50% chance at wearing a hat
 		if ( Game.Random.Int( 1 ) == 0 )
 			WearRandomHat();
