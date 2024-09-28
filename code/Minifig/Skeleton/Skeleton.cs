@@ -2,6 +2,8 @@ using Sandbox.Physics;
 
 namespace MightyBrick.GraveQuest;
 
+public record SkeletonDiedEvent() : IGameEvent;
+
 public partial class Skeleton : Minifig
 {
 	[RequireComponent]

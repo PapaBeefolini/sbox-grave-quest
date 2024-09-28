@@ -1,5 +1,7 @@
 ﻿namespace MightyBrick.GraveQuest;
 
+public record PizzaThrownEvent() : IGameEvent;
+
 public partial class Vehicle
 {
 	[Property, Category( "Pizza Throwing" )]
