@@ -44,6 +44,7 @@ public partial class GameManager : Component
 
 		EscapeMenu = GameUI.Components.Get<EscapeMenu>();
 		InputHintsHUD = GameUI.Components.Get<InputHintsHUD>();
+		InputHintsHUD.Enabled = ShowInputHints;
 
 		RefreshUI();
 	}

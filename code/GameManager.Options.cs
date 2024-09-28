@@ -3,7 +3,7 @@
 public partial class GameManager
 {
 	public float GameVolume { get; set; } = 100.0f;
-	public float MusicVolume { get; set; } = 100.0f;
+	public float MusicVolume { get; set; } = 75.0f;
 	public bool ShowInputHints
 	{
 		get => showInputHints;
@@ -13,5 +13,5 @@ public partial class GameManager
 			InputHintsHUD.Enabled = value;
 		}
 	}
-	private bool showInputHints;
+	private bool showInputHints = true;
 }
