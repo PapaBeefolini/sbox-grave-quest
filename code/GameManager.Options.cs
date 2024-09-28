@@ -2,7 +2,16 @@
 
 public partial class GameManager
 {
-	public static float GameVolume { get; set; } = 1.0f;
-	public static float MusicVolume { get; set; } = 1.0f;
-	public static bool HideInputHints { get; set; } = false;
+	public float GameVolume { get; set; } = 100.0f;
+	public float MusicVolume { get; set; } = 100.0f;
+	public bool ShowInputHints
+	{
+		get => showInputHints;
+		set
+		{
+			showInputHints = value;
+			InputHintsHUD.Enabled = value;
+		}
+	}
+	private bool showInputHints;
 }

@@ -43,21 +43,22 @@ public partial class GameManager : Component
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
 
 		EscapeMenu = GameUI.Components.Get<EscapeMenu>();
+		InputHintsHUD = GameUI.Components.Get<InputHintsHUD>();
 
 		RefreshUI();
 	}
 
 	protected override void OnUpdate()
 	{
+		if ( State == GameState.Game )
+		{
+			SpawnSkeletonOnTimer();
+		}
+
 		if ( Input.EscapePressed )
 		{
 			Input.EscapePressed = false;
 			ToggleEscapeMenu();
-		}
-
-		if ( State == GameState.Game )
-		{
-			SpawnSkeletonOnTimer();
 		}
 	}
 

@@ -10,10 +10,17 @@ public partial class GameManager
 	public ScreenPanel GameUI { get; private set; }
 	[Property, Category( "UI" )]
 	public ScreenPanel OptionsMenu { get; private set; }
+	public InputHintsHUD InputHintsHUD { get; private set; }
 	public EscapeMenu EscapeMenu { get; private set; }
 
 	public void ToggleEscapeMenu()
 	{
+		if ( OptionsMenu.Enabled )
+		{
+			ToggleOptionsMenu();
+			return;
+		}
+
 		EscapeMenu.Enabled = !EscapeMenu.Enabled;
 		Scene.TimeScale = EscapeMenu.Enabled ? 0.0f : 1.0f;
 	}

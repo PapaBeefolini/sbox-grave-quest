@@ -9,17 +9,16 @@
     <div class="container">
         <div class="entry">
             <label>Game Volume</label>
-            <SliderControl Value:bind=@GameManager.GameVolume ShowValueTooltip=@false ShowRange=@true style=""/>
+            <SliderControl Value:bind=@GameManager.Instance.GameVolume ShowValueTooltip=@false ShowRange=@true style=""/>
         </div>
         <div class="entry">
             <label>Music Volume</label>
-            <SliderControl Value:bind=@GameManager.MusicVolume ShowValueTooltip=@false ShowRange=@true style=""/>
+            <SliderControl Value:bind=@GameManager.Instance.MusicVolume ShowValueTooltip=@false ShowRange=@true style=""/>
         </div>
         <div class="entry">
-            <label>Hide Input Hints</label>
-            <Checkbox />
+            <label>Show Input Hints</label>
+            <Checkbox Value:bind=@GameManager.Instance.ShowInputHints />
         </div>
-
     </div>
 </root>
 
