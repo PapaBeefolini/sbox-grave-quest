@@ -10,6 +10,7 @@
         {
           "__type": "MightyBrick.GraveQuest.GameManager",
           "__guid": "a2344e3b-0169-48e7-b16f-718560c16aec",
+          "EscapeMenuSound": "sounds/ui/pause.sound",
           "GameScene": "scenes/game-world.scene",
           "GameUI": {
             "_type": "component",

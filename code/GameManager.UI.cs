@@ -12,6 +12,8 @@ public partial class GameManager
 	public ScreenPanel OptionsMenu { get; private set; }
 	public InputHintsHUD InputHintsHUD { get; private set; }
 	public EscapeMenu EscapeMenu { get; private set; }
+	[Property, Category( "UI" )]
+	public SoundEvent EscapeMenuSound { get; private set; }
 
 	public void ToggleEscapeMenu()
 	{
@@ -23,6 +25,8 @@ public partial class GameManager
 
 		EscapeMenu.Enabled = !EscapeMenu.Enabled;
 		Scene.TimeScale = EscapeMenu.Enabled ? 0.0f : 1.0f;
+		if ( EscapeMenuSound.IsValid() )
+			Sound.Play( EscapeMenuSound );
 	}
 
 	public void ToggleOptionsMenu()
