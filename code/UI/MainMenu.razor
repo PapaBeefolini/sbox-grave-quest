@@ -4,7 +4,7 @@
 @inherits PanelComponent
 
 <root>
-    <div class="version">v1.0</div>
+    <label class="version">V1.0</label>
 
     @if (GameManager.Instance.IsCustomizing)
     {
@@ -24,9 +24,7 @@
         <Button class="left" Text="Quit" OnClick=@(() => OnQuit()) />
     </div>
 
-    <div class="discord">
-        <img class="icon" src="ui/discord.png" ; />
-    </div>
+    <Button class="discord" Text="Discord" OnClick=@(() => Log.Info("Discord")) />
 </root>
 
 @code
@@ -43,7 +41,7 @@
 
     private void OnOptions()
     {
-        Log.Info("Options");
+        GameManager.Instance.ToggleOptionsMenu();
     }
 
     private void OnQuit()

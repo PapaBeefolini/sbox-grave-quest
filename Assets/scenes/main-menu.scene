@@ -24,11 +24,11 @@
             "go": "71cf2983-b8f7-45d4-ae8d-8a1f1024652a",
             "component_type": "ScreenPanel"
           },
-          "MusicSoundPoint": {
+          "OptionsMenu": {
             "_type": "component",
-            "component_id": "c8388ea4-be6e-4821-862e-9442935a069a",
-            "go": "a2a9bfa8-9e30-4296-9a13-648026779349",
-            "component_type": "SoundPointComponent"
+            "component_id": "3e3ec4bf-c9bb-498a-afa5-45d4062969f1",
+            "go": "9d281563-46ef-4e12-a99b-3716c041b7ad",
+            "component_type": "ScreenPanel"
           },
           "SkeletonPrefab": {
             "_type": "gameobject",
@@ -84,6 +84,47 @@
             {
               "__type": "MightyBrick.GraveQuest.UI.EscapeMenu",
               "__guid": "434d3643-a1ce-46d5-b859-4cba1b345b1e"
+            }
+          ]
+        },
+        {
+          "__guid": "9d281563-46ef-4e12-a99b-3716c041b7ad",
+          "Flags": 0,
+          "Name": "Options UI",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "3e3ec4bf-c9bb-498a-afa5-45d4062969f1",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 150
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.OptionsMenu",
+              "__guid": "26633b2a-f407-4d80-8833-82b024a5d1f5"
+            }
+          ]
+        },
+        {
+          "__guid": "04b0327f-945c-474f-a066-e87208047ec1",
+          "Flags": 0,
+          "Name": "Fade UI",
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "b072d80b-3904-48c8-87f5-1477c0b7d27d",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 200
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.Fader",
+              "__guid": "5956cd8f-6e09-49fa-961c-f85bba2bd7e5"
             }
           ]
         },

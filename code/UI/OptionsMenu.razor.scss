@@ -1,0 +1,123 @@
+@import "Defaults.scss";
+
+OptionsMenu {
+    pointer-events: all;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    bottom: 10%;
+    left: 30%;
+    flex-direction: column;
+    padding: 48px;
+    border-radius: 16px;
+    border: solid 3px $orange;
+    background-color: $black-transparent;
+    backdrop-filter: blur(24px);
+
+    h2 {
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 64px;
+        gap: 24px;
+    }
+
+    .entry {
+        align-items: center;
+        gap: 24px;
+        padding: 16px 24px;
+        border-radius: 16px;
+        border: solid 3px $dark-purple;
+        background-color: $black-transparent;
+
+        Checkbox:last-child {
+            margin-left: auto;
+        }
+    }
+
+    .slidercontrol {
+        flex-grow: 1;
+
+        label {
+            color: $white;
+            font-size: 24px;
+        }
+
+        > .inner {
+            > .track {
+                height: 24px;
+                border-radius: 12px;
+                border: solid 3px $dark-purple;
+                background-color: $black-transparent;
+
+                > .track-active {
+                    border-radius: 4px;
+                    background-color: $dark-purple;
+                }
+
+                > .thumb {
+                    border: solid 12px $white;
+                }
+            }
+
+            > .values {
+                display: none;
+            }
+        }
+
+        .value-tooltip {
+
+            > .tail {
+                display: none;
+            }
+        }
+
+        &:hover {
+            sound-in: 'hover';
+        }
+
+        &:active {
+            sound-in: 'click';
+        }
+    }
+
+    .checkbox {
+        cursor: pointer;
+        aspect-ratio: 1;
+        background-color: $black-transparent;
+        border: 3px solid $dark-purple;
+        border-radius: 8px;
+        min-width: 36px;
+        max-width: 36px;
+        color: transparent;
+        font-size: 28px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            sound-in: 'hover';
+            transform: scale(1.1);
+        }
+
+        &:active {
+            sound-in: 'click';
+            transform: scale(1);
+        }
+
+        &.checked {
+            color: $white;
+        }
+    }
+
+    .close {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 24px;
+    }
+}

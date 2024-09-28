@@ -1,0 +1,29 @@
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits PanelComponent
+
+<root>
+    <h2>Options</h2>
+    <Button Text="X" class="close" OnClick=@(() => GameManager.Instance.ToggleOptionsMenu()) />
+    <div class="container">
+        <div class="entry">
+            <label>Game Volume</label>
+            <SliderControl Value:bind=@GameManager.GameVolume ShowValueTooltip=@false ShowRange=@true style=""/>
+        </div>
+        <div class="entry">
+            <label>Music Volume</label>
+            <SliderControl Value:bind=@GameManager.MusicVolume ShowValueTooltip=@false ShowRange=@true style=""/>
+        </div>
+        <div class="entry">
+            <label>Hide Input Hints</label>
+            <Checkbox />
+        </div>
+
+    </div>
+</root>
+
+@code
+{
+    //protected override int BuildHash() => System.HashCode.Combine();
+}

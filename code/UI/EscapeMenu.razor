@@ -4,10 +4,10 @@
 @inherits PanelComponent
 
 <root>
-    <h2>PAUSED</h2>
+    <h1>PAUSED</h1>
     <div class="options">
         <Button Text="Resume" OnClick=@(() => GameManager.Instance.ToggleEscapeMenu()) />
-        <Button Text="Options" OnClick=@(() => Log.Info("Options")) />
+        <Button Text="Options" OnClick=@(() => GameManager.Instance.ToggleOptionsMenu()) />
         <Button Text="Quit" OnClick=@(() => GameManager.Instance.LoadMainMenuScene()) />
     </div>
 </root>

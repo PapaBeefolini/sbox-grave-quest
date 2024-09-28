@@ -1,0 +1,20 @@
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits PanelComponent
+
+<root style="opacity: @opacity" />
+
+@code
+{
+    public static float GoalOpacity { get; set; } = 1.0f;
+
+    private float opacity = 0.0f;
+
+    protected override void OnUpdate()
+    {
+        opacity = opacity.LerpTo(GoalOpacity, 4.0f * Time.Delta);
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine( opacity );
+}
