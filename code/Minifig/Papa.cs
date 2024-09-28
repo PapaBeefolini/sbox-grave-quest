@@ -8,6 +8,8 @@ public sealed class Papa : Minifig
 	[Property]
 	public Model[] Hats { get; set; }
 
+	private TimeUntil scaleTime = 0.0f;
+
 	protected override void OnAwake()
 	{
 		base.OnAwake();
@@ -17,6 +19,11 @@ public sealed class Papa : Minifig
 	protected override void OnStart()
 	{
 		SetHatModel( HatIndex );
+	}
+
+	protected override void OnUpdate()
+	{
+		Transform.Scale = Transform.Scale.LerpTo( Vector3.One, Easing.EaseOut( scaleTime.Fraction ) );
 	}
 
 	public void SetInputs(float vertical, float horizontal)
@@ -60,5 +67,11 @@ public sealed class Papa : Minifig
 			return;
 		if ( HatRenderer.IsValid() )
 			HatRenderer.Model = Hats[index];
+	}
+
+	public void ScaleZ( float value )
+	{
+		Transform.Scale = Transform.Scale.WithZ( value );
+		scaleTime = 1.0f;
 	}
 }
