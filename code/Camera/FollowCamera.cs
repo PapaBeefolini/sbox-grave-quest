@@ -1,6 +1,6 @@
 namespace MightyBrick.GraveQuest;
 
-public sealed class FollowCamera : Component
+public partial class FollowCamera : Component
 {
 	public static FollowCamera Instance { get; private set; }
 
@@ -33,8 +33,9 @@ public sealed class FollowCamera : Component
 	public Vehicle Target { get; set; }
 	public Angles EyeAngles { get; set; }
 
-	private float cameraZoom = 0.0f;
-	private float cameraDistance = 0.0f;
+	private float zoom = 0.0f;
+	private float distance = 0.0f;
+	private Vector3 shakeOffset = Vector3.Zero;
 	private bool autoFocusing = false;
 	private TimeUntil timeUntilAutoFocus = 0.0f;
 	private bool isDrivingBackwards = false;
@@ -46,8 +47,8 @@ public sealed class FollowCamera : Component
 
 	protected override void OnStart()
 	{
-		cameraZoom = (MinZoom + MaxZoom) / 2.0f;
-		cameraDistance = cameraZoom;
+		zoom = (MinZoom + MaxZoom) / 2.0f;
+		distance = zoom;
 		EyeAngles = AutoFocusRotationOffset;
 	}
 
@@ -59,11 +60,7 @@ public sealed class FollowCamera : Component
 		Zoom();
 		Look();
 		AutoFocus();
-
-		shakeOffset = shakeOffset.LerpTo( Vector3.Zero, 12.0f * Time.Delta );
-
-		//if ( Input.Pressed( "Brake" ) )
-		//	Shake( 32 );
+		ApplyScreenShakes();
 	}
 
 	private void Zoom()
@@ -71,9 +68,9 @@ public sealed class FollowCamera : Component
 		float zoomSpeed = ZoomSpeed;
 		if ( Input.UsingController )
 			zoomSpeed /= 8.0f;
-		cameraZoom -= Input.Down("ZoomIn" ) ? zoomSpeed : 0.0f;
-		cameraZoom += Input.Down( "ZoomOut" ) ? zoomSpeed : 0.0f;
-		cameraZoom = cameraZoom.Clamp( MinZoom, MaxZoom );
+		zoom -= Input.Down("ZoomIn" ) ? zoomSpeed : 0.0f;
+		zoom += Input.Down( "ZoomOut" ) ? zoomSpeed : 0.0f;
+		zoom = zoom.Clamp( MinZoom, MaxZoom );
 	}
 
 	private void Look()
@@ -83,18 +80,18 @@ public sealed class FollowCamera : Component
 		Transform.Rotation = EyeAngles.ToRotation();
 
 		Vector3 startPosition = Target.Transform.Position + Vector3.Up * UpOffset;
-		Vector3 targetPosition = startPosition + cameraZoom * Transform.Rotation.Backward;
+		Vector3 targetPosition = startPosition + zoom * Transform.Rotation.Backward;
 		SceneTraceResult trace = Scene.Trace.Ray( startPosition, targetPosition )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "Player", "Car", "Pizza", "Enemy", "Misc", "World-Border" )
 			.Radius( 8.0f )
 			.Run();
 
-		cameraDistance = cameraDistance.LerpTo( trace.Distance, 4.0f * Time.Delta );
-		if ( cameraDistance > trace.Distance && trace.Hit )
-			cameraDistance = trace.Distance;
+		distance = distance.LerpTo( trace.Distance, 4.0f * Time.Delta );
+		if ( distance > trace.Distance && trace.Hit )
+			distance = trace.Distance;
 
-		Transform.LocalPosition = startPosition + Transform.Rotation.Backward * cameraDistance + shakeOffset;
+		Transform.LocalPosition = startPosition + Transform.Rotation.Backward * distance + shakeOffset;
 		Transform.Rotation *= new Angles(-8, 0, 0);
 	}
 
@@ -121,29 +118,5 @@ public sealed class FollowCamera : Component
 			angles.yaw = isDrivingBackwards ? angles.yaw + 180.0f : angles.yaw;
 			EyeAngles = EyeAngles.LerpTo( angles + AutoFocusRotationOffset, AutoFocusSpeed * Time.Delta );
 		}
-	}
-	Vector3 shakeOffset;
-	public void Shake(float amount)
-	{
-		// Define the intensity of the shake
-		float shakeIntensity = amount;
-
-		// Create random shake values for X, Y, and Z axis
-		float shakeX = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
-		float shakeY = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
-		float shakeZ = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
-
-		// Apply the shake offset to the camera's local position
-		shakeOffset = new Vector3( shakeX, shakeY, shakeZ );
-		//Transform.LocalPosition += shakeOffset;
-
-		// Optionally, you could also apply a small rotation shake if desired
-		float shakePitch = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
-		float shakeYaw = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
-		float shakeRoll = Game.Random.Float( -1.0f, 1.0f ) * shakeIntensity;
-
-		// Apply the rotation shake to the camera's rotation
-		//Angles shakeRotation = new Angles( shakePitch, shakeYaw, shakeRoll );
-		//Transform.Rotation *= shakeRotation.ToRotation();
 	}
 }

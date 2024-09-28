@@ -522,7 +522,6 @@
           "__guid": "8e77ca6f-c539-4383-93c2-3bb016b39cd7",
           "Flags": 0,
           "Name": "Back Sun",
-          "Position": "0,0,0",
           "Rotation": "0.03575084,0.09822462,-0.3401465,0.9345449",
           "Enabled": true,
           "Components": [

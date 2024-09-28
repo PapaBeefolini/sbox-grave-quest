@@ -130,4 +130,9 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 		angles.roll = angles.roll.Clamp( -KeepUprightAngle, KeepUprightAngle );
 		Rigidbody.PhysicsBody.Rotation = angles.ToRotation();
 	}
+
+	public void ShakeCamera( float duration, float intensity )
+	{
+		FollowCamera.Instance?.AddShake( new ScreenShake.Random( duration, intensity ) );
+	}
 }

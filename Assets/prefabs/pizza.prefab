@@ -50,8 +50,9 @@
           "_type": "gameobject",
           "prefab": "prefabs/explosion.prefab"
         },
-        "ExplosionRadius": 200,
-        "ExplosionSound": "sounds/explosions/explosion.sound"
+        "ExplosionRadius": 400,
+        "ExplosionSound": "sounds/explosions/explosion.sound",
+        "LethalRadius": 200
       }
     ],
     "Children": [],
