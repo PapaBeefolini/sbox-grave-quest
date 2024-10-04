@@ -3,12 +3,13 @@ namespace MightyBrick.GraveQuest;
 public sealed class Papa : Minifig
 {
 	public static Papa Instance { get; private set; }
-	public static int HatIndex { get; set; } = 0;
 
 	[Property]
 	public Model[] Hats { get; set; }
+	public int HatIndex { get; set; } = 0;
 
 	private TimeUntil scaleTime = 0.0f;
+	private Vector3 scale;
 
 	protected override void OnAwake()
 	{
@@ -18,12 +19,13 @@ public sealed class Papa : Minifig
 
 	protected override void OnStart()
 	{
+		HatIndex = GameManager.Instance.HatIndex;
 		SetHatModel( HatIndex );
 	}
 
 	protected override void OnUpdate()
 	{
-		Transform.Scale = Transform.Scale.LerpTo( Vector3.One, Easing.EaseOut( scaleTime.Fraction ) );
+		Transform.Scale = scale.LerpTo( Vector3.One, Easing.EaseOut( scaleTime.Fraction ) );
 	}
 
 	public void SetInputs(float vertical, float horizontal)
@@ -71,7 +73,7 @@ public sealed class Papa : Minifig
 
 	public void ScaleZ( float value )
 	{
-		Transform.Scale = Transform.Scale.WithZ( value );
-		scaleTime = 1.0f;
+		scale = Transform.Scale.WithZ( value );
+		scaleTime = 0.25f;
 	}
 }
