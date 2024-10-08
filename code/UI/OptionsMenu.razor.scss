@@ -9,7 +9,7 @@ OptionsMenu {
     left: 30%;
     flex-direction: column;
     padding: 48px;
-    border-radius: 16px;
+    border-radius: 8px;
     border: solid 3px $orange;
     background-color: $black-transparent;
     backdrop-filter: blur(24px);
@@ -29,7 +29,7 @@ OptionsMenu {
         align-items: center;
         gap: 24px;
         padding: 16px 24px;
-        border-radius: 16px;
+        border-radius: 8px;
         border: solid 3px $dark-purple;
         background-color: $black-transparent;
 

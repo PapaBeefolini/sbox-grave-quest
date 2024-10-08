@@ -8,6 +8,13 @@
 
 <root>
     <Score @ref="ScorePanel"/>
+    @if (GameManager.Instance.IsCountdownActive)
+    {
+        string text = CurrentTime.ToString();
+        if (CurrentTime == 0)
+            text = "GO!";
+        <CountDown Text=@text/>
+    }
     <Timer CurrentTime=@CurrentTime></Timer>
     <Pizza @ref="PizzaPanel"/>
 </root>
@@ -20,7 +27,7 @@
 
     protected override void OnUpdate()
     {
-        CurrentTime = MathX.FloorToInt(20 - Time.Now);
+        CurrentTime = MathX.FloorToInt(1 + GameManager.Instance.TimeUntilGameStart.Relative);
     }
 
     public void OnGameEvent(PizzaThrownEvent args)

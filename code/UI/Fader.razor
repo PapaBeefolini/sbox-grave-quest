@@ -7,13 +7,45 @@
 
 @code
 {
-    public static float GoalOpacity { get; set; } = 1.0f;
-
+    private TimeUntil timeUntilFinished = 0.0f;
+    private Action actionToCall;
+    private float desiredOpacity = 0.0f;
+    private float currentOpacity = 0.0f;
     private float opacity = 0.0f;
+    private bool done = false;
 
     protected override void OnUpdate()
     {
-        opacity = opacity.LerpTo(GoalOpacity, 4.0f * Time.Delta);
+        if ( done )
+            return;
+
+        opacity = currentOpacity.LerpTo(desiredOpacity, Easing.EaseOut(timeUntilFinished.Fraction));
+
+        if ( timeUntilFinished )
+        {
+            done = true;
+            actionToCall?.Invoke();
+            Log.Info("FINISHED");
+        }
+    }
+
+    public void FadeIn(float time, Action action = null)
+    {
+        Fade(time, 1.0f, action);
+    }
+
+    public void FadeOut(float time, Action action = null)
+    {
+        Fade(time, 0.0f, action);
+    }
+
+    private void Fade(float time, float opacity, Action action = null)
+    {
+        done = false;
+        currentOpacity = this.opacity;
+        desiredOpacity = opacity;
+        timeUntilFinished = time;
+        actionToCall = action;
     }
 
     protected override int BuildHash() => System.HashCode.Combine( opacity );

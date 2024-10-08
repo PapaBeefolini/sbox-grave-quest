@@ -4,17 +4,11 @@
 @inherits Panel
 
 <root>
-    <label>@CurrentTime</label>
+    <h2 class="tick">Time</h2>
+    <h2>@CurrentTime</h2>
 </root>
 
 @code
 {
     public float CurrentTime { get; set; } = 0;
-
-    public override void Tick()
-    {
-
-    }
-
-    //protected override int BuildHash() => System.HashCode.Combine(Time);
 }
