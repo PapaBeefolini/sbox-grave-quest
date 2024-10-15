@@ -26,35 +26,6 @@ MainMenu {
 		align-items: flex-end;
 	}
 
-	.color-row {
-		background-color: $black-transparent;
-		border-radius: 8px;
-		padding: 12px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 2px;
-		margin-bottom: 16px;
-	}
-
-	.color {
-		cursor: pointer;
-		background-color: #ff0000;
-		border: solid 4px black;
-		width: 38px;
-		height: 38px;
-		transition: all 0.05s linear;
-
-		&:hover {
-			transform: scale(1.1);
-		}
-
-		&:active {
-			transform: scale(0.9);
-		}
-	}
-
 	.logo {
 		position: absolute;
 		background-repeat: no-repeat;

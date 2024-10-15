@@ -9,20 +9,6 @@
     @if (GameManager.Instance.IsCustomizing)
     {
         <div class="customization-parent">
-            <div class="color-row">
-                <div class="color"/>
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-                <div class="color" />
-            </div>
             <Button class="right" Text="Next Hat" OnClick=@(() => ChangeHat(1)) />
             <Button class="right" Text="Previous Hat" OnClick=@(() => ChangeHat(-1)) />
             <Button class="bigger right" Text="Back" OnClick=@(() => OnCustomize()) />
