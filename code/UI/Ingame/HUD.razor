@@ -3,7 +3,6 @@
 
 @namespace MightyBrick.GraveQuest.UI
 @inherits PanelComponent
-@implements ISceneLoadingEvents
 @implements IGameEventHandler<PizzaThrownEvent> 
 @implements IGameEventHandler<SkeletonDiedEvent>
 
@@ -31,11 +30,6 @@
         if (!Announcement.IsValid())
             return;
         Announcement.Display(text, timeVisible);
-    }
-
-    public void AfterLoad(Scene scene)
-    {
-        Announcement.Clear();
     }
 
     public void OnGameEvent(PizzaThrownEvent args)
