@@ -5,7 +5,7 @@
   "Ident": "gravequest",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": null,
+  "Resources": "\nui/*\nfonts/*",
   "PackageReferences": [],
   "EditorReferences": null,
   "IsWhitelistDisabled": false,

@@ -49,11 +49,11 @@ public partial class GameManager : ISceneLoadingEvents
 
 	private void LoadScene( SceneFile scene )
 	{
-		if ( !scene.IsValid() )
+		if ( scene == null )
 			return;
 		EndGame();
 		HideUI();
-		Game.ActiveScene.Load( scene );
-		Game.ActiveScene.Name = scene.Title;
+		Scene.Load( scene );
+		Scene.Name = scene.Title;
 	}
 }
