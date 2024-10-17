@@ -18,5 +18,5 @@ public partial class GameManager
 
 	public bool IsCustomizing { get; set; } = false;
 	public int HatIndex { get; set; } = 0;
-	public Color HatColor { get; set; } = Color.White;
+	public int HatColor { get; set; } = 0;
 }

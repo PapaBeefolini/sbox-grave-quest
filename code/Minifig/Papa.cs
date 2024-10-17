@@ -6,8 +6,11 @@ public sealed class Papa : Minifig
 
 	[Property]
 	public Model[] Hats { get; set; }
-	public int HatIndex { get; set; } = 0;
+	[Property]
+	public Color[] HatColors { get; set; }
 
+	private int HatIndex { get; set; } = 0;
+	private int HatColorIndex { get; set; } = 0;
 	private TimeUntil scaleTime = 0.0f;
 	private Vector3 scale;
 
@@ -20,7 +23,9 @@ public sealed class Papa : Minifig
 	protected override void OnStart()
 	{
 		HatIndex = GameManager.Instance.HatIndex;
+		HatColorIndex = GameManager.Instance.HatColor;
 		SetHatModel( HatIndex );
+		SetHatColor( HatColorIndex );
 	}
 
 	protected override void OnUpdate()
@@ -55,6 +60,12 @@ public sealed class Papa : Minifig
 		ScaleZ( 0.9f );
 	}
 
+	public void SetHatColorIndex( int index )
+	{
+		SetHatColor( index );
+		ScaleZ( 0.9f );
+	}
+
 	public void OffsetHatIndex( int offset )
 	{
 		HatIndex = (HatIndex + offset) % Hats.Length;
@@ -68,10 +79,22 @@ public sealed class Papa : Minifig
 		if ( Hats.Length <= 0 )
 			return;
 		if ( HatRenderer.IsValid() )
+		{
 			HatRenderer.Model = Hats[index];
+			HatRenderer.Enabled = Hats[index].IsValid();
+		}
+		GameManager.Instance.HatIndex = index;
 	}
 
-	public void ScaleZ( float value )
+	private void SetHatColor( int index )
+	{
+		HatColorIndex = index;
+		if ( HatRenderer.IsValid() )
+			HatRenderer.Tint = HatColors[HatColorIndex];
+		GameManager.Instance.HatColor = HatColorIndex;
+	}
+
+	private void ScaleZ( float value )
 	{
 		scale = WorldScale.WithZ( value );
 		scaleTime = 0.25f;

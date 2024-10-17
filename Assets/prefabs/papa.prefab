@@ -12,6 +12,13 @@
         "CreateBoneObjects": false,
         "Model": "models/minifig.vmdl",
         "Morphs": {},
+        "Parameters": {
+          "bools": {},
+          "ints": {},
+          "floats": {},
+          "vectors": {},
+          "rotations": {}
+        },
         "RenderOptions": {
           "GameLayer": true,
           "OverlayLayer": false,
@@ -25,6 +32,17 @@
       {
         "__type": "MightyBrick.GraveQuest.Papa",
         "__guid": "eb9d45ec-0d73-4416-a948-ef6415a4d765",
+        "HatColors": [
+          "1,1,1,1",
+          "0.51163,0.50687,0.50687,1",
+          "0.02791,0.02791,0.02791,1",
+          "0.34884,0.17442,0,1",
+          "1,0,0,1",
+          "0,0.23333,1,1",
+          "0.18333,1,0,1",
+          "1,0.86667,0,1",
+          "0.58333,0,1,1"
+        ],
         "Hats": [
           "models/hat_chef.vmdl",
           "models/hat_cap.vmdl",
@@ -33,7 +51,8 @@
           "models/hat_medieval_02.vmdl",
           "models/hat_pirate.vmdl",
           "models/hat_pumpkin.vmdl",
-          "models/hat_witch.vmdl"
+          "models/hat_witch.vmdl",
+          null
         ]
       }
     ],
@@ -57,6 +76,13 @@
             "CreateBoneObjects": false,
             "Model": "models/hat_chef.vmdl",
             "Morphs": {},
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
             "RenderOptions": {
               "GameLayer": true,
               "OverlayLayer": false,
@@ -78,6 +104,5 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }

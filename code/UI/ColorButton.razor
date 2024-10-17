@@ -1,0 +1,28 @@
+@using Sandbox.UI;
+@using System;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits Panel
+
+<root onclick=@(() => { OnClick(); })>
+    <div class="color" style="background-color: @ToHex(Color)" />
+</root>
+
+@code
+{
+    public int Index { get; set; } = 0;
+    public Color Color { get; set; } = Color.White;
+
+    private void OnClick()
+    {
+        Papa.Instance.SetHatColorIndex(Index);
+    }
+
+    private string ToHex(Color color)
+    {
+        int r = (int)(color.r * 255);
+        int g = (int)(color.g * 255);
+        int b = (int)(color.b * 255);
+        return $"#{r:X2}{g:X2}{b:X2}";
+    }
+}
