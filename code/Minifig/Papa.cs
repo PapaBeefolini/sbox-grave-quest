@@ -25,7 +25,7 @@ public sealed class Papa : Minifig
 
 	protected override void OnUpdate()
 	{
-		Transform.Scale = scale.LerpTo( Vector3.One, Easing.EaseOut( scaleTime.Fraction ) );
+		WorldScale = scale.LerpTo( Vector3.One, Easing.EaseOut( scaleTime.Fraction ) );
 	}
 
 	public void SetInputs(float vertical, float horizontal)
@@ -73,7 +73,7 @@ public sealed class Papa : Minifig
 
 	public void ScaleZ( float value )
 	{
-		scale = Transform.Scale.WithZ( value );
+		scale = WorldScale.WithZ( value );
 		scaleTime = 0.25f;
 	}
 }

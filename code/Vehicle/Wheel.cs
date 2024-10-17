@@ -6,8 +6,8 @@ public sealed class Wheel : Component
 	public ModelRenderer WheelModel { get; set; }
 
 	public bool Grounded { get; private set; }
-	public Vector3 Velocity => Vehicle.IsValid() ? Vehicle.GetVelocityAtPoint( Transform.Position ) : Vector3.Zero;
-	public Vector3 LocalVelocity => Velocity * Transform.Rotation.Inverse;
+	public Vector3 Velocity => Vehicle.IsValid() ? Vehicle.GetVelocityAtPoint( WorldPosition ) : Vector3.Zero;
+	public Vector3 LocalVelocity => Velocity * WorldRotation.Inverse;
 
 	[Property]
 	public float SuspensionRestLength { get; set; } = 20.0f;
@@ -44,7 +44,7 @@ public sealed class Wheel : Component
 		Vehicle = GameObject.Components.GetInParent<Vehicle>();
 		WheelModel = GameObject.Components.GetInChildren<ModelRenderer>();
 
-		GameObject particles = DirtParticleEffectPrefab.Clone( Transform.Position );
+		GameObject particles = DirtParticleEffectPrefab.Clone( WorldPosition );
 		particles.SetParent( GameObject );
 		DirtParticleEffect = particles.Components.Get<ParticleEffect>();
 	}
@@ -72,7 +72,7 @@ public sealed class Wheel : Component
 
 	private void Raycast()
 	{
-		Vector3 tracePosition = Transform.Position + Transform.Rotation.Up * 1.5f;
+		Vector3 tracePosition = WorldPosition + WorldRotation.Up * 1.5f;
 		SceneTraceResult trace = Scene.Trace.Ray( tracePosition, tracePosition + Vector3.Down * SuspensionRestLength )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "Player", "Car", "Pizza" )
@@ -98,7 +98,7 @@ public sealed class Wheel : Component
 			return;
 		}
 
-		Vector3 projectedDirection = Transform.Rotation.Up.ProjectOnNormal( SurfaceImpactNormal );
+		Vector3 projectedDirection = WorldRotation.Up.ProjectOnNormal( SurfaceImpactNormal );
 		float offset = SuspensionRestLength - SurfaceImpactDistance;
 		float velocity = Vector3.Dot( projectedDirection, Velocity );
 		float force = (offset * SpringStrength) - (velocity * SpringDamper);
@@ -113,9 +113,9 @@ public sealed class Wheel : Component
 			return;
 		}
 
-		float sidewaysVelocity = Vector3.Dot( Transform.Rotation.Right, Velocity );
+		float sidewaysVelocity = Vector3.Dot( WorldRotation.Right, Velocity );
 		float desiredSidewaysVelocity = -sidewaysVelocity * WheelGrip;
-		tractionForce = Transform.Rotation.Right * desiredSidewaysVelocity * 100.0f;
+		tractionForce = WorldRotation.Right * desiredSidewaysVelocity * 100.0f;
 	}
 
 	private void Drive()
@@ -130,7 +130,7 @@ public sealed class Wheel : Component
 		if ( Velocity.Length < 25 )
 			power *= 0.5f;
 		Vector3 desiredPower = Inverted ? -power : power;
-		driveForce = Vehicle.InputForward * Transform.Rotation.Forward * desiredPower;
+		driveForce = Vehicle.InputForward * WorldRotation.Forward * desiredPower;
 	}
 
 	private void Steer()
@@ -141,7 +141,7 @@ public sealed class Wheel : Component
 		float angle = Steering ? (Vehicle.InputRight * SteerAngle) : 0;
 		if ( Inverted )
 			angle += 180.0f;
-		Transform.LocalRotation = Rotation.FromAxis( Vector3.Up, angle );
+		LocalRotation = Rotation.FromAxis( Vector3.Up, angle );
 	}
 
 	private void AutoBraking()
@@ -150,7 +150,7 @@ public sealed class Wheel : Component
 
 		if ( Vehicle.LocalVelocity.Length <= 100.0f )
 		{
-			brakeForce = Transform.Rotation.Backward * LocalVelocity.x * 700;
+			brakeForce = WorldRotation.Backward * LocalVelocity.x * 700;
 		}
 	}
 
@@ -160,11 +160,11 @@ public sealed class Wheel : Component
 			return;
 
 		float zOffset = Grounded ? (-1 * SurfaceImpactDistance + WheelRadius) : (-1 * SuspensionRestLength + WheelRadius);
-		WheelModel.Transform.Position = Transform.Position + Transform.Rotation.Up * zOffset;
+		WheelModel.WorldPosition = WorldPosition + WorldRotation.Up * zOffset;
 
 		float circumference = 2 * MathF.PI * WheelRadius;
 		rotationSpeed = (Vehicle.LocalVelocity.x + Vehicle.InputForward * 200) / circumference * (Inverted ? -360 : 360);
-		WheelModel.Transform.Rotation *= Rotation.FromAxis( Vector3.Left, rotationSpeed * Time.Delta );
+		WheelModel.WorldRotation *= Rotation.FromAxis( Vector3.Left, rotationSpeed * Time.Delta );
 	}
 
 	private void UpdateParticles()
@@ -172,17 +172,17 @@ public sealed class Wheel : Component
 		if ( !Grounded || float.Abs( rotationSpeed ) < 600.0f || Vehicle.LocalVelocity.Length > 800.0f )
 			return;
 
-		DirtParticleEffect.Transform.Position = SurfaceImpactPoint + SurfaceImpactNormal * 4.0f;
+		DirtParticleEffect.WorldPosition = SurfaceImpactPoint + SurfaceImpactNormal * 4.0f;
 
 		for ( int i = 0; i < 3; i++ )
 		{
-			Particle particle = DirtParticleEffect.Emit( DirtParticleEffect.Transform.Position, Time.Delta );
-			particle.Velocity += Vehicle.Transform.Rotation.Backward * Vehicle.LocalVelocity.x;
+			Particle particle = DirtParticleEffect.Emit( DirtParticleEffect.WorldPosition, Time.Delta );
+			particle.Velocity += Vehicle.WorldRotation.Backward * Vehicle.LocalVelocity.x;
 		}
 	}
 
 	private void ApplyForce()
 	{
-		Vehicle.Rigidbody.ApplyForceAt( Transform.Position, liftForce + tractionForce + driveForce + brakeForce );
+		Vehicle.Rigidbody.ApplyForceAt( WorldPosition, liftForce + tractionForce + driveForce + brakeForce );
 	}
 }

@@ -77,10 +77,10 @@ public partial class FollowCamera : Component
 	{
 		EyeAngles += Input.AnalogLook;
 		EyeAngles = EyeAngles.WithPitch( MathX.Clamp( EyeAngles.pitch, MinPitch, MaxPitch ) );
-		Transform.Rotation = EyeAngles.ToRotation();
+		WorldRotation = EyeAngles.ToRotation();
 
-		Vector3 startPosition = Target.Transform.Position + Vector3.Up * UpOffset;
-		Vector3 targetPosition = startPosition + zoom * Transform.Rotation.Backward;
+		Vector3 startPosition = Target.WorldPosition + Vector3.Up * UpOffset;
+		Vector3 targetPosition = startPosition + zoom * WorldRotation.Backward;
 		SceneTraceResult trace = Scene.Trace.Ray( startPosition, targetPosition )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "Player", "Car", "Pizza", "Enemy", "Misc", "World-Border" )
@@ -91,8 +91,8 @@ public partial class FollowCamera : Component
 		if ( distance > trace.Distance && trace.Hit )
 			distance = trace.Distance;
 
-		Transform.LocalPosition = startPosition + Transform.Rotation.Backward * distance + shakeOffset;
-		Transform.Rotation *= new Angles(-8, 0, 0);
+		LocalPosition = startPosition + WorldRotation.Backward * distance + shakeOffset;
+		WorldRotation *= new Angles(-8, 0, 0);
 	}
 
 	private void AutoFocus()
@@ -114,7 +114,7 @@ public partial class FollowCamera : Component
 
 		if ( autoFocusing )
 		{
-			Angles angles = Target.Transform.Rotation.Angles().WithPitch( 0 ).WithRoll( 0 );
+			Angles angles = Target.WorldRotation.Angles().WithPitch( 0 ).WithRoll( 0 );
 			angles.yaw = isDrivingBackwards ? angles.yaw + 180.0f : angles.yaw;
 			EyeAngles = EyeAngles.LerpTo( angles + AutoFocusRotationOffset, AutoFocusSpeed * Time.Delta );
 		}

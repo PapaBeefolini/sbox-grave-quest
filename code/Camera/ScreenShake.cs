@@ -21,7 +21,7 @@ public abstract class ScreenShake
 		public override bool Update( CameraComponent camera )
 		{
 			Vector3 random = Vector3.Random.WithZ( 0 ).Normal;
-			camera.Transform.LocalPosition += (camera.Transform.LocalRotation.Right * random.x + camera.Transform.LocalRotation.Up * random.y) * (1.0f - Progress) * Size;
+			camera.LocalPosition += (camera.LocalRotation.Right * random.x + camera.LocalRotation.Up * random.y) * (1.0f - Progress) * Size;
 			return LifeTime < Length;
 		}
 	}

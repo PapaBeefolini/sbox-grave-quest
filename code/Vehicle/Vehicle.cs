@@ -10,7 +10,7 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 	public Papa Papa { get; private set; }
 
 	public bool Grounded { get; private set; } = false;
-	public Vector3 LocalVelocity => Rigidbody.IsValid() ? Rigidbody.Velocity * Transform.Rotation.Inverse : Vector3.Zero;
+	public Vector3 LocalVelocity => Rigidbody.IsValid() ? Rigidbody.Velocity * WorldRotation.Inverse : Vector3.Zero;
 
 	[Property]
 	public float MaxSpeed { get; set; } = 1100.0f;
@@ -58,7 +58,7 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 
 	public void OnTriggerEnter( Collider collider )
 	{
-		Vector3 direction = Vector3.Direction( collider.Transform.Position, Transform.Position );
+		Vector3 direction = Vector3.Direction( collider.WorldPosition, WorldPosition );
 		Vector3 force = direction * LocalVelocity.Length * 4.0f + Vector3.Up * 2000.0f;
 
 		if ( collider.Components.TryGet<Skeleton>( out Skeleton skeleton ) && LocalVelocity.Length > 100.0f )
@@ -70,7 +70,7 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 
 	public void OnCollisionStart( Collision collision )
 	{
-		float dot = Vector3.Dot( Transform.Rotation.Backward, collision.Contact.Normal );
+		float dot = Vector3.Dot( WorldRotation.Backward, collision.Contact.Normal );
 		if ( collision.Contact.Speed.Length >= 700.0f && collision.Other.GameObject.Tags.Has( "wall" ) && dot > 0.7f )
 		{
 			DoCrashEffects( true );
@@ -145,6 +145,6 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 		float normalizedVelocity = MathX.Clamp( LocalVelocity.Length / MaxSpeed, 0.0f, 1.0f );
 		float shakeIntensity = MathX.Lerp( 0.25f, 4.0f, normalizedVelocity );
 		ShakeCamera( 0.5f, shakeIntensity );
-		Sound.Play( CrashSound, Transform.Position );
+		Sound.Play( CrashSound, WorldPosition );
 	}
 }

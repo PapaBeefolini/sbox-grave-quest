@@ -25,9 +25,9 @@ public sealed class Pizza : Component, Component.ITriggerListener
 
 	private void Explode()
 	{
-		GameObject explosion = ExplosionPrefab.Clone( Transform.Position, Rotation.FromPitch( -90 ) );
+		GameObject explosion = ExplosionPrefab.Clone( WorldPosition, Rotation.FromPitch( -90 ) );
 
-		SceneTraceResult[] hitObjects = Scene.Trace.Sphere( ExplosionRadius, Transform.Position, Transform.Position )
+		SceneTraceResult[] hitObjects = Scene.Trace.Sphere( ExplosionRadius, WorldPosition, WorldPosition )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.WithoutTags( "Player", "Pizza" )
 			.HitTriggers()
@@ -36,9 +36,9 @@ public sealed class Pizza : Component, Component.ITriggerListener
 
 		foreach ( SceneTraceResult hit in hitObjects )
 		{
-			Vector3 direction = Vector3.Direction( Transform.Position, hit.GameObject.Transform.Position );
+			Vector3 direction = Vector3.Direction( WorldPosition, hit.GameObject.WorldPosition );
 			Vector3 force = direction * 5000.0f + Vector3.Up * 2000.0f;
-			float distance = Transform.Position.Distance( hit.GameObject.Transform.Position );
+			float distance = WorldPosition.Distance( hit.GameObject.WorldPosition );
 
 			if ( hit.Body.IsValid() )
 				hit.Body.ApplyImpulse( force );
@@ -54,7 +54,7 @@ public sealed class Pizza : Component, Component.ITriggerListener
 			}
 		}
 
-		Sound.Play( ExplosionSound, Transform.Position );
+		Sound.Play( ExplosionSound, WorldPosition );
 		GameObject.Destroy();
 	}
 }

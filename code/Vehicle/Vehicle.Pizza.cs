@@ -25,13 +25,13 @@ public partial class Vehicle
 		Scene.Dispatch( new PizzaThrownEvent() );
 
 		Papa?.Throw();
-		GameObject pizza = PizzaPrefab.Clone( Papa.Transform.Position + Transform.Rotation * ThrowOffset, Transform.Rotation );
+		GameObject pizza = PizzaPrefab.Clone( Papa.WorldPosition + WorldRotation * ThrowOffset, WorldRotation );
 		Rigidbody pizzaRigidbody = pizza.Components.Get<Rigidbody>();
 		if ( !pizzaRigidbody.IsValid() )
 			return;
-		pizzaRigidbody.Velocity = Rigidbody.Velocity + Transform.Rotation * ThrowForce;
+		pizzaRigidbody.Velocity = Rigidbody.Velocity + WorldRotation * ThrowForce;
 
-		Sound.Play( ThrowSound, Transform.Position );
+		Sound.Play( ThrowSound, WorldPosition );
 	}
 
 	public float GetThrowCooldown()

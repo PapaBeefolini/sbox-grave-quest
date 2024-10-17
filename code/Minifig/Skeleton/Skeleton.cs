@@ -51,7 +51,7 @@ public partial class Skeleton : Minifig
 		Ragdoll( force, hitSpeed > 1000.0f );
 		DropHat();
 
-		Sound.Play( DeathSound, Transform.Position );
+		Sound.Play( DeathSound, WorldPosition );
 
 		IsDead = true;
 		Scene.Dispatch( new SkeletonDiedEvent() );
@@ -75,7 +75,7 @@ public partial class Skeleton : Minifig
 			if ( breakApart )
 			{
 				strength = 500.0f;
-				Sound.Play( BreakSound, Transform.Position );
+				Sound.Play( BreakSound, WorldPosition );
 			}
 			joint.Strength = strength;
 		}
