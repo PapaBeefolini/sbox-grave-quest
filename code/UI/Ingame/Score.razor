@@ -1,20 +1,19 @@
 @using Sandbox.UI;
-@using System.Threading.Tasks;
 
 @namespace MightyBrick.GraveQuest.UI
 @inherits Panel
 
 <root>
-    <div @ref=SkullPanel>
-        <img src="ui/skull.png" />
+    <div>
+        <img @ref=SkullPanel src="ui/skull.png" />
      </div>
     <label>@CurrentScore</label>
 </root>
 
 @code
 {
-    public int CurrentScore { get; set; } = 0;
-    public Panel SkullPanel { get; set; }
+    private int CurrentScore { get; set; } = 0;
+    private Panel SkullPanel { get; set; }
 
     public void Increment()
     {

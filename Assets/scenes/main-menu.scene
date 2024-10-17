@@ -10,13 +10,27 @@
         {
           "__type": "MightyBrick.GraveQuest.GameManager",
           "__guid": "a2344e3b-0169-48e7-b16f-718560c16aec",
+          "CountdownSound": "sounds/ui/beep.sound",
           "EscapeMenuSound": "sounds/ui/pause.sound",
+          "FadeUI": {
+            "_type": "component",
+            "component_id": "5956cd8f-6e09-49fa-961c-f85bba2bd7e5",
+            "go": "04b0327f-945c-474f-a066-e87208047ec1",
+            "component_type": "Fader"
+          },
           "GameScene": "scenes/game-world.scene",
+          "GameStartSound": "sounds/ui/go.sound",
           "GameUI": {
             "_type": "component",
             "component_id": "ccf7533c-2c08-4aa2-a080-1bdda0870856",
             "go": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
             "component_type": "ScreenPanel"
+          },
+          "HUDUI": {
+            "_type": "component",
+            "component_id": "9da77445-42ca-49c4-87e1-3fb89950429c",
+            "go": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
+            "component_type": "HUD"
           },
           "MainMenuScene": "scenes/main-menu.scene",
           "MainMenuUI": {
@@ -30,7 +44,11 @@
             "component_id": "3e3ec4bf-c9bb-498a-afa5-45d4062969f1",
             "go": "9d281563-46ef-4e12-a99b-3716c041b7ad",
             "component_type": "ScreenPanel"
-          },
+          }
+        },
+        {
+          "__type": "MightyBrick.GraveQuest.EnemySpawner",
+          "__guid": "0aa93972-8054-4ee1-b27e-fb08e573efd9",
           "SkeletonPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/skeleton.prefab"
@@ -113,6 +131,7 @@
           "__guid": "04b0327f-945c-474f-a066-e87208047ec1",
           "Flags": 0,
           "Name": "Fade UI",
+          "Enabled": true,
           "Components": [
             {
               "__type": "Sandbox.ScreenPanel",
@@ -462,6 +481,7 @@
         {
           "__type": "Sandbox.SkyBox2D",
           "__guid": "b48ad079-2eec-45f1-9150-98d050e7948e",
+          "SkyIndirectLighting": true,
           "SkyMaterial": "materials/sky.vmat",
           "Tint": "4,4,4,1"
         },
@@ -1495,6 +1515,7 @@
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
     "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
@@ -1515,6 +1536,5 @@
   "Description": "",
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }

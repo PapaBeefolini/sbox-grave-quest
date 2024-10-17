@@ -3,10 +3,12 @@
 
 @namespace MightyBrick.GraveQuest.UI
 @inherits PanelComponent
+@implements ISceneLoadingEvents
 @implements IGameEventHandler<PizzaThrownEvent> 
 @implements IGameEventHandler<SkeletonDiedEvent>
 
 <root>
+    <Announcement @ref="Announcement"/>
     <Score @ref="ScorePanel"/>
     <Timer CurrentTime=@CurrentTime></Timer>
     <Pizza @ref="PizzaPanel"/>
@@ -14,13 +16,26 @@
 
 @code
 {
-    public int CurrentTime { get; set; } = 0;
+    public Announcement Announcement { get; set; }
     public Score ScorePanel { get; set; }
     public Pizza PizzaPanel { get; set; }
+    public int CurrentTime { get; set; } = 0;
 
     protected override void OnUpdate()
     {
-        CurrentTime = MathX.FloorToInt(20 - Time.Now);
+        //CurrentTime = MathX.FloorToInt(1 + GameManager.Instance.TimeUntilGameStart.Relative);
+    }
+
+    public void Announce(string text, float timeVisible)
+    {
+        if (!Announcement.IsValid())
+            return;
+        Announcement.Display(text, timeVisible);
+    }
+
+    public void AfterLoad(Scene scene)
+    {
+        Announcement.Clear();
     }
 
     public void OnGameEvent(PizzaThrownEvent args)

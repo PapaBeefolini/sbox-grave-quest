@@ -22,6 +22,19 @@ public partial class GameManager : ISceneLoadingEvents
 				return;
 			SetGameState( GameState.MainMenu );
 		}
+
+		FadeUI.FadeOut( 0.25f );
+	}
+
+	public void FadeInMainMenu()
+	{
+		FadeUI.FadeIn( 0.25f, LoadMainMenuScene );
+		Scene.TimeScale = 1.0f;
+	}
+
+	public void FadeInGameScene()
+	{
+		FadeUI.FadeIn( 0.25f, LoadGameScene );
 	}
 
 	public void LoadGameScene()
@@ -38,6 +51,7 @@ public partial class GameManager : ISceneLoadingEvents
 	{
 		if ( !scene.IsValid() )
 			return;
+		EndGame();
 		HideUI();
 		Game.ActiveScene.Load( scene );
 		Game.ActiveScene.Name = scene.Title;

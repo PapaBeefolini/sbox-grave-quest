@@ -3,18 +3,24 @@ global using Sandbox.Utility;
 global using Sandbox.Events;
 global using System;
 global using System.Linq;
-global using System.Threading.Tasks;
 using MightyBrick.GraveQuest.UI;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MightyBrick.GraveQuest;
 
 public partial class GameManager : Component
 {
 	public static GameManager Instance { get; private set; }
+	public static CancellationTokenSource GameCTS { get; private set; }
 
-	public SoundPointComponent MusicSoundPoint { get; private set; }
+	[Property, Category( "Sounds" )]
+	public SoundEvent GameStartSound { get; set; }
+	[Property, Category( "Sounds" )]
+	public SoundEvent CountdownSound { get; set; }
 
-	public bool IsCustomizing { get; set; } = false;
+	public EnemySpawner EnemySpawner { get; private set; }
+	public bool IsGameRunning { get; private set; } = false;
 	public int Score;
 
 	public GameState State { get; private set; } = GameState.MainMenu;
@@ -43,6 +49,9 @@ public partial class GameManager : Component
 		Instance = this;
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
 
+		EnemySpawner = GetComponent<EnemySpawner>( true );
+		EnemySpawner.Enabled = false;
+
 		EscapeMenu = GameUI.Components.Get<EscapeMenu>();
 		InputHintsHUD = GameUI.Components.Get<InputHintsHUD>();
 		InputHintsHUD.Enabled = ShowInputHints;
@@ -52,11 +61,11 @@ public partial class GameManager : Component
 
 	protected override void OnUpdate()
 	{
-		if ( State == GameState.Game )
-		{
-			SpawnSkeletonOnTimer();
-		}
+		HandleInputs();
+	}
 
+	private void HandleInputs()
+	{
 		if ( Input.EscapePressed )
 		{
 			Input.EscapePressed = false;
@@ -66,7 +75,39 @@ public partial class GameManager : Component
 
 	private void StartGame()
 	{
-		skeletonSpawningTask = SpawnInitialSkeletons();
+		GameCTS = new CancellationTokenSource();
+		EnemySpawner.Enabled = true;
+		EnemySpawner?.SpawnEnemies( 5 );
+		_ = StartCountdown();
+		Log.Info( "Start" );
+	}
+
+	private void EndGame()
+	{
+		GameCTS?.Cancel();
+		EnemySpawner.Enabled = false;
+		IsGameRunning = false;
+		Log.Info( "End" );
+	}
+
+	private async Task StartCountdown()
+	{
+		await GameTask.DelaySeconds( 1.0f );
+		if ( GameCTS.IsCancellationRequested )
+			return;
+		for ( int i = 3; i >= 1; i-- )
+		{
+			if ( GameCTS.IsCancellationRequested )
+				return;
+			Sound.Play( CountdownSound );
+			HUDUI?.Announce( i.ToString(), 1.0f );
+			await GameTask.DelaySeconds( 1.0f );
+		}
+		if ( GameCTS.IsCancellationRequested )
+			return;
+		HUDUI?.Announce( "GO!", 1.0f );
+		Sound.Play( GameStartSound );
+		IsGameRunning = true;
 	}
 
 	private void SetGameState( GameState state )

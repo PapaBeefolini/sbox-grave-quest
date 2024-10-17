@@ -1,0 +1,36 @@
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits Panel
+
+<root>
+    <label>@Text</label>
+</root>
+
+@code
+{
+    private string Text { get; set; }
+    private TimeUntil timeUntilHideText { get; set; }
+
+    public override void Tick()
+    {
+        if (timeUntilHideText)
+        {
+            Clear();
+        } 
+    }
+
+    public void Display(string text, float timeVisible)
+    {
+        Text = text;
+        timeUntilHideText = timeVisible;
+        FlashClass("shake", 0.5f);
+    }
+
+    public void Clear()
+    {
+        Text = "";
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(Text);
+}

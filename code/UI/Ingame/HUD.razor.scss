@@ -1,3 +1,5 @@
+@import "../Defaults.scss";
+
 HUD {
 	position: absolute;
 	top: 0;
@@ -9,11 +11,25 @@ HUD {
 	color: white;
 	font-family: Fredoka One;
 
+	Announcement {
+		position: absolute;
+
+		label {
+			font-size: 96px;
+			text-shadow: 0px 0px 16px rgba( black, 0.8 );
+			text-stroke: 14px black;
+		}
+	}
+
 	Score {
 		position: absolute;
 		align-items: center;
 		top: 32px;
 		left: 64px;
+
+		div {
+			animation: rotate 0.6s ease infinite alternate;
+		}
 
 		label {
 			font-size: 48px;
@@ -25,18 +41,25 @@ HUD {
 		img {
 			width: 128px;
 			height: 128px;
-			animation: rotate 0.6s ease infinite alternate;
 		}
 	}
 
 	Timer {
 		position: absolute;
-		top: 128px;
+		top: 96px;
+		flex-direction: column;
+		text-align: center;
+		gap: 16px;
 
-		label {
-			font-size: 72px;
-			text-shadow: 0px 0px 16px rgba( black, 0.8 );
-			text-stroke: 14px black;
+		* {
+			color: $white;
+			justify-content: center;
+			text-align: center;
+			letter-spacing: 12px;
+		}
+
+		.tick * {
+			animation: timer 0.4s ease infinite alternate;
 		}
 	}
 
@@ -45,9 +68,9 @@ HUD {
 		align-items: center;
 		top: 32px;
 		right: 64px;
+		animation: grow 1.0s ease infinite alternate;
 
 		div {
-			position: relative;
 			width: 112px;
 			height: 112px;
 		}
@@ -58,7 +81,6 @@ HUD {
 			right: 0;
 			width: 112px;
 			height: 112px;
-			animation: grow 1.0s ease infinite alternate;
 
 			&.fg {
 				mask-image: linear-gradient(black, white);
@@ -118,5 +140,15 @@ HUD {
 
 	100% {
 		transform: scale(1);
+	}
+}
+
+@keyframes timer {
+	0% {
+		letter-spacing: 12px;
+	}
+
+	100% {
+		letter-spacing: 14px;
 	}
 }
