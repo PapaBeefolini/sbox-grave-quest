@@ -4,6 +4,8 @@ public sealed class EnemySpawner : Component
 {
 	[Property, Category( "Spawning" )]
 	public GameObject SkeletonPrefab { get; set; }
+	[Property, Category( "Spawning" )]
+	public int MaxSkeletons { get; set; } = 32;
 	public TimeUntil TimeUntilNextSpawn { get; set; } = 0.0f;
 
 	private float spawnRadius = 1550.0f;
@@ -13,7 +15,7 @@ public sealed class EnemySpawner : Component
 		if ( !Active || Scene.NavMesh.IsGenerating || TimeUntilNextSpawn > 0.0f )
 			return;
 		SpawnEnemy();
-		TimeUntilNextSpawn = 2.0f;
+		TimeUntilNextSpawn = 1.75f;
 	}
 
 	public void SpawnEnemies( int amount, float delayMin = 0.1f, float delayMax = 0.2f )
@@ -29,7 +31,7 @@ public sealed class EnemySpawner : Component
 
 	public void SpawnEnemy()
 	{
-		if ( !SkeletonPrefab.IsValid() )
+		if ( !SkeletonPrefab.IsValid() || Scene.GetAll<Skeleton>().Count() >= MaxSkeletons )
 			return;
 		Vector3 spawnPosition = Scene.NavMesh.GetRandomPoint( Vector3.Zero, spawnRadius ) ?? Vector3.Zero;
 		GameObject enemy = SkeletonPrefab.Clone( spawnPosition );

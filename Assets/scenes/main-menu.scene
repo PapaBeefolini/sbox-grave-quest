@@ -49,6 +49,7 @@
         {
           "__type": "MightyBrick.GraveQuest.EnemySpawner",
           "__guid": "0aa93972-8054-4ee1-b27e-fb08e573efd9",
+          "MaxSkeletons": 32,
           "SkeletonPrefab": {
             "_type": "gameobject",
             "prefab": "prefabs/skeleton.prefab"
