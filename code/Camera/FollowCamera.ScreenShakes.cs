@@ -8,6 +8,9 @@ public partial class FollowCamera
 
 	protected void ApplyScreenShakes()
 	{
+		if ( GameManager.Paused )
+			return;
+
 		for ( var i = Shakes.Count; i > 0; i-- )
 		{
 			ScreenShake entry = Shakes[i - 1];

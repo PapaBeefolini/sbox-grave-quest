@@ -75,6 +75,9 @@ public partial class FollowCamera : Component
 
 	private void Look()
 	{
+		if ( GameManager.Paused )
+			return;
+
 		EyeAngles += Input.AnalogLook;
 		EyeAngles = EyeAngles.WithPitch( MathX.Clamp( EyeAngles.pitch, MinPitch, MaxPitch ) );
 		WorldRotation = EyeAngles.ToRotation();

@@ -8,22 +8,17 @@
 
 <root>
     <Announcement @ref="Announcement"/>
+    <Timer @ref="TimePanel" CurrentTime=@MathX.FloorToInt(GameManager.Instance.TimeRemaining + 1)></Timer>
     <Score @ref="ScorePanel"/>
-    <Timer CurrentTime=@CurrentTime></Timer>
     <Pizza @ref="PizzaPanel"/>
 </root>
 
 @code
 {
     public Announcement Announcement { get; set; }
+    public Timer TimePanel { get; set; }
     public Score ScorePanel { get; set; }
     public Pizza PizzaPanel { get; set; }
-    public int CurrentTime { get; set; } = 0;
-
-    protected override void OnUpdate()
-    {
-        //CurrentTime = MathX.FloorToInt(1 + GameManager.Instance.TimeUntilGameStart.Relative);
-    }
 
     public void Announce(string text, float timeVisible)
     {
@@ -43,8 +38,11 @@
     {
         if (!ScorePanel.IsValid())
             return;
-        ScorePanel.Increment();
+        ScorePanel.Animate();
+        if (!TimePanel.IsValid())
+            return;
+        TimePanel.Animate();
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(CurrentTime);
+    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.TimeRemaining);
 }

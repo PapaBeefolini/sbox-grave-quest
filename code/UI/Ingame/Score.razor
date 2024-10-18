@@ -7,22 +7,19 @@
     <div>
         <img @ref=SkullPanel src="ui/skull.png" />
      </div>
-    <label>@CurrentScore</label>
+    <label>@GameManager.Instance.Score</label>
 </root>
 
 @code
 {
-    private int CurrentScore { get; set; } = 0;
     private Panel SkullPanel { get; set; }
 
-    public void Increment()
+    public void Animate()
     {
-        CurrentScore++;
-
         if (!SkullPanel.IsValid())
             return;
         SkullPanel.FlashClass("shake", 0.15f);
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(CurrentScore);
+    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.Score);
 }

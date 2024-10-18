@@ -12,7 +12,7 @@ public sealed class EnemySpawner : Component
 
 	protected override void OnUpdate()
 	{
-		if ( !Active || Scene.NavMesh.IsGenerating || TimeUntilNextSpawn > 0.0f )
+		if ( Scene.NavMesh.IsGenerating || TimeUntilNextSpawn > 0.0f )
 			return;
 		SpawnEnemy();
 		TimeUntilNextSpawn = 1.75f;
@@ -31,6 +31,8 @@ public sealed class EnemySpawner : Component
 
 	public void SpawnEnemy()
 	{
+		if ( GameManager.Instance.State != GameManager.GameState.Game )
+			return;
 		if ( !SkeletonPrefab.IsValid() || Scene.GetAll<Skeleton>().Count() >= MaxSkeletons )
 			return;
 		Vector3 spawnPosition = Scene.NavMesh.GetRandomPoint( Vector3.Zero, spawnRadius ) ?? Vector3.Zero;

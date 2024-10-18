@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 namespace MightyBrick.GraveQuest;
 
-public partial class GameManager : Component
+public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEvent>
 {
 	public static GameManager Instance { get; private set; }
 	public static CancellationTokenSource GameCTS { get; private set; }
+	public static bool Paused => Game.ActiveScene.TimeScale != 1.0f;
 
 	[Property, Category( "Sounds" )]
 	public SoundEvent GameStartSound { get; set; }
@@ -21,13 +22,15 @@ public partial class GameManager : Component
 
 	public EnemySpawner EnemySpawner { get; private set; }
 	public bool IsGameRunning { get; private set; } = false;
-	public int Score;
+	public float TimeRemaining { get; private set; } = 0.0f;
+	public int Score = 0;
 
 	public GameState State { get; private set; } = GameState.MainMenu;
 	public enum GameState
 	{
 		MainMenu,
-		Game
+		Game,
+		Loading
 	}
 
 	protected override void OnEnabled()
@@ -62,6 +65,11 @@ public partial class GameManager : Component
 	protected override void OnUpdate()
 	{
 		HandleInputs();
+
+		if ( TimeRemaining <= 0.0f && IsGameRunning )
+			_ = RestartGame();
+		if ( IsGameRunning )
+			TimeRemaining -= Time.Delta;
 	}
 
 	private void HandleInputs()
@@ -73,13 +81,20 @@ public partial class GameManager : Component
 		}
 	}
 
+	public void OnGameEvent( SkeletonDiedEvent args )
+	{
+		TimeRemaining += 2.0f;
+		Score++;
+	}
+
 	private void StartGame()
 	{
 		GameCTS = new CancellationTokenSource();
+		TimeRemaining = 6.0f;
+		Score = 0;
 		EnemySpawner.Enabled = true;
 		EnemySpawner?.SpawnEnemies( 5 );
 		_ = StartCountdown();
-		Log.Info( "Start" );
 	}
 
 	private void EndGame()
@@ -87,7 +102,18 @@ public partial class GameManager : Component
 		GameCTS?.Cancel();
 		EnemySpawner.Enabled = false;
 		IsGameRunning = false;
-		Log.Info( "End" );
+	}
+
+	private async Task RestartGame()
+	{
+		EndGame();
+		GameCTS = new CancellationTokenSource();
+		HUDUI?.Announce( "Game Over", 5.0f );
+
+		await GameTask.DelaySeconds( 5.0f );
+		if ( GameCTS.IsCancellationRequested )
+			return;
+		LoadGameScene();
 	}
 
 	private async Task StartCountdown()

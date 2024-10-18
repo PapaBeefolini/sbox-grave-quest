@@ -5,10 +5,18 @@
 
 <root>
     <h2 class="tick">Time</h2>
-    <h2>@CurrentTime</h2>
+    <h1 @ref="TimePanel">@CurrentTime</h1>
 </root>
 
 @code
 {
     public float CurrentTime { get; set; } = 0;
+    private Panel TimePanel { get; set; }
+
+    public void Animate()
+    {
+        if (!TimePanel.IsValid())
+            return;
+        TimePanel.FlashClass("shake", 0.15f);
+    }
 }

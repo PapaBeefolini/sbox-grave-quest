@@ -11,40 +11,27 @@ public partial class GameManager : ISceneLoadingEvents
 	{
 		if ( scene.Source.ResourceId == GameScene.ResourceId )
 		{
-			if ( State == GameState.Game )
-				return;
 			SetGameState( GameState.Game );
 			StartGame();
 		}
 		else if ( scene.Source.ResourceId == MainMenuScene.ResourceId )
 		{
-			if ( State == GameState.MainMenu )
-				return;
 			SetGameState( GameState.MainMenu );
 		}
 
 		FadeUI.FadeOut( 0.25f );
 	}
 
-	public void FadeInMainMenu()
-	{
-		FadeUI.FadeIn( 0.25f, LoadMainMenuScene );
-		Scene.TimeScale = 1.0f;
-	}
-
-	public void FadeInGameScene()
-	{
-		FadeUI.FadeIn( 0.25f, LoadGameScene );
-	}
-
 	public void LoadGameScene()
 	{
-		LoadScene( GameScene );
+		FadeUI.FadeIn( 0.25f, () => { LoadScene( GameScene ); } );
 	}
 
 	public void LoadMainMenuScene()
 	{
-		LoadScene( MainMenuScene );
+		FadeUI.FadeIn( 0.25f, () => { LoadScene( MainMenuScene ); } );
+		Scene.TimeScale = 1.0f;
+		GameCTS?.Cancel();
 	}
 
 	private void LoadScene( SceneFile scene )
@@ -53,6 +40,7 @@ public partial class GameManager : ISceneLoadingEvents
 			return;
 		EndGame();
 		HideUI();
+		State = GameState.Loading;
 		Scene.Load( scene );
 		Scene.Name = scene.Title;
 	}
