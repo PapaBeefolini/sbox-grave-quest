@@ -79,9 +79,6 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 
 	private void UpdateInputs()
 	{
-		if ( !GameManager.Instance.IsGameRunning )
-			return;
-
 		float forward = Input.Down( "Throttle" ) ? 1.0f : 0.0f;
 		if ( Input.Down( "Brake" ) )
 			forward = -1.0f;
@@ -96,6 +93,13 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 
 		InputForward = InputForward.LerpTo( forward, PowerLerpSpeed * Time.Delta );
 		InputRight = InputRight.LerpTo( steer, SteerLerpSpeed * Time.Delta );
+
+		if ( !GameManager.Instance.IsGameRunning )
+		{
+			InputForward = 0.0f;
+			InputRight = 0.0f;
+			return;
+		}
 
 		if ( Input.Pressed( "ThrowPizza" ) )
 			ThrowPizza();
@@ -136,6 +140,7 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 	public void ShakeCamera( float duration, float intensity )
 	{
 		FollowCamera.Instance?.AddShake( new ScreenShake.Random( duration, intensity ) );
+		Input.TriggerHaptics( HapticEffect.Rumble );
 	}
 
 	private void DoCrashEffects(bool animate = false)
