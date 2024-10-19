@@ -111,31 +111,22 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		EndGame();
 		GameCTS = new CancellationTokenSource();
 		HUDUI?.Announce( "Game Over", 5.0f );
-
-		await GameTask.DelaySeconds( 5.0f );
-		if ( GameCTS.IsCancellationRequested )
-			return;
+		await GameTask.DelaySeconds( 5.0f, GameCTS.Token );
 		LoadGameScene();
 	}
 
 	private async Task StartCountdown()
 	{
-		await GameTask.DelaySeconds( 1.0f );
-		if ( GameCTS.IsCancellationRequested )
-			return;
+		await GameTask.DelaySeconds( 1.0f, GameCTS.Token );
 		for ( int i = 3; i >= 1; i-- )
 		{
-			if ( GameCTS.IsCancellationRequested )
-				return;
 			Sound.Play( CountdownSound );
 			HUDUI?.Announce( i.ToString(), 1.0f );
-			await GameTask.DelaySeconds( 1.0f );
+			await GameTask.DelaySeconds( 1.0f, GameCTS.Token );
 		}
-		if ( GameCTS.IsCancellationRequested )
-			return;
+		IsGameRunning = true;
 		HUDUI?.Announce( "GO!", 1.0f );
 		Sound.Play( GameStartSound );
-		IsGameRunning = true;
 	}
 
 	private void SetGameState( GameState state )
