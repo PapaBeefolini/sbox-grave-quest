@@ -54,5 +54,6 @@ public partial class GameManager
 		MainMenuUI.Enabled = false;
 		GameUI.Enabled = false;
 		OptionsMenu.Enabled = false;
+		HUDUI?.ClearAnnouncement();
 	}
 }

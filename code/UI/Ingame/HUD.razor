@@ -1,4 +1,3 @@
-@using Sandbox.UI;
 @using Sandbox.Events;
 
 @namespace MightyBrick.GraveQuest.UI
@@ -8,7 +7,9 @@
 
 <root>
     <Announcement @ref="Announcement"/>
-    <Timer @ref="TimePanel" CurrentTime=@MathX.FloorToInt(GameManager.Instance.TimeRemaining + 1)></Timer>
+    @if (!GameManager.Instance.IsGameRunning)
+        return;
+    <Timer @ref="TimePanel" CurrentTime=@MathX.CeilToInt(GameManager.Instance.TimeRemaining)></Timer>
     <Score @ref="ScorePanel"/>
     <Pizza @ref="PizzaPanel"/>
 </root>
@@ -20,11 +21,18 @@
     public Score ScorePanel { get; set; }
     public Pizza PizzaPanel { get; set; }
 
-    public void Announce(string text, float timeVisible)
+    public void DisplayAnnouncement(string text, float timeVisible, string subtext = null, string imageURL = null)
     {
         if (!Announcement.IsValid())
             return;
-        Announcement.Display(text, timeVisible);
+        Announcement.Display(text, timeVisible, subtext, imageURL);
+    }
+
+    public void ClearAnnouncement()
+    {
+        if (!Announcement.IsValid())
+            return;
+        Announcement.Clear();
     }
 
     public void OnGameEvent(PizzaThrownEvent args)
@@ -46,5 +54,5 @@
         TimePanel.Animate();
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.TimeRemaining);
+    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.TimeRemaining, GameManager.Instance.IsGameRunning);
 }

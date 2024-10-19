@@ -1,10 +1,9 @@
-@using Sandbox;
-@using Sandbox.UI;
-
 @namespace MightyBrick.GraveQuest.UI
 @inherits PanelComponent
 
 <root>
+    @if (!GameManager.Instance.IsGameRunning)
+        return;
     <div class="panel">
         @if ( Input.UsingController )
 	    {
@@ -34,5 +33,5 @@
 
 @code
 {
-    protected override int BuildHash() => System.HashCode.Combine(Input.UsingController);
+    protected override int BuildHash() => System.HashCode.Combine(Input.UsingController, GameManager.Instance.IsGameRunning);
 }

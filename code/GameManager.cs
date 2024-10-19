@@ -92,7 +92,7 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 	private void StartGame()
 	{
 		GameCTS = new CancellationTokenSource();
-		TimeRemaining = 6.0f;
+		TimeRemaining = 8.0f;
 		Score = 0;
 		EnemySpawner.Enabled = true;
 		EnemySpawner?.SpawnEnemies( 5 );
@@ -110,7 +110,7 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 	{
 		EndGame();
 		GameCTS = new CancellationTokenSource();
-		HUDUI?.Announce( "Game Over", 5.0f );
+		HUDUI?.DisplayAnnouncement( "Game Over", 5.0f, $"Score: {Score}", "ui/skull-small.png" );
 		await GameTask.DelaySeconds( 5.0f, GameCTS.Token );
 		LoadGameScene();
 	}
@@ -121,11 +121,11 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		for ( int i = 3; i >= 1; i-- )
 		{
 			Sound.Play( CountdownSound );
-			HUDUI?.Announce( i.ToString(), 1.0f );
+			HUDUI?.DisplayAnnouncement( i.ToString(), 1.0f );
 			await GameTask.DelaySeconds( 1.0f, GameCTS.Token );
 		}
 		IsGameRunning = true;
-		HUDUI?.Announce( "GO!", 1.0f );
+		HUDUI?.DisplayAnnouncement( "GO!", 1.0f );
 		Sound.Play( GameStartSound );
 	}
 

@@ -13,11 +13,31 @@ HUD {
 
 	Announcement {
 		position: absolute;
+		flex-direction: column;
+		align-items: center;
+
+		div {
+			align-items: center;
+		}
 
 		label {
+			letter-spacing: 8px;
 			font-size: 96px;
 			text-shadow: 0px 0px 16px rgba( black, 0.8 );
 			text-stroke: 14px black;
+			padding: 24px 16px;
+
+			&.subtext {
+				color: $purple;
+				letter-spacing: 4px;
+				font-size: 48px;
+				text-stroke: 12px black;
+			}
+		}
+
+		img {
+			width: 64px;
+			height: 64px;
 		}
 	}
 

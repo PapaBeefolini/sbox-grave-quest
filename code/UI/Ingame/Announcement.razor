@@ -5,11 +5,20 @@
 
 <root>
     <label>@Text</label>
+    <div>
+        <label class="subtext">@Subtext</label>
+        @if (!string.IsNullOrEmpty(ImageURL))
+        {
+            <img src=@ImageURL />
+        }
+    </div>
 </root>
 
 @code
 {
     private string Text { get; set; }
+    private string Subtext { get; set; }
+    private string ImageURL { get; set; }
     private TimeUntil timeUntilHideText { get; set; }
 
     public override void Tick()
@@ -20,17 +29,21 @@
         } 
     }
 
-    public void Display(string text, float timeVisible)
+    public void Display(string text, float timeVisible, string subtext = null, string imageURL = null)
     {
         Text = text;
+        Subtext = subtext;
+        ImageURL = imageURL;
         timeUntilHideText = timeVisible;
         FlashClass("shake", 0.5f);
     }
 
     public void Clear()
     {
-        Text = "";
+        Text = string.Empty;
+        Subtext = string.Empty;
+        ImageURL = string.Empty;
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(Text);
+    protected override int BuildHash() => System.HashCode.Combine(Text, Subtext);
 }
