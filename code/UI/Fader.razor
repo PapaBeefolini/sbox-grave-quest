@@ -8,22 +8,22 @@
 @code
 {
     private TimeUntil timeUntilFinished = 0.0f;
-    private Action actionToCall;
+    private Action actionToCall = null;
     private float desiredOpacity = 0.0f;
     private float currentOpacity = 0.0f;
     private float opacity = 0.0f;
-    private bool done = false;
+    private bool fading = false;
 
-    protected override void OnUpdate()
+    protected override void OnPreRender()
     {
-        if ( done )
+        if ( !fading )
             return;
 
-        opacity = currentOpacity.LerpTo(desiredOpacity, Easing.EaseOut(timeUntilFinished.Fraction));
+        opacity = currentOpacity.LerpTo(desiredOpacity, timeUntilFinished.Fraction);
 
         if ( timeUntilFinished )
         {
-            done = true;
+            fading = false;
             actionToCall?.Invoke();
         }
     }
@@ -40,7 +40,7 @@
 
     private void Fade(float time, float opacity, Action action = null)
     {
-        done = false;
+        fading = true;
         currentOpacity = this.opacity;
         desiredOpacity = opacity;
         timeUntilFinished = time;
