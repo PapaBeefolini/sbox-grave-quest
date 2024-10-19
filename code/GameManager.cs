@@ -83,6 +83,8 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 
 	public void OnGameEvent( SkeletonDiedEvent args )
 	{
+		if ( !IsGameRunning )
+			return;
 		TimeRemaining += 2.0f;
 		Score++;
 	}
