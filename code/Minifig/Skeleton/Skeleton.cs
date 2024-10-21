@@ -28,6 +28,9 @@ public partial class Skeleton : Minifig
 			Renderer.MaterialGroup = "dark";
 
 		SetRandomMoveSpeed();
+
+		Collider.Enabled = false;
+		Invoke( 1.75f, () => { Collider.Enabled = true; } );
 	}
 
 	protected override void OnUpdate()
