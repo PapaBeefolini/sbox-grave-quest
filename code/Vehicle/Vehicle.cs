@@ -8,6 +8,8 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 	public Rigidbody Rigidbody { get; private set; }
 	public Wheel[] Wheels { get; private set; }
 	public Papa Papa { get; private set; }
+	public SoundPointComponent EngineSoundPoint { get; private set; }
+	private float currentPitch = 0.8f;
 
 	public bool Grounded { get; private set; } = false;
 	public Vector3 LocalVelocity => Rigidbody.IsValid() ? Rigidbody.Velocity * WorldRotation.Inverse : Vector3.Zero;
@@ -36,12 +38,18 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 	{
 		if ( IsProxy )
 			return;
-
 		Local = this;
 		FollowCamera.Instance.Target = this;
 		Wheels = GameObject.Components.GetAll<Wheel>( FindMode.EverythingInChildren ).ToArray();
 		Papa = GameObject.Components.GetInChildren<Papa>();
 		Papa?.SetIsDriving( true );
+		EngineSoundPoint = Components.GetInChildren<SoundPointComponent>();
+	}
+
+	protected override void OnUpdate()
+	{
+		UpdateInputs();
+		UpdateAudio();
 	}
 
 	protected override void OnFixedUpdate()
@@ -49,7 +57,6 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 		if ( !Rigidbody.IsValid() )
 			return;
 
-		UpdateInputs();
 		UpdateGrounded();
 		KeepUpright();
 
@@ -103,6 +110,17 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 
 		if ( Input.Pressed( "ThrowPizza" ) )
 			ThrowPizza();
+	}
+
+	private void UpdateAudio()
+	{
+		float velocityFactor = MathX.Clamp( LocalVelocity.Length / MaxSpeed, 0.0f, 1.0f );
+		float inputFactor = MathF.Abs( InputForward );
+		float targetPitch = MathX.Lerp( 0.5f, 1.5f, MathX.Lerp( velocityFactor, inputFactor, 0.6f ) );
+		if ( !Grounded )
+			targetPitch += 0.2f;
+		currentPitch = MathX.Lerp( currentPitch, targetPitch, Time.Delta * 8.0f );
+		EngineSoundPoint.Pitch = currentPitch;
 	}
 
 	private void UpdateGrounded()

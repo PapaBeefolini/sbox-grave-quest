@@ -177,7 +177,7 @@
               "StopOnNew": false,
               "TargetMixer": {
                 "Name": "music",
-                "Id": "3c2d37d7-d2de-4c4e-8811-99e59ba00e61"
+                "Id": "dbf2d9b7-2d1e-4494-b378-9181fc41f3ef"
               },
               "Volume": 1
             }
@@ -348,6 +348,39 @@
               "LightColor": "64,60.0707,24.70698,1",
               "Radius": 600,
               "Shadows": true
+            }
+          ]
+        },
+        {
+          "__guid": "e8bff898-71cf-411b-a27f-14d074bc503a",
+          "Flags": 0,
+          "Name": "Engine",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundPointComponent",
+              "__guid": "21b90649-0763-426a-867d-3b58a89a3ea9",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": false,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 0.5,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/vehicle/engine.sound",
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "TargetMixer": {
+                "Name": "game",
+                "Id": "aab222af-1d88-4dde-af8a-7a3c3e2d9595"
+              },
+              "Volume": 0.4
             }
           ]
         },
@@ -582,7 +615,8 @@
               "IsTrigger": false,
               "Scale": "3200,50,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface"
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
             }
           ]
         },
@@ -601,7 +635,8 @@
               "IsTrigger": false,
               "Scale": "3200,50,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface"
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
             }
           ]
         },
@@ -620,7 +655,8 @@
               "IsTrigger": false,
               "Scale": "50,3200,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface"
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
             }
           ]
         },
@@ -639,7 +675,8 @@
               "IsTrigger": false,
               "Scale": "50,3200,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface"
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
             }
           ]
         }

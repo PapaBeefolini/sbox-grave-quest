@@ -26,7 +26,8 @@
         "IsTrigger": false,
         "Model": "models/car.vmdl",
         "Static": false,
-        "Surface": "surfaces/vehicle.surface"
+        "Surface": "surfaces/vehicle.surface",
+        "SurfaceVelocity": "0,0,0"
       },
       {
         "__type": "Sandbox.Rigidbody",
@@ -96,6 +97,39 @@
         ]
       },
       {
+        "__guid": "f4d87d2a-2574-43fb-9507-1ea95dd8b0b7",
+        "Flags": 0,
+        "Name": "Engine",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SoundPointComponent",
+            "__guid": "1dfb4941-4165-4e9b-bcec-500e8f5b6d9a",
+            "DistanceAttenuation": false,
+            "DistanceAttenuationOverride": false,
+            "Force2d": false,
+            "MaxRepeatTime": 1,
+            "MinRepeatTime": 1,
+            "Occlusion": false,
+            "OcclusionOverride": false,
+            "OcclusionRadius": 32,
+            "Pitch": 1,
+            "PlayOnStart": true,
+            "ReflectionOverride": false,
+            "Reflections": false,
+            "Repeat": false,
+            "SoundEvent": "sounds/vehicle/engine.sound",
+            "SoundOverride": true,
+            "StopOnNew": false,
+            "TargetMixer": {
+              "Name": "game",
+              "Id": "aab222af-1d88-4dde-af8a-7a3c3e2d9595"
+            },
+            "Volume": 0.8
+          }
+        ]
+      },
+      {
         "__guid": "2da9bdfd-de88-4c64-8db3-30a4fa8b4b18",
         "Flags": 0,
         "Name": "wheel_fl",
@@ -124,7 +158,6 @@
             "__guid": "24e35e72-879c-4949-b3ba-c4bafdff054a",
             "Flags": 0,
             "Name": "wheel_small",
-            "Position": "0,0,0",
             "Enabled": true,
             "Components": [
               {
@@ -175,7 +208,6 @@
             "__guid": "c48e6406-21fe-4534-a377-772788f244a9",
             "Flags": 0,
             "Name": "wheel_small",
-            "Position": "0,0,0",
             "Enabled": true,
             "Components": [
               {
@@ -225,7 +257,6 @@
             "__guid": "f70a5004-0be9-494a-ab1a-e122e6190973",
             "Flags": 0,
             "Name": "wheel_big",
-            "Position": "0,0,0",
             "Enabled": true,
             "Components": [
               {
@@ -276,7 +307,6 @@
             "__guid": "8308607c-1d2c-4f48-bbbb-995248d80466",
             "Flags": 0,
             "Name": "wheel_big",
-            "Position": "0,0,0",
             "Enabled": true,
             "Components": [
               {
