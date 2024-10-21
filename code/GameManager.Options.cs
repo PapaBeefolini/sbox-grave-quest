@@ -1,22 +1,84 @@
-﻿namespace MightyBrick.GraveQuest;
+﻿using Sandbox.Audio;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+
+namespace MightyBrick.GraveQuest;
+
+public class GameSettings
+{
+	private float masterVolume;
+	public float MasterVolume
+	{
+		get
+		{
+			return masterVolume;
+		}
+		set
+		{
+			masterVolume = value;
+			GameManager.UpdateSettings();
+		}
+	}
+	private float musicVolume;
+	public float MusicVolume
+	{
+		get
+		{
+			return musicVolume;
+		}
+		set
+		{
+			musicVolume = value;
+			GameManager.UpdateSettings();
+		}
+	}
+	public bool ShowInputHints { get; set; } = true;
+	public int HatIndex { get; set; } = 0;
+	public int HatColor { get; set; } = 0;
+}
 
 public partial class GameManager
 {
-	public float GameVolume { get; set; } = 100.0f;
-	public float MusicVolume { get; set; } = 75.0f;
+	public static string SaveFilePath => "gamesettings.json";
 
-	private bool showInputHints = true;
-	public bool ShowInputHints
+	private static GameSettings gameSettings { get; set; }
+	public static GameSettings GameSettings
 	{
-		get => showInputHints;
+		get
+		{
+			if ( gameSettings is null )
+				Load();
+			return gameSettings;
+		}
 		set
 		{
-			showInputHints = value;
-			InputHintsHUD.Enabled = value;
+			gameSettings = value;
 		}
 	}
 
 	public bool IsCustomizing { get; set; } = false;
-	public int HatIndex { get; set; } = 0;
-	public int HatColor { get; set; } = 0;
+
+	public static void Save()
+	{
+		UpdateSettings();
+		JsonSerializerOptions options = new JsonSerializerOptions
+		{
+			DefaultIgnoreCondition = JsonIgnoreCondition.Never,
+			WriteIndented = true
+		};
+		string json = JsonSerializer.Serialize( GameSettings, options );
+		FileSystem.Data.WriteAllText( SaveFilePath, json );
+	}
+
+	public static void Load()
+	{
+		GameSettings = FileSystem.Data.ReadJson<GameSettings>( SaveFilePath, new() );
+	}
+
+	public static void UpdateSettings()
+	{
+		Mixer.Master.Volume = GameSettings.MasterVolume / 100;
+		Mixer[] channels = Mixer.Master.GetChildren();
+		channels[0].Volume = GameSettings.MusicVolume / 100;
+	}
 }

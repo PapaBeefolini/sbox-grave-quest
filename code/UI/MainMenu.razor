@@ -17,7 +17,7 @@
             </div>
             <Button class="right" Text="Next Hat" OnClick=@(() => ChangeHat(1)) />
             <Button class="right" Text="Previous Hat" OnClick=@(() => ChangeHat(-1)) />
-            <Button class="bigger right" Text="Back" OnClick=@(() => OnCustomize()) />
+            <Button class="right" Text="Back" OnClick=@(() => OnCustomize()) />
         </div>
         return;
     }
@@ -43,6 +43,7 @@
     private void OnCustomize()
     {
         GameManager.Instance.IsCustomizing = !GameManager.Instance.IsCustomizing;
+        GameManager.Save();
     }
 
     private void OnOptions()

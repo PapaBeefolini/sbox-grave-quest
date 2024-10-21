@@ -22,8 +22,8 @@ public sealed class Papa : Minifig
 
 	protected override void OnStart()
 	{
-		HatIndex = GameManager.Instance.HatIndex;
-		HatColorIndex = GameManager.Instance.HatColor;
+		HatIndex = GameManager.GameSettings.HatIndex;
+		HatColorIndex = GameManager.GameSettings.HatColor;
 		SetHatModel( HatIndex );
 		SetHatColor( HatColorIndex );
 	}
@@ -83,7 +83,7 @@ public sealed class Papa : Minifig
 			HatRenderer.Model = Hats[index];
 			HatRenderer.Enabled = Hats[index].IsValid();
 		}
-		GameManager.Instance.HatIndex = index;
+		GameManager.GameSettings.HatIndex = index;
 	}
 
 	private void SetHatColor( int index )
@@ -91,7 +91,7 @@ public sealed class Papa : Minifig
 		HatColorIndex = index;
 		if ( HatRenderer.IsValid() )
 			HatRenderer.Tint = HatColors[HatColorIndex];
-		GameManager.Instance.HatColor = HatColorIndex;
+		GameManager.GameSettings.HatColor = HatColorIndex;
 	}
 
 	private void ScaleZ( float value )

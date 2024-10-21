@@ -5,21 +5,22 @@
 
 <root>
     <h2>Options</h2>
-    <Button Text="X" class="close" OnClick=@(() => GameManager.Instance.ToggleOptionsMenu()) />
+    <Button Text="X" class="x" OnClick=@(() => GameManager.Instance.ToggleOptionsMenu()) />
     <div class="container">
         <div class="entry">
-            <label>Game Volume</label>
-            <SliderControl Value:bind=@GameManager.Instance.GameVolume ShowValueTooltip=@false ShowRange=@true style=""/>
+            <label>Master Volume</label>
+            <SliderControl Value:bind=@GameManager.GameSettings.MasterVolume ShowValueTooltip=@false ShowRange=@true style=""/>
         </div>
         <div class="entry">
             <label>Music Volume</label>
-            <SliderControl Value:bind=@GameManager.Instance.MusicVolume ShowValueTooltip=@false ShowRange=@true style=""/>
+            <SliderControl Value:bind=@GameManager.GameSettings.MusicVolume ShowValueTooltip=@false ShowRange=@true style=""/>
         </div>
         <div class="entry">
             <label>Show Input Hints</label>
-            <Checkbox Value:bind=@GameManager.Instance.ShowInputHints />
+            <Checkbox Value:bind=@GameManager.GameSettings.ShowInputHints />
         </div>
     </div>
+    <Button Text="Accept" class="bigger" OnClick=@(() => GameManager.Instance.ToggleOptionsMenu()) />
 </root>
 
 @code

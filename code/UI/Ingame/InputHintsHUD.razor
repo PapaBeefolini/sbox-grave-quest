@@ -2,7 +2,7 @@
 @inherits PanelComponent
 
 <root>
-    @if (!GameManager.Instance.IsGameRunning)
+    @if (!GameManager.Instance.IsGameRunning || !GameManager.GameSettings.ShowInputHints)
         return;
     <div class="panel">
         @if ( Input.UsingController )
@@ -33,5 +33,5 @@
 
 @code
 {
-    protected override int BuildHash() => System.HashCode.Combine(Input.UsingController, GameManager.Instance.IsGameRunning);
+    protected override int BuildHash() => System.HashCode.Combine(Input.UsingController, GameManager.Instance.IsGameRunning, GameManager.GameSettings.ShowInputHints);
 }

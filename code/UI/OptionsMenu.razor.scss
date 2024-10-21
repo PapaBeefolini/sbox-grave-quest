@@ -33,6 +33,10 @@ OptionsMenu {
         border: solid 3px $dark-purple;
         background-color: $black-transparent;
 
+        > label {
+            width: 300px;
+        }
+
         Checkbox:last-child {
             margin-left: auto;
         }
@@ -113,7 +117,15 @@ OptionsMenu {
         }
     }
 
-    .close {
+    Button {
+        align-self: center;
+        margin-top: auto;
+        padding: 0px;
+        margin-top: auto;
+        padding: 0px;
+    }
+
+    .x {
         cursor: pointer;
         position: absolute;
         top: 0;

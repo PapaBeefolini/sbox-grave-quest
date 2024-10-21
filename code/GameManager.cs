@@ -56,9 +56,6 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		EnemySpawner.Enabled = false;
 
 		EscapeMenu = GameUI.Components.Get<EscapeMenu>();
-		InputHintsHUD = GameUI.Components.Get<InputHintsHUD>();
-		InputHintsHUD.Enabled = ShowInputHints;
-
 		RefreshUI();
 	}
 

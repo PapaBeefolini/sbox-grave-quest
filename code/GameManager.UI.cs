@@ -14,7 +14,6 @@ public partial class GameManager
 	public HUD HUDUI { get; private set; }
 	[Property, Category( "UI" )]
 	public Fader FadeUI { get; private set; }
-	public InputHintsHUD InputHintsHUD { get; private set; }
 	public EscapeMenu EscapeMenu { get; private set; }
 	[Property, Category( "Sounds" )]
 	public SoundEvent EscapeMenuSound { get; private set; }
@@ -39,6 +38,7 @@ public partial class GameManager
 	public void ToggleOptionsMenu()
 	{
 		OptionsMenu.Enabled = !OptionsMenu.Enabled;
+		Save();
 	}
 
 	private void RefreshUI()

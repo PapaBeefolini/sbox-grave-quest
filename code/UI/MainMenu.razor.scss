@@ -34,8 +34,6 @@ MainMenu {
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
-		width: 226px;
-		gap: 2px;
 		margin-bottom: 16px;
 	}
 
@@ -45,6 +43,7 @@ MainMenu {
 		border: solid 4px black;
 		width: 38px;
 		height: 38px;
+		margin: 1px;
 		transition: all 0.05s linear;
 
 		&:hover {
@@ -83,7 +82,7 @@ MainMenu {
 		animation: discord 1s ease infinite alternate;
 
 		> label {
-			color: $dark-purple;
+			color: $orange;
 			font-size: 48px;
 		}
 	}
