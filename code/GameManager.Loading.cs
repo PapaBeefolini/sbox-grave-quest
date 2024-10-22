@@ -17,6 +17,7 @@ public partial class GameManager : ISceneLoadingEvents
 		else if ( scene.Source.ResourceId == MainMenuScene.ResourceId )
 		{
 			SetGameState( GameState.MainMenu );
+			MusicManager.Instance.PlayMenuMusic();
 		}
 
 		FadeUI.FadeOut( 0.25f );
@@ -25,11 +26,13 @@ public partial class GameManager : ISceneLoadingEvents
 	public void LoadGameScene()
 	{
 		FadeUI.FadeIn( 0.25f, () => { LoadScene( GameScene ); } );
+		MusicManager.Instance.FadeOut();
 	}
 
 	public void LoadMainMenuScene()
 	{
 		FadeUI.FadeIn( 0.25f, () => { LoadScene( MainMenuScene ); } );
+		MusicManager.Instance.FadeOut();
 		Scene.TimeScale = 1.0f;
 		GameCTS?.Cancel();
 	}

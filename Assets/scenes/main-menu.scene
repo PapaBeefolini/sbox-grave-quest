@@ -168,18 +168,24 @@
               "OcclusionOverride": false,
               "OcclusionRadius": 32,
               "Pitch": 1,
-              "PlayOnStart": true,
+              "PlayOnStart": false,
               "ReflectionOverride": false,
               "Reflections": false,
               "Repeat": false,
-              "SoundEvent": "sounds/music/spooker.sound",
-              "SoundOverride": false,
-              "StopOnNew": false,
+              "SoundOverride": true,
+              "StopOnNew": true,
               "TargetMixer": {
                 "Name": "music",
                 "Id": "dbf2d9b7-2d1e-4494-b378-9181fc41f3ef"
               },
-              "Volume": 1
+              "Volume": 0.4
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.MusicManager",
+              "__guid": "8d24b6ed-880d-4463-81a7-2d185d3cdd73",
+              "GameMusic": "sounds/music/spooker-action.sound",
+              "GameOverSound": "sounds/music/spooker-ending.sound",
+              "MenuMusic": "sounds/music/spooker.sound"
             }
           ]
         }

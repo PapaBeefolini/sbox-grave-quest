@@ -109,8 +109,9 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 	{
 		EndGame();
 		GameCTS = new CancellationTokenSource();
-		HUDUI?.DisplayAnnouncement( "Game Over", 5.0f, $"Score: {Score}", "ui/skull-small.png" );
-		await GameTask.DelaySeconds( 5.0f, GameCTS.Token );
+		HUDUI?.DisplayAnnouncement( "Game Over", 8.0f, $"Score: {Score}", "ui/skull-small.png" );
+		MusicManager.Instance.PlayGameOverMusic();
+		await GameTask.DelaySeconds( 6.0f, GameCTS.Token );
 		LoadGameScene();
 	}
 
@@ -126,6 +127,7 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		IsGameRunning = true;
 		HUDUI?.DisplayAnnouncement( "GO!", 1.0f );
 		Sound.Play( GameStartSound );
+		MusicManager.Instance.PlayGameMusic();
 	}
 
 	private void SetGameState( GameState state )

@@ -5,7 +5,7 @@
   "Decibels": 70,
   "SelectionMode": "Random",
   "Sounds": [
-    "sounds/music/spooker.vsnd"
+    "sounds/music/spooker-action.vsnd"
   ],
   "Occlusion": false,
   "AirAbsorption": true,
