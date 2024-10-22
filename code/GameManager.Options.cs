@@ -6,30 +6,24 @@ namespace MightyBrick.GraveQuest;
 
 public class GameSettings
 {
-	private float masterVolume;
+	private float masterVolume = 100.0f;
 	public float MasterVolume
 	{
-		get
-		{
-			return masterVolume;
-		}
+		get => masterVolume;
 		set
 		{
 			masterVolume = value;
-			GameManager.UpdateSettings();
+			Mixer.Master.Volume = masterVolume / 100.0f;
 		}
 	}
-	private float musicVolume;
+	private float musicVolume = 75.0f;
 	public float MusicVolume
 	{
-		get
-		{
-			return musicVolume;
-		}
+		get => Mixer.Master.GetChildren()[0].Volume * 100.0f;
 		set
 		{
 			musicVolume = value;
-			GameManager.UpdateSettings();
+			Mixer.Master.GetChildren()[0].Volume = musicVolume / 100.0f;
 		}
 	}
 	public bool ShowInputHints { get; set; } = true;
@@ -60,7 +54,6 @@ public partial class GameManager
 
 	public static void Save()
 	{
-		UpdateSettings();
 		JsonSerializerOptions options = new JsonSerializerOptions
 		{
 			DefaultIgnoreCondition = JsonIgnoreCondition.Never,
@@ -73,12 +66,5 @@ public partial class GameManager
 	public static void Load()
 	{
 		GameSettings = FileSystem.Data.ReadJson<GameSettings>( SaveFilePath, new() );
-	}
-
-	public static void UpdateSettings()
-	{
-		Mixer.Master.Volume = GameSettings.MasterVolume / 100;
-		Mixer[] channels = Mixer.Master.GetChildren();
-		channels[0].Volume = GameSettings.MusicVolume / 100;
 	}
 }
