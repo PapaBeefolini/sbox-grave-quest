@@ -16,7 +16,7 @@ public class GameSettings
 			Mixer.Master.Volume = masterVolume / 100.0f;
 		}
 	}
-	private float musicVolume = 75.0f;
+	private float musicVolume = 70.0f;
 	public float MusicVolume
 	{
 		get => musicVolume;
