@@ -19,7 +19,7 @@ public class GameSettings
 	private float musicVolume = 75.0f;
 	public float MusicVolume
 	{
-		get => Mixer.Master.GetChildren()[0].Volume * 100.0f;
+		get => musicVolume;
 		set
 		{
 			musicVolume = value;
