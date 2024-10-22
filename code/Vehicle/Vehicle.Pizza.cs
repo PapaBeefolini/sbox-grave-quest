@@ -23,6 +23,7 @@ public partial class Vehicle
 			return;
 		timeUntilCanThrow = ThrowCooldown;
 		Scene.Dispatch( new PizzaThrownEvent() );
+		Stats.Increment( "pizzas_thrown", 1 );
 
 		Papa?.Throw();
 		GameObject pizza = PizzaPrefab.Clone( Papa.WorldPosition + WorldRotation * ThrowOffset, WorldRotation );

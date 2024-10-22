@@ -34,6 +34,17 @@
         <Button Text="Discord" OnClick=@(() => CopyDiscordLink()) />
         <label class="copied" > @discordSubtitleText</label>
     </div>
+
+    <label class="kills">@GameManager.Instance.GlobalKills skeletons laid to rest</label>
+    <div class="leaderboard">
+        <label class="title">Leaderboard</label>
+        <div class="content">
+            @foreach (Leaderboards.Board2.Entry entry in GameManager.Instance.GetLeaderboard().Result.Entries)
+            {
+                <label>@entry.Rank - @entry.DisplayName - @entry.Value</label>
+            }
+        </div>
+    </div>
 </root>
 
 @code
@@ -80,5 +91,5 @@
         Papa.Instance.OffsetHatIndex(offset);
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(discordSubtitleText);
+    protected override int BuildHash() => System.HashCode.Combine(discordSubtitleText, GameManager.Instance.GlobalKills);
 }

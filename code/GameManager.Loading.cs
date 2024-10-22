@@ -45,6 +45,6 @@ public partial class GameManager : ISceneLoadingEvents
 		HideUI();
 		State = GameState.Loading;
 		Scene.Load( scene );
-		Scene.Name = scene.Title;
+		Scene.Name = scene.GetMetadata( "title" );
 	}
 }

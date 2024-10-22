@@ -11,7 +11,7 @@ MainMenu {
 	.buttons-parent {
 		position: absolute;
 		top: 45%;
-		left: 8%;
+		left: 6%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -57,6 +57,42 @@ MainMenu {
 		}
 	}
 
+	.leaderboard {
+		background-color: $black-transparent;
+		backdrop-filter: blur(12px);
+		border-radius: 8px;
+		border: solid 3px $orange;
+		position: absolute;
+		flex-direction: column;
+		gap: 38px;
+		padding: 24px;
+		top: 27%;
+		right: 6%;
+		width: 500px;
+		height: 600px;
+		text-align: center;
+
+		.content {
+			overflow-y: scroll;
+			flex-direction: column;
+			gap: 24px;
+
+			> label {
+				flex-shrink: 0;
+				font-size: 20px;
+				letter-spacing: 1px;
+				text-stroke: 10px black;
+			}
+		}
+
+		.title {
+			font-size: 38px;
+			letter-spacing: 8px;
+			text-stroke: 12px black;
+			color: $dark-purple;
+		}
+	}
+
 	.logo {
 		position: absolute;
 		background-repeat: no-repeat;
@@ -74,9 +110,22 @@ MainMenu {
 		margin: 24px;
 	}
 
+	.kills {
+		position: absolute;
+		top: 4%;
+		left: 0;
+		right: 0;
+		margin: 24px;
+		color: $white;
+		letter-spacing: 8px;
+		text-align: center;
+		font-size: 24px;
+		text-stroke: 10px black;
+	}
+
 	.discord {
 		position: absolute;
-		top: 6%;
+		top: 4%;
 		right: 2%;
 		margin: 24px;
 		flex-direction: column;
@@ -93,6 +142,7 @@ MainMenu {
 		.copied {
 			color: $white;
 			font-size: 28px;
+			letter-spacing: 4px;
 		}
 	}
 }

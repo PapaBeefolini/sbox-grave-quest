@@ -2,6 +2,21 @@
   "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
   "GameObjects": [
     {
+      "__guid": "d03aee4a-d82a-41b8-a307-bd1a548a32a0",
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "f4d51472-00e9-4977-b506-1aaae412d43a",
+          "Description": "",
+          "SceneTags": "",
+          "Title": "main-menu"
+        }
+      ]
+    },
+    {
       "__guid": "52172345-5045-4fe1-83d0-5180e775ef98",
       "Flags": 0,
       "Name": "Game Manager",
@@ -296,7 +311,7 @@
       "__guid": "55449a3b-a0f9-4d74-b24e-5e33e054a10f",
       "Flags": 0,
       "Name": "Customization Spot",
-      "Position": "-940.8497,821.4027,38",
+      "Position": "-945.2257,818.832,38",
       "Rotation": "0,0,0.8679136,0.4967152",
       "Enabled": true
     },
@@ -304,7 +319,7 @@
       "__guid": "c61477c2-0402-441c-8340-56f80363786d",
       "Flags": 0,
       "Name": "papa",
-      "Position": "-997.8925,922.2756,0.0518373",
+      "Position": "-1007.627,919.504,0.0518373",
       "Rotation": "0,0,-0.6025612,0.7980727",
       "Enabled": true,
       "__Prefab": "prefabs/papa.prefab",
@@ -1563,6 +1578,9 @@
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
+    "Metadata": {
+      "Title": "main-menu"
+    },
     "NavMesh": {
       "Enabled": true,
       "IncludeStaticBodies": true,
@@ -1576,9 +1594,9 @@
       "IncludedBodies": ""
     }
   },
+  "ResourceVersion": 2,
   "Title": "main-menu",
-  "Description": "",
-  "ResourceVersion": 1,
+  "Description": null,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

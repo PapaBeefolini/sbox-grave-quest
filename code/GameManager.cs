@@ -1,6 +1,7 @@
 global using Sandbox;
 global using Sandbox.Utility;
 global using Sandbox.Events;
+global using Sandbox.Services;
 global using System;
 global using System.Linq;
 using MightyBrick.GraveQuest.UI;
@@ -32,6 +33,8 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		Game,
 		Loading
 	}
+
+	public double GlobalKills => Stats.Global.Get( "kills" ).Value;
 
 	protected override void OnEnabled()
 	{
@@ -86,6 +89,7 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 			return;
 		TimeRemaining += 2.0f;
 		Score++;
+		Stats.Increment( "kills", 1 );
 	}
 
 	private void StartGame()
@@ -134,5 +138,13 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 	{
 		State = state;
 		RefreshUI();
+	}
+
+	public async Task<Leaderboards.Board2> GetLeaderboard()
+	{
+		Leaderboards.Board2 board = Leaderboards.GetFromStat( "brick.gravequest", "kills" );
+		board.MaxEntries = 50;
+		await board.Refresh();
+		return board;
 	}
 }
