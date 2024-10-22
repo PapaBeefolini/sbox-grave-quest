@@ -1,0 +1,159 @@
+{
+  "RootObject": {
+    "__guid": "82300eea-715e-4f62-9b84-3ccd83223505",
+    "Flags": 0,
+    "Name": "skeleton",
+    "Tags": "enemy",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "96f7fe81-b15c-4893-bc6a-1870cdbc7470",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "MaterialGroup": "default",
+        "Model": "models/skeleton.vmdl",
+        "Morphs": {},
+        "Parameters": {
+          "bools": {},
+          "ints": {},
+          "floats": {},
+          "vectors": {},
+          "rotations": {}
+        },
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "8f02848b-6812-4170-b58a-5f39f8cd0178",
+        "End": "0,0,48",
+        "IsTrigger": true,
+        "Radius": 12,
+        "Start": "0,0,12",
+        "Static": false,
+        "Surface": "surfaces/plastic.surface",
+        "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "4a27e203-8b10-422d-a431-1f4f8a941b4d",
+        "Acceleration": 400,
+        "Height": 64,
+        "MaxSpeed": 150,
+        "Radius": 12,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "MightyBrick.GraveQuest.Skeleton",
+        "__guid": "7a56482a-a4bd-447d-a326-4651ef4b2e5c",
+        "BreakSound": "sounds/brick_explode.sound",
+        "DeathSound": "sounds/enemy/death.sound",
+        "Hats": [
+          {
+            "Model": "models/hat_archer.vmdl",
+            "Colors": [
+              "0.25581,0.25581,0.25581,1"
+            ]
+          },
+          {
+            "Model": "models/hat_cap.vmdl",
+            "Colors": [
+              "1,0,0,1",
+              "0,0.08333,1,1",
+              "1,0.93333,0,1",
+              "0.1476,0.52093,0,1"
+            ]
+          },
+          {
+            "Model": "models/hat_medieval_01.vmdl",
+            "Colors": [
+              "0.25581,0.25581,0.25581,1"
+            ]
+          },
+          {
+            "Model": "models/hat_medieval_02.vmdl",
+            "Colors": [
+              "0.25581,0.25581,0.25581,1"
+            ]
+          },
+          {
+            "Model": "models/hat_pirate.vmdl",
+            "Colors": []
+          },
+          {
+            "Model": "models/hat_pumpkin.vmdl",
+            "Colors": []
+          },
+          {
+            "Model": "models/hat_witch.vmdl",
+            "Colors": [
+              "0,0,0,1",
+              "0.27969,0,0.3814,1"
+            ]
+          }
+        ],
+        "MaxSpeedMultiplier": 1.2,
+        "MinSpeedMultiplier": 0.8
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a",
+        "Flags": 0,
+        "Name": "hat",
+        "Tags": "misc",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "2d5324b1-b09f-4e36-95e7-489118b9ed0d",
+            "__enabled": false,
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": {
+              "_type": "component",
+              "component_id": "96f7fe81-b15c-4893-bc6a-1870cdbc7470",
+              "go": "82300eea-715e-4f62-9b84-3ccd83223505",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "CreateBoneObjects": false,
+            "Morphs": {},
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

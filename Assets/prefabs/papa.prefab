@@ -1,0 +1,109 @@
+{
+  "RootObject": {
+    "__guid": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
+    "Flags": 0,
+    "Name": "papa",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/minifig.vmdl",
+        "Morphs": {},
+        "Parameters": {
+          "bools": {},
+          "ints": {},
+          "floats": {},
+          "vectors": {},
+          "rotations": {}
+        },
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
+      },
+      {
+        "__type": "MightyBrick.GraveQuest.Papa",
+        "__guid": "eb9d45ec-0d73-4416-a948-ef6415a4d765",
+        "HatColors": [
+          "1,1,1,1",
+          "0.51163,0.50687,0.50687,1",
+          "0.01395,0.01395,0.01395,1",
+          "0.34884,0.17442,0,1",
+          "1,0,0,1",
+          "0,0.23333,1,1",
+          "0.18333,1,0,1",
+          "1,0.9,0,1",
+          "0.58333,0,1,1",
+          "1,0.6,0,1"
+        ],
+        "Hats": [
+          "models/hat_chef.vmdl",
+          "models/hat_cap.vmdl",
+          "models/hat_archer.vmdl",
+          "models/hat_medieval_01.vmdl",
+          "models/hat_medieval_02.vmdl",
+          "models/hat_pirate.vmdl",
+          "models/hat_pumpkin.vmdl",
+          "models/hat_witch.vmdl",
+          null
+        ]
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "d8a38e08-1954-4001-9f49-f1b067e2b0c2",
+        "Flags": 0,
+        "Name": "hat",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "88ab7d77-1c47-480e-be54-09bbe5f9b433",
+            "BodyGroups": 18446744073709551615,
+            "BoneMergeTarget": {
+              "_type": "component",
+              "component_id": "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee",
+              "go": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "CreateBoneObjects": false,
+            "Model": "models/hat_chef.vmdl",
+            "Morphs": {},
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -1,0 +1,1602 @@
+{
+  "__guid": "325a4042-0696-43dd-a79d-dcc314299ba3",
+  "GameObjects": [
+    {
+      "__guid": "d03aee4a-d82a-41b8-a307-bd1a548a32a0",
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "f4d51472-00e9-4977-b506-1aaae412d43a",
+          "Description": "",
+          "SceneTags": "",
+          "Title": "main-menu"
+        }
+      ]
+    },
+    {
+      "__guid": "52172345-5045-4fe1-83d0-5180e775ef98",
+      "Flags": 0,
+      "Name": "Game Manager",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MightyBrick.GraveQuest.GameManager",
+          "__guid": "a2344e3b-0169-48e7-b16f-718560c16aec",
+          "CountdownSound": "sounds/ui/beep.sound",
+          "EscapeMenuSound": "sounds/ui/pause.sound",
+          "FadeUI": {
+            "_type": "component",
+            "component_id": "5956cd8f-6e09-49fa-961c-f85bba2bd7e5",
+            "go": "04b0327f-945c-474f-a066-e87208047ec1",
+            "component_type": "Fader"
+          },
+          "GameScene": "scenes/game-world.scene",
+          "GameStartSound": "sounds/ui/go.sound",
+          "GameUI": {
+            "_type": "component",
+            "component_id": "ccf7533c-2c08-4aa2-a080-1bdda0870856",
+            "go": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
+            "component_type": "ScreenPanel"
+          },
+          "HUDUI": {
+            "_type": "component",
+            "component_id": "9da77445-42ca-49c4-87e1-3fb89950429c",
+            "go": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
+            "component_type": "HUD"
+          },
+          "MainMenuScene": "scenes/main-menu.scene",
+          "MainMenuUI": {
+            "_type": "component",
+            "component_id": "8a217c27-5846-48a9-901a-84fcdb985b75",
+            "go": "71cf2983-b8f7-45d4-ae8d-8a1f1024652a",
+            "component_type": "ScreenPanel"
+          },
+          "OptionsMenu": {
+            "_type": "component",
+            "component_id": "3e3ec4bf-c9bb-498a-afa5-45d4062969f1",
+            "go": "9d281563-46ef-4e12-a99b-3716c041b7ad",
+            "component_type": "ScreenPanel"
+          }
+        },
+        {
+          "__type": "MightyBrick.GraveQuest.EnemySpawner",
+          "__guid": "610e5646-53a2-49a6-bdc4-7dff84dff7a4",
+          "MaxSkeletons": 32,
+          "SkeletonPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/skeleton.prefab"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "71cf2983-b8f7-45d4-ae8d-8a1f1024652a",
+          "Flags": 0,
+          "Name": "Main Menu UI",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "8a217c27-5846-48a9-901a-84fcdb985b75",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.MainMenu",
+              "__guid": "429b6b84-d79e-4f50-a8f5-72dff2c7fbfc"
+            }
+          ]
+        },
+        {
+          "__guid": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
+          "Flags": 0,
+          "Name": "Game UI",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "ccf7533c-2c08-4aa2-a080-1bdda0870856",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 100
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.HUD",
+              "__guid": "9da77445-42ca-49c4-87e1-3fb89950429c"
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.InputHintsHUD",
+              "__guid": "1f29b5fb-e803-4025-9397-a8e56cc9b531"
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.EscapeMenu",
+              "__guid": "434d3643-a1ce-46d5-b859-4cba1b345b1e"
+            }
+          ]
+        },
+        {
+          "__guid": "9d281563-46ef-4e12-a99b-3716c041b7ad",
+          "Flags": 0,
+          "Name": "Options UI",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "3e3ec4bf-c9bb-498a-afa5-45d4062969f1",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 150
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.OptionsMenu",
+              "__guid": "26633b2a-f407-4d80-8833-82b024a5d1f5"
+            }
+          ]
+        },
+        {
+          "__guid": "04b0327f-945c-474f-a066-e87208047ec1",
+          "Flags": 0,
+          "Name": "Fade UI",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "b072d80b-3904-48c8-87f5-1477c0b7d27d",
+              "AutoScreenScale": true,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "ZIndex": 200
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.UI.Fader",
+              "__guid": "5956cd8f-6e09-49fa-961c-f85bba2bd7e5"
+            }
+          ]
+        },
+        {
+          "__guid": "a2a9bfa8-9e30-4296-9a13-648026779349",
+          "Flags": 0,
+          "Name": "Music",
+          "Position": "296.1387,586.3163,31.68331",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundPointComponent",
+              "__guid": "c8388ea4-be6e-4821-862e-9442935a069a",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": false,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": false,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundOverride": true,
+              "StopOnNew": true,
+              "TargetMixer": {
+                "Name": "music",
+                "Id": "dbf2d9b7-2d1e-4494-b378-9181fc41f3ef"
+              },
+              "Volume": 0.4
+            },
+            {
+              "__type": "MightyBrick.GraveQuest.MusicManager",
+              "__guid": "8d24b6ed-880d-4463-81a7-2d185d3cdd73",
+              "GameMusic": "sounds/music/spooker-action.sound",
+              "GameOverSound": "sounds/music/spooker-ending.sound",
+              "MenuMusic": "sounds/music/spooker.sound"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-856.2066,742.8725,69.77353",
+      "Rotation": "-0.004701478,0.00165934,0.9429794,0.3328139",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 80,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "Sandbox.Tonemapping",
+          "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
+          "__version": 1,
+          "AutoExposureEnabled": false,
+          "ExposureBias": 2,
+          "ExposureCompensation": 0,
+          "ExposureMethod": "RGB",
+          "MaximumExposure": 2,
+          "MinimumExposure": 1,
+          "Mode": "ACES",
+          "Rate": 1
+        },
+        {
+          "__type": "Sandbox.ColorAdjustments",
+          "__guid": "e7252e1f-e163-4be5-902a-a519633d5e61",
+          "Brightness": 1.25,
+          "Contrast": 1,
+          "HueRotate": 0,
+          "Saturation": 1.15
+        },
+        {
+          "__type": "Sandbox.Bloom",
+          "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
+          "BloomColor": {
+            "color": [
+              {
+                "c": "1,0.81977,0.27907,1"
+              }
+            ],
+            "alpha": []
+          },
+          "BloomCurve": [
+            {},
+            {
+              "x": 0.5,
+              "y": 1
+            },
+            {
+              "x": 1
+            }
+          ],
+          "Mode": "Screen",
+          "Strength": 1.5,
+          "Threshold": 0.6,
+          "ThresholdWidth": 1
+        },
+        {
+          "__type": "Sandbox.AmbientOcclusion",
+          "__guid": "41948233-c9fd-4337-a442-47f637c888ac",
+          "FalloffDistance": 1,
+          "Intensity": 6,
+          "Quality": "High",
+          "Radius": 32
+        },
+        {
+          "__type": "Sandbox.Vignette",
+          "__guid": "e620d104-5bf0-40df-858d-5aa527236535",
+          "Center": "0.5,0.5",
+          "Color": "0,0,0,1",
+          "Intensity": 0.3,
+          "Roundness": 1,
+          "Smoothness": 1
+        },
+        {
+          "__type": "MightyBrick.GraveQuest.MenuCamera",
+          "__guid": "b72e5f6d-b178-45ac-aea2-2e85c47a01b2",
+          "CustomizationTransform": {
+            "_type": "gameobject",
+            "go": "55449a3b-a0f9-4d74-b24e-5e33e054a10f"
+          },
+          "SwayAmount": 1,
+          "SwaySpeed": 0.5
+        }
+      ]
+    },
+    {
+      "__guid": "55449a3b-a0f9-4d74-b24e-5e33e054a10f",
+      "Flags": 0,
+      "Name": "Customization Spot",
+      "Position": "-945.2257,818.832,38",
+      "Rotation": "0,0,0.8679136,0.4967152",
+      "Enabled": true
+    },
+    {
+      "__guid": "c61477c2-0402-441c-8340-56f80363786d",
+      "Flags": 0,
+      "Name": "papa",
+      "Position": "-1007.627,919.504,0.0518373",
+      "Rotation": "0,0,-0.6025612,0.7980727",
+      "Enabled": true,
+      "__Prefab": "prefabs/papa.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "5ea2f0e0-d4a4-496b-bdce-f8a6b1347ca4",
+      "Flags": 0,
+      "Name": "car",
+      "Position": "-1174.594,837.0764,-2.533813",
+      "Rotation": "-0.02721473,0.03864767,0.7668915,0.6400335",
+      "Tags": "car",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "2b35c5c9-ed45-418b-8645-937d15c0b4d8",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/car.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "522a6020-d880-4030-822d-5b5aae1a58a5",
+          "Flags": 0,
+          "Name": "Headlights",
+          "Position": "66.66526,0.000003577168,29.44075",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "a9cf3183-2a14-45d5-b9f1-b38579c27f73",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 65,
+              "FogMode": "Enabled",
+              "FogStrength": 2,
+              "LightColor": "64,60.0707,24.70698,1",
+              "Radius": 600,
+              "Shadows": true
+            }
+          ]
+        },
+        {
+          "__guid": "e8bff898-71cf-411b-a27f-14d074bc503a",
+          "Flags": 0,
+          "Name": "Engine",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SoundPointComponent",
+              "__guid": "21b90649-0763-426a-867d-3b58a89a3ea9",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": false,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 0.5,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/vehicle/engine.sound",
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "TargetMixer": {
+                "Name": "game",
+                "Id": "aab222af-1d88-4dde-af8a-7a3c3e2d9595"
+              },
+              "Volume": 0.4
+            }
+          ]
+        },
+        {
+          "__guid": "421bc9e7-689e-425c-a3d7-cb8bf054d876",
+          "Flags": 0,
+          "Name": "wheel_small",
+          "Position": "57.25,30.25,20",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "8a4e4930-fb7a-47bd-9fbc-3daea7362516",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/wheel_small.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "b51b2e37-57e2-4ccd-a2fc-e299a2110ac0",
+          "Flags": 0,
+          "Name": "wheel_small",
+          "Position": "57.25,-30.25,20",
+          "Rotation": "0,0.0000000000000000000004235165,1,0.0000001947072",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "1e56f3ef-f165-47c4-9491-69a9fe1e1773",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/wheel_small.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "272ca20f-5eff-4876-b81e-b2c8ae05669d",
+          "Flags": 0,
+          "Name": "wheel_big",
+          "Position": "-38.5,35,15",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "c8a58c82-0ade-42af-9bf3-419359b9869c",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/wheel_big.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "37132b76-d6d9-4f52-b059-126df8c1b7a2",
+          "Flags": 0,
+          "Name": "wheel_big",
+          "Position": "-38.5,-35,15",
+          "Rotation": "0,0.0000000000000000000004235165,1,0.0000001947072",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a94e0769-b409-4a56-93d2-f62a25511285",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/wheel_big.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "f6b8f878-d8fe-4351-9dc1-d0744d3b062d",
+          "Flags": 0,
+          "Name": "pizza",
+          "Position": "-53.91306,-0.000003366811,39.33324",
+          "Rotation": "0,-0.3125566,0,0.9498993",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "3689f86a-0c8a-4af6-808b-edb9cda1f0f6",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/pizza.vmdl",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "Flags": 0,
+      "Name": "Sky",
+      "Position": "0,0,64",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "b48ad079-2eec-45f1-9150-98d050e7948e",
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/sky.vmat",
+          "Tint": "4,4,4,1"
+        },
+        {
+          "__type": "Sandbox.CubemapFog",
+          "__guid": "289097ab-d86a-49d9-94b7-d8af935638f6",
+          "Blur": 0.5,
+          "EndDistance": 6000,
+          "FalloffExponent": 0.5,
+          "HeightExponent": 2,
+          "HeightStart": 2000,
+          "HeightWidth": 0,
+          "StartDistance": 300,
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.GradientFog",
+          "__guid": "e7eb5953-d349-4e6f-96ee-198bc0764bc0",
+          "Color": "0.17674,0.04604,0.16803,0.1",
+          "EndDistance": 1024,
+          "FalloffExponent": 1,
+          "Height": 1000,
+          "StartDistance": 256,
+          "VerticalFalloffExponent": -1
+        },
+        {
+          "__type": "Sandbox.VolumetricFogVolume",
+          "__guid": "1ba80dc7-f1ae-4a84-8fa4-897c2692968f",
+          "Bounds": {
+            "Mins": "-4000,-4000,-200",
+            "Maxs": "4000,4000,200"
+          },
+          "FalloffExponent": 1,
+          "Strength": 0.01
+        }
+      ]
+    },
+    {
+      "__guid": "15106d36-3834-4ce0-a0b4-2ba0eda9e246",
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "0,0,400",
+      "Rotation": "-0.09042397,0.2867882,0.2867882,0.909576",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "28d294e0-aad8-4144-8803-731ec041e6d8",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.47442,0.13681,0.40127,1",
+          "Shadows": true,
+          "SkyColor": "0.30698,0.14135,0.28489,1"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "8e77ca6f-c539-4383-93c2-3bb016b39cd7",
+          "Flags": 0,
+          "Name": "Back Sun",
+          "Rotation": "0.03575084,0.09822462,-0.3401465,0.9345449",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.DirectionalLight",
+              "__guid": "9a770a8c-38ca-46b5-8589-0e7b1c704c6f",
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.82791,0.13478,0.67773,1",
+              "Shadows": false,
+              "SkyColor": "0,0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "baa622bd-469e-4054-930b-caa93c2ae04b",
+      "Flags": 0,
+      "Name": "World Border",
+      "Tags": "wall",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "f31b7aa3-7b80-452c-9913-5496db51dd8e",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "0,1565,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "69a52b7d-e8ab-4045-b6ed-092202c7453a",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "3200,50,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
+            }
+          ]
+        },
+        {
+          "__guid": "527fdfde-7422-4913-9a72-20cf8a1897df",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "0,-1565,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "1a03ca48-02a7-4fd6-bec6-83d0a05c9b3e",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "3200,50,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
+            }
+          ]
+        },
+        {
+          "__guid": "78384a5c-8507-43ad-bae3-9464e637889a",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "-1565,0,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "aca99416-340e-4ec1-b2b4-87fea0c3542c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,3200,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
+            }
+          ]
+        },
+        {
+          "__guid": "efdd022b-b788-4b66-9f73-240c09be5d98",
+          "Flags": 0,
+          "Name": "Wall",
+          "Position": "1580,0,300",
+          "Tags": "world-border",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "91836bbd-51b9-4f34-b899-13fa01eb4922",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Scale": "50,3200,600",
+              "Static": true,
+              "Surface": "surfaces/fence.surface",
+              "SurfaceVelocity": "0,0,0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "6e5da265-ae3d-4785-a90b-ff29505ace88",
+      "Flags": 0,
+      "Name": "terrain",
+      "Tags": "ground",
+      "Enabled": true,
+      "__Prefab": "prefabs/terrain.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "97e54bea-9873-40b0-b9ae-8d0389cce97c",
+      "Flags": 0,
+      "Name": "fireflies",
+      "Position": "0,0,200",
+      "Tags": "particles",
+      "Enabled": true,
+      "__Prefab": "prefabs/fireflies.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1e84228b-9dbb-4707-923a-5043a847b53f",
+      "Flags": 0,
+      "Name": "fence",
+      "Position": "-1300,-1552,-2",
+      "Tags": "wall",
+      "Enabled": true,
+      "__Prefab": "prefabs/fence.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8",
+      "Flags": 0,
+      "Name": "barn",
+      "Position": "-1808,1296,-2.795198",
+      "Enabled": true,
+      "__Prefab": "prefabs/barn.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3",
+      "Flags": 0,
+      "Name": "graves_small",
+      "Position": "1880,-1080,0.02943937",
+      "Enabled": true,
+      "__Prefab": "prefabs/graves_small.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96",
+      "Flags": 0,
+      "Name": "graves_large",
+      "Position": "-368,2016,0.0002332315",
+      "Enabled": true,
+      "__Prefab": "prefabs/graves_large.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "0be2ea70-26f7-4d32-9885-20dd359cc0bc",
+      "Flags": 0,
+      "Name": "crickets",
+      "Position": "-1852.146,66.9637,84.47704",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "d6d5192d-a73c-4827-acc7-c4c9d39ea150",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/crickets.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "game",
+            "Id": "e7413d64-02d1-4514-b8f3-cd7bdfaac757"
+          },
+          "Volume": 1
+        }
+      ]
+    },
+    {
+      "__guid": "7d3cd9a7-0c40-441e-8b09-254d43f767f3",
+      "Flags": 0,
+      "Name": "corn_field",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "f0b68fea-2058-4e00-ad46-14d5e329b37f",
+          "Flags": 0,
+          "Name": "corn_field",
+          "Position": "-1728,672,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2f14890b-9268-4e18-83e5-5ff7c0a16a34",
+          "Flags": 0,
+          "Name": "corn_field (5)",
+          "Position": "-1984,672,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "295b1f0a-c4ed-464f-ad4f-0d44f2857250",
+          "Flags": 0,
+          "Name": "corn_field (1)",
+          "Position": "-1728,368,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "cad0c904-cdda-4e49-a1f0-796c98a5dbad",
+          "Flags": 0,
+          "Name": "corn_field (6)",
+          "Position": "-1984,368,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "9b432eeb-4614-442e-bb3d-07b8b5278939",
+          "Flags": 0,
+          "Name": "corn_field (7)",
+          "Position": "-1984,64,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1b3d5f70-7750-4d67-98bf-8c168d14bd71",
+          "Flags": 0,
+          "Name": "corn_field (3)",
+          "Position": "-1728,-240,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "99a31a20-dc8d-4112-b405-cc41bd242ee4",
+          "Flags": 0,
+          "Name": "corn_field (8)",
+          "Position": "-1984,-240,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "8ff5f92a-7113-435f-87f4-0bc399fffda2",
+          "Flags": 0,
+          "Name": "corn_field (4)",
+          "Position": "-1728,-544,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "bb7d6e2d-5cfd-4d64-bfa2-c7f698dc8881",
+          "Flags": 0,
+          "Name": "corn_field (9)",
+          "Position": "-1984,-544,2.290814",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "7f20f7bf-49bc-439a-8df3-a8f56be0f656",
+          "Flags": 0,
+          "Name": "corn_field_crow",
+          "Position": "-1728,64,2.526324",
+          "Enabled": true,
+          "__Prefab": "prefabs/corn_field_crow.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
+      "__guid": "35203ae7-7930-4661-8fb4-832fe8dcbfb2",
+      "Flags": 0,
+      "Name": "pumpkins",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "f8f82a29-65e8-4bdd-9ec1-fad4bba94ae5",
+          "Flags": 0,
+          "Name": "pumpkin-patch (2)",
+          "Position": "656,-912,-0.7325444",
+          "Rotation": "-0.00000001140485,0.00000002753376,0.3826833,0.9238794",
+          "Enabled": true,
+          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "7a86ab3c-aa23-4df4-a9bf-a461f669d255",
+          "Flags": 0,
+          "Name": "pumpkin-patch (3)",
+          "Position": "-1008,1040,1.00029",
+          "Rotation": "0.00000001140485,0.00000002753376,-0.3826833,0.9238794",
+          "Enabled": true,
+          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "bff23464-298a-44e3-87fe-6baaf6d08ef5",
+          "Flags": 0,
+          "Name": "pumpkins (2)",
+          "Position": "1657.776,1735.622,-0.0004499841",
+          "Rotation": "0,0,-0.8660253,0.5000001",
+          "Enabled": true,
+          "__Prefab": "prefabs/pumpkins.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "efa6abfc-fcbb-449f-8035-e0642f440e26",
+          "Flags": 0,
+          "Name": "pumpkin-patch",
+          "Position": "720,928,0.1201292",
+          "Enabled": true,
+          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4690838c-b432-4a2e-86a7-98713fb34659",
+          "Flags": 0,
+          "Name": "pumpkins (1)",
+          "Position": "-1651.089,-1209.411,0.0004890019",
+          "Rotation": "0.000000007713408,0.00000002878683,0.258819,0.9659257",
+          "Enabled": true,
+          "__Prefab": "prefabs/pumpkins.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1240ef28-af8d-4bd1-9911-a3797797f57b",
+          "Flags": 0,
+          "Name": "pumpkin-patch (1)",
+          "Position": "-880,-223.1009,23.17702",
+          "Rotation": "0.0000002552167,-0.0000000954216,-0.09584578,0.9953962",
+          "Enabled": true,
+          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "a43ae81c-b0cd-4e03-8074-54e9284c7e75",
+          "Flags": 0,
+          "Name": "pumpkins",
+          "Position": "775.5309,-1696.383,0.0299936",
+          "Rotation": "0,0,-0.9659259,-0.2588189",
+          "Enabled": true,
+          "__Prefab": "prefabs/pumpkins.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
+      "__guid": "563c064d-f97f-496e-89a7-7b731e5cda67",
+      "Flags": 0,
+      "Name": "lamps",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
+          "Flags": 0,
+          "Name": "lamp",
+          "Position": "1600.89,-1584,4.469998",
+          "Rotation": "0,0,-0.3826834,0.9238796",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1fb49192-b796-45e6-a886-6945f3a14058",
+          "Flags": 0,
+          "Name": "lamp (1)",
+          "Position": "-1595.233,-1595.232,5.00002",
+          "Rotation": "0,0,0.3826833,0.9238794",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2661048b-1bfc-4284-8bc1-cf0d5d7e9b28",
+          "Flags": 0,
+          "Name": "lamp (2)",
+          "Position": "-1584,1584,5.00046",
+          "Rotation": "0,0,-0.3826835,0.9238795",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "507d331d-f3af-4773-8afb-ad518aafa4c6",
+          "Flags": 0,
+          "Name": "lamp (3)",
+          "Position": "1608,1592,4.999539",
+          "Rotation": "0,0,0.3826835,0.9238795",
+          "Enabled": true,
+          "__Prefab": "prefabs/lamp.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
+      "__guid": "ac45ceda-74fc-4a21-945b-775b3fe43b43",
+      "Flags": 0,
+      "Name": "trees",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "85306bf5-070e-4c7b-8df6-e755cbdf27ec",
+          "Flags": 0,
+          "Name": "tree (17)",
+          "Position": "-2144,1104,1.000626",
+          "Rotation": "0,0,-0.258819,0.9659259",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "81d9637e-07ef-48c8-9d27-090709cee06b",
+          "Flags": 0,
+          "Name": "tree (16)",
+          "Position": "717.0784,188.0147,44.06166",
+          "Rotation": "-0.000000006832709,-0.000000008904497,0.7933513,0.6087642",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "eb9a5c12-0e0b-478f-9f84-33fc9b3eee78",
+          "Flags": 0,
+          "Name": "tree (12)",
+          "Position": "1808,64,0.9994555",
+          "Rotation": "0,0,0.258819,0.9659259",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "c5683bbe-c269-4c64-9edc-bf50ec5031f2",
+          "Flags": 0,
+          "Name": "tree (11)",
+          "Position": "1904,368,0.9995208",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "7ed7c0ef-551b-4586-9657-7749de6078aa",
+          "Flags": 0,
+          "Name": "tree (10)",
+          "Position": "1792,832,0.9995146",
+          "Rotation": "-0.000000007713408,0.00000002878683,0.258819,0.9659257",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b11e8b38-94cb-419b-b9c9-55790bf63ef7",
+          "Flags": 0,
+          "Name": "tree (15)",
+          "Position": "432,1744,0.9994484",
+          "Rotation": "0,0,0.7933534,0.6087615",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "c5c82181-a1c8-4efc-a786-8a52c99597c8",
+          "Flags": 0,
+          "Name": "tree (14)",
+          "Position": "736,1840,0.9994484",
+          "Rotation": "0,0,-0.3826834,0.9238796",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "656ba419-1066-465f-bb75-1835a6081f8c",
+          "Flags": 0,
+          "Name": "tree (13)",
+          "Position": "1024,1760,0.9994476",
+          "Rotation": "0,0,0.258819,0.9659259",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "69e2c387-3f94-4d11-8e0c-068c633b730a",
+          "Flags": 0,
+          "Name": "tree (9)",
+          "Position": "1702.223,1784.378,0.9995121",
+          "Rotation": "0,0,-0.3826834,0.9238796",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "6bd4cf80-7512-4625-b16d-ff73646a244f",
+          "Flags": 0,
+          "Name": "tree (8)",
+          "Position": "-1392,1792,1.000364",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "86504217-1e96-4464-b669-b96565309060",
+          "Flags": 0,
+          "Name": "tree (5)",
+          "Position": "-1383.086,-1762.008,0.01324748",
+          "Rotation": "0,0,0.1305262,0.9914449",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "8f9f0f2c-ec50-430d-8581-0cd2a4b6f091",
+          "Flags": 0,
+          "Name": "tree (4)",
+          "Position": "-416.2256,-1903.077,0.01325389",
+          "Rotation": "0,0,0.6087614,0.7933534",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "f8fd5b57-00c7-4dab-a337-792c3f57f511",
+          "Flags": 0,
+          "Name": "tree (3)",
+          "Position": "19.75397,-1762.215,0.01324757",
+          "Rotation": "0,0,0.8660254,0.5000001",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "0e756b85-808f-4229-962a-9f500c6e75c1",
+          "Flags": 0,
+          "Name": "tree (2)",
+          "Position": "372.5125,-1914.789,0.01326782",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "a4b68f1a-d563-473a-a5ed-8bcf5a59d363",
+          "Flags": 0,
+          "Name": "tree (1)",
+          "Position": "832,-1728,0.01329068",
+          "Rotation": "0,0,0.5,0.8660254",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "82cf1e96-1eef-4265-95f1-5da544324a1e",
+          "Flags": 0,
+          "Name": "tree",
+          "Position": "1152,-1792,0.01328422",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "f832860a-9bad-47df-869a-62e0b56242a6",
+          "Flags": 0,
+          "Name": "tree (7)",
+          "Position": "-1676.911,-1152,1.000458",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "85a0958b-ec76-41af-bf68-1a319483b1ab",
+          "Flags": 0,
+          "Name": "tree (6)",
+          "Position": "-863.9996,-896.0001,51.25672",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2d4b2dc0-7af6-43fb-9130-0bc98b59b7bc",
+          "Flags": 0,
+          "Name": "tree (5)",
+          "Position": "279.5789,-2459.826,-1.231815",
+          "Rotation": "0.00000002878683,0.000000007713413,0.9659257,0.2588192",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "c847da77-0b5c-4a31-b706-8a57f17af190",
+          "Flags": 0,
+          "Name": "tree (6)",
+          "Position": "-1040.741,2792.051,22.39741",
+          "Rotation": "0.00000002016687,-0.00000002459948,-0.7733402,0.6339912",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "769be497-0802-4b28-9e9e-6f166222dad2",
+          "Flags": 0,
+          "Name": "tree (7)",
+          "Position": "91.83344,2643.125,28.19594",
+          "Rotation": "0.000000003443757,0.00000001509009,-0.222493,0.9749343",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "7e7ff25b-654f-4586-b9f5-b9ed0e891a1f",
+          "Flags": 0,
+          "Name": "tree (8)",
+          "Position": "-2492.777,336.9914,-3.801348",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "ddde89f2-86e1-452e-a3b8-da1317dc9fee",
+          "Flags": 0,
+          "Name": "tree (9)",
+          "Position": "-2377.61,-163.9748,-3.620682",
+          "Rotation": "0.006627591,0.006627593,0.7070756,0.7070757",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "82387e82-1cd7-4c47-b118-eee4ba034c83",
+          "Flags": 0,
+          "Name": "tree (1)",
+          "Position": "1936.078,-1776.415,-3.241802",
+          "Rotation": "0.001924784,0.001477006,-0.7933376,0.6087771",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1e09209a-f494-4360-b2f4-afb152defbcc",
+          "Flags": 0,
+          "Name": "tree",
+          "Position": "751.6953,2539.521,37.97707",
+          "Rotation": "0.00000001827187,-0.00000001413884,-0.6119806,0.7908728",
+          "Enabled": true,
+          "__Prefab": "prefabs/tree.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "a011971b-ade5-4f85-ac0e-989541c3a84e",
+          "Flags": 0,
+          "Name": "treeline (6)",
+          "Position": "2938.207,-1971.371,234.3526",
+          "Rotation": "-0.000000112174,-0.00000006351197,0.963715,0.2669333",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "030d38dd-8929-4162-97f3-7224f14f3f4d",
+          "Flags": 0,
+          "Name": "treeline (7)",
+          "Position": "3169.371,-1422.736,247.8246",
+          "Rotation": "0,0,0.986772,0.1621139",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "77502c8a-418a-482b-af31-3f4bd238f2f1",
+          "Flags": 0,
+          "Name": "treeline (8)",
+          "Position": "-49.56196,-3816.104,138.4831",
+          "Rotation": "-0.0000001666084,-0.0000001666084,0.7071068,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4e6a9cc1-f82e-4feb-9581-4362c5cc7165",
+          "Flags": 0,
+          "Name": "treeline (5)",
+          "Position": "-3194.79,-777.4142,162.8781",
+          "Rotation": "-0.00000001116288,-0.000000002094084,0.1843773,0.9828556",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "66d40b46-3d02-4e97-9ada-e2410c75582b",
+          "Flags": 0,
+          "Name": "treeline (9)",
+          "Position": "-3458.858,-98.35364,177.8353",
+          "Rotation": "-0.00000001079405,-0.000000003533217,0.05451156,0.9985134",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "006f0015-e7ed-417f-abd1-fc940f513744",
+          "Flags": 0,
+          "Name": "treeline (1)",
+          "Position": "-3411.295,-532.6689,178.8071",
+          "Rotation": "-0.00000001116289,-0.000000002094084,0.1843773,0.9828559",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "3cdd6b2d-7efd-4450-aa86-1b8f3af0db1b",
+          "Flags": 0,
+          "Name": "treeline (2)",
+          "Position": "-3683.885,445.7272,201.64",
+          "Rotation": "-0.0000000004942382,0.00000000001299763,-0.02628921,0.9996544",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "48f77ed5-7903-4aea-9ef0-74a23416025b",
+          "Flags": 0,
+          "Name": "treeline (10)",
+          "Position": "-3495.255,1793.365,234.3144",
+          "Rotation": "0.00000000283117,-0.0000000003324042,-0.1166078,0.993178",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "d111e88c-1027-4e96-b3a6-80a91f1f3649",
+          "Flags": 0,
+          "Name": "treeline (11)",
+          "Position": "-2830.077,-2058.423,-8.919196",
+          "Rotation": "0,0,0.3152265,0.9490165",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "bc6f7f04-d36c-4276-b44a-2a69bd8ed7e5",
+          "Flags": 0,
+          "Name": "treeline (12)",
+          "Position": "-2460.408,-2569.561,-3.042776",
+          "Rotation": "0,0,0.4364012,0.8997522",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "4b17d287-649c-42b7-9cf0-cda44ce9ad21",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-653.2803,-3506.099,124.913",
+          "Rotation": "0,-0,-0.7071144,-0.7070991",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "461b1f08-576d-44c0-9a7d-711def72da5c",
+          "Flags": 0,
+          "Name": "treeline (13)",
+          "Position": "574.8093,-3590.771,103.693",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "002c105b-1564-45ba-9551-b1bb75de1413",
+          "Flags": 0,
+          "Name": "treeline (13)",
+          "Position": "2078.708,-2979.369,138.3637",
+          "Rotation": "0,0,0.8660254,0.5",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "850b1919-5a9c-49b4-a43e-a2f9f36b17df",
+          "Flags": 0,
+          "Name": "treeline (13)",
+          "Position": "1465.06,-3333.658,145.473",
+          "Rotation": "0,0,0.7933534,0.6087614",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "46d157fe-05fe-4216-9b88-07e995a0d533",
+          "Flags": 0,
+          "Name": "treeline",
+          "Position": "2897.404,708.87,151.3854",
+          "Rotation": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "7fd3198d-a67a-44ce-8f55-b1d35b61eda4",
+          "Flags": 0,
+          "Name": "treeline (1)",
+          "Position": "2733.002,1322.431,142.6572",
+          "Rotation": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "6d7985d4-b6c2-407c-bc39-fd76ff5f9f82",
+          "Flags": 0,
+          "Name": "treeline (2)",
+          "Position": "34.78907,3811.114,268.9883",
+          "Rotation": "-0.00000001330279,-0.00000001330279,0.7071068,0.7071068",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "cab0f741-0196-449e-b5e1-f56ad2499093",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-677.5786,3768.673,214.2133",
+          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "e04a4fff-7955-4941-a76b-2e91ff8f2cf3",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-1391.488,3609.917,199.3234",
+          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1c345d69-1cd5-4055-804d-e7088cc35e05",
+          "Flags": 0,
+          "Name": "treeline (3)",
+          "Position": "-1086.188,3897.498,200.3574",
+          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "208ac1fa-8606-47e9-a4df-e4282c0aa992",
+          "Flags": 0,
+          "Name": "treeline (4)",
+          "Position": "-2650.122,3194.16,20.40092",
+          "Rotation": "0,0,-0.5,0.8660256",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "ccc356db-90b0-4ef4-896b-69003300a72c",
+          "Flags": 0,
+          "Name": "treeline (4)",
+          "Position": "-3052.49,3318.043,20.96049",
+          "Rotation": "0,0,-0.5,0.8660256",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "c957c6e5-51d0-446d-8f12-ffef5c878ab5",
+          "Flags": 0,
+          "Name": "treeline (2)",
+          "Position": "1155.81,3180.219,204.6244",
+          "Rotation": "0.0000000483078,-0.0000000351381,-0.8837544,0.467951",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2b85a2d6-6396-4480-8234-eab8e0224be6",
+          "Flags": 0,
+          "Name": "treeline (2)",
+          "Position": "794.2379,3605.243,203.1824",
+          "Rotation": "0.0000000483078,-0.0000000351381,-0.8837544,0.467951",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "1b9792f9-ccd4-48b0-90b0-1c5622a53523",
+          "Flags": 0,
+          "Name": "treeline (1)",
+          "Position": "3230.881,-65.86086,78.35118",
+          "Rotation": "0.00000009301353,0.00000002180918,-0.9993542,0.0359296",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b2483302-20e7-4ef3-8c50-89d87cce5d9a",
+          "Flags": 0,
+          "Name": "treeline",
+          "Position": "-2073.751,-2995.101,24.47852",
+          "Rotation": "-0.00000001980644,0.00000002740214,0.4048731,0.9143729",
+          "Enabled": true,
+          "__Prefab": "prefabs/treeline.prefab",
+          "__PrefabVariables": {}
+        }
+      ]
+    },
+    {
+      "__guid": "d08c8f18-bc0f-46c4-a0ff-e315f9590787",
+      "Flags": 0,
+      "Name": "skeleton (1)",
+      "Position": "-490.6581,1674.678,19.00009",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/skeleton.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c2d1d2c2-a499-41fc-aeb1-9d260320d169",
+      "Flags": 0,
+      "Name": "skeleton (2)",
+      "Position": "-2131.486,1373.179,19.00046",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/skeleton.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "07734822-9b03-4159-a44f-1b342a85b34a",
+      "Flags": 0,
+      "Name": "skeleton (3)",
+      "Position": "-2068.34,1230.071,19.00046",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/skeleton.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "901c864f-7d55-4d68-8a3f-9b18686741ec",
+      "Flags": 0,
+      "Name": "skeleton (4)",
+      "Position": "-711.7601,2067.154,19.00018",
+      "Tags": "enemy",
+      "Enabled": true,
+      "__Prefab": "prefabs/skeleton.prefab",
+      "__PrefabVariables": {}
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "Metadata": {
+      "Title": "main-menu"
+    },
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 12,
+      "AgentStepSize": 16,
+      "AgentMaxSlope": 48,
+      "ExcludedBodies": "enemy,world-border",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": "main-menu",
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}

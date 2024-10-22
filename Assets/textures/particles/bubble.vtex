@@ -1,0 +1,12 @@
+{
+  "Sequences": [
+    {
+      "Source": "textures/particles/bubble.png",
+      "FlipBook": true,
+      "Columns": 4,
+      "Rows": 1,
+      "Frames": 4
+    }
+  ],
+  "OutputTypeString": "2D"
+}

@@ -1,0 +1,49 @@
+@import "Defaults.scss";
+
+Button {
+    padding: 24px 0px;
+    cursor: pointer;
+    transition: all 0.05s linear;
+
+    > label {
+        color: $orange;
+    }
+
+    &.bigger > label {
+        font-size: 38px;
+    }
+
+    &.left {
+        &:hover {
+            padding-left: 24px;
+        }
+
+        &:active {
+            padding-left: 12px;
+        }
+    }
+
+    &.right {
+        &:hover {
+            padding-right: 24px;
+        }
+
+        &:active {
+            padding-right: 12px;
+        }
+    }
+
+    &:hover > label {
+        sound-in: 'hover';
+        color: $purple;
+        transform: scale(1.1);
+        transition: all 0.05s linear;
+    }
+
+    &:active > label {
+        sound-in: 'click';
+        color: $dark-purple;
+        transform: scale(1);
+        transition: all 0.01s linear;
+    }
+}

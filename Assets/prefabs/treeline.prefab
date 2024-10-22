@@ -1,0 +1,32 @@
+{
+  "RootObject": {
+    "__guid": "4d4e1067-1685-4c59-a31f-9821c20807e5",
+    "Flags": 0,
+    "Name": "treeline",
+    "Position": "-22.65707,-150.1269,124.5886",
+    "Rotation": "0,0.7071068,0,0.7071068",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/treeline.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

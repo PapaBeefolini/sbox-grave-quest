@@ -1,0 +1,58 @@
+@using Sandbox.Events;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits PanelComponent
+@implements IGameEventHandler<PizzaThrownEvent> 
+@implements IGameEventHandler<SkeletonDiedEvent>
+
+<root>
+    <Announcement @ref="Announcement"/>
+    @if (!GameManager.Instance.IsGameRunning)
+        return;
+    <Timer @ref="TimePanel" CurrentTime=@MathX.CeilToInt(GameManager.Instance.TimeRemaining)></Timer>
+    <Score @ref="ScorePanel"/>
+    <Pizza @ref="PizzaPanel"/>
+</root>
+
+@code
+{
+    public Announcement Announcement { get; set; }
+    public Timer TimePanel { get; set; }
+    public Score ScorePanel { get; set; }
+    public Pizza PizzaPanel { get; set; }
+
+    public void DisplayAnnouncement(string text, float timeVisible, string subtext = null, string imageURL = null)
+    {
+        if (!Announcement.IsValid())
+            return;
+        Announcement.Display(text, timeVisible, subtext, imageURL);
+    }
+
+    public void ClearAnnouncement()
+    {
+        if (!Announcement.IsValid())
+            return;
+        Announcement.Clear();
+    }
+
+    public void OnGameEvent(PizzaThrownEvent args)
+    {
+        if (!PizzaPanel.IsValid())
+            return;
+        PizzaPanel.Animate();
+    }
+
+    public void OnGameEvent(SkeletonDiedEvent args)
+    {
+        if (!GameManager.Instance.IsGameRunning)
+            return;
+        if (!ScorePanel.IsValid())
+            return;
+        ScorePanel.Animate();
+        if (!TimePanel.IsValid())
+            return;
+        TimePanel.Animate();
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.TimeRemaining, GameManager.Instance.IsGameRunning);
+}

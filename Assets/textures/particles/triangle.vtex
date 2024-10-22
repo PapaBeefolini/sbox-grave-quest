@@ -1,0 +1,12 @@
+{
+  "Sequences": [
+    {
+      "Source": "textures/particles/triangle.png",
+      "FlipBook": true,
+      "Columns": 8,
+      "Rows": 1,
+      "Frames": 7
+    }
+  ],
+  "OutputTypeString": "2D"
+}

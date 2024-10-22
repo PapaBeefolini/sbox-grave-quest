@@ -1,0 +1,25 @@
+$white: #f3f3f3;
+$orange: #ff8100;
+$purple: #d341ff;
+$dark-purple: darken($purple, 0.2);
+$black-transparent: rgba(black, 0.8);
+
+label {
+    color: $white;
+    font-size: 28px;
+    font-family: Fredoka One;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-stroke: 12px black;
+    text-shadow: 0px 0px 16px black;
+}
+
+h1 > label {
+    font-size: 72px;
+    color: $dark-purple;
+}
+
+h2 > label {
+    font-size: 48px;
+    color: $dark-purple;
+}

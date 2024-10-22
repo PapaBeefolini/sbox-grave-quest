@@ -1,0 +1,81 @@
+{
+  "RootObject": {
+    "__guid": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96",
+    "Flags": 0,
+    "Name": "graves_large",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "144854bb-8ae4-434e-8c4a-ace7c0de1160",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/graves_large.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "328c4459-c114-47f9-9100-bf01701e519e",
+        "IsTrigger": false,
+        "Model": "models/graves_large.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "1d1763c7-1dcc-45f7-9683-42ff832ab333",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "256,160,250",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "ba962947-270a-44e9-bb15-0dc587ba0b0b",
+            "Attenuation": 1,
+            "FogMode": "Disabled",
+            "FogStrength": 1,
+            "LightColor": "14.93334,6.4,32,1",
+            "Radius": 1200,
+            "Shadows": true
+          }
+        ]
+      },
+      {
+        "__guid": "bb33525e-3767-4703-927d-436b2c7861fc",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "-160,-96,250",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "83a4f5e6-2134-4351-b576-a6ef7146c0aa",
+            "Attenuation": 1,
+            "FogMode": "Disabled",
+            "FogStrength": 1,
+            "LightColor": "14.93334,6.4,32,1",
+            "Radius": 1200,
+            "Shadows": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

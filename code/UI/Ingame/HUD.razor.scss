@@ -1,0 +1,175 @@
+@import "../Defaults.scss";
+
+HUD {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: Fredoka One;
+
+	Announcement {
+		position: absolute;
+		flex-direction: column;
+		align-items: center;
+
+		div {
+			align-items: center;
+		}
+
+		label {
+			letter-spacing: 8px;
+			font-size: 96px;
+			text-shadow: 0px 0px 16px rgba( black, 0.8 );
+			text-stroke: 14px black;
+			padding: 24px 16px;
+
+			&.subtext {
+				color: $purple;
+				letter-spacing: 4px;
+				font-size: 48px;
+				text-stroke: 12px black;
+			}
+		}
+
+		img {
+			width: 64px;
+			height: 64px;
+		}
+	}
+
+	Score {
+		position: absolute;
+		align-items: center;
+		top: 32px;
+		left: 64px;
+
+		div {
+			animation: rotate 0.6s ease infinite alternate;
+		}
+
+		label {
+			font-size: 48px;
+			text-shadow: 0px 0px 16px rgba( black, 0.8 );
+			text-stroke: 12px black;
+			padding-left: 16px;
+		}
+
+		img {
+			width: 128px;
+			height: 128px;
+		}
+	}
+
+	Timer {
+		position: absolute;
+		top: 96px;
+		flex-direction: column;
+		text-align: center;
+		gap: 16px;
+		width: 25%;
+
+		* {
+			color: $white;
+			justify-content: center;
+			text-align: center;
+			letter-spacing: 12px;
+		}
+
+		.tick * {
+			animation: timer 0.4s ease infinite alternate;
+		}
+	}
+
+	Pizza {
+		position: absolute;
+		align-items: center;
+		top: 32px;
+		right: 64px;
+		animation: grow 1.0s ease infinite alternate;
+
+		div {
+			width: 112px;
+			height: 112px;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 112px;
+			height: 112px;
+
+			&.fg {
+				mask-image: linear-gradient(black, white);
+			}
+
+			&.bg {
+				opacity: 0.1;
+			}
+		}
+	}
+}
+
+.shake {
+	animation: flash 0.2s ease 1;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(-10deg);
+	}
+
+	100% {
+		transform: rotate(10deg);
+	}
+}
+
+@keyframes grow {
+	0% {
+		transform: scale(1.0) rotate(-5deg);
+	}
+
+	25% {
+		transform: scale(1.0375) rotate(5deg);
+	}
+
+	50% {
+		transform: scale(1.075) rotate(-5deg);
+	}
+
+	75% {
+		transform: scale(1.125) rotate(5deg);
+	}
+
+	100% {
+		transform: scale(1.15) rotate(-5deg);
+	}
+}
+
+@keyframes flash {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes timer {
+	0% {
+		letter-spacing: 12px;
+	}
+
+	100% {
+		letter-spacing: 14px;
+	}
+}

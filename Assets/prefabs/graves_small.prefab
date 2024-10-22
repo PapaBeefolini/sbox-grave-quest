@@ -1,0 +1,61 @@
+{
+  "RootObject": {
+    "__guid": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3",
+    "Flags": 0,
+    "Name": "graves_small",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "1bd60c0a-9202-42db-8e5a-6d12996b6766",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/graves_small.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "6f04b0a6-5e28-447c-8fea-5824fe5cc596",
+        "IsTrigger": false,
+        "Model": "models/graves_small.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "856a1de8-2df4-4c76-9ba2-e13c976c68ca",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "0,0,250",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "65fd4c1d-651a-4040-93d1-70e1443f88ae",
+            "Attenuation": 1,
+            "FogMode": "Disabled",
+            "FogStrength": 1,
+            "LightColor": "14.93334,6.4,32,1",
+            "Radius": 1200,
+            "Shadows": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

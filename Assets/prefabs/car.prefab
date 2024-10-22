@@ -1,0 +1,364 @@
+{
+  "RootObject": {
+    "__guid": "b066ca9e-1808-4ebd-b5d1-6a239670db04",
+    "Flags": 0,
+    "Name": "car",
+    "Tags": "car",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "8fe98f45-bf61-4d53-9a2d-481deb684b40",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/car.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "4267dd29-17e2-495c-8430-d7d23cf9fc27",
+        "IsTrigger": false,
+        "Model": "models/car.vmdl",
+        "Static": false,
+        "Surface": "surfaces/vehicle.surface",
+        "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "d455bc2a-be08-48ac-8c87-06d2cff66905",
+        "AngularDamping": 2,
+        "Gravity": true,
+        "LinearDamping": 0.25,
+        "Locking": {},
+        "MassCenterOverride": "0,0,8",
+        "MassOverride": 1000,
+        "MotionEnabled": true,
+        "OverrideMassCenter": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "MightyBrick.GraveQuest.Vehicle",
+        "__guid": "7b13a2b6-8426-4b76-8998-6b8c39f3a721",
+        "AngularDampingAirborne": 0.5,
+        "AngularDampingGrounded": 4,
+        "CrashSound": "sounds/vehicle/crash.sound",
+        "KeepUprightAngle": 55,
+        "MaxSpeed": 1100,
+        "PizzaPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/pizza.prefab"
+        },
+        "Power": 1400000,
+        "PowerLerpSpeed": 14,
+        "SteerLerpSpeed": 12,
+        "ThrowCooldown": 1.5,
+        "ThrowForce": "600,0,300",
+        "ThrowOffset": "30,0,60",
+        "ThrowSound": "sounds/vehicle/throw.sound"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
+        "Flags": 0,
+        "Name": "papa",
+        "Position": "-12.9907,0,1.710571",
+        "Enabled": true,
+        "__Prefab": "prefabs/papa.prefab",
+        "__PrefabVariables": {}
+      },
+      {
+        "__guid": "164dc177-94fd-4c6b-9563-3c5e5e1d6427",
+        "Flags": 0,
+        "Name": "Headlights",
+        "Position": "66.66526,0.000003577168,29.44075",
+        "Tags": "light_spot,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SpotLight",
+            "__guid": "d074143f-5bcd-4d3e-a349-8297fd41f63b",
+            "Attenuation": 1,
+            "ConeInner": 15,
+            "ConeOuter": 65,
+            "FogMode": "Enabled",
+            "FogStrength": 2,
+            "LightColor": "64,60.0707,24.70698,1",
+            "Radius": 600,
+            "Shadows": true
+          }
+        ]
+      },
+      {
+        "__guid": "f4d87d2a-2574-43fb-9507-1ea95dd8b0b7",
+        "Flags": 0,
+        "Name": "Engine",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SoundPointComponent",
+            "__guid": "1dfb4941-4165-4e9b-bcec-500e8f5b6d9a",
+            "DistanceAttenuation": false,
+            "DistanceAttenuationOverride": false,
+            "Force2d": false,
+            "MaxRepeatTime": 1,
+            "MinRepeatTime": 1,
+            "Occlusion": false,
+            "OcclusionOverride": false,
+            "OcclusionRadius": 32,
+            "Pitch": 1,
+            "PlayOnStart": true,
+            "ReflectionOverride": false,
+            "Reflections": false,
+            "Repeat": false,
+            "SoundEvent": "sounds/vehicle/engine.sound",
+            "SoundOverride": true,
+            "StopOnNew": false,
+            "TargetMixer": {
+              "Name": "game",
+              "Id": "aab222af-1d88-4dde-af8a-7a3c3e2d9595"
+            },
+            "Volume": 0.8
+          }
+        ]
+      },
+      {
+        "__guid": "2da9bdfd-de88-4c64-8db3-30a4fa8b4b18",
+        "Flags": 0,
+        "Name": "wheel_fl",
+        "Position": "57.25,30.25,20",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "MightyBrick.GraveQuest.Wheel",
+            "__guid": "1d73a668-07ae-4a84-8679-9df2e4c07213",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
+            "Inverted": false,
+            "SpringDamper": 2500,
+            "SpringStrength": 100000,
+            "SteerAngle": 35,
+            "Steering": true,
+            "SuspensionRestLength": 16,
+            "WheelGrip": 14,
+            "WheelRadius": 12
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "24e35e72-879c-4949-b3ba-c4bafdff054a",
+            "Flags": 0,
+            "Name": "wheel_small",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "f1452dc6-1a98-4870-b77f-e1a4f8ecb382",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/wheel_small.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "e6dcf26e-fc28-4be8-807c-51bd51ceefac",
+        "Flags": 0,
+        "Name": "wheel_fr",
+        "Position": "57.25,-30.25,20",
+        "Rotation": "0,0,1,0.0000001947072",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "MightyBrick.GraveQuest.Wheel",
+            "__guid": "60742be5-dacf-4b86-a750-84322eaf5052",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
+            "Inverted": true,
+            "SpringDamper": 2500,
+            "SpringStrength": 100000,
+            "SteerAngle": 35,
+            "Steering": true,
+            "SuspensionRestLength": 16,
+            "WheelGrip": 14,
+            "WheelRadius": 12
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "c48e6406-21fe-4534-a377-772788f244a9",
+            "Flags": 0,
+            "Name": "wheel_small",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "cbf783ff-a6c7-4744-a986-9bff9f02c2f2",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/wheel_small.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "1ec91ae3-e14f-426e-9bef-7b84d7b0a850",
+        "Flags": 0,
+        "Name": "wheel_rl",
+        "Position": "-38.5,35,15",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "MightyBrick.GraveQuest.Wheel",
+            "__guid": "0eb94ed7-ef83-4c2b-9e05-371e2694b282",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
+            "Inverted": false,
+            "SpringDamper": 2500,
+            "SpringStrength": 100000,
+            "SteerAngle": 35,
+            "Steering": false,
+            "SuspensionRestLength": 20,
+            "WheelGrip": 20,
+            "WheelRadius": 16
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "f70a5004-0be9-494a-ab1a-e122e6190973",
+            "Flags": 0,
+            "Name": "wheel_big",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "18ecb574-1d3d-4d68-a3e8-30a8f1f8f6ad",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/wheel_big.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "38e97f01-35c5-45e0-a21c-3069595414ee",
+        "Flags": 0,
+        "Name": "wheel_rr",
+        "Position": "-38.5,-35,15",
+        "Rotation": "0,0,1,0.0000001947072",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "MightyBrick.GraveQuest.Wheel",
+            "__guid": "3b6aade5-e6a1-4508-94ce-8ef684b95afe",
+            "DirtParticleEffectPrefab": {
+              "_type": "gameobject",
+              "prefab": "prefabs/dirt_particles.prefab"
+            },
+            "Inverted": true,
+            "SpringDamper": 2500,
+            "SpringStrength": 100000,
+            "SteerAngle": 35,
+            "Steering": false,
+            "SuspensionRestLength": 20,
+            "WheelGrip": 20,
+            "WheelRadius": 16
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "8308607c-1d2c-4f48-bbbb-995248d80466",
+            "Flags": 0,
+            "Name": "wheel_big",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "75bd542a-cc40-4bbf-8f38-0d337fc4fc44",
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/wheel_big.vmdl",
+                "RenderOptions": {
+                  "GameLayer": true,
+                  "OverlayLayer": false,
+                  "BloomLayer": false,
+                  "AfterUILayer": false
+                },
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "13bb5940-6886-4279-a5c5-e613c0b6f6b7",
+        "Flags": 0,
+        "Name": "pizza",
+        "Position": "-53.91306,-0.000003366811,39.33324",
+        "Rotation": "0,-0.3125566,0,0.9498993",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "6fadb277-0873-4d77-b242-c63edc713c1e",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/pizza.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

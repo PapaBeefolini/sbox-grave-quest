@@ -1,0 +1,40 @@
+{
+  "RootObject": {
+    "__guid": "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8",
+    "Flags": 0,
+    "Name": "barn",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "93b48053-6509-4e2b-99e1-704557bc829a",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/barn.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "5da5f9d8-ea06-45f2-b80a-6bd25adf62fd",
+        "IsTrigger": false,
+        "Model": "models/barn.vmdl",
+        "Static": true,
+        "Surface": "surfaces/plastic.surface"
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

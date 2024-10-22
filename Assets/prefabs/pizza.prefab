@@ -1,0 +1,69 @@
+{
+  "RootObject": {
+    "__guid": "9c5d25cb-3f61-4326-b4b1-d6d12af957e8",
+    "Flags": 0,
+    "Name": "pizza",
+    "Tags": "pizza",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "398bcd91-7a48-424c-b120-b31583d3eea1",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/pizza.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "9c43d1ca-bf82-4a67-87f9-1e5e79a330fc",
+        "Center": "0,0,2.5",
+        "IsTrigger": true,
+        "Scale": "24,24,12",
+        "Static": false,
+        "Surface": "surfaces/plastic.surface"
+      },
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "e80fee69-1be0-4088-b02d-dcd709ab8ecc",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassCenterOverride": "0,0,0",
+        "MassOverride": 10,
+        "MotionEnabled": true,
+        "OverrideMassCenter": false,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "MightyBrick.GraveQuest.Pizza",
+        "__guid": "5e6747b9-8e7f-4691-b282-339a2c54d259",
+        "ExplosionPrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/explosion.prefab"
+        },
+        "ExplosionRadius": 400,
+        "ExplosionSound": "sounds/explosions/explosion.sound",
+        "LethalRadius": 200
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "IsValid": true,
+  "__version": 1
+}

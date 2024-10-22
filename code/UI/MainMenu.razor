@@ -1,0 +1,95 @@
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits PanelComponent
+
+<root>
+    <label class="version">V1.0</label>
+
+    @if (GameManager.Instance.IsCustomizing)
+    {
+        <div class="customization-parent">
+            <div class="color-row">
+                @for (int i = 0; i < Papa.Instance.HatColors.Length; i++)
+                {
+                    <ColorButton Index=@i Color=@Papa.Instance.HatColors[i]/>
+                }
+            </div>
+            <Button class="right" Text="Next Hat" OnClick=@(() => ChangeHat(1)) />
+            <Button class="right" Text="Previous Hat" OnClick=@(() => ChangeHat(-1)) />
+            <Button class="right" Text="Back" OnClick=@(() => OnCustomize()) />
+        </div>
+        return;
+    }
+
+    <img class="logo" src="ui/logo.png" />
+    <div class="buttons-parent">
+        <Button class="left bigger" Text="Start Game" OnClick=@(() => OnStartGame()) />
+        <Button class="left" Text="Customize" OnClick=@(() => OnCustomize()) />
+        <Button class="left" Text="Options" OnClick=@(() => OnOptions()) />
+        <Button class="left" Text="Quit" OnClick=@(() => OnQuit()) />
+    </div>
+
+    <div class="discord">
+        <Button Text="Discord" OnClick=@(() => CopyDiscordLink()) />
+        <label class="copied" > @discordSubtitleText</label>
+    </div>
+
+    <label class="kills">@GameManager.Instance.GlobalKills skeletons laid to rest</label>
+    <div class="leaderboard">
+        <label class="title">Leaderboard</label>
+        <div class="content">
+            @foreach (Leaderboards.Board2.Entry entry in GameManager.Instance.GetLeaderboard().Result.Entries)
+            {
+                <label>@entry.Rank - @entry.DisplayName - @entry.Value</label>
+            }
+        </div>
+    </div>
+</root>
+
+@code
+{
+    private string discordSubtitleText { get; set; } = "";
+    private TimeUntil discordSubtitleTimer = 0.0f;
+
+    protected override void OnUpdate()
+    {
+        if (discordSubtitleTimer)
+            discordSubtitleText = string.Empty;
+    }
+
+    private void OnStartGame()
+    {
+        GameManager.Instance.LoadGameScene();
+    }
+
+    private void OnCustomize()
+    {
+        GameManager.Instance.IsCustomizing = !GameManager.Instance.IsCustomizing;
+        GameManager.Save();
+    }
+
+    private void OnOptions()
+    {
+        GameManager.Instance.ToggleOptionsMenu();
+    }
+
+    private void OnQuit()
+    {
+        Game.Close();
+    }
+
+    private void CopyDiscordLink()
+    {
+        Clipboard.SetText("https://discord.gg/nK4fdrTArc");
+        discordSubtitleText = "Copied!";
+        discordSubtitleTimer = 1.5f;
+    }
+
+    private void ChangeHat(int offset)
+    {
+        Papa.Instance.OffsetHatIndex(offset);
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(discordSubtitleText, GameManager.Instance.GlobalKills);
+}

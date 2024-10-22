@@ -1,0 +1,158 @@
+@import "Defaults.scss";
+
+MainMenu {
+	pointer-events: all;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	.buttons-parent {
+		position: absolute;
+		top: 45%;
+		left: 6%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.customization-parent {
+		position: absolute;
+		top: 45%;
+		right: 12%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.color-row {
+		background-color: $black-transparent;
+		border-radius: 8px;
+		padding: 12px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 16px;
+	}
+
+	.color {
+		cursor: pointer;
+		background-color: $white;
+		border: solid 4px black;
+		width: 38px;
+		height: 38px;
+		margin: 1px;
+		transition: all 0.05s linear;
+
+		&:hover {
+			sound-in: 'hover';
+			transform: scale(1.1);
+		}
+
+		&:active {
+			sound-in: 'click';
+			transform: scale(0.9);
+		}
+	}
+
+	.leaderboard {
+		background-color: $black-transparent;
+		backdrop-filter: blur(12px);
+		border-radius: 8px;
+		border: solid 3px $orange;
+		position: absolute;
+		flex-direction: column;
+		gap: 38px;
+		padding: 24px;
+		top: 27%;
+		right: 6%;
+		width: 500px;
+		height: 600px;
+		text-align: center;
+
+		.content {
+			overflow-y: scroll;
+			flex-direction: column;
+			gap: 24px;
+
+			> label {
+				flex-shrink: 0;
+				font-size: 20px;
+				letter-spacing: 1px;
+				text-stroke: 10px black;
+			}
+		}
+
+		.title {
+			font-size: 38px;
+			letter-spacing: 8px;
+			text-stroke: 12px black;
+			color: $dark-purple;
+		}
+	}
+
+	.logo {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 600px;
+		top: 8%;
+		left: 2%;
+		animation: logo 1s ease infinite alternate;
+	}
+
+	.version {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin: 24px;
+	}
+
+	.kills {
+		position: absolute;
+		top: 4%;
+		left: 0;
+		right: 0;
+		margin: 24px;
+		color: $white;
+		letter-spacing: 8px;
+		text-align: center;
+		font-size: 24px;
+		text-stroke: 10px black;
+	}
+
+	.discord {
+		position: absolute;
+		top: 4%;
+		right: 2%;
+		margin: 24px;
+		flex-direction: column;
+		text-align: center;
+
+		Button {
+			padding: 12px 0px;
+
+			> label {
+				font-size: 48px;
+			}
+		}
+
+		.copied {
+			color: $white;
+			font-size: 28px;
+			letter-spacing: 4px;
+		}
+	}
+}
+
+@keyframes logo {
+	0% {
+		transform: rotate(-12deg) scale(1.0);
+	}
+
+	100% {
+		transform: rotate(-10deg) scale(1.1);
+	}
+}

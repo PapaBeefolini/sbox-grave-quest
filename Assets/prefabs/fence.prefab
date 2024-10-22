@@ -1,0 +1,75 @@
+{
+  "RootObject": {
+    "__guid": "1e84228b-9dbb-4707-923a-5043a847b53f",
+    "Flags": 0,
+    "Name": "fence",
+    "Tags": "wall",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "4f3eb9f6-0a0b-4637-8d6b-eeeb767774c9",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/fence.vmdl",
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "9829d414-6729-4bca-b882-b76f8ac163db",
+        "IsTrigger": false,
+        "Model": "models/fence.vmdl",
+        "Static": true,
+        "Surface": "surfaces/fence.surface"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "87de9595-6994-47f4-9e48-66f7d786fb3a",
+        "Flags": 0,
+        "Name": "fence",
+        "Position": "2618,3108,0.00005341955",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "bb0b021f-a13d-4c81-8f9c-893c23e20713",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/fence.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.ModelCollider",
+            "__guid": "fb4a5832-7b66-4944-a9b1-5210a057c9a9",
+            "IsTrigger": false,
+            "Model": "models/fence.vmdl",
+            "Static": true,
+            "Surface": "surfaces/fence.surface"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

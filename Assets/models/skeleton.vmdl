@@ -1,0 +1,354 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						name = "Light"
+						remaps = 
+						[
+							{
+								from = "white.vmat"
+								to = "materials/white.vmat"
+							},
+							{
+								from = "face.vmat"
+								to = "materials/minifig/face_skeleton.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/default.vmat"
+					},
+					{
+						_class = "MaterialGroup"
+						name = "Dark"
+						remaps = 
+						[
+							{
+								from = "materials/white.vmat"
+								to = "materials/black.vmat"
+							},
+							{
+								from = "materials/minifig/face_skeleton.vmat"
+								to = "materials/minifig/face_skeleton_dark.vmat"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/skeleton.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"Head",
+								"Leg_R",
+								"Torso",
+								"Arm_R_001",
+								"Arm_L_001",
+								"Leg_L",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/skeleton.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "run"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND"
+								event_frame = 5
+								event_keys = 
+								{
+									name = "sounds/enemy/footsteps_dirt.sound"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND"
+								event_frame = 15
+								event_keys = 
+								{
+									name = "sounds/enemy/footsteps_dirt.sound"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/skeleton.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 1
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "spawn"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/skeleton.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 2
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Arm_L"
+						anchor_origin = [ 12.0, 22.65, 0.0 ]
+						anchor_angles = [ 0.0, 25.0, 90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = false
+						swing_limit = 90.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = false
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Arm_R"
+						anchor_origin = [ -12.0, 22.65, 0.0 ]
+						anchor_angles = [ 0.0, -25.0, 90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = false
+						swing_limit = 90.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = false
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Head"
+						anchor_origin = [ 0.000007, 26.999994, -0.000002 ]
+						anchor_angles = [ -90.0, 0.0, -90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = true
+						swing_limit = 1.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Leg_L"
+						anchor_origin = [ 6.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, -90.0, -90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = true
+						swing_limit = 1.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "Bone_Torso"
+						child_body = "Bone_Leg_R"
+						anchor_origin = [ -6.0, 0.0, 0.0 ]
+						anchor_angles = [ 0.0, -90.0, 90.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.25
+						enable_swing_limit = true
+						swing_limit = 1.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -90.0
+						max_twist_angle = 90.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Torso"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 15.611935, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 16.0, 21.776131, 8.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Arm_L"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 1.0, 10.0, 0.0 ]
+						angles = [ 0.0, -5.0, 0.0 ]
+						dimensions = [ 5.0, 24.0, 5.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Arm_R"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ -1.0, 10.0, 0.0 ]
+						angles = [ 0.0, 5.0, 0.0 ]
+						dimensions = [ 5.0, 24.0, 5.0 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "Bone_Head"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 8.0
+						point0 = [ 0.0, 6.0, 0.0 ]
+						point1 = [ 0.0, 9.0, 0.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_L"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 8.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 17.0, 7.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_L"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 14.243632, -1.218517 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 4.512726, 9.437033 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_R"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 8.0, 0.0 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 17.0, 7.0 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "Bone_Leg_R"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.0, 14.243632, -1.218517 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 8.0, 4.512726, 9.437033 ]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = "animgraphs/skeleton.vanmgrph"
+		base_model_name = ""
+	}
+}

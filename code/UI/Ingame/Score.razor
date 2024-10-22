@@ -1,0 +1,25 @@
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits Panel
+
+<root>
+    <div>
+        <img @ref=SkullPanel src="ui/skull.png" />
+     </div>
+    <label>@GameManager.Instance.Score</label>
+</root>
+
+@code
+{
+    private Panel SkullPanel { get; set; }
+
+    public void Animate()
+    {
+        if (!SkullPanel.IsValid())
+            return;
+        SkullPanel.FlashClass("shake", 0.15f);
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.Score);
+}

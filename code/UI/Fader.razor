@@ -1,0 +1,51 @@
+@using Sandbox.UI;
+
+@namespace MightyBrick.GraveQuest.UI
+@inherits PanelComponent
+
+<root style="opacity: @opacity" />
+
+@code
+{
+    private TimeUntil timeUntilFinished = 0.0f;
+    private Action actionToCall = null;
+    private float desiredOpacity = 0.0f;
+    private float currentOpacity = 0.0f;
+    private float opacity = 0.0f;
+    private bool fading = false;
+
+    protected override void OnUpdate()
+    {
+        if ( !fading )
+            return;
+
+        opacity = currentOpacity.LerpTo(desiredOpacity, timeUntilFinished.Fraction);
+
+        if ( timeUntilFinished )
+        {
+            fading = false;
+            actionToCall?.Invoke();
+        }
+    }
+
+    public void FadeIn(float time, Action action = null)
+    {
+        Fade(time, 1.0f, action);
+    }
+
+    public void FadeOut(float time, Action action = null)
+    {
+        Fade(time, 0.0f, action);
+    }
+
+    private void Fade(float time, float opacity, Action action = null)
+    {
+        fading = true;
+        currentOpacity = this.opacity;
+        desiredOpacity = opacity;
+        timeUntilFinished = time;
+        actionToCall = action;
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine( opacity );
+}
