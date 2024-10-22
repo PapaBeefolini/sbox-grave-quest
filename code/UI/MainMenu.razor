@@ -30,11 +30,23 @@
         <Button class="left" Text="Quit" OnClick=@(() => OnQuit()) />
     </div>
 
-    <Button class="discord" Text="Discord" OnClick=@(() => Log.Info("Discord")) />
+    <div class="discord">
+        <Button Text="Discord" OnClick=@(() => CopyDiscordLink()) />
+        <label class="copied" > @discordSubtitleText</label>
+    </div>
 </root>
 
 @code
 {
+    private string discordSubtitleText { get; set; } = "";
+    private TimeUntil discordSubtitleTimer = 0.0f;
+
+    protected override void OnUpdate()
+    {
+        if (discordSubtitleTimer)
+            discordSubtitleText = string.Empty;
+    }
+
     private void OnStartGame()
     {
         GameManager.Instance.LoadGameScene();
@@ -56,10 +68,17 @@
         Game.Close();
     }
 
+    private void CopyDiscordLink()
+    {
+        Clipboard.SetText("https://discord.gg/nK4fdrTArc");
+        discordSubtitleText = "Copied!";
+        discordSubtitleTimer = 1.5f;
+    }
+
     private void ChangeHat(int offset)
     {
         Papa.Instance.OffsetHatIndex(offset);
     }
 
-    //protected override int BuildHash() => System.HashCode.Combine( );
+    protected override int BuildHash() => System.HashCode.Combine(discordSubtitleText);
 }

@@ -79,11 +79,20 @@ MainMenu {
 		top: 6%;
 		right: 2%;
 		margin: 24px;
-		animation: discord 1s ease infinite alternate;
+		flex-direction: column;
+		text-align: center;
 
-		> label {
-			color: $orange;
-			font-size: 48px;
+		Button {
+			padding: 12px 0px;
+
+			> label {
+				font-size: 48px;
+			}
+		}
+
+		.copied {
+			color: $white;
+			font-size: 28px;
 		}
 	}
 }
@@ -95,15 +104,5 @@ MainMenu {
 
 	100% {
 		transform: rotate(-10deg) scale(1.1);
-	}
-}
-
-@keyframes discord {
-	0% {
-		transform: rotate(4deg) scale(1.0);
-	}
-
-	100% {
-		transform: rotate(6deg) scale(1.1);
 	}
 }
