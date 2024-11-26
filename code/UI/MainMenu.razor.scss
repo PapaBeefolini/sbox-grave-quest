@@ -1,150 +1,200 @@
 @import "Defaults.scss";
 
 MainMenu {
-	pointer-events: all;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+    pointer-events: all;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-	.buttons-parent {
-		position: absolute;
-		top: 45%;
-		left: 6%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
+    .buttons-parent {
+        position: absolute;
+        top: 45%;
+        left: 6%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-	.customization-parent {
-		position: absolute;
-		top: 45%;
-		right: 12%;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-	}
+    .customization-parent {
+        position: absolute;
+        top: 45%;
+        right: 12%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 
-	.color-row {
-		background-color: $black-transparent;
-		border-radius: 8px;
-		padding: 12px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		margin-bottom: 16px;
-	}
+    .color-row {
+        background-color: $black-transparent;
+        border-radius: 8px;
+        padding: 12px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 16px;
+    }
 
-	.color {
-		cursor: pointer;
-		background-color: $white;
-		border: solid 4px black;
-		width: 38px;
-		height: 38px;
-		margin: 1px;
-		transition: all 0.05s linear;
+    .color {
+        cursor: pointer;
+        background-color: $white;
+        border: solid 4px black;
+        width: 38px;
+        height: 38px;
+        margin: 1px;
+        transition: all 0.05s linear;
 
-		&:hover {
-			sound-in: 'hover';
-			transform: scale(1.1);
-		}
+        &:hover {
+            sound-in: 'hover';
+            transform: scale(1.1);
+        }
 
-		&:active {
-			sound-in: 'click';
-			transform: scale(0.9);
-		}
-	}
+        &:active {
+            sound-in: 'click';
+            transform: scale(0.9);
+        }
+    }
 
-	.leaderboard {
-		background-color: $black-transparent;
-		backdrop-filter: blur(12px);
-		border-radius: 8px;
-		border: solid 3px $orange;
-		position: absolute;
-		flex-direction: column;
-		gap: 38px;
-		padding: 24px;
-		top: 27%;
-		right: 6%;
-		width: 500px;
-		height: 600px;
-		text-align: center;
+    .leaderboard {
+        background-color: $black-transparent;
+        backdrop-filter: blur(12px);
+        border-radius: 8px;
+        border: solid 3px $orange;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 24px;
+        top: 17%;
+        right: 6%;
+        width: 425px;
+        height: 780px;
 
-		.content {
-			overflow-y: scroll;
-			flex-direction: column;
-			gap: 24px;
+        .content {
+            overflow-y: scroll;
+            flex-direction: column;
+            gap: 12px;
+            width: 350px;
 
-			> label {
-				flex-shrink: 0;
-				font-size: 20px;
-				letter-spacing: 1px;
-				text-stroke: 10px black;
-			}
-		}
+            .row {
+                min-height: 32px;
+                width: 100%;
+                align-items: center;
+                gap: 12px;
 
-		.title {
-			font-size: 38px;
-			letter-spacing: 8px;
-			text-stroke: 12px black;
-			color: $dark-purple;
-		}
-	}
+                img {
+                    width: 32px;
+                    height: 32px;
+                    min-width: 32px;
+                    min-height: 32px;
+                    border-radius: 8px;
+                }
+            }
 
-	.logo {
-		position: absolute;
-		background-repeat: no-repeat;
-		background-size: contain;
-		width: 600px;
-		top: 8%;
-		left: 2%;
-		animation: logo 1s ease infinite alternate;
-	}
+            .rank {
+                flex-shrink: 1;
+                padding-left: 4px;
 
-	.version {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		margin: 24px;
-	}
+                label {
+                    color: $dark-purple;
+                }
+            }
 
-	.kills {
-		position: absolute;
-		top: 4%;
-		left: 0;
-		right: 0;
-		margin: 24px;
-		color: $white;
-		letter-spacing: 8px;
-		text-align: center;
-		font-size: 24px;
-		text-stroke: 10px black;
-	}
+            .name {
+                flex-grow: 1;
+                flex-shrink: 1;
+                padding-left: 4px;
+                padding-right: 4px;
+                text-overflow: ellipsis;
+                word-break: break-all;
+            }
 
-	.discord {
-		position: absolute;
-		top: 4%;
-		right: 2%;
-		margin: 24px;
-		flex-direction: column;
-		text-align: center;
+            .score {
+                flex-grow: 0;
+                flex-shrink: 0;
+                padding-right: 4px;
+                text-align: right;
+                justify-content: flex-end;
 
-		Button {
-			padding: 12px 0px;
+                label {
+                    color: $orange;
+                }
+            }
 
-			> label {
-				font-size: 48px;
-			}
-		}
+            * label {
+                font-size: 16px;
+                letter-spacing: 1px;
+                white-space: nowrap;
+                overflow-x: hidden;
+                text-stroke: 10px black;
+                text-shadow: none;
+            }
+        }
 
-		.copied {
-			color: $white;
-			font-size: 28px;
-			letter-spacing: 4px;
-		}
-	}
+        .title {
+            font-size: 38px;
+            letter-spacing: 8px;
+            text-stroke: 12px black;
+            text-align: center;
+            color: $dark-purple;
+            padding-bottom: 48px;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 600px;
+        top: 8%;
+        left: 2%;
+        animation: logo 1s ease infinite alternate;
+    }
+
+    .version {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 24px;
+    }
+
+    .kills {
+        position: absolute;
+        top: 4%;
+        left: 0;
+        right: 0;
+        margin: 24px;
+        color: $white;
+        letter-spacing: 8px;
+        text-align: center;
+        font-size: 24px;
+        text-stroke: 10px black;
+    }
+
+    .discord {
+        position: absolute;
+        top: 4%;
+        right: 2%;
+        margin: 24px;
+        flex-direction: column;
+        text-align: center;
+
+        Button {
+            padding: 12px 0px;
+
+            > label {
+                font-size: 48px;
+            }
+        }
+
+        .copied {
+            color: $white;
+            font-size: 28px;
+            letter-spacing: 4px;
+        }
+    }
 }
 
 @keyframes logo {

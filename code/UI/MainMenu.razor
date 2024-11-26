@@ -41,7 +41,20 @@
         <div class="content">
             @foreach (Leaderboards.Board2.Entry entry in GameManager.Instance.GetLeaderboard().Result.Entries)
             {
-                <label>@entry.Rank - @entry.DisplayName - @entry.Value</label>
+                <div class="row">
+                    <img src="avatar:@entry.SteamId" />
+                    <div class="row">
+                        <div class="rank">
+                            <label>@entry.Rank</label>
+                        </div>
+                        <div class="name">
+                            <label>@entry.DisplayName</label>
+                        </div>
+                        <div class="score">
+                            <label>@entry.Value</label>
+                        </div>
+                    </div>
+                </div>
             }
         </div>
     </div>
