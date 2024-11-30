@@ -143,7 +143,7 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 	public async Task<Leaderboards.Board2> GetLeaderboard()
 	{
 		Leaderboards.Board2 board = Leaderboards.GetFromStat( "brick.gravequest", "kills" );
-		board.MaxEntries = 50;
+		board.MaxEntries = 100;
 		await board.Refresh();
 		return board;
 	}
