@@ -9,7 +9,7 @@ public sealed class Pizza : Component, Component.ITriggerListener
 	[Property]
 	public float ExplosionRadius { get; set; } = 400.0f;
 	[Property]
-	public float LethalRadius { get; set; } = 200.0f;
+	public float LethalRadius { get; set; } = 225.0f;
 	[Property]
 	public SoundEvent ExplosionSound { get; set; }
 
