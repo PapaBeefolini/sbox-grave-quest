@@ -1,6 +1,6 @@
 {
   "UI": false,
-  "Volume": "6",
+  "Volume": "0.8",
   "Pitch": "1.7 2",
   "Decibels": 70,
   "SelectionMode": "Random",
@@ -13,7 +13,23 @@
   "Transmission": true,
   "OcclusionRadius": 64,
   "DistanceAttenuation": true,
+  "Distance": 6000,
+  "Falloff": [
+    {
+      "x": 0,
+      "y": 1,
+      "in": 0,
+      "out": 0,
+      "mode": "Mirrored"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "in": 0,
+      "out": 0,
+      "mode": "Mirrored"
+    }
+  ],
   "__references": [],
-  "IsValid": true,
-  "__version": 0
+  "__version": 1
 }

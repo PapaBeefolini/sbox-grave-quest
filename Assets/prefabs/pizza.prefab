@@ -10,6 +10,7 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "398bcd91-7a48-424c-b120-b31583d3eea1",
         "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
         "Model": "models/pizza.vmdl",
         "RenderOptions": {
           "GameLayer": true,
@@ -27,7 +28,8 @@
         "IsTrigger": true,
         "Scale": "24,24,12",
         "Static": false,
-        "Surface": "surfaces/plastic.surface"
+        "Surface": "surfaces/plastic.surface",
+        "SurfaceVelocity": "0,0,0"
       },
       {
         "__type": "Sandbox.Rigidbody",
@@ -35,7 +37,14 @@
         "AngularDamping": 0,
         "Gravity": true,
         "LinearDamping": 0,
-        "Locking": {},
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
         "MassCenterOverride": "0,0,0",
         "MassOverride": 10,
         "MotionEnabled": true,
@@ -52,11 +61,34 @@
         },
         "ExplosionRadius": 400,
         "ExplosionSound": "sounds/explosions/explosion.sound",
-        "LethalRadius": 200
+        "LethalRadius": 225
       }
     ],
     "Children": [],
-    "__variables": []
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
   },
   "ShowInMenu": false,
   "MenuPath": null,
@@ -64,6 +96,5 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }

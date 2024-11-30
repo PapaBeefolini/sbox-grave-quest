@@ -174,8 +174,25 @@
             {
               "__type": "Sandbox.SoundPointComponent",
               "__guid": "c8388ea4-be6e-4821-862e-9442935a069a",
+              "Distance": 512,
               "DistanceAttenuation": false,
               "DistanceAttenuationOverride": false,
+              "Falloff": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 3.1415927,
+                  "out": -3.1415927,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
               "Force2d": false,
               "MaxRepeatTime": 1,
               "MinRepeatTime": 1,
@@ -256,21 +273,36 @@
           "__type": "Sandbox.Bloom",
           "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
           "BloomColor": {
+            "blend": "Linear",
             "color": [
               {
+                "t": 0,
                 "c": "1,0.81977,0.27907,1"
               }
             ],
             "alpha": []
           },
           "BloomCurve": [
-            {},
             {
-              "x": 0.5,
-              "y": 1
+              "x": 0,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
             },
             {
-              "x": 1
+              "x": 0.5,
+              "y": 1,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
             }
           ],
           "Mode": "Screen",
@@ -338,6 +370,7 @@
           "__type": "Sandbox.ModelRenderer",
           "__guid": "2b35c5c9-ed45-418b-8645-937d15c0b4d8",
           "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
           "Model": "models/car.vmdl",
           "RenderOptions": {
             "GameLayer": true,
@@ -381,8 +414,25 @@
             {
               "__type": "Sandbox.SoundPointComponent",
               "__guid": "21b90649-0763-426a-867d-3b58a89a3ea9",
+              "Distance": 512,
               "DistanceAttenuation": false,
               "DistanceAttenuationOverride": false,
+              "Falloff": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 3.1415927,
+                  "out": -3.1415927,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
               "Force2d": false,
               "MaxRepeatTime": 1,
               "MinRepeatTime": 1,
@@ -401,7 +451,7 @@
                 "Name": "game",
                 "Id": "aab222af-1d88-4dde-af8a-7a3c3e2d9595"
               },
-              "Volume": 0.4
+              "Volume": 0.3
             }
           ]
         },
@@ -416,6 +466,7 @@
               "__type": "Sandbox.ModelRenderer",
               "__guid": "8a4e4930-fb7a-47bd-9fbc-3daea7362516",
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/wheel_small.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -440,6 +491,7 @@
               "__type": "Sandbox.ModelRenderer",
               "__guid": "1e56f3ef-f165-47c4-9491-69a9fe1e1773",
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/wheel_small.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -463,6 +515,7 @@
               "__type": "Sandbox.ModelRenderer",
               "__guid": "c8a58c82-0ade-42af-9bf3-419359b9869c",
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/wheel_big.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -487,6 +540,7 @@
               "__type": "Sandbox.ModelRenderer",
               "__guid": "a94e0769-b409-4a56-93d2-f62a25511285",
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/wheel_big.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -511,6 +565,7 @@
               "__type": "Sandbox.ModelRenderer",
               "__guid": "3689f86a-0c8a-4af6-808b-edb9cda1f0f6",
               "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
               "Model": "models/pizza.vmdl",
               "RenderOptions": {
                 "GameLayer": true,
@@ -769,8 +824,25 @@
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "d6d5192d-a73c-4827-acc7-c4c9d39ea150",
+          "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "x": 0,
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
           "Force2d": false,
           "MaxRepeatTime": 1,
           "MinRepeatTime": 1,
@@ -1587,7 +1659,7 @@
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
       "AgentHeight": 64,
-      "AgentRadius": 12,
+      "AgentRadius": 24,
       "AgentStepSize": 16,
       "AgentMaxSlope": 48,
       "ExcludedBodies": "enemy,world-border",

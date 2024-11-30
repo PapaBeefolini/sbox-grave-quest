@@ -10,6 +10,7 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "8fe98f45-bf61-4d53-9a2d-481deb684b40",
         "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
         "Model": "models/car.vmdl",
         "RenderOptions": {
           "GameLayer": true,
@@ -35,7 +36,14 @@
         "AngularDamping": 2,
         "Gravity": true,
         "LinearDamping": 0.25,
-        "Locking": {},
+        "Locking": {
+          "X": false,
+          "Y": false,
+          "Z": false,
+          "Pitch": false,
+          "Yaw": false,
+          "Roll": false
+        },
         "MassCenterOverride": "0,0,8",
         "MassOverride": 1000,
         "MotionEnabled": true,
@@ -105,8 +113,25 @@
           {
             "__type": "Sandbox.SoundPointComponent",
             "__guid": "1dfb4941-4165-4e9b-bcec-500e8f5b6d9a",
+            "Distance": 512,
             "DistanceAttenuation": false,
             "DistanceAttenuationOverride": false,
+            "Falloff": [
+              {
+                "x": 0,
+                "y": 1,
+                "in": 3.1415927,
+                "out": -3.1415927,
+                "mode": "Mirrored"
+              },
+              {
+                "x": 1,
+                "y": 0,
+                "in": 0,
+                "out": 0,
+                "mode": "Mirrored"
+              }
+            ],
             "Force2d": false,
             "MaxRepeatTime": 1,
             "MinRepeatTime": 1,
@@ -125,7 +150,7 @@
               "Name": "game",
               "Id": "aab222af-1d88-4dde-af8a-7a3c3e2d9595"
             },
-            "Volume": 0.8
+            "Volume": 0.5
           }
         ]
       },
@@ -164,6 +189,7 @@
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "f1452dc6-1a98-4870-b77f-e1a4f8ecb382",
                 "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
                 "Model": "models/wheel_small.vmdl",
                 "RenderOptions": {
                   "GameLayer": true,
@@ -214,6 +240,7 @@
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "cbf783ff-a6c7-4744-a986-9bff9f02c2f2",
                 "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
                 "Model": "models/wheel_small.vmdl",
                 "RenderOptions": {
                   "GameLayer": true,
@@ -263,6 +290,7 @@
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "18ecb574-1d3d-4d68-a3e8-30a8f1f8f6ad",
                 "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
                 "Model": "models/wheel_big.vmdl",
                 "RenderOptions": {
                   "GameLayer": true,
@@ -313,6 +341,7 @@
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "75bd542a-cc40-4bbf-8f38-0d337fc4fc44",
                 "BodyGroups": 18446744073709551615,
+                "CreateAttachments": false,
                 "Model": "models/wheel_big.vmdl",
                 "RenderOptions": {
                   "GameLayer": true,
@@ -339,6 +368,7 @@
             "__type": "Sandbox.ModelRenderer",
             "__guid": "6fadb277-0873-4d77-b242-c63edc713c1e",
             "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
             "Model": "models/pizza.vmdl",
             "RenderOptions": {
               "GameLayer": true,
@@ -352,7 +382,30 @@
         ]
       }
     ],
-    "__variables": []
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
   },
   "ShowInMenu": false,
   "MenuPath": null,
