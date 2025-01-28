@@ -55,6 +55,8 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		Instance = this;
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
 
+		Mouse.Visible = false;
+
 		Load();
 
 		EnemySpawner = GetComponent<EnemySpawner>( true );
