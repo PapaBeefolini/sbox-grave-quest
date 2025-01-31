@@ -2,12 +2,9 @@
 
 public partial class Skeleton
 {
-	[RequireComponent]
-	public NavMeshAgent Agent { get; private set; }
-	[Property, Category( "Movement" )]
-	public float MinSpeedMultiplier { get; set; } = 0.8f;
-	[Property, Category( "Movement" )]
-	public float MaxSpeedMultiplier { get; set; } = 1.2f;
+	[RequireComponent] public NavMeshAgent Agent { get; private set; }
+	[Property, Category( "Movement" )] public float MinSpeedMultiplier { get; set; } = 0.8f;
+	[Property, Category( "Movement" )] public float MaxSpeedMultiplier { get; set; } = 1.2f;
 	public float SpeedMultiplier = 1.0f;
 
 	private TimeUntil timeUntilMove = 2.6f;

@@ -4,10 +4,8 @@ public sealed class Papa : Minifig
 {
 	public static Papa Instance { get; private set; }
 
-	[Property]
-	public Model[] Hats { get; set; }
-	[Property]
-	public Color[] HatColors { get; set; }
+	[Property] public Model[] Hats { get; set; }
+	[Property] public Color[] HatColors { get; set; }
 
 	private int HatIndex { get; set; } = 0;
 	private int HatColorIndex { get; set; } = 0;

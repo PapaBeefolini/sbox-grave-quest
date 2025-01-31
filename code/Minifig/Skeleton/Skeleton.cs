@@ -6,12 +6,9 @@ public record SkeletonDiedEvent() : IGameEvent;
 
 public partial class Skeleton : Minifig
 {
-	[RequireComponent]
-	public CapsuleCollider Collider { get; private set; }
-	[Property, Category( "Sounds" )]
-	public SoundEvent DeathSound { get; private set; }
-	[Property, Category( "Sounds" )]
-	public SoundEvent BreakSound { get; private set; }
+	[RequireComponent] public CapsuleCollider Collider { get; private set; }
+	[Property, Category( "Sounds" )] public SoundEvent DeathSound { get; private set; }
+	[Property, Category( "Sounds" )] public SoundEvent BreakSound { get; private set; }
 
 	public bool IsDead { get; private set; }
 

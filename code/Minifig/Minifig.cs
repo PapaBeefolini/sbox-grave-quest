@@ -2,9 +2,8 @@ namespace MightyBrick.GraveQuest;
 
 public class Minifig : Component
 {
-	[RequireComponent]
-	public SkinnedModelRenderer Renderer { get; private set; }
-	public SkinnedModelRenderer HatRenderer { get; private set; }
+	[RequireComponent] public SkinnedModelRenderer Renderer { get; protected set; }
+	public SkinnedModelRenderer HatRenderer { get; protected set; }
 
 	protected override void OnAwake()
 	{

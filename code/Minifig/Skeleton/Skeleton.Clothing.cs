@@ -2,8 +2,7 @@
 
 public partial class Skeleton
 {
-	[Property, Category( "Hats" )]
-	public Hat[] Hats { get; private set; }
+	[Property, Category( "Hats" )] public Hat[] Hats { get; private set; }
 
 	public struct Hat
 	{
