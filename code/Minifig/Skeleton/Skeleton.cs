@@ -4,7 +4,7 @@ namespace MightyBrick.GraveQuest;
 
 public record SkeletonDiedEvent() : IGameEvent;
 
-public partial class Skeleton : Minifig
+public partial class Skeleton : Minifig, Component.ITriggerListener
 {
 	[RequireComponent] public CapsuleCollider Collider { get; private set; }
 	[Property, Category( "Sounds" )] public SoundEvent DeathSound { get; private set; }
@@ -39,11 +39,26 @@ public partial class Skeleton : Minifig
 		Animate();
 	}
 
+	public void OnTriggerEnter( Collider collider )
+	{
+		Vehicle vehicle = collider.GameObject.GetComponent<Vehicle>();
+		if ( !vehicle.IsValid() )
+			return;
+
+		float collisionVelocity = vehicle.LocalVelocity.Length;
+		Vector3 direction = Vector3.Direction( collider.WorldPosition, WorldPosition );
+		Vector3 force = direction * collisionVelocity * 4.0f + Vector3.Up * 2000.0f;
+
+		Kill( force, collisionVelocity );
+		vehicle.DoCrashEffects();
+	}
+
 	public void Kill( Vector3 force, float hitSpeed )
 	{
 		if ( IsDead )
 			return;
 
+		GameObject.BreakFromPrefab();
 		Renderer.UseAnimGraph = false;
 		Collider.Destroy();
 		Agent.Destroy();

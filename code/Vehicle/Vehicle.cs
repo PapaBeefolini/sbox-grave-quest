@@ -1,6 +1,6 @@
 namespace MightyBrick.GraveQuest;
 
-public partial class Vehicle : Component, Component.ITriggerListener, Component.ICollisionListener
+public partial class Vehicle : Component, Component.ICollisionListener
 {
 	public static Vehicle Local { get; private set; }
 
@@ -61,18 +61,6 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 		KeepUpright();
 
 		Papa?.SetInputs( InputForward, InputRight );
-	}
-
-	public void OnTriggerEnter( Collider collider )
-	{
-		Vector3 direction = Vector3.Direction( collider.WorldPosition, WorldPosition );
-		Vector3 force = direction * LocalVelocity.Length * 4.0f + Vector3.Up * 2000.0f;
-
-		if ( collider.Components.TryGet<Skeleton>( out Skeleton skeleton ) && LocalVelocity.Length > 100.0f )
-		{
-			skeleton.Kill( force, LocalVelocity.Length );
-			DoCrashEffects();
-		}
 	}
 
 	public void OnCollisionStart( Collision collision )
@@ -161,7 +149,7 @@ public partial class Vehicle : Component, Component.ITriggerListener, Component.
 		Input.TriggerHaptics( HapticEffect.Rumble );
 	}
 
-	private void DoCrashEffects(bool animate = false)
+	public void DoCrashEffects( bool animate = false )
 	{
 		if ( animate )
 			Papa?.Crash();
