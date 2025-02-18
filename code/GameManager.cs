@@ -34,7 +34,7 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		Loading
 	}
 
-	public double GlobalKills => Stats.Global.Get( "kills" ).Value;
+	public double GlobalKills => Stats.Global.Get( "kills" ).Sum;
 
 	protected override void OnEnabled()
 	{
