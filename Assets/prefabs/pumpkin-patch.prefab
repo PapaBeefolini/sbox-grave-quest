@@ -9,7 +9,16 @@
         "__type": "Sandbox.ModelRenderer",
         "__guid": "db07d7ae-17af-4fe6-a9ba-857c36dcb68d",
         "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
         "Model": "models/pumpkin_patch.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
         "RenderOptions": {
           "GameLayer": true,
           "OverlayLayer": false,
@@ -22,10 +31,22 @@
       {
         "__type": "Sandbox.ModelCollider",
         "__guid": "570d309a-b8d0-40a5-9bff-85bedb49d978",
+        "Friction": null,
         "IsTrigger": false,
         "Model": "models/pumpkin_patch.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
         "Static": true,
-        "Surface": "surfaces/plastic.surface"
+        "Surface": "surfaces/plastic.surface",
+        "SurfaceVelocity": "0,0,0"
       }
     ],
     "Children": [
@@ -43,7 +64,13 @@
             "Attenuation": 2,
             "FogMode": "Disabled",
             "FogStrength": 1,
-            "LightColor": "32,19.2,0,1",
+            "LightColor": "16,9.6,0,1",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
             "Radius": 600,
             "Shadows": true
           }
@@ -64,13 +91,42 @@
             "FogMode": "WithoutShadows",
             "FogStrength": 1,
             "LightColor": "12,6.8,0,1",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
             "Radius": 400,
             "Shadows": false
           }
         ]
       }
     ],
-    "__variables": []
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
   },
   "ShowInMenu": false,
   "MenuPath": null,
@@ -78,6 +134,5 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [],
-  "IsValid": true,
   "__version": 1
 }
