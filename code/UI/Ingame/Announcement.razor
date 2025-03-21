@@ -4,9 +4,15 @@
 @inherits Panel
 
 <root>
-    <label>@Text</label>
+    @if (!string.IsNullOrEmpty(Text))
+    {
+        <label>@Text</label>
+    }
     <div>
-        <label class="subtext">@Subtext</label>
+        @if (!string.IsNullOrEmpty(Subtext))
+        {
+            <label class="subtext">@Subtext</label>
+        }
         @if (!string.IsNullOrEmpty(ImageURL))
         {
             <img src=@ImageURL />
@@ -26,7 +32,7 @@
         if (timeUntilHideText)
         {
             Clear();
-        } 
+        }
     }
 
     public void Display(string text, float timeVisible, string subtext = null, string imageURL = null)
