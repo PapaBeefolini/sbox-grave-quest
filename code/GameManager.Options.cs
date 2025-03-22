@@ -1,6 +1,4 @@
 ﻿using Sandbox.Audio;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 
 namespace MightyBrick.GraveQuest;
 
@@ -33,8 +31,6 @@ public class GameSettings
 
 public partial class GameManager
 {
-	public static string SaveFilePath => "gamesettings.json";
-
 	private static GameSettings gameSettings { get; set; }
 	public static GameSettings GameSettings
 	{
@@ -54,17 +50,26 @@ public partial class GameManager
 
 	public static void Save()
 	{
-		JsonSerializerOptions options = new JsonSerializerOptions
+		try
 		{
-			DefaultIgnoreCondition = JsonIgnoreCondition.Never,
-			WriteIndented = true
-		};
-		string json = JsonSerializer.Serialize( GameSettings, options );
-		FileSystem.Data.WriteAllText( SaveFilePath, json );
+			FileSystem.Data.WriteJson( "gamesettings.json", GameSettings );
+		}
+		catch ( Exception ex )
+		{
+			Log.Error( $"Failed to save game settings: {ex.Message}" );
+		}
 	}
 
 	public static void Load()
 	{
-		GameSettings = FileSystem.Data.ReadJson<GameSettings>( SaveFilePath, new() );
+		try
+		{
+			GameSettings = FileSystem.Data.ReadJson<GameSettings>( "gamesettings.json", new() );
+		}
+		catch ( Exception ex )
+		{
+			Log.Error( $"Failed to load game settings: {ex.Message}" );
+			GameSettings = new();
+		}
 	}
 }
