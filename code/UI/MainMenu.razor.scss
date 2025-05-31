@@ -174,25 +174,25 @@ MainMenu {
     }
 
     .discord {
+        width: 96px;
+        height: 96px;
         position: absolute;
-        top: 4%;
-        right: 2%;
-        margin: 24px;
-        flex-direction: column;
-        text-align: center;
+        top: 5%;
+        right: 3%;
+        transition: all 0.025s linear;
+        animation: discord 0.5s ease infinite alternate;
 
-        Button {
-            padding: 12px 0px;
-
-            > label {
-                font-size: 48px;
-            }
+        &:hover {
+            cursor: pointer;
+            sound-in: 'hover';
+            transform: scale(1.2);
+            animation: none;
         }
 
-        .copied {
-            color: $white;
-            font-size: 28px;
-            letter-spacing: 4px;
+        &:active {
+            sound-in: 'click';
+            transform: scale(1.0);
+            animation: none;
         }
     }
 }
@@ -205,4 +205,14 @@ MainMenu {
 	100% {
 		transform: rotate(-10deg) scale(1.1);
 	}
+}
+
+@keyframes discord {
+    0% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(-4deg);
+    }
 }

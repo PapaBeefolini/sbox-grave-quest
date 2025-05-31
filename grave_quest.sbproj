@@ -8,6 +8,7 @@
   "Resources": "\nui/*\nfonts/*",
   "PackageReferences": [],
   "EditorReferences": null,
+  "Mounts": null,
   "IsStandaloneOnly": false,
   "Metadata": {
     "MaxPlayers": 1,

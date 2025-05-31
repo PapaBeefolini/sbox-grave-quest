@@ -3,13 +3,23 @@
   "GameObjects": [
     {
       "__guid": "9374b48e-908c-494e-8432-1ad084b50fae",
+      "__version": 1,
       "Flags": 0,
       "Name": "Scene Information",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.SceneInformation",
           "__guid": "01acd26f-bb34-4648-8f47-aaabae9e4096",
+          "__enabled": true,
           "Author": null,
           "Changes": null,
           "Description": "",
@@ -24,19 +34,28 @@
           "Title": "game-world",
           "Version": null
         }
-      ]
+      ],
+      "Children": []
     },
     {
       "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+      "__version": 1,
       "Flags": 0,
       "Name": "Camera",
       "Position": "-856.2066,742.8725,69.77353",
       "Rotation": "-0.004701478,0.00165934,0.9429794,0.3328139",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.CameraComponent",
           "__guid": "cf3cbf96-22b6-4be4-a5d0-672a96c17f9f",
+          "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 80,
@@ -61,9 +80,9 @@
         {
           "__type": "Sandbox.Tonemapping",
           "__guid": "9d76f362-7227-40eb-a189-69353c780c46",
-          "__version": 2,
+          "__enabled": true,
+          "__version": 3,
           "AutoExposureEnabled": false,
-          "ExposureBias": 2,
           "ExposureCompensation": 0,
           "ExposureMethod": "RGB",
           "MaximumExposure": 2,
@@ -80,6 +99,7 @@
         {
           "__type": "Sandbox.ColorAdjustments",
           "__guid": "e7252e1f-e163-4be5-902a-a519633d5e61",
+          "__enabled": true,
           "Brightness": 1.25,
           "Contrast": 1,
           "HueRotate": 0,
@@ -94,6 +114,7 @@
         {
           "__type": "Sandbox.Bloom",
           "__guid": "d73ef723-c888-41d4-802e-f797c79318be",
+          "__enabled": true,
           "__version": 1,
           "Gamma": 2.2,
           "Mode": "Screen",
@@ -110,6 +131,7 @@
         {
           "__type": "Sandbox.AmbientOcclusion",
           "__guid": "41948233-c9fd-4337-a442-47f637c888ac",
+          "__enabled": true,
           "__version": 1,
           "DenoiseMode": "Temporal",
           "FalloffRange": 0.75,
@@ -127,6 +149,7 @@
         {
           "__type": "Sandbox.Vignette",
           "__guid": "e620d104-5bf0-40df-858d-5aa527236535",
+          "__enabled": true,
           "Center": "0.5,0.5",
           "Color": "0,0,0,1",
           "Intensity": 0.3,
@@ -142,6 +165,7 @@
         {
           "__type": "MightyBrick.GraveQuest.FollowCamera",
           "__guid": "f3008bdd-695e-4428-9f62-d928fee5d389",
+          "__enabled": true,
           "AutoFocusRotationOffset": "20,0,0",
           "AutoFocusSpeed": 3,
           "AutoFocusTime": 1,
@@ -159,19 +183,28 @@
           "UpOffset": 50,
           "ZoomSpeed": 50
         }
-      ]
+      ],
+      "Children": []
     },
     {
       "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "__version": 1,
       "Flags": 0,
       "Name": "Sky",
       "Position": "0,0,64",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
       "Tags": "skybox",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.SkyBox2D",
           "__guid": "b48ad079-2eec-45f1-9150-98d050e7948e",
+          "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -185,6 +218,7 @@
         {
           "__type": "Sandbox.CubemapFog",
           "__guid": "289097ab-d86a-49d9-94b7-d8af935638f6",
+          "__enabled": true,
           "Blur": 0.5,
           "EndDistance": 6000,
           "FalloffExponent": 0.5,
@@ -204,6 +238,7 @@
         {
           "__type": "Sandbox.GradientFog",
           "__guid": "e7eb5953-d349-4e6f-96ee-198bc0764bc0",
+          "__enabled": true,
           "Color": "0.17674,0.04604,0.16803,0.1",
           "EndDistance": 1024,
           "FalloffExponent": 1,
@@ -220,6 +255,7 @@
         {
           "__type": "Sandbox.VolumetricFogVolume",
           "__guid": "1ba80dc7-f1ae-4a84-8fa4-897c2692968f",
+          "__enabled": true,
           "Bounds": {
             "Mins": "-4000,-4000,-200",
             "Maxs": "4000,4000,200"
@@ -233,20 +269,28 @@
           "OnComponentUpdate": null,
           "Strength": 0.01
         }
-      ]
+      ],
+      "Children": []
     },
     {
       "__guid": "15106d36-3834-4ce0-a0b4-2ba0eda9e246",
+      "__version": 1,
       "Flags": 0,
       "Name": "Sun",
       "Position": "0,0,400",
       "Rotation": "-0.09042397,0.2867882,0.2867882,0.909576",
+      "Scale": "1,1,1",
       "Tags": "light_directional,light",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.DirectionalLight",
           "__guid": "28d294e0-aad8-4144-8803-731ec041e6d8",
+          "__enabled": true,
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.47442,0.13681,0.40127,1",
@@ -263,14 +307,23 @@
       "Children": [
         {
           "__guid": "8e77ca6f-c539-4383-93c2-3bb016b39cd7",
+          "__version": 1,
           "Flags": 0,
           "Name": "Back Sun",
+          "Position": "0,0,0",
           "Rotation": "0.03575084,0.09822462,-0.3401465,0.9345449",
+          "Scale": "1,1,1",
+          "Tags": "",
           "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "OwnerTransfer": 1,
           "Components": [
             {
               "__type": "Sandbox.DirectionalLight",
               "__guid": "9a770a8c-38ca-46b5-8589-0e7b1c704c6f",
+              "__enabled": true,
               "FogMode": "Enabled",
               "FogStrength": 1,
               "LightColor": "0.82791,0.13478,0.67773,1",
@@ -283,28 +336,46 @@
               "Shadows": false,
               "SkyColor": "0,0,0,0"
             }
-          ]
+          ],
+          "Children": []
         }
       ]
     },
     {
       "__guid": "baa622bd-469e-4054-930b-caa93c2ae04b",
+      "__version": 1,
       "Flags": 0,
       "Name": "World Border",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
       "Tags": "wall",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
+      "Components": [],
       "Children": [
         {
           "__guid": "f31b7aa3-7b80-452c-9913-5496db51dd8e",
+          "__version": 1,
           "Flags": 0,
           "Name": "Wall",
           "Position": "0,1565,300",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
           "Tags": "world-border",
           "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "OwnerTransfer": 1,
           "Components": [
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "69a52b7d-e8ab-4045-b6ed-092202c7453a",
+              "__enabled": true,
               "Center": "0,0,0",
               "Friction": null,
               "IsTrigger": false,
@@ -323,19 +394,28 @@
               "Surface": "surfaces/fence.surface",
               "SurfaceVelocity": "0,0,0"
             }
-          ]
+          ],
+          "Children": []
         },
         {
           "__guid": "527fdfde-7422-4913-9a72-20cf8a1897df",
+          "__version": 1,
           "Flags": 0,
           "Name": "Wall",
           "Position": "0,-1565,300",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
           "Tags": "world-border",
           "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "OwnerTransfer": 1,
           "Components": [
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "1a03ca48-02a7-4fd6-bec6-83d0a05c9b3e",
+              "__enabled": true,
               "Center": "0,0,0",
               "Friction": null,
               "IsTrigger": false,
@@ -354,19 +434,28 @@
               "Surface": "surfaces/fence.surface",
               "SurfaceVelocity": "0,0,0"
             }
-          ]
+          ],
+          "Children": []
         },
         {
           "__guid": "78384a5c-8507-43ad-bae3-9464e637889a",
+          "__version": 1,
           "Flags": 0,
           "Name": "Wall",
           "Position": "-1565,0,300",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
           "Tags": "world-border",
           "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "OwnerTransfer": 1,
           "Components": [
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "aca99416-340e-4ec1-b2b4-87fea0c3542c",
+              "__enabled": true,
               "Center": "0,0,0",
               "Friction": null,
               "IsTrigger": false,
@@ -385,19 +474,28 @@
               "Surface": "surfaces/fence.surface",
               "SurfaceVelocity": "0,0,0"
             }
-          ]
+          ],
+          "Children": []
         },
         {
           "__guid": "efdd022b-b788-4b66-9f73-240c09be5d98",
+          "__version": 1,
           "Flags": 0,
           "Name": "Wall",
           "Position": "1580,0,300",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
           "Tags": "world-border",
           "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "OwnerTransfer": 1,
           "Components": [
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "91836bbd-51b9-4f34-b899-13fa01eb4922",
+              "__enabled": true,
               "Center": "0,0,0",
               "Friction": null,
               "IsTrigger": false,
@@ -416,85 +514,447 @@
               "Surface": "surfaces/fence.surface",
               "SurfaceVelocity": "0,0,0"
             }
-          ]
+          ],
+          "Children": []
         }
       ]
     },
     {
       "__guid": "6e5da265-ae3d-4785-a90b-ff29505ace88",
-      "Flags": 0,
-      "Name": "terrain",
-      "Tags": "ground",
-      "Enabled": true,
+      "__version": 1,
       "__Prefab": "prefabs/terrain.prefab",
-      "__PrefabVariables": {}
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e5da265-ae3d-4785-a90b-ff29505ace88"
+            },
+            "Property": "NetworkInterpolation",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e5da265-ae3d-4785-a90b-ff29505ace88": "6e5da265-ae3d-4785-a90b-ff29505ace88",
+        "90d3ea28-4908-4c6c-ab4d-f271855177e0": "0438a9e3-2eff-47bc-8495-d0145d8664ef",
+        "7a5becd0-e5d2-4598-bb5f-ce3249316b55": "e23a6402-1fb7-44f4-80e1-7590a14b9ce6"
+      }
     },
     {
       "__guid": "97e54bea-9873-40b0-b9ae-8d0389cce97c",
-      "Flags": 0,
-      "Name": "fireflies",
-      "Position": "0,0,200",
-      "Tags": "particles",
-      "Enabled": true,
+      "__version": 1,
       "__Prefab": "prefabs/fireflies.prefab",
-      "__PrefabVariables": {}
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "97e54bea-9873-40b0-b9ae-8d0389cce97c"
+            },
+            "Property": "NetworkInterpolation",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
+            },
+            "Property": "Alpha",
+            "Value": {
+              "Type": "Curve",
+              "Evaluation": "Life",
+              "CurveA": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "in": -4.0000024,
+                  "out": 4.0000024,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 0.20000002,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 0.8000001,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "CurveB": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Constants": "1,0,0,0"
+            }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
+            },
+            "Property": "Lifetime",
+            "Value": {
+              "Type": "Range",
+              "Evaluation": "Particle",
+              "CurveA": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "CurveB": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Constants": "2,5,0,0"
+            }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
+            },
+            "Property": "Roll",
+            "Value": {
+              "Type": "Range",
+              "Evaluation": "Particle",
+              "CurveA": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "CurveB": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Constants": "0,360,0,0"
+            }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
+            },
+            "Property": "Scale",
+            "Value": {
+              "Type": "Range",
+              "Evaluation": "Particle",
+              "CurveA": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "CurveB": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Constants": "1,1,0,0"
+            }
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
+            },
+            "Property": "StartVelocity",
+            "Value": {
+              "Type": "Range",
+              "Evaluation": "Particle",
+              "CurveA": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "CurveB": [
+                {
+                  "x": 0.5,
+                  "y": 0.5,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Constants": "20,70,0,0"
+            }
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "97e54bea-9873-40b0-b9ae-8d0389cce97c": "97e54bea-9873-40b0-b9ae-8d0389cce97c",
+        "418f6c87-f239-4382-919e-ac4abc31c171": "75221dda-5fce-4272-80ae-664f10c0a349",
+        "6a91e351-33b8-4fa2-b580-5b39e7d2ae0d": "f7b4e4d8-340f-4e65-94b0-4480732d8fb9",
+        "3f3baf7c-7cc2-407c-b61e-37ee9e4c2009": "0e146bdc-ed71-451e-8191-27631df6c8da"
+      }
     },
     {
       "__guid": "1e84228b-9dbb-4707-923a-5043a847b53f",
-      "Flags": 0,
-      "Name": "fence",
-      "Position": "-1300,-1552,-2",
-      "Tags": "wall",
-      "Enabled": true,
+      "__version": 1,
       "__Prefab": "prefabs/fence.prefab",
-      "__PrefabVariables": {}
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1e84228b-9dbb-4707-923a-5043a847b53f"
+            },
+            "Property": "Position",
+            "Value": "-1300,-1552,-2"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "1e84228b-9dbb-4707-923a-5043a847b53f"
+            },
+            "Property": "NetworkInterpolation",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "1e84228b-9dbb-4707-923a-5043a847b53f": "1e84228b-9dbb-4707-923a-5043a847b53f",
+        "4f3eb9f6-0a0b-4637-8d6b-eeeb767774c9": "a1bf76c8-deef-48e7-8bd6-497338f187fc",
+        "9829d414-6729-4bca-b882-b76f8ac163db": "0199966d-ed70-4b44-9c05-6a3538c53c4d",
+        "87de9595-6994-47f4-9e48-66f7d786fb3a": "c5fb0e15-2349-4b13-809c-f1a56142d2ca",
+        "bb0b021f-a13d-4c81-8f9c-893c23e20713": "d003182e-56c5-4ce2-ab14-c97ada3159bb",
+        "fb4a5832-7b66-4944-a9b1-5210a057c9a9": "73767214-ed13-480b-8400-1b8efc4a10ac"
+      }
     },
     {
       "__guid": "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8",
-      "Flags": 0,
-      "Name": "barn",
-      "Position": "-1808,1296,-2.795198",
-      "Enabled": true,
+      "__version": 1,
       "__Prefab": "prefabs/barn.prefab",
-      "__PrefabVariables": {}
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8"
+            },
+            "Property": "Position",
+            "Value": "-1808,1296,-2.795198"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8"
+            },
+            "Property": "NetworkInterpolation",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8": "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8",
+        "93b48053-6509-4e2b-99e1-704557bc829a": "48976dbf-5500-465c-8a37-557d88a371f2",
+        "5da5f9d8-ea06-45f2-b80a-6bd25adf62fd": "6dc30650-df02-4ed5-8752-0da67a63c725"
+      }
     },
     {
       "__guid": "b066ca9e-1808-4ebd-b5d1-6a239670db04",
-      "Flags": 0,
-      "Name": "car",
-      "Tags": "car",
-      "Enabled": true,
+      "__version": 1,
       "__Prefab": "prefabs/car.prefab",
-      "__PrefabVariables": {}
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "b066ca9e-1808-4ebd-b5d1-6a239670db04"
+            },
+            "Property": "NetworkInterpolation",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "b066ca9e-1808-4ebd-b5d1-6a239670db04": "b066ca9e-1808-4ebd-b5d1-6a239670db04",
+        "8fe98f45-bf61-4d53-9a2d-481deb684b40": "c4fbe85d-7630-4f21-adc9-27e1b34a9d0d",
+        "4267dd29-17e2-495c-8430-d7d23cf9fc27": "a03f9f37-b44a-459c-9ec9-b8f75ee4c1d2",
+        "d455bc2a-be08-48ac-8c87-06d2cff66905": "86e2e9cb-0dad-4ac0-ad5f-7c2be21f424c",
+        "7b13a2b6-8426-4b76-8998-6b8c39f3a721": "ddc02746-0303-44c0-8cb0-8cb6d8dc05f5",
+        "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e": "90ef7a48-5ef8-412e-93ad-f49a78f31b70",
+        "90f06f88-b1f8-4266-9c63-50d72cf0eab4": "eab1f74b-3bfe-4e8c-aec4-e3f7273fd31b",
+        "791d2fbc-abbc-4934-aad4-9033e581575e": "9633448b-d089-4533-aa6a-7f2da0512720",
+        "6ecc547b-3003-4dab-a322-e68484e7f847": "cf1ee1e0-68db-4310-82e3-37e8b1256bfa",
+        "a8b0a3aa-7645-4691-ae0c-5c2eb6345b02": "f34a4405-64b5-451c-a3bc-442595f1db60",
+        "164dc177-94fd-4c6b-9563-3c5e5e1d6427": "cc31bb5c-5cba-4cef-b9bf-9025e17019da",
+        "d074143f-5bcd-4d3e-a349-8297fd41f63b": "d016306c-21c2-468e-8479-07c44376a033",
+        "f4d87d2a-2574-43fb-9507-1ea95dd8b0b7": "db55fd2d-3fd2-420f-9198-b88f1a8eb7ba",
+        "1dfb4941-4165-4e9b-bcec-500e8f5b6d9a": "43e69330-fcf4-43ca-a1fb-8190e36835ba",
+        "2da9bdfd-de88-4c64-8db3-30a4fa8b4b18": "25ac7851-610b-4b89-8479-72a70c0d2e13",
+        "1d73a668-07ae-4a84-8679-9df2e4c07213": "8b9adc1a-f96f-4c18-a37e-4b10d89b92bf",
+        "24e35e72-879c-4949-b3ba-c4bafdff054a": "5b06d3a6-39df-4c9b-b4e3-ec5db0ae963e",
+        "f1452dc6-1a98-4870-b77f-e1a4f8ecb382": "819cec2b-ab72-469d-83cd-2a27ac81e464",
+        "e6dcf26e-fc28-4be8-807c-51bd51ceefac": "849eada4-c221-435c-b09e-1e5709a72e0a",
+        "60742be5-dacf-4b86-a750-84322eaf5052": "4f2d6a1c-932d-4f24-ad1b-5a6d9988f44d",
+        "c48e6406-21fe-4534-a377-772788f244a9": "a120e65a-4f41-4e25-958d-9261a1c32717",
+        "cbf783ff-a6c7-4744-a986-9bff9f02c2f2": "693a7f85-a639-4479-be1b-475f3f68c62b",
+        "1ec91ae3-e14f-426e-9bef-7b84d7b0a850": "7b1f6352-6ccd-4bc1-a644-ac1240c4fac7",
+        "0eb94ed7-ef83-4c2b-9e05-371e2694b282": "21ed46df-50f3-49f8-8295-c500aa787bb6",
+        "f70a5004-0be9-494a-ab1a-e122e6190973": "e02d4a54-667b-4fb6-bc40-248fa765939c",
+        "18ecb574-1d3d-4d68-a3e8-30a8f1f8f6ad": "88969849-9a08-4a20-8428-09222c54f2af",
+        "38e97f01-35c5-45e0-a21c-3069595414ee": "9498da44-e91a-4d48-8874-46536d612073",
+        "3b6aade5-e6a1-4508-94ce-8ef684b95afe": "bcfebad4-1356-4f64-86ce-b22763842036",
+        "8308607c-1d2c-4f48-bbbb-995248d80466": "abb107f8-ce4a-4247-8b77-989a1cd1d74f",
+        "75bd542a-cc40-4bbf-8f38-0d337fc4fc44": "7aaa717d-1fb4-420c-ab16-bc93c6ee2510",
+        "13bb5940-6886-4279-a5c5-e613c0b6f6b7": "42e91eb4-4fb4-4a00-a204-312f71a7ff7e",
+        "6fadb277-0873-4d77-b242-c63edc713c1e": "14015d16-a961-4f76-801c-43c4ba968c86"
+      }
     },
     {
       "__guid": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3",
-      "Flags": 0,
-      "Name": "graves_small",
-      "Position": "1880,-1080,0.02943937",
-      "Enabled": true,
+      "__version": 1,
       "__Prefab": "prefabs/graves_small.prefab",
-      "__PrefabVariables": {}
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3"
+            },
+            "Property": "Position",
+            "Value": "1880,-1080,0.02943937"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3"
+            },
+            "Property": "NetworkInterpolation",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3",
+        "1bd60c0a-9202-42db-8e5a-6d12996b6766": "aeadbc3f-5678-45d3-95a9-c3a23c9f3960",
+        "6f04b0a6-5e28-447c-8fea-5824fe5cc596": "1f5ed463-0d99-42c3-bd28-6f4f8869aa36",
+        "856a1de8-2df4-4c76-9ba2-e13c976c68ca": "26f03cc9-33ee-4316-9aad-2ab19d6942c7",
+        "65fd4c1d-651a-4040-93d1-70e1443f88ae": "619c9d6b-f2ab-4df8-a980-2961982b1c50"
+      }
     },
     {
       "__guid": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96",
-      "Flags": 0,
-      "Name": "graves_large",
-      "Position": "-368,2016,0.0002332315",
-      "Enabled": true,
+      "__version": 1,
       "__Prefab": "prefabs/graves_large.prefab",
-      "__PrefabVariables": {}
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96"
+            },
+            "Property": "Position",
+            "Value": "-368,2016,0.0002332315"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96"
+            },
+            "Property": "NetworkInterpolation",
+            "Value": false
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96",
+        "144854bb-8ae4-434e-8c4a-ace7c0de1160": "9e244bf4-97b6-4abd-a200-9bd12f58fc6f",
+        "328c4459-c114-47f9-9100-bf01701e519e": "49041e80-2cbc-43dc-9757-ced94fb65688",
+        "1d1763c7-1dcc-45f7-9683-42ff832ab333": "495d0651-07f8-4d28-af73-5ed2e9651482",
+        "ba962947-270a-44e9-bb15-0dc587ba0b0b": "ac6b6757-18b7-400a-aeac-da0ce8b73fe3",
+        "bb33525e-3767-4703-927d-436b2c7861fc": "807b2013-237c-4c7a-b3db-3ee6ea218dda",
+        "83a4f5e6-2134-4351-b576-a6ef7146c0aa": "f0517330-8147-488f-b425-9857ef6cf304"
+      }
     },
     {
       "__guid": "0be2ea70-26f7-4d32-9885-20dd359cc0bc",
+      "__version": 1,
       "Flags": 0,
       "Name": "crickets",
       "Position": "-1852.146,66.9637,84.47704",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "d6d5192d-a73c-4827-acc7-c4c9d39ea150",
+          "__enabled": true,
           "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
@@ -540,753 +1000,3394 @@
           },
           "Volume": 1
         }
-      ]
+      ],
+      "Children": []
     },
     {
       "__guid": "7d3cd9a7-0c40-441e-8b09-254d43f767f3",
+      "__version": 1,
       "Flags": 0,
       "Name": "corn_field",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
+      "Components": [],
       "Children": [
         {
           "__guid": "f0b68fea-2058-4e00-ad46-14d5e329b37f",
-          "Flags": 0,
-          "Name": "corn_field",
-          "Position": "-1728,672,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1728,672,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "f0b68fea-2058-4e00-ad46-14d5e329b37f",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "6badc2ab-3e5c-4fde-9113-e755cef58214"
+          }
         },
         {
           "__guid": "2f14890b-9268-4e18-83e5-5ff7c0a16a34",
-          "Flags": 0,
-          "Name": "corn_field (5)",
-          "Position": "-1984,672,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (5)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1984,672,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "2f14890b-9268-4e18-83e5-5ff7c0a16a34",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "6cfd01b2-3a14-43ab-805a-54da1a57571d"
+          }
         },
         {
           "__guid": "295b1f0a-c4ed-464f-ad4f-0d44f2857250",
-          "Flags": 0,
-          "Name": "corn_field (1)",
-          "Position": "-1728,368,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1728,368,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "295b1f0a-c4ed-464f-ad4f-0d44f2857250",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "9b24496e-7f15-465f-86e0-35be68db6c20"
+          }
         },
         {
           "__guid": "cad0c904-cdda-4e49-a1f0-796c98a5dbad",
-          "Flags": 0,
-          "Name": "corn_field (6)",
-          "Position": "-1984,368,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (6)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1984,368,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "cad0c904-cdda-4e49-a1f0-796c98a5dbad",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "92aed1c1-f7da-4bbc-bb5c-e5e2818194b8"
+          }
         },
         {
           "__guid": "9b432eeb-4614-442e-bb3d-07b8b5278939",
-          "Flags": 0,
-          "Name": "corn_field (7)",
-          "Position": "-1984,64,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (7)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1984,64,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "9b432eeb-4614-442e-bb3d-07b8b5278939",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "0daa3f69-5229-4bf1-8d3a-764dcff0ccb7"
+          }
         },
         {
           "__guid": "1b3d5f70-7750-4d67-98bf-8c168d14bd71",
-          "Flags": 0,
-          "Name": "corn_field (3)",
-          "Position": "-1728,-240,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1728,-240,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "1b3d5f70-7750-4d67-98bf-8c168d14bd71",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "4272b6aa-b443-45d6-ac30-6ad0ff74a083"
+          }
         },
         {
           "__guid": "99a31a20-dc8d-4112-b405-cc41bd242ee4",
-          "Flags": 0,
-          "Name": "corn_field (8)",
-          "Position": "-1984,-240,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (8)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1984,-240,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "99a31a20-dc8d-4112-b405-cc41bd242ee4",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "48c1b829-e547-461a-9079-9cebd9a02f22"
+          }
         },
         {
           "__guid": "8ff5f92a-7113-435f-87f4-0bc399fffda2",
-          "Flags": 0,
-          "Name": "corn_field (4)",
-          "Position": "-1728,-544,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (4)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1728,-544,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "8ff5f92a-7113-435f-87f4-0bc399fffda2",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "069144e1-94ba-4eeb-a61d-883463afc1c5"
+          }
         },
         {
           "__guid": "bb7d6e2d-5cfd-4d64-bfa2-c7f698dc8881",
-          "Flags": 0,
-          "Name": "corn_field (9)",
-          "Position": "-1984,-544,2.290814",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Name",
+                "Value": "corn_field (9)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "Position",
+                "Value": "-1984,-544,2.290814"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "f0b68fea-2058-4e00-ad46-14d5e329b37f"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "f0b68fea-2058-4e00-ad46-14d5e329b37f": "bb7d6e2d-5cfd-4d64-bfa2-c7f698dc8881",
+            "aaffe39f-4e9e-4bfa-bc9d-3923d364ec6b": "ccc09f4c-1087-4ff4-ae28-94a0dacce374"
+          }
         },
         {
           "__guid": "7f20f7bf-49bc-439a-8df3-a8f56be0f656",
-          "Flags": 0,
-          "Name": "corn_field_crow",
-          "Position": "-1728,64,2.526324",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/corn_field_crow.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "7f20f7bf-49bc-439a-8df3-a8f56be0f656"
+                },
+                "Property": "Position",
+                "Value": "-1728,64,2.526324"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "7f20f7bf-49bc-439a-8df3-a8f56be0f656"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "7f20f7bf-49bc-439a-8df3-a8f56be0f656": "7f20f7bf-49bc-439a-8df3-a8f56be0f656",
+            "3f7185e0-6324-45f6-9104-d4493ca9ac4d": "2c6b6b2e-0cc4-4253-8976-3afec155e9eb"
+          }
         }
       ]
     },
     {
       "__guid": "35203ae7-7930-4661-8fb4-832fe8dcbfb2",
+      "__version": 1,
       "Flags": 0,
       "Name": "pumpkins",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
+      "Components": [],
       "Children": [
         {
           "__guid": "f8f82a29-65e8-4bdd-9ec1-fad4bba94ae5",
-          "Flags": 0,
-          "Name": "pumpkin-patch (2)",
-          "Position": "656,-912,-0.7325444",
-          "Rotation": "-0.00000001140485,0.00000002753376,0.3826833,0.9238794",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/pumpkin-patch.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Name",
+                "Value": "pumpkin-patch (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Position",
+                "Value": "656,-912,-0.7325444"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000001140485,0.00000002753376,0.3826833,0.9238794"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "f8f82a29-65e8-4bdd-9ec1-fad4bba94ae5",
+            "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "eb4ede40-13f2-426e-8eb9-e31188a0d6a4",
+            "570d309a-b8d0-40a5-9bff-85bedb49d978": "1e878c4a-708d-48db-bfc8-6fb4c8bde099",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "88ffc847-5c85-4e63-8f2d-db744961f671",
+            "06a58812-f6c4-49ec-bd41-dc811f993039": "fd4cd90b-d137-4ec2-92c3-718c46d8f11d",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "ca62fb60-4b49-40a0-8236-a3d4581561af",
+            "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "64a7e912-da12-48a2-ab67-29d958e348d2"
+          }
         },
         {
           "__guid": "7a86ab3c-aa23-4df4-a9bf-a461f669d255",
-          "Flags": 0,
-          "Name": "pumpkin-patch (3)",
-          "Position": "-1008,1040,1.00029",
-          "Rotation": "0.00000001140485,0.00000002753376,-0.3826833,0.9238794",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/pumpkin-patch.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Name",
+                "Value": "pumpkin-patch (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Position",
+                "Value": "-1008,1040,1.00029"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Rotation",
+                "Value": "0.00000001140485,0.00000002753376,-0.3826833,0.9238794"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "7a86ab3c-aa23-4df4-a9bf-a461f669d255",
+            "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "fb6669cd-6069-4358-8156-d6a398139b17",
+            "570d309a-b8d0-40a5-9bff-85bedb49d978": "7b2f9134-c75a-4877-b9ca-997c008b2773",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "7486ba94-888f-4404-9bfa-dc74c3a13cbf",
+            "06a58812-f6c4-49ec-bd41-dc811f993039": "e8f5561c-b351-4e97-8d3f-f188a7f82b9f",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "9a5e0165-4f0e-4a16-99cf-865592ff3111",
+            "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "04f8ced0-0a1c-4c75-8b0a-a3aa7277bf0b"
+          }
         },
         {
           "__guid": "bff23464-298a-44e3-87fe-6baaf6d08ef5",
-          "Flags": 0,
-          "Name": "pumpkins (2)",
-          "Position": "1657.776,1735.622,-0.0004499841",
-          "Rotation": "0,0,-0.8660253,0.5000001",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/pumpkins.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Name",
+                "Value": "pumpkins (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Position",
+                "Value": "1657.776,1735.622,-0.0004499841"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.8660253,0.5000001"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "a43ae81c-b0cd-4e03-8074-54e9284c7e75": "bff23464-298a-44e3-87fe-6baaf6d08ef5",
+            "752b9774-9e2e-4bed-9839-c3cc73709e37": "979031ae-5147-4061-99ec-a35b4aeec179",
+            "6e55a15f-2094-4101-a14f-2b202cd9c91d": "bca993d9-bd0e-4775-8b5b-e5efc1cde944"
+          }
         },
         {
           "__guid": "efa6abfc-fcbb-449f-8035-e0642f440e26",
-          "Flags": 0,
-          "Name": "pumpkin-patch",
-          "Position": "720,928,0.1201292",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/pumpkin-patch.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Position",
+                "Value": "720,928,0.1201292"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "efa6abfc-fcbb-449f-8035-e0642f440e26",
+            "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "9019d286-0e4e-4730-99ee-e53c6f31da0f",
+            "570d309a-b8d0-40a5-9bff-85bedb49d978": "c780c48d-d284-482f-8399-00aa37bd73db",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "a69182c2-3e12-4bb7-8b74-d257b1e91df8",
+            "06a58812-f6c4-49ec-bd41-dc811f993039": "be337bab-ad18-4a19-bebe-92aeedef39f9",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "b4966b11-49bf-4614-bd1b-6fbd86d9226d",
+            "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "1d79c3b3-cc1d-49a1-81a4-b82bd6f6d640"
+          }
         },
         {
           "__guid": "4690838c-b432-4a2e-86a7-98713fb34659",
-          "Flags": 0,
-          "Name": "pumpkins (1)",
-          "Position": "-1651.089,-1209.411,0.0004890019",
-          "Rotation": "0.000000007713408,0.00000002878683,0.258819,0.9659257",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/pumpkins.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Name",
+                "Value": "pumpkins (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Position",
+                "Value": "-1651.089,-1209.411,0.0004890019"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Rotation",
+                "Value": "0.000000007713408,0.00000002878683,0.258819,0.9659257"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "a43ae81c-b0cd-4e03-8074-54e9284c7e75": "4690838c-b432-4a2e-86a7-98713fb34659",
+            "752b9774-9e2e-4bed-9839-c3cc73709e37": "f47d9ced-e4d7-4bed-93ee-d8cc31a078da",
+            "6e55a15f-2094-4101-a14f-2b202cd9c91d": "d53e18d8-053c-410d-9612-0a2c8af343b5"
+          }
         },
         {
           "__guid": "1240ef28-af8d-4bd1-9911-a3797797f57b",
-          "Flags": 0,
-          "Name": "pumpkin-patch (1)",
-          "Position": "-880,-223.1009,23.17702",
-          "Rotation": "0.0000002552167,-0.0000000954216,-0.09584578,0.9953962",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/pumpkin-patch.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Name",
+                "Value": "pumpkin-patch (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Position",
+                "Value": "-880,-223.1009,23.17702"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Rotation",
+                "Value": "0.0000002552167,-0.0000000954216,-0.09584578,0.9953962"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "1240ef28-af8d-4bd1-9911-a3797797f57b",
+            "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "00f94021-add9-4522-8082-5152bae2e5c4",
+            "570d309a-b8d0-40a5-9bff-85bedb49d978": "cd498e9d-1b5e-4cb5-94a3-4bc0a408e94d",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "0fad639c-4f5b-4ca7-9c53-a029dea39656",
+            "06a58812-f6c4-49ec-bd41-dc811f993039": "77b20693-a3d2-42ae-8fa8-7c852aed57f6",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "c2d61804-c40d-4f90-b1f2-f0357848ff6d",
+            "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "f4e4325d-a1b4-41b6-8590-2944349f9530"
+          }
         },
         {
           "__guid": "a43ae81c-b0cd-4e03-8074-54e9284c7e75",
-          "Flags": 0,
-          "Name": "pumpkins",
-          "Position": "775.5309,-1696.383,0.0299936",
-          "Rotation": "0,0,-0.9659259,-0.2588189",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/pumpkins.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Position",
+                "Value": "775.5309,-1696.383,0.0299936"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.9659259,-0.2588189"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "a43ae81c-b0cd-4e03-8074-54e9284c7e75": "a43ae81c-b0cd-4e03-8074-54e9284c7e75",
+            "752b9774-9e2e-4bed-9839-c3cc73709e37": "1afca572-7dc6-4e1e-80f9-0b29105002a4",
+            "6e55a15f-2094-4101-a14f-2b202cd9c91d": "b620542d-442b-49ac-b7b3-95188719ce41"
+          }
         }
       ]
     },
     {
       "__guid": "563c064d-f97f-496e-89a7-7b731e5cda67",
+      "__version": 1,
       "Flags": 0,
       "Name": "lamps",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
+      "Components": [],
       "Children": [
         {
           "__guid": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
-          "Flags": 0,
-          "Name": "lamp",
-          "Position": "1600.89,-1584,4.469998",
-          "Rotation": "0,0,-0.3826834,0.9238796",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/lamp.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Position",
+                "Value": "1600.89,-1584,4.469998"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.3826834,0.9238796"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "a5c5e277-f370-4d5a-9092-b66cafaf515a": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
+            "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "e3d2d156-45a2-4c77-b9c1-08351404574b",
+            "75039fed-3cbc-45f6-8997-ac77cfcd1772": "e40195d8-e2d9-4d46-b821-79af126281d8",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "7f9747db-435e-4ac5-b106-f42aacf222c1",
+            "b78d7ee3-9e2e-4344-af28-ae460c486132": "46053733-e4ac-416a-af33-8ea071ae4af2"
+          }
         },
         {
           "__guid": "1fb49192-b796-45e6-a886-6945f3a14058",
-          "Flags": 0,
-          "Name": "lamp (1)",
-          "Position": "-1595.233,-1595.232,5.00002",
-          "Rotation": "0,0,0.3826833,0.9238794",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/lamp.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Name",
+                "Value": "lamp (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Position",
+                "Value": "-1595.233,-1595.232,5.00002"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.3826833,0.9238794"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "a5c5e277-f370-4d5a-9092-b66cafaf515a": "1fb49192-b796-45e6-a886-6945f3a14058",
+            "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "1b113cc7-c0b6-4d2b-bfe0-a50d5bd1c45e",
+            "75039fed-3cbc-45f6-8997-ac77cfcd1772": "e7fbe572-db35-4a0c-ac28-b5726e3bceb7",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "a834af57-543f-4177-a46b-d5ed9e311557",
+            "b78d7ee3-9e2e-4344-af28-ae460c486132": "161e8102-34bb-4f7f-b5e8-571fc09041de"
+          }
         },
         {
           "__guid": "2661048b-1bfc-4284-8bc1-cf0d5d7e9b28",
-          "Flags": 0,
-          "Name": "lamp (2)",
-          "Position": "-1584,1584,5.00046",
-          "Rotation": "0,0,-0.3826835,0.9238795",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/lamp.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Name",
+                "Value": "lamp (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Position",
+                "Value": "-1584,1584,5.00046"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.3826835,0.9238795"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "a5c5e277-f370-4d5a-9092-b66cafaf515a": "2661048b-1bfc-4284-8bc1-cf0d5d7e9b28",
+            "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "75463da3-8d0f-49ec-8783-fe4fe288ed68",
+            "75039fed-3cbc-45f6-8997-ac77cfcd1772": "473b39c1-96ca-4475-9b1b-1dd26f311ed9",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "0b19466a-f084-4926-84d4-34e3946065d2",
+            "b78d7ee3-9e2e-4344-af28-ae460c486132": "f0bad8d2-51f2-4a49-8db3-3f17770b3e40"
+          }
         },
         {
           "__guid": "507d331d-f3af-4773-8afb-ad518aafa4c6",
-          "Flags": 0,
-          "Name": "lamp (3)",
-          "Position": "1608,1592,4.999539",
-          "Rotation": "0,0,0.3826835,0.9238795",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/lamp.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Name",
+                "Value": "lamp (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Position",
+                "Value": "1608,1592,4.999539"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.3826835,0.9238795"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "a5c5e277-f370-4d5a-9092-b66cafaf515a": "507d331d-f3af-4773-8afb-ad518aafa4c6",
+            "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "a6621a03-b17b-490a-886e-b9859ea263fe",
+            "75039fed-3cbc-45f6-8997-ac77cfcd1772": "4442cbf9-602c-4e6e-bf4a-07191b7796b5",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "f7e49dba-4e24-4b90-a3e8-476f500c1e8e",
+            "b78d7ee3-9e2e-4344-af28-ae460c486132": "fd0e4e8d-d2cd-4c99-b583-e6e6f6612577"
+          }
         }
       ]
     },
     {
       "__guid": "ac45ceda-74fc-4a21-945b-775b3fe43b43",
+      "__version": 1,
       "Flags": 0,
       "Name": "trees",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
+      "Components": [],
       "Children": [
         {
           "__guid": "85306bf5-070e-4c7b-8df6-e755cbdf27ec",
-          "Flags": 0,
-          "Name": "tree (17)",
-          "Position": "-2144,1104,1.000626",
-          "Rotation": "0,0,-0.258819,0.9659259",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (17)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-2144,1104,1.000626"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.258819,0.9659259"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "85306bf5-070e-4c7b-8df6-e755cbdf27ec",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "54eabdb5-f0f2-4445-9ab6-081a2e738bb7",
+            "bb729e89-9481-436c-989e-a43bf756988f": "0d1a11dd-7206-4ec1-9fdd-4d0c328b1007"
+          }
         },
         {
           "__guid": "81d9637e-07ef-48c8-9d27-090709cee06b",
-          "Flags": 0,
-          "Name": "tree (16)",
-          "Position": "717.0784,188.0147,44.06166",
-          "Rotation": "-0.000000006832709,-0.000000008904497,0.7933513,0.6087642",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (16)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "717.0784,188.0147,44.06166"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "-0.000000006832709,-0.000000008904497,0.7933513,0.6087642"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "81d9637e-07ef-48c8-9d27-090709cee06b",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "73dd550f-f2bf-4e31-971c-d174bc899660",
+            "bb729e89-9481-436c-989e-a43bf756988f": "c33a5f7e-72c0-4c25-ad96-a13619b28f06"
+          }
         },
         {
           "__guid": "eb9a5c12-0e0b-478f-9f84-33fc9b3eee78",
-          "Flags": 0,
-          "Name": "tree (12)",
-          "Position": "1808,64,0.9994555",
-          "Rotation": "0,0,0.258819,0.9659259",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (12)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "1808,64,0.9994555"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.258819,0.9659259"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "eb9a5c12-0e0b-478f-9f84-33fc9b3eee78",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "549ef3f7-3232-49be-a4a4-262f852f1fb2",
+            "bb729e89-9481-436c-989e-a43bf756988f": "df318c64-9c41-48b1-9ee1-e2199ca34e9c"
+          }
         },
         {
           "__guid": "c5683bbe-c269-4c64-9edc-bf50ec5031f2",
-          "Flags": 0,
-          "Name": "tree (11)",
-          "Position": "1904,368,0.9995208",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (11)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "1904,368,0.9995208"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "c5683bbe-c269-4c64-9edc-bf50ec5031f2",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "70445147-6fbc-4984-a881-8ac4a87b1484",
+            "bb729e89-9481-436c-989e-a43bf756988f": "4f3fe9e2-659b-4f88-a054-a0cf4af84b83"
+          }
         },
         {
           "__guid": "7ed7c0ef-551b-4586-9657-7749de6078aa",
-          "Flags": 0,
-          "Name": "tree (10)",
-          "Position": "1792,832,0.9995146",
-          "Rotation": "-0.000000007713408,0.00000002878683,0.258819,0.9659257",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (10)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "1792,832,0.9995146"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "-0.000000007713408,0.00000002878683,0.258819,0.9659257"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "7ed7c0ef-551b-4586-9657-7749de6078aa",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "61edd9e8-7580-4d71-b515-7f136baf1dbc",
+            "bb729e89-9481-436c-989e-a43bf756988f": "88941686-96ba-490c-8e73-1c048a3285d4"
+          }
         },
         {
           "__guid": "b11e8b38-94cb-419b-b9c9-55790bf63ef7",
-          "Flags": 0,
-          "Name": "tree (15)",
-          "Position": "432,1744,0.9994484",
-          "Rotation": "0,0,0.7933534,0.6087615",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (15)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "432,1744,0.9994484"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.7933534,0.6087615"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "b11e8b38-94cb-419b-b9c9-55790bf63ef7",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "092a1724-40b1-44d9-b9b4-012e9a57a407",
+            "bb729e89-9481-436c-989e-a43bf756988f": "2836feab-40e6-452d-a630-a190dadc1bde"
+          }
         },
         {
           "__guid": "c5c82181-a1c8-4efc-a786-8a52c99597c8",
-          "Flags": 0,
-          "Name": "tree (14)",
-          "Position": "736,1840,0.9994484",
-          "Rotation": "0,0,-0.3826834,0.9238796",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (14)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "736,1840,0.9994484"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.3826834,0.9238796"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "c5c82181-a1c8-4efc-a786-8a52c99597c8",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "04a2abbd-4d2b-41c9-a294-4b5f429d5dce",
+            "bb729e89-9481-436c-989e-a43bf756988f": "a8fe2cf1-2488-4c3d-8d4d-5e7394a94c54"
+          }
         },
         {
           "__guid": "656ba419-1066-465f-bb75-1835a6081f8c",
-          "Flags": 0,
-          "Name": "tree (13)",
-          "Position": "1024,1760,0.9994476",
-          "Rotation": "0,0,0.258819,0.9659259",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (13)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "1024,1760,0.9994476"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.258819,0.9659259"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "656ba419-1066-465f-bb75-1835a6081f8c",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "0f1daa12-4c1a-4856-bf54-b7a25db366fb",
+            "bb729e89-9481-436c-989e-a43bf756988f": "15822ecd-492f-4d52-b7d9-8a8580e64b37"
+          }
         },
         {
           "__guid": "69e2c387-3f94-4d11-8e0c-068c633b730a",
-          "Flags": 0,
-          "Name": "tree (9)",
-          "Position": "1702.223,1784.378,0.9995121",
-          "Rotation": "0,0,-0.3826834,0.9238796",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (9)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "1702.223,1784.378,0.9995121"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.3826834,0.9238796"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "69e2c387-3f94-4d11-8e0c-068c633b730a",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "7051e537-a9f1-4e04-8b25-1bcae7460863",
+            "bb729e89-9481-436c-989e-a43bf756988f": "95e97c15-e361-4dae-ac16-a8b5e661c4a9"
+          }
         },
         {
           "__guid": "6bd4cf80-7512-4625-b16d-ff73646a244f",
-          "Flags": 0,
-          "Name": "tree (8)",
-          "Position": "-1392,1792,1.000364",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (8)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-1392,1792,1.000364"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "6bd4cf80-7512-4625-b16d-ff73646a244f",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "31383573-8cbc-4bce-a68b-8526f4a8113a",
+            "bb729e89-9481-436c-989e-a43bf756988f": "b933c716-1cc0-4e43-a0f8-5bb28414bcbf"
+          }
         },
         {
           "__guid": "86504217-1e96-4464-b669-b96565309060",
-          "Flags": 0,
-          "Name": "tree (5)",
-          "Position": "-1383.086,-1762.008,0.01324748",
-          "Rotation": "0,0,0.1305262,0.9914449",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (5)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-1383.086,-1762.008,0.01324748"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.1305262,0.9914449"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "86504217-1e96-4464-b669-b96565309060",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "77c08121-76e0-4b7a-a43c-b672bddb8b9e",
+            "bb729e89-9481-436c-989e-a43bf756988f": "337d522e-196a-4ec2-9940-754b687189b0"
+          }
         },
         {
           "__guid": "8f9f0f2c-ec50-430d-8581-0cd2a4b6f091",
-          "Flags": 0,
-          "Name": "tree (4)",
-          "Position": "-416.2256,-1903.077,0.01325389",
-          "Rotation": "0,0,0.6087614,0.7933534",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (4)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-416.2256,-1903.077,0.01325389"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.6087614,0.7933534"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "8f9f0f2c-ec50-430d-8581-0cd2a4b6f091",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "cfdca151-af36-427f-925a-29fe7670e0b4",
+            "bb729e89-9481-436c-989e-a43bf756988f": "0edc724d-03b4-448b-a8d0-8534d2c815e2"
+          }
         },
         {
           "__guid": "f8fd5b57-00c7-4dab-a337-792c3f57f511",
-          "Flags": 0,
-          "Name": "tree (3)",
-          "Position": "19.75397,-1762.215,0.01324757",
-          "Rotation": "0,0,0.8660254,0.5000001",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "19.75397,-1762.215,0.01324757"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.8660254,0.5000001"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "f8fd5b57-00c7-4dab-a337-792c3f57f511",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "65c00dad-eb88-46d0-b807-c984e611bd14",
+            "bb729e89-9481-436c-989e-a43bf756988f": "a3c998ef-7dda-4973-bb8b-08b258147d34"
+          }
         },
         {
           "__guid": "0e756b85-808f-4229-962a-9f500c6e75c1",
-          "Flags": 0,
-          "Name": "tree (2)",
-          "Position": "372.5125,-1914.789,0.01326782",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "372.5125,-1914.789,0.01326782"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "0e756b85-808f-4229-962a-9f500c6e75c1",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "c639bdae-6286-49a4-89a5-8758c8a1b5bd",
+            "bb729e89-9481-436c-989e-a43bf756988f": "5fc1a630-1801-4665-9eda-217701d64917"
+          }
         },
         {
           "__guid": "a4b68f1a-d563-473a-a5ed-8bcf5a59d363",
-          "Flags": 0,
-          "Name": "tree (1)",
-          "Position": "832,-1728,0.01329068",
-          "Rotation": "0,0,0.5,0.8660254",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "832,-1728,0.01329068"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.5,0.8660254"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "a4b68f1a-d563-473a-a5ed-8bcf5a59d363",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "f2adcf82-8504-4541-96ad-dba5b1095b85",
+            "bb729e89-9481-436c-989e-a43bf756988f": "e70d678f-02e0-4fd3-a545-54384710f6ff"
+          }
         },
         {
           "__guid": "82cf1e96-1eef-4265-95f1-5da544324a1e",
-          "Flags": 0,
-          "Name": "tree",
-          "Position": "1152,-1792,0.01328422",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "1152,-1792,0.01328422"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "82cf1e96-1eef-4265-95f1-5da544324a1e",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "7b449e0b-9a46-44f0-8e05-abb87816236d",
+            "bb729e89-9481-436c-989e-a43bf756988f": "8d95557e-0cf4-4767-beaa-ca6b1dcbde65"
+          }
         },
         {
           "__guid": "f832860a-9bad-47df-869a-62e0b56242a6",
-          "Flags": 0,
-          "Name": "tree (7)",
-          "Position": "-1676.911,-1152,1.000458",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (7)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-1676.911,-1152,1.000458"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "f832860a-9bad-47df-869a-62e0b56242a6",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "bb6a1bc4-f6e3-4f00-a21c-30b63861a833",
+            "bb729e89-9481-436c-989e-a43bf756988f": "1f440d1a-5fce-4084-8f5d-2ebe0efba59d"
+          }
         },
         {
           "__guid": "85a0958b-ec76-41af-bf68-1a319483b1ab",
-          "Flags": 0,
-          "Name": "tree (6)",
-          "Position": "-863.9996,-896.0001,51.25672",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (6)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-863.9996,-896.0001,51.25672"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.7071067,0.7071068"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "85a0958b-ec76-41af-bf68-1a319483b1ab",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "15361810-26bf-40ad-aca1-27e980061e41",
+            "bb729e89-9481-436c-989e-a43bf756988f": "6c83cc28-9590-4f28-8115-1f2aec366991"
+          }
         },
         {
           "__guid": "2d4b2dc0-7af6-43fb-9130-0bc98b59b7bc",
-          "Flags": 0,
-          "Name": "tree (5)",
-          "Position": "279.5789,-2459.826,-1.231815",
-          "Rotation": "0.00000002878683,0.000000007713413,0.9659257,0.2588192",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (5)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "279.5789,-2459.826,-1.231815"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0.00000002878683,0.000000007713413,0.9659257,0.2588192"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "2d4b2dc0-7af6-43fb-9130-0bc98b59b7bc",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "c8f19fd3-d0bf-4e63-a7b8-308fd55f1028",
+            "bb729e89-9481-436c-989e-a43bf756988f": "5d24cb1c-1f84-4066-b55d-6103f112fa11"
+          }
         },
         {
           "__guid": "c847da77-0b5c-4a31-b706-8a57f17af190",
-          "Flags": 0,
-          "Name": "tree (6)",
-          "Position": "-1040.741,2792.051,22.39741",
-          "Rotation": "0.00000002016687,-0.00000002459948,-0.7733402,0.6339912",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (6)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-1040.741,2792.051,22.39741"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0.00000002016687,-0.00000002459948,-0.7733402,0.6339912"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "c847da77-0b5c-4a31-b706-8a57f17af190",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "d47f3d5b-9dfb-4a0d-a839-1faa04fbff14",
+            "bb729e89-9481-436c-989e-a43bf756988f": "390d771f-b3b5-4dee-ab63-14dfc8e52fdd"
+          }
         },
         {
           "__guid": "769be497-0802-4b28-9e9e-6f166222dad2",
-          "Flags": 0,
-          "Name": "tree (7)",
-          "Position": "91.83344,2643.125,28.19594",
-          "Rotation": "0.000000003443757,0.00000001509009,-0.222493,0.9749343",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (7)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "91.83344,2643.125,28.19594"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0.000000003443757,0.00000001509009,-0.222493,0.9749343"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "769be497-0802-4b28-9e9e-6f166222dad2",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "65d131cc-a482-4ca8-be4d-7f6edfd12bf8",
+            "bb729e89-9481-436c-989e-a43bf756988f": "f9692426-63da-46ff-88e9-232f96df9446"
+          }
         },
         {
           "__guid": "7e7ff25b-654f-4586-b9f5-b9ed0e891a1f",
-          "Flags": 0,
-          "Name": "tree (8)",
-          "Position": "-2492.777,336.9914,-3.801348",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (8)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-2492.777,336.9914,-3.801348"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "7e7ff25b-654f-4586-b9f5-b9ed0e891a1f",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "61d177be-171a-4ca4-8380-87611357a3b4",
+            "bb729e89-9481-436c-989e-a43bf756988f": "3ab408ea-9d84-4a3d-82ae-82b5908a9389"
+          }
         },
         {
           "__guid": "ddde89f2-86e1-452e-a3b8-da1317dc9fee",
-          "Flags": 0,
-          "Name": "tree (9)",
-          "Position": "-2377.61,-163.9748,-3.620682",
-          "Rotation": "0.006627591,0.006627593,0.7070756,0.7070757",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (9)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "-2377.61,-163.9748,-3.620682"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0.006627591,0.006627593,0.7070756,0.7070757"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "ddde89f2-86e1-452e-a3b8-da1317dc9fee",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "b618e9bf-8a12-46b3-a03a-1eb5e1a72ff6",
+            "bb729e89-9481-436c-989e-a43bf756988f": "d310e23e-e580-45ea-b567-addc844685d4"
+          }
         },
         {
           "__guid": "82387e82-1cd7-4c47-b118-eee4ba034c83",
-          "Flags": 0,
-          "Name": "tree (1)",
-          "Position": "1936.078,-1776.415,-3.241802",
-          "Rotation": "0.001924784,0.001477006,-0.7933376,0.6087771",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Name",
+                "Value": "tree (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "1936.078,-1776.415,-3.241802"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0.001924784,0.001477006,-0.7933376,0.6087771"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "82387e82-1cd7-4c47-b118-eee4ba034c83",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "e9811a57-b175-42f8-817b-45abc51c0409",
+            "bb729e89-9481-436c-989e-a43bf756988f": "6216beaf-4504-4033-b19a-2a78b7e3d38d"
+          }
         },
         {
           "__guid": "1e09209a-f494-4360-b2f4-afb152defbcc",
-          "Flags": 0,
-          "Name": "tree",
-          "Position": "751.6953,2539.521,37.97707",
-          "Rotation": "0.00000001827187,-0.00000001413884,-0.6119806,0.7908728",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/tree.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Position",
+                "Value": "751.6953,2539.521,37.97707"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Rotation",
+                "Value": "0.00000001827187,-0.00000001413884,-0.6119806,0.7908728"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "82cf1e96-1eef-4265-95f1-5da544324a1e": "1e09209a-f494-4360-b2f4-afb152defbcc",
+            "292d6918-ae3c-4e2e-b8b3-01ea7d487201": "5a92dcbc-96d2-41b5-91ba-d269e2c81ca5",
+            "bb729e89-9481-436c-989e-a43bf756988f": "2cf02fa1-6a63-4d61-b476-b59c8fc569ad"
+          }
         },
         {
           "__guid": "a011971b-ade5-4f85-ac0e-989541c3a84e",
-          "Flags": 0,
-          "Name": "treeline (6)",
-          "Position": "2938.207,-1971.371,234.3526",
-          "Rotation": "-0.000000112174,-0.00000006351197,0.963715,0.2669333",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (6)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "2938.207,-1971.371,234.3526"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.000000112174,-0.00000006351197,0.963715,0.2669333"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "a011971b-ade5-4f85-ac0e-989541c3a84e",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "eb3cb2f7-b591-430d-a89c-f185a5eaa66b"
+          }
         },
         {
           "__guid": "030d38dd-8929-4162-97f3-7224f14f3f4d",
-          "Flags": 0,
-          "Name": "treeline (7)",
-          "Position": "3169.371,-1422.736,247.8246",
-          "Rotation": "0,0,0.986772,0.1621139",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (7)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "3169.371,-1422.736,247.8246"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.986772,0.1621139"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "030d38dd-8929-4162-97f3-7224f14f3f4d",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "e9e3b0d8-b2a0-45fa-ac63-ef6c0f403ae3"
+          }
         },
         {
           "__guid": "77502c8a-418a-482b-af31-3f4bd238f2f1",
-          "Flags": 0,
-          "Name": "treeline (8)",
-          "Position": "-49.56196,-3816.104,138.4831",
-          "Rotation": "-0.0000001666084,-0.0000001666084,0.7071068,0.7071068",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (8)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-49.56196,-3816.104,138.4831"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.0000001666084,-0.0000001666084,0.7071068,0.7071068"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "77502c8a-418a-482b-af31-3f4bd238f2f1",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "a3486e25-b6fe-4dac-b766-3543f7390a8f"
+          }
         },
         {
           "__guid": "4e6a9cc1-f82e-4feb-9581-4362c5cc7165",
-          "Flags": 0,
-          "Name": "treeline (5)",
-          "Position": "-3194.79,-777.4142,162.8781",
-          "Rotation": "-0.00000001116288,-0.000000002094084,0.1843773,0.9828556",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (5)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-3194.79,-777.4142,162.8781"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000001116288,-0.000000002094084,0.1843773,0.9828556"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "4e6a9cc1-f82e-4feb-9581-4362c5cc7165",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "95eebd8a-ac6f-4743-9421-517251014e86"
+          }
         },
         {
           "__guid": "66d40b46-3d02-4e97-9ada-e2410c75582b",
-          "Flags": 0,
-          "Name": "treeline (9)",
-          "Position": "-3458.858,-98.35364,177.8353",
-          "Rotation": "-0.00000001079405,-0.000000003533217,0.05451156,0.9985134",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (9)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-3458.858,-98.35364,177.8353"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000001079405,-0.000000003533217,0.05451156,0.9985134"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "66d40b46-3d02-4e97-9ada-e2410c75582b",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "5ed5fd2d-cfa6-408a-b980-c695bb829c97"
+          }
         },
         {
           "__guid": "006f0015-e7ed-417f-abd1-fc940f513744",
-          "Flags": 0,
-          "Name": "treeline (1)",
-          "Position": "-3411.295,-532.6689,178.8071",
-          "Rotation": "-0.00000001116289,-0.000000002094084,0.1843773,0.9828559",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-3411.295,-532.6689,178.8071"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000001116289,-0.000000002094084,0.1843773,0.9828559"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "006f0015-e7ed-417f-abd1-fc940f513744",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "5baea92b-0922-40f4-97ca-146de3990ed3"
+          }
         },
         {
           "__guid": "3cdd6b2d-7efd-4450-aa86-1b8f3af0db1b",
-          "Flags": 0,
-          "Name": "treeline (2)",
-          "Position": "-3683.885,445.7272,201.64",
-          "Rotation": "-0.0000000004942382,0.00000000001299763,-0.02628921,0.9996544",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-3683.885,445.7272,201.64"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.0000000004942382,0.00000000001299763,-0.02628921,0.9996544"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "3cdd6b2d-7efd-4450-aa86-1b8f3af0db1b",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "eaa5206e-0072-44b7-99b9-616bab482a8e"
+          }
         },
         {
           "__guid": "48f77ed5-7903-4aea-9ef0-74a23416025b",
-          "Flags": 0,
-          "Name": "treeline (10)",
-          "Position": "-3495.255,1793.365,234.3144",
-          "Rotation": "0.00000000283117,-0.0000000003324042,-0.1166078,0.993178",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (10)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-3495.255,1793.365,234.3144"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0.00000000283117,-0.0000000003324042,-0.1166078,0.993178"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "48f77ed5-7903-4aea-9ef0-74a23416025b",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "0b2996b9-2543-4b4f-9bf3-d840eeeb775b"
+          }
         },
         {
           "__guid": "d111e88c-1027-4e96-b3a6-80a91f1f3649",
-          "Flags": 0,
-          "Name": "treeline (11)",
-          "Position": "-2830.077,-2058.423,-8.919196",
-          "Rotation": "0,0,0.3152265,0.9490165",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (11)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-2830.077,-2058.423,-8.919196"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.3152265,0.9490165"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "d111e88c-1027-4e96-b3a6-80a91f1f3649",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "e3834ada-f7a4-411e-b1fe-f5944d1398de"
+          }
         },
         {
           "__guid": "bc6f7f04-d36c-4276-b44a-2a69bd8ed7e5",
-          "Flags": 0,
-          "Name": "treeline (12)",
-          "Position": "-2460.408,-2569.561,-3.042776",
-          "Rotation": "0,0,0.4364012,0.8997522",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (12)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-2460.408,-2569.561,-3.042776"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.4364012,0.8997522"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "bc6f7f04-d36c-4276-b44a-2a69bd8ed7e5",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "b54ed21e-2634-4902-ba1d-88d16dc5bc0f"
+          }
         },
         {
           "__guid": "4b17d287-649c-42b7-9cf0-cda44ce9ad21",
-          "Flags": 0,
-          "Name": "treeline (3)",
-          "Position": "-653.2803,-3506.099,124.913",
-          "Rotation": "0,-0,-0.7071144,-0.7070991",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-653.2803,-3506.099,124.913"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,-0,-0.7071144,-0.7070991"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "4b17d287-649c-42b7-9cf0-cda44ce9ad21",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "84b1e3ef-c08b-47dc-b823-304b4b548bc0"
+          }
         },
         {
           "__guid": "461b1f08-576d-44c0-9a7d-711def72da5c",
-          "Flags": 0,
-          "Name": "treeline (13)",
-          "Position": "574.8093,-3590.771,103.693",
-          "Rotation": "0,0,0.7071068,0.7071068",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (13)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "574.8093,-3590.771,103.693"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.7071068,0.7071068"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "461b1f08-576d-44c0-9a7d-711def72da5c",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "3c0ba215-7e71-44bb-9fb5-338ad22265a0"
+          }
         },
         {
           "__guid": "002c105b-1564-45ba-9551-b1bb75de1413",
-          "Flags": 0,
-          "Name": "treeline (13)",
-          "Position": "2078.708,-2979.369,138.3637",
-          "Rotation": "0,0,0.8660254,0.5",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (13)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "2078.708,-2979.369,138.3637"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.8660254,0.5"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "002c105b-1564-45ba-9551-b1bb75de1413",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "a2091482-fbe6-494d-9a98-6a7d29b4518e"
+          }
         },
         {
           "__guid": "850b1919-5a9c-49b4-a43e-a2f9f36b17df",
-          "Flags": 0,
-          "Name": "treeline (13)",
-          "Position": "1465.06,-3333.658,145.473",
-          "Rotation": "0,0,0.7933534,0.6087614",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (13)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "1465.06,-3333.658,145.473"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,0.7933534,0.6087614"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "850b1919-5a9c-49b4-a43e-a2f9f36b17df",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "c6eb2ca9-e203-426c-99cc-85db32eafd1d"
+          }
         },
         {
           "__guid": "46d157fe-05fe-4216-9b88-07e995a0d533",
-          "Flags": 0,
-          "Name": "treeline",
-          "Position": "2897.404,708.87,151.3854",
-          "Rotation": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "2897.404,708.87,151.3854"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "46d157fe-05fe-4216-9b88-07e995a0d533",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "0cd3e410-ec95-4d1c-b927-fa84b4f6e527"
+          }
         },
         {
           "__guid": "7fd3198d-a67a-44ce-8f55-b1d35b61eda4",
-          "Flags": 0,
-          "Name": "treeline (1)",
-          "Position": "2733.002,1322.431,142.6572",
-          "Rotation": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "2733.002,1322.431,142.6572"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.0000000264793,0.000000003486061,0.9914449,-0.1305261"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "7fd3198d-a67a-44ce-8f55-b1d35b61eda4",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "b2cb94cc-ba3c-40d2-a0d8-4a8d71ca4291"
+          }
         },
         {
           "__guid": "6d7985d4-b6c2-407c-bc39-fd76ff5f9f82",
-          "Flags": 0,
-          "Name": "treeline (2)",
-          "Position": "34.78907,3811.114,268.9883",
-          "Rotation": "-0.00000001330279,-0.00000001330279,0.7071068,0.7071068",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "34.78907,3811.114,268.9883"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000001330279,-0.00000001330279,0.7071068,0.7071068"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "6d7985d4-b6c2-407c-bc39-fd76ff5f9f82",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "9befe7da-3b38-4705-8baa-95d692b48b5f"
+          }
         },
         {
           "__guid": "cab0f741-0196-449e-b5e1-f56ad2499093",
-          "Flags": 0,
-          "Name": "treeline (3)",
-          "Position": "-677.5786,3768.673,214.2133",
-          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-677.5786,3768.673,214.2133"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "cab0f741-0196-449e-b5e1-f56ad2499093",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "e56fddd8-bcb6-4715-81ee-10d396fd1ee4"
+          }
         },
         {
           "__guid": "e04a4fff-7955-4941-a76b-2e91ff8f2cf3",
-          "Flags": 0,
-          "Name": "treeline (3)",
-          "Position": "-1391.488,3609.917,199.3234",
-          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-1391.488,3609.917,199.3234"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "e04a4fff-7955-4941-a76b-2e91ff8f2cf3",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "27bbf4d8-4adb-4238-8f49-90fc76ff036f"
+          }
         },
         {
           "__guid": "1c345d69-1cd5-4055-804d-e7088cc35e05",
-          "Flags": 0,
-          "Name": "treeline (3)",
-          "Position": "-1086.188,3897.498,200.3574",
-          "Rotation": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (3)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-1086.188,3897.498,200.3574"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000003404813,0.00000009214185,-0.6390336,0.7691788"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "1c345d69-1cd5-4055-804d-e7088cc35e05",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "49d27b31-6ac1-4a30-99a4-2666392c12b7"
+          }
         },
         {
           "__guid": "208ac1fa-8606-47e9-a4df-e4282c0aa992",
-          "Flags": 0,
-          "Name": "treeline (4)",
-          "Position": "-2650.122,3194.16,20.40092",
-          "Rotation": "0,0,-0.5,0.8660256",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (4)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-2650.122,3194.16,20.40092"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.5,0.8660256"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "208ac1fa-8606-47e9-a4df-e4282c0aa992",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "491efe84-f3d0-4123-b50b-4e4cf3e40b4d"
+          }
         },
         {
           "__guid": "ccc356db-90b0-4ef4-896b-69003300a72c",
-          "Flags": 0,
-          "Name": "treeline (4)",
-          "Position": "-3052.49,3318.043,20.96049",
-          "Rotation": "0,0,-0.5,0.8660256",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (4)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-3052.49,3318.043,20.96049"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0,0,-0.5,0.8660256"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "ccc356db-90b0-4ef4-896b-69003300a72c",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "e4494051-18bf-471e-bd08-ed6724bd85c5"
+          }
         },
         {
           "__guid": "c957c6e5-51d0-446d-8f12-ffef5c878ab5",
-          "Flags": 0,
-          "Name": "treeline (2)",
-          "Position": "1155.81,3180.219,204.6244",
-          "Rotation": "0.0000000483078,-0.0000000351381,-0.8837544,0.467951",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "1155.81,3180.219,204.6244"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0.0000000483078,-0.0000000351381,-0.8837544,0.467951"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "c957c6e5-51d0-446d-8f12-ffef5c878ab5",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "255d9ff2-042f-4d28-ba4d-20a340aaf262"
+          }
         },
         {
           "__guid": "2b85a2d6-6396-4480-8234-eab8e0224be6",
-          "Flags": 0,
-          "Name": "treeline (2)",
-          "Position": "794.2379,3605.243,203.1824",
-          "Rotation": "0.0000000483078,-0.0000000351381,-0.8837544,0.467951",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (2)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "794.2379,3605.243,203.1824"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0.0000000483078,-0.0000000351381,-0.8837544,0.467951"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "2b85a2d6-6396-4480-8234-eab8e0224be6",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "03c40697-2865-47b3-87d6-9b34af2af331"
+          }
         },
         {
           "__guid": "1b9792f9-ccd4-48b0-90b0-1c5622a53523",
-          "Flags": 0,
-          "Name": "treeline (1)",
-          "Position": "3230.881,-65.86086,78.35118",
-          "Rotation": "0.00000009301353,0.00000002180918,-0.9993542,0.0359296",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Name",
+                "Value": "treeline (1)"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "3230.881,-65.86086,78.35118"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "0.00000009301353,0.00000002180918,-0.9993542,0.0359296"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "1b9792f9-ccd4-48b0-90b0-1c5622a53523",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "612ea70a-db63-4d0f-b525-68a5cf47f58d"
+          }
         },
         {
           "__guid": "b2483302-20e7-4ef3-8c50-89d87cce5d9a",
-          "Flags": 0,
-          "Name": "treeline",
-          "Position": "-2073.751,-2995.101,24.47852",
-          "Rotation": "-0.00000001980644,0.00000002740214,0.4048731,0.9143729",
-          "Enabled": true,
+          "__version": 1,
           "__Prefab": "prefabs/treeline.prefab",
-          "__PrefabVariables": {}
+          "__PrefabInstancePatch": {
+            "AddedObjects": [],
+            "RemovedObjects": [],
+            "PropertyOverrides": [
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Position",
+                "Value": "-2073.751,-2995.101,24.47852"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "Rotation",
+                "Value": "-0.00000001980644,0.00000002740214,0.4048731,0.9143729"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "4d4e1067-1685-4c59-a31f-9821c20807e5"
+                },
+                "Property": "NetworkInterpolation",
+                "Value": false
+              }
+            ],
+            "MovedObjects": []
+          },
+          "__PrefabIdToInstanceId": {
+            "4d4e1067-1685-4c59-a31f-9821c20807e5": "b2483302-20e7-4ef3-8c50-89d87cce5d9a",
+            "b7bf3e0e-e8e5-4de1-a886-1e7c84f990c5": "7fe5e4a7-3364-4a5f-b559-f9c89f6ebd09"
+          }
         }
       ]
     }
   ],
   "SceneProperties": {
-    "FixedUpdateFrequency": 50,
-    "MaxFixedUpdates": 5,
-    "NetworkFrequency": 60,
     "NetworkInterpolation": true,
-    "PhysicsSubSteps": 1,
-    "ThreadedAnimation": true,
     "TimeScale": 1,
-    "UseFixedUpdate": true,
+    "WantsSystemScene": true,
     "Metadata": {
       "Title": "game-world"
     },
@@ -1303,9 +4404,9 @@
       "IncludedBodies": ""
     }
   },
-  "ResourceVersion": 2,
+  "ResourceVersion": 3,
   "Title": "game-world",
   "Description": null,
   "__references": [],
-  "__version": 2
+  "__version": 3
 }

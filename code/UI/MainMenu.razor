@@ -30,10 +30,7 @@
         <Button class="left" Text="Quit" OnClick=@(() => OnQuit()) />
     </div>
 
-    <div class="discord">
-        <Button Text="Discord" OnClick=@(() => CopyDiscordLink()) />
-        <label class="copied" > @discordSubtitleText</label>
-    </div>
+    <img class="discord" src="ui/discord.png" OnClick=@(() => OpenDiscord()) />
 
     <label class="kills">@GameManager.Instance.GlobalKills skeletons laid to rest</label>
     <div class="leaderboard">
@@ -62,14 +59,7 @@
 
 @code
 {
-    private string discordSubtitleText { get; set; } = "";
-    private TimeUntil discordSubtitleTimer = 0.0f;
-
-    protected override void OnUpdate()
-    {
-        if (discordSubtitleTimer)
-            discordSubtitleText = string.Empty;
-    }
+    private WebPanel webPanel = null;
 
     private void OnStartGame()
     {
@@ -92,11 +82,14 @@
         Game.Close();
     }
 
-    private void CopyDiscordLink()
+    private void OpenDiscord()
     {
-        Clipboard.SetText("https://discord.gg/nK4fdrTArc");
-        discordSubtitleText = "Copied!";
-        discordSubtitleTimer = 1.5f;
+        webPanel?.Delete();
+
+        webPanel = new WebPanel
+        {
+            Url = "https://discord.gg/nK4fdrTArc"
+        };
     }
 
     private void ChangeHat(int offset)
@@ -104,5 +97,5 @@
         Papa.Instance.OffsetHatIndex(offset);
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(discordSubtitleText, GameManager.Instance.GlobalKills);
+    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.GlobalKills);
 }
