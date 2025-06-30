@@ -55,8 +55,6 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		Instance = this;
 		GameObject.Flags |= GameObjectFlags.DontDestroyOnLoad;
 
-		Mouse.Visible = false;
-
 		Load();
 
 		EnemySpawner = GetComponent<EnemySpawner>( true );
@@ -97,7 +95,7 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 	private void StartGame()
 	{
 		GameCTS = new CancellationTokenSource();
-		TimeRemaining = 8.0f;
+		TimeRemaining = 10.0f;
 		Score = 0;
 		EnemySpawner.Enabled = true;
 		EnemySpawner?.SpawnEnemies( 5 );

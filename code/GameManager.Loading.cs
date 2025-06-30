@@ -9,6 +9,9 @@ public partial class GameManager : ISceneLoadingEvents
 
 	public void AfterLoad( Scene scene )
 	{
+		if ( !scene.Source.IsValid() )
+			return;
+
 		if ( scene.Source.ResourceId == GameScene.ResourceId )
 		{
 			SetGameState( GameState.Game );

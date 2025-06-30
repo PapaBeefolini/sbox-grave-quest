@@ -468,7 +468,7 @@
           "__type": "Sandbox.ColorAdjustments",
           "__guid": "e7252e1f-e163-4be5-902a-a519633d5e61",
           "__enabled": true,
-          "Brightness": 1.25,
+          "Brightness": 1.05,
           "Contrast": 1,
           "HueRotate": 0,
           "OnComponentDestroy": null,
@@ -477,7 +477,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Saturation": 1.15
+          "Saturation": 1.05
         },
         {
           "__type": "Sandbox.Bloom",
@@ -493,7 +493,7 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Strength": 1,
-          "Threshold": 1.2,
+          "Threshold": 1.4,
           "Tint": "1,1,1,1"
         },
         {
@@ -633,6 +633,7 @@
           "CreateAttachments": false,
           "MaterialGroup": null,
           "MaterialOverride": null,
+          "Materials": null,
           "Model": "models/car.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -779,6 +780,7 @@
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/wheel_small.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -821,6 +823,7 @@
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/wheel_small.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -863,6 +866,7 @@
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/wheel_big.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -905,6 +909,7 @@
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/wheel_big.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -947,6 +952,7 @@
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/pizza.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -1159,6 +1165,7 @@
               "__guid": "69a52b7d-e8ab-4045-b6ed-092202c7453a",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -1171,6 +1178,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "3200,50,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -1199,6 +1207,7 @@
               "__guid": "1a03ca48-02a7-4fd6-bec6-83d0a05c9b3e",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -1211,6 +1220,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "3200,50,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -1239,6 +1249,7 @@
               "__guid": "aca99416-340e-4ec1-b2b4-87fea0c3542c",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -1251,6 +1262,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "50,3200,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -1279,6 +1291,7 @@
               "__guid": "91836bbd-51b9-4f34-b899-13fa01eb4922",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -1291,6 +1304,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "50,3200,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -1389,128 +1403,7 @@
                   "out": 0,
                   "mode": "Mirrored"
                 }
-              ],
-              "Constants": "1,0,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "Lifetime",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "2,5,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "Roll",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "0,360,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "Scale",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0,
-                  "y": 0,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "1,1,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "StartVelocity",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "20,70,0,0"
+              ]
             }
           }
         ],

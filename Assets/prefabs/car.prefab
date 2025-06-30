@@ -1,18 +1,28 @@
 {
   "RootObject": {
     "__guid": "b066ca9e-1808-4ebd-b5d1-6a239670db04",
+    "__version": 1,
     "Flags": 0,
     "Name": "car",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
     "Tags": "car",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "8fe98f45-bf61-4d53-9a2d-481deb684b40",
+        "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
         "MaterialGroup": null,
         "MaterialOverride": null,
+        "Materials": null,
         "Model": "models/car.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -32,6 +42,8 @@
       {
         "__type": "Sandbox.ModelCollider",
         "__guid": "4267dd29-17e2-495c-8430-d7d23cf9fc27",
+        "__enabled": true,
+        "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
         "Model": "models/car.vmdl",
@@ -45,6 +57,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
+        "RollingResistance": null,
         "Static": false,
         "Surface": "surfaces/vehicle.surface",
         "SurfaceVelocity": "0,0,0"
@@ -52,6 +65,7 @@
       {
         "__type": "Sandbox.Rigidbody",
         "__guid": "d455bc2a-be08-48ac-8c87-06d2cff66905",
+        "__enabled": true,
         "AngularDamping": 2,
         "Gravity": true,
         "LinearDamping": 0.25,
@@ -79,6 +93,7 @@
       {
         "__type": "MightyBrick.GraveQuest.Vehicle",
         "__guid": "7b13a2b6-8426-4b76-8998-6b8c39f3a721",
+        "__enabled": true,
         "AngularDampingAirborne": 0.5,
         "AngularDampingGrounded": 4,
         "CrashSound": "sounds/vehicle/crash.sound",
@@ -94,9 +109,9 @@
           "_type": "gameobject",
           "prefab": "prefabs/pizza.prefab"
         },
-        "Power": 1400000,
+        "Power": 800000,
         "PowerLerpSpeed": 14,
-        "SteerLerpSpeed": 12,
+        "SteerLerpSpeed": 8,
         "ThrowCooldown": 1.5,
         "ThrowForce": "600,0,300",
         "ThrowOffset": "30,0,60",
@@ -106,24 +121,58 @@
     "Children": [
       {
         "__guid": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
-        "Flags": 0,
-        "Name": "papa",
-        "Position": "-12.9907,0,1.710571",
-        "Enabled": true,
+        "__version": 1,
         "__Prefab": "prefabs/papa.prefab",
-        "__PrefabVariables": {}
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e"
+              },
+              "Property": "Position",
+              "Value": "-12.9907,0,1.710571"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e"
+              },
+              "Property": "NetworkInterpolation",
+              "Value": false
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e": "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e",
+          "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee": "909195fb-615d-4ba1-abde-b9d30450e002",
+          "eb9d45ec-0d73-4416-a948-ef6415a4d765": "6b889f14-e6d3-460f-ab0f-790fed8bffb8",
+          "d8a38e08-1954-4001-9f49-f1b067e2b0c2": "b20362ef-0f54-4a68-839d-e30fa7e74a6a",
+          "88ab7d77-1c47-480e-be54-09bbe5f9b433": "2e14c993-f372-4e6c-8b6a-76acd2168eea"
+        }
       },
       {
         "__guid": "164dc177-94fd-4c6b-9563-3c5e5e1d6427",
+        "__version": 1,
         "Flags": 0,
         "Name": "Headlights",
         "Position": "66.66526,0.000003577168,29.44075",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
         "Tags": "light_spot,light",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.SpotLight",
             "__guid": "d074143f-5bcd-4d3e-a349-8297fd41f63b",
+            "__enabled": true,
             "Attenuation": 1,
             "ConeInner": 15,
             "ConeOuter": 65,
@@ -140,17 +189,28 @@
             "Radius": 600,
             "Shadows": true
           }
-        ]
+        ],
+        "Children": []
       },
       {
         "__guid": "f4d87d2a-2574-43fb-9507-1ea95dd8b0b7",
+        "__version": 1,
         "Flags": 0,
         "Name": "Engine",
+        "Position": "0,0,0",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.SoundPointComponent",
             "__guid": "1dfb4941-4165-4e9b-bcec-500e8f5b6d9a",
+            "__enabled": true,
             "Distance": 512,
             "DistanceAttenuation": false,
             "DistanceAttenuationOverride": false,
@@ -196,18 +256,28 @@
             },
             "Volume": 0.5
           }
-        ]
+        ],
+        "Children": []
       },
       {
         "__guid": "2da9bdfd-de88-4c64-8db3-30a4fa8b4b18",
+        "__version": 1,
         "Flags": 0,
         "Name": "wheel_fl",
         "Position": "57.25,30.25,20",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "1d73a668-07ae-4a84-8679-9df2e4c07213",
+            "__enabled": true,
             "DirtParticleEffectPrefab": {
               "_type": "gameobject",
               "prefab": "prefabs/dirt_particles.prefab"
@@ -231,17 +301,28 @@
         "Children": [
           {
             "__guid": "24e35e72-879c-4949-b3ba-c4bafdff054a",
+            "__version": 1,
             "Flags": 0,
             "Name": "wheel_small",
+            "Position": "0,0,0",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
             "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkInterpolation": true,
+            "NetworkOrphaned": 0,
+            "OwnerTransfer": 1,
             "Components": [
               {
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "f1452dc6-1a98-4870-b77f-e1a4f8ecb382",
+                "__enabled": true,
                 "BodyGroups": 18446744073709551615,
                 "CreateAttachments": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
+                "Materials": null,
                 "Model": "models/wheel_small.vmdl",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -258,21 +339,30 @@
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
-            ]
+            ],
+            "Children": []
           }
         ]
       },
       {
         "__guid": "e6dcf26e-fc28-4be8-807c-51bd51ceefac",
+        "__version": 1,
         "Flags": 0,
         "Name": "wheel_fr",
         "Position": "57.25,-30.25,20",
         "Rotation": "0,0,1,0.0000001947072",
+        "Scale": "1,1,1",
+        "Tags": "",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "60742be5-dacf-4b86-a750-84322eaf5052",
+            "__enabled": true,
             "DirtParticleEffectPrefab": {
               "_type": "gameobject",
               "prefab": "prefabs/dirt_particles.prefab"
@@ -296,17 +386,28 @@
         "Children": [
           {
             "__guid": "c48e6406-21fe-4534-a377-772788f244a9",
+            "__version": 1,
             "Flags": 0,
             "Name": "wheel_small",
+            "Position": "0,0,0",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
             "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkInterpolation": true,
+            "NetworkOrphaned": 0,
+            "OwnerTransfer": 1,
             "Components": [
               {
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "cbf783ff-a6c7-4744-a986-9bff9f02c2f2",
+                "__enabled": true,
                 "BodyGroups": 18446744073709551615,
                 "CreateAttachments": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
+                "Materials": null,
                 "Model": "models/wheel_small.vmdl",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -323,20 +424,30 @@
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
-            ]
+            ],
+            "Children": []
           }
         ]
       },
       {
         "__guid": "1ec91ae3-e14f-426e-9bef-7b84d7b0a850",
+        "__version": 1,
         "Flags": 0,
         "Name": "wheel_rl",
         "Position": "-38.5,35,15",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
+        "Tags": "",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "0eb94ed7-ef83-4c2b-9e05-371e2694b282",
+            "__enabled": true,
             "DirtParticleEffectPrefab": {
               "_type": "gameobject",
               "prefab": "prefabs/dirt_particles.prefab"
@@ -360,17 +471,28 @@
         "Children": [
           {
             "__guid": "f70a5004-0be9-494a-ab1a-e122e6190973",
+            "__version": 1,
             "Flags": 0,
             "Name": "wheel_big",
+            "Position": "0,0,0",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
             "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkInterpolation": true,
+            "NetworkOrphaned": 0,
+            "OwnerTransfer": 1,
             "Components": [
               {
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "18ecb574-1d3d-4d68-a3e8-30a8f1f8f6ad",
+                "__enabled": true,
                 "BodyGroups": 18446744073709551615,
                 "CreateAttachments": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
+                "Materials": null,
                 "Model": "models/wheel_big.vmdl",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -387,21 +509,30 @@
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
-            ]
+            ],
+            "Children": []
           }
         ]
       },
       {
         "__guid": "38e97f01-35c5-45e0-a21c-3069595414ee",
+        "__version": 1,
         "Flags": 0,
         "Name": "wheel_rr",
         "Position": "-38.5,-35,15",
         "Rotation": "0,0,1,0.0000001947072",
+        "Scale": "1,1,1",
+        "Tags": "",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "MightyBrick.GraveQuest.Wheel",
             "__guid": "3b6aade5-e6a1-4508-94ce-8ef684b95afe",
+            "__enabled": true,
             "DirtParticleEffectPrefab": {
               "_type": "gameobject",
               "prefab": "prefabs/dirt_particles.prefab"
@@ -425,17 +556,28 @@
         "Children": [
           {
             "__guid": "8308607c-1d2c-4f48-bbbb-995248d80466",
+            "__version": 1,
             "Flags": 0,
             "Name": "wheel_big",
+            "Position": "0,0,0",
+            "Rotation": "0,0,0,1",
+            "Scale": "1,1,1",
+            "Tags": "",
             "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkInterpolation": true,
+            "NetworkOrphaned": 0,
+            "OwnerTransfer": 1,
             "Components": [
               {
                 "__type": "Sandbox.ModelRenderer",
                 "__guid": "75bd542a-cc40-4bbf-8f38-0d337fc4fc44",
+                "__enabled": true,
                 "BodyGroups": 18446744073709551615,
                 "CreateAttachments": false,
                 "MaterialGroup": null,
                 "MaterialOverride": null,
+                "Materials": null,
                 "Model": "models/wheel_big.vmdl",
                 "OnComponentDestroy": null,
                 "OnComponentDisabled": null,
@@ -452,25 +594,35 @@
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
               }
-            ]
+            ],
+            "Children": []
           }
         ]
       },
       {
         "__guid": "13bb5940-6886-4279-a5c5-e613c0b6f6b7",
+        "__version": 1,
         "Flags": 0,
         "Name": "pizza",
         "Position": "-53.91306,-0.000003366811,39.33324",
         "Rotation": "0,-0.3125566,0,0.9498993",
+        "Scale": "1,1,1",
+        "Tags": "",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.ModelRenderer",
             "__guid": "6fadb277-0873-4d77-b242-c63edc713c1e",
+            "__enabled": true,
             "BodyGroups": 18446744073709551615,
             "CreateAttachments": false,
             "MaterialGroup": null,
             "MaterialOverride": null,
+            "Materials": null,
             "Model": "models/pizza.vmdl",
             "OnComponentDestroy": null,
             "OnComponentDisabled": null,
@@ -487,19 +639,14 @@
             "RenderType": "On",
             "Tint": "1,1,1,1"
           }
-        ]
+        ],
+        "Children": []
       }
     ],
-    "__variables": [],
     "__properties": {
-      "FixedUpdateFrequency": 50,
-      "MaxFixedUpdates": 5,
-      "NetworkFrequency": 30,
       "NetworkInterpolation": true,
-      "PhysicsSubSteps": 1,
-      "ThreadedAnimation": true,
       "TimeScale": 1,
-      "UseFixedUpdate": true,
+      "WantsSystemScene": true,
       "Metadata": {},
       "NavMesh": {
         "Enabled": false,
@@ -513,13 +660,14 @@
         "ExcludedBodies": "",
         "IncludedBodies": ""
       }
-    }
+    },
+    "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
   "DontBreakAsTemplate": false,
-  "ResourceVersion": 1,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

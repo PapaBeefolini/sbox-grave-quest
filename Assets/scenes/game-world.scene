@@ -100,7 +100,7 @@
           "__type": "Sandbox.ColorAdjustments",
           "__guid": "e7252e1f-e163-4be5-902a-a519633d5e61",
           "__enabled": true,
-          "Brightness": 1.25,
+          "Brightness": 1.05,
           "Contrast": 1,
           "HueRotate": 0,
           "OnComponentDestroy": null,
@@ -109,7 +109,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Saturation": 1.15
+          "Saturation": 1.05
         },
         {
           "__type": "Sandbox.Bloom",
@@ -125,7 +125,7 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Strength": 1,
-          "Threshold": 1.2,
+          "Threshold": 1.4,
           "Tint": "1,1,1,1"
         },
         {
@@ -377,6 +377,7 @@
               "__guid": "69a52b7d-e8ab-4045-b6ed-092202c7453a",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -389,6 +390,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "3200,50,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -417,6 +419,7 @@
               "__guid": "1a03ca48-02a7-4fd6-bec6-83d0a05c9b3e",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -429,6 +432,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "3200,50,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -457,6 +461,7 @@
               "__guid": "aca99416-340e-4ec1-b2b4-87fea0c3542c",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -469,6 +474,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "50,3200,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -497,6 +503,7 @@
               "__guid": "91836bbd-51b9-4f34-b899-13fa01eb4922",
               "__enabled": true,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -509,6 +516,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "50,3200,600",
               "Static": true,
               "Surface": "surfaces/fence.surface",
@@ -607,128 +615,7 @@
                   "out": 0,
                   "mode": "Mirrored"
                 }
-              ],
-              "Constants": "1,0,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "Lifetime",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "2,5,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "Roll",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "0,360,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "Scale",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0,
-                  "y": 0,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "1,1,0,0"
-            }
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "StartVelocity",
-            "Value": {
-              "Type": "Range",
-              "Evaluation": "Particle",
-              "CurveA": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "Constants": "20,70,0,0"
+              ]
             }
           }
         ],
@@ -836,10 +723,10 @@
         "d455bc2a-be08-48ac-8c87-06d2cff66905": "86e2e9cb-0dad-4ac0-ad5f-7c2be21f424c",
         "7b13a2b6-8426-4b76-8998-6b8c39f3a721": "ddc02746-0303-44c0-8cb0-8cb6d8dc05f5",
         "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e": "90ef7a48-5ef8-412e-93ad-f49a78f31b70",
-        "90f06f88-b1f8-4266-9c63-50d72cf0eab4": "eab1f74b-3bfe-4e8c-aec4-e3f7273fd31b",
-        "791d2fbc-abbc-4934-aad4-9033e581575e": "9633448b-d089-4533-aa6a-7f2da0512720",
-        "6ecc547b-3003-4dab-a322-e68484e7f847": "cf1ee1e0-68db-4310-82e3-37e8b1256bfa",
-        "a8b0a3aa-7645-4691-ae0c-5c2eb6345b02": "f34a4405-64b5-451c-a3bc-442595f1db60",
+        "2e14c993-f372-4e6c-8b6a-76acd2168eea": "dea01c1d-f2f8-4d45-a242-1cb56bdb858a",
+        "6b889f14-e6d3-460f-ab0f-790fed8bffb8": "93d965de-c9c9-4c4d-b525-351a0f708690",
+        "909195fb-615d-4ba1-abde-b9d30450e002": "d619ac0f-7898-4a38-9aea-bae035128fca",
+        "b20362ef-0f54-4a68-839d-e30fa7e74a6a": "c856776c-5981-460e-bcbb-650d06313f60",
         "164dc177-94fd-4c6b-9563-3c5e5e1d6427": "cc31bb5c-5cba-4cef-b9bf-9025e17019da",
         "d074143f-5bcd-4d3e-a349-8297fd41f63b": "d016306c-21c2-468e-8479-07c44376a033",
         "f4d87d2a-2574-43fb-9507-1ea95dd8b0b7": "db55fd2d-3fd2-420f-9198-b88f1a8eb7ba",
