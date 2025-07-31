@@ -520,15 +520,15 @@
           "__enabled": true,
           "Center": "0.5,0.5",
           "Color": "0,0,0,1",
-          "Intensity": 0.3,
+          "Intensity": 0.4,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Roundness": 1,
-          "Smoothness": 1
+          "Roundness": 0,
+          "Smoothness": 0.9
         },
         {
           "__type": "MightyBrick.GraveQuest.MenuCamera",
@@ -1355,56 +1355,6 @@
             },
             "Property": "NetworkInterpolation",
             "Value": false
-          },
-          {
-            "Target": {
-              "Type": "Component",
-              "IdValue": "418f6c87-f239-4382-919e-ac4abc31c171"
-            },
-            "Property": "Alpha",
-            "Value": {
-              "Type": "Curve",
-              "Evaluation": "Life",
-              "CurveA": [
-                {
-                  "x": 0,
-                  "y": 0,
-                  "in": -4.0000024,
-                  "out": 4.0000024,
-                  "mode": "Mirrored"
-                },
-                {
-                  "x": 0.20000002,
-                  "y": 1,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                },
-                {
-                  "x": 0.8000001,
-                  "y": 1,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                },
-                {
-                  "x": 1,
-                  "y": 0,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ],
-              "CurveB": [
-                {
-                  "x": 0.5,
-                  "y": 0.5,
-                  "in": 0,
-                  "out": 0,
-                  "mode": "Mirrored"
-                }
-              ]
-            }
           }
         ],
         "MovedObjects": []

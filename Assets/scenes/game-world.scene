@@ -152,15 +152,15 @@
           "__enabled": true,
           "Center": "0.5,0.5",
           "Color": "0,0,0,1",
-          "Intensity": 0.3,
+          "Intensity": 0.4,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Roundness": 1,
-          "Smoothness": 1
+          "Roundness": 0,
+          "Smoothness": 0.9
         },
         {
           "__type": "MightyBrick.GraveQuest.FollowCamera",
@@ -4269,6 +4269,35 @@
           }
         }
       ]
+    },
+    {
+      "__guid": "7a3883ae-f9cb-4ff0-acc9-23159cee2353",
+      "__version": 1,
+      "__Prefab": "prefabs/skeleton.prefab",
+      "__PrefabInstancePatch": {
+        "AddedObjects": [],
+        "RemovedObjects": [],
+        "PropertyOverrides": [
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "82300eea-715e-4f62-9b84-3ccd83223505"
+            },
+            "Property": "Position",
+            "Value": "-1102,886.9094,0.0002212524"
+          }
+        ],
+        "MovedObjects": []
+      },
+      "__PrefabIdToInstanceId": {
+        "82300eea-715e-4f62-9b84-3ccd83223505": "7a3883ae-f9cb-4ff0-acc9-23159cee2353",
+        "96f7fe81-b15c-4893-bc6a-1870cdbc7470": "312c22ea-3cf4-4c92-b036-303dfe9d2f3f",
+        "8f02848b-6812-4170-b58a-5f39f8cd0178": "7e2f1e1c-ce9b-4f8a-a12f-1cba302f698a",
+        "4a27e203-8b10-422d-a431-1f4f8a941b4d": "3a43d6ff-e8e3-4c17-81c6-0a4e96a3b0bb",
+        "7a56482a-a4bd-447d-a326-4651ef4b2e5c": "524da408-6cc8-404e-9158-2c2df9c597f3",
+        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "e3de87b3-e2e0-4a85-8a92-a1e1a8ad0c2c",
+        "2d5324b1-b09f-4e36-95e7-489118b9ed0d": "aa1d3352-815f-4b1d-88a7-dd01bda9cfa2"
+      }
     }
   ],
   "SceneProperties": {
