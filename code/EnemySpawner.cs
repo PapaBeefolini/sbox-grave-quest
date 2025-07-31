@@ -36,6 +36,8 @@ public sealed class EnemySpawner : Component
 		if ( !SkeletonPrefab.IsValid() || Scene.GetAll<Skeleton>().Count() >= MaxSkeletons )
 			return;
 		Vector3 spawnPosition = Scene.NavMesh.GetRandomPoint( Vector3.Zero, spawnRadius ) ?? Vector3.Zero;
+		if( spawnPosition == Vector3.Zero )
+			return;
 		GameObject enemy = SkeletonPrefab.Clone( spawnPosition );
 	}
 }
