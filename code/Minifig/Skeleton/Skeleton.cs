@@ -81,10 +81,13 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 		ModelPhysics physics = Components.Create<ModelPhysics>();
 		physics.Renderer = Renderer;
 		physics.Model = Renderer.Model;
-		physics.PhysicsGroup.Mass = 50.0f;
-		physics.PhysicsGroup.ApplyImpulse( force );
-
-		foreach ( PhysicsJoint joint in physics.PhysicsGroup.Joints )
+		foreach ( ModelPhysics.Body body in physics.Bodies )
+		{
+			body.Component.MassOverride = 10.0f;
+			body.Component.ApplyImpulse( force );
+			body.Component.AngularVelocity = Game.Random.Float( -100.0f, 100.0f );
+		}
+		foreach ( Joint joint in physics.GetComponentsInChildren<Joint>() )
 		{
 			float strength = 4500.0f;
 			if ( breakApart )
@@ -92,7 +95,7 @@ public partial class Skeleton : Minifig, Component.ITriggerListener
 				strength = 500.0f;
 				Sound.Play( BreakSound, WorldPosition );
 			}
-			joint.Strength = strength;
+			joint.BreakForce = strength;
 		}
 	}
 }
