@@ -28,6 +28,6 @@
       "Keyboard": true,
       "Gamepad": true
     },
-    "LaunchMode": "Normal"
+    "LaunchMode": "QuickPlay"
   }
 }
