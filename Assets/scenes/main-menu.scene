@@ -1154,49 +1154,7 @@
           "Visualizer": {}
         }
       ],
-      "Children": [
-        {
-          "__guid": "8e77ca6f-c539-4383-93c2-3bb016b39cd7",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "Back Sun",
-          "Position": "0,0,0",
-          "Rotation": "0.0357508399,0.0982246175,-0.340146512,0.934544921",
-          "Scale": "1,1,1",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [
-            {
-              "__type": "Sandbox.DirectionalLight",
-              "__guid": "9a770a8c-38ca-46b5-8589-0e7b1c704c6f",
-              "__enabled": true,
-              "Flags": 0,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.82791,0.13478,0.67773,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "ShadowBias": 0.0005,
-              "ShadowCascadeCount": 4,
-              "ShadowCascadeSplitRatio": 0.91,
-              "ShadowHardness": 0,
-              "Shadows": false,
-              "SkyColor": "0,0,0,0",
-              "Visualizer": {}
-            }
-          ],
-          "Children": []
-        }
-      ]
+      "Children": []
     },
     {
       "__guid": "baa622bd-469e-4054-930b-caa93c2ae04b",
