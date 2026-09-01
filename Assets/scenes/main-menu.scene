@@ -153,6 +153,7 @@
               "Scale": 1,
               "ScaleStrategy": "ConsistentHeight",
               "TargetCamera": null,
+              "Timing": "AfterPostProcess",
               "ZIndex": 100
             },
             {
@@ -202,6 +203,7 @@
               "Scale": 1,
               "ScaleStrategy": "ConsistentHeight",
               "TargetCamera": null,
+              "Timing": "AfterPostProcess",
               "ZIndex": 100
             },
             {
@@ -275,6 +277,7 @@
               "Scale": 1,
               "ScaleStrategy": "ConsistentHeight",
               "TargetCamera": null,
+              "Timing": "AfterPostProcess",
               "ZIndex": 150
             },
             {
@@ -324,6 +327,7 @@
               "Scale": 1,
               "ScaleStrategy": "ConsistentHeight",
               "TargetCamera": null,
+              "Timing": "AfterPostProcess",
               "ZIndex": 200
             },
             {
@@ -384,9 +388,8 @@
               "Force2d": false,
               "MaxRepeatTime": 1,
               "MinRepeatTime": 1,
-              "Occlusion": false,
+              "OcclusionEnabled": false,
               "OcclusionOverride": false,
-              "OcclusionRadius": 32,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -395,9 +398,9 @@
               "OnComponentUpdate": null,
               "Pitch": 1,
               "PlayOnStart": false,
-              "ReflectionOverride": false,
-              "Reflections": false,
               "Repeat": false,
+              "ReverbEnabled": false,
+              "ReverbOverride": false,
               "SoundEvent": null,
               "SoundOverride": true,
               "StopOnNew": true,
@@ -515,8 +518,6 @@
           "__enabled": true,
           "Flags": 0,
           "__version": 1,
-          "Filter": "Bilinear",
-          "Gamma": 2.2,
           "Mode": "Screen",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -705,6 +706,7 @@
               "Attenuation": 1,
               "ConeInner": 15,
               "ConeOuter": 65,
+              "Contribution": "Diffuse, Specular, Transmissive",
               "Cookie": null,
               "FogMode": "Enabled",
               "FogStrength": 2,
@@ -766,9 +768,8 @@
               "Force2d": false,
               "MaxRepeatTime": 1,
               "MinRepeatTime": 1,
-              "Occlusion": false,
+              "OcclusionEnabled": false,
               "OcclusionOverride": false,
-              "OcclusionRadius": 32,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -777,9 +778,9 @@
               "OnComponentUpdate": null,
               "Pitch": 0.5,
               "PlayOnStart": true,
-              "ReflectionOverride": false,
-              "Reflections": false,
               "Repeat": false,
+              "ReverbEnabled": false,
+              "ReverbOverride": false,
               "SoundEvent": "sounds/vehicle/engine.sound",
               "SoundOverride": true,
               "StopOnNew": false,
@@ -1103,6 +1104,7 @@
             "Mins": "-4000,-4000,-200",
             "Maxs": "4000,4000,200"
           },
+          "Color": "1,1,1,1",
           "FalloffExponent": 1,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -1136,6 +1138,8 @@
           "__guid": "28d294e0-aad8-4144-8803-731ec041e6d8",
           "__enabled": true,
           "Flags": 0,
+          "ContactShadows": true,
+          "Contribution": "Diffuse, Specular, Transmissive",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.47442,0.13681,0.40127,1",
@@ -1540,9 +1544,8 @@
           "Force2d": false,
           "MaxRepeatTime": 1,
           "MinRepeatTime": 1,
-          "Occlusion": false,
+          "OcclusionEnabled": false,
           "OcclusionOverride": false,
-          "OcclusionRadius": 32,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -1551,9 +1554,9 @@
           "OnComponentUpdate": null,
           "Pitch": 1,
           "PlayOnStart": true,
-          "ReflectionOverride": false,
-          "Reflections": false,
           "Repeat": false,
+          "ReverbEnabled": false,
+          "ReverbOverride": false,
           "SoundEvent": "sounds/crickets.sound",
           "SoundOverride": false,
           "StopOnNew": false,
@@ -4547,7 +4550,8 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "0e936d91-90f9-424c-840d-6bfd37053049"
+          "$blob": "64db792e-5935-8fbc-8cfa-050cd49fa7fd",
+          "$refs": []
         }
       },
       "Sandbox.SelectionSetsSystem": {
