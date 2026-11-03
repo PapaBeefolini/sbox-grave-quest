@@ -32,6 +32,17 @@
       "Keyboard": true,
       "Gamepad": true
     },
-    "LaunchMode": "QuickPlay"
+    "LaunchMode": "QuickPlay",
+    "RecommendedMinPlayers": 1,
+    "RecommendedMaxPlayers": 1,
+    "Coop": false,
+    "Versus": false,
+    "WorkshopTags": [
+      "Arcade",
+      "Horror",
+      "Physics",
+      "Racing",
+      "Survival"
+    ]
   }
 }
