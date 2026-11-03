@@ -5,11 +5,15 @@
   "Ident": "gravequest",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": "\nui/*\nfonts/*",
+  "Resources": "\nui/*\nfonts/*\n*.sound",
+  "PublishUsedAssetsOnly": true,
   "PackageReferences": [],
   "EditorReferences": null,
   "Mounts": null,
   "IsStandaloneOnly": false,
+  "AI": {
+    "EnableMcpCommunication": true
+  },
   "Metadata": {
     "MaxPlayers": 1,
     "MinPlayers": 1,
