@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "sbox": {
+      "type": "stdio",
+      "command": "${FACEPUNCH_ENGINE}/bin/managed/sbox-cli.exe",
+      "args": ["--connect", "grave_quest.sbproj"]
+    },
+    "Blender": {
+      "type": "stdio",
+      "command": "${LOCALAPPDATA}/Claude-Data/claude_pzs8sxrjxfjjc/Claude Extensions/ant.dir.gh.blender.blender-mcp/.venv/Scripts/blender-mcp.exe"
+    }
+  }
+}
