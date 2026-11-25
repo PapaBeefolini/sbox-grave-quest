@@ -64,6 +64,16 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		RefreshUI();
 	}
 
+	protected override void OnDestroy()
+	{
+		if ( Instance != this )
+			return;
+
+		// Stop countdown / restart tasks so they don't run after play mode stops.
+		GameCTS?.Cancel();
+		Instance = null;
+	}
+
 	protected override void OnUpdate()
 	{
 		HandleInputs();
@@ -114,8 +124,10 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 		EndGame();
 		GameCTS = new CancellationTokenSource();
 		HUDUI?.DisplayAnnouncement( "Game Over", 8.0f, $"Score: {Score}", "ui/skull-small.png" );
-		MusicManager.Instance.PlayGameOverMusic();
+		MusicManager.Instance?.PlayGameOverMusic();
 		await GameTask.DelaySeconds( 6.0f, GameCTS.Token );
+		if ( !this.IsValid() )
+			return;
 		LoadGameScene();
 	}
 
@@ -128,10 +140,12 @@ public partial class GameManager : Component, IGameEventHandler<SkeletonDiedEven
 			HUDUI?.DisplayAnnouncement( i.ToString(), 1.0f );
 			await GameTask.DelaySeconds( 1.0f, GameCTS.Token );
 		}
+		if ( !this.IsValid() )
+			return;
 		IsGameRunning = true;
 		HUDUI?.DisplayAnnouncement( "GO!", 1.0f );
 		Sound.Play( GameStartSound );
-		MusicManager.Instance.PlayGameMusic();
+		MusicManager.Instance?.PlayGameMusic();
 	}
 
 	private void SetGameState( GameState state )

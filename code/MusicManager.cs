@@ -53,8 +53,18 @@ public sealed class MusicManager : Component
 		PlaySound( GameOverSound );
 	}
 
+	protected override void OnDestroy()
+	{
+		if ( Instance == this )
+			Instance = null;
+	}
+
 	public void PlaySound( SoundEvent soundEvent )
 	{
+		// Async game tasks can still call in after play mode stops and this component is gone.
+		if ( !this.IsValid() || !SoundPoint.IsValid() || soundEvent is null )
+			return;
+
 		targetVolume = defaultVolume;
 		SoundPoint.Volume = targetVolume;
 		SoundPoint.SoundEvent = soundEvent;
@@ -68,6 +78,7 @@ public sealed class MusicManager : Component
 
 	public void Stop()
 	{
-		SoundPoint.StopSound();
+		if ( SoundPoint.IsValid() )
+			SoundPoint.StopSound();
 	}
 }

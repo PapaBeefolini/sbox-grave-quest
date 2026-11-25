@@ -2,6 +2,7 @@
   "Title": "Grave Quest",
   "Type": "game",
   "Org": "brick",
+  "OrgTitle": null,
   "Ident": "gravequest",
   "Schema": 1,
   "IncludeSourceFiles": false,
@@ -43,6 +44,14 @@
       "Physics",
       "Racing",
       "Survival"
-    ]
+    ],
+    "MenuScene": "scenes/main-menu.scene",
+    "MapSettings": {
+      "UseCreateGameModal": false,
+      "NeedsMap": false,
+      "ShowChangeMap": false,
+      "DefaultMap": null,
+      "MapTarget": null
+    }
   }
 }
