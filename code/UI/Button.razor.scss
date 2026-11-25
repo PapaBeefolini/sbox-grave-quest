@@ -1,49 +1,59 @@
 @import "Defaults.scss";
 
+// The Button's own box is the only hit target and never changes size or position.
+// All hover/press feedback is a transform on the label, which ignores the mouse.
+// If the label took input, or the box moved on :active, mouse-up could land on a
+// different panel than mouse-down and the click would be dropped.
 Button {
     padding: 24px 0px;
     cursor: pointer;
-    transition: all 0.05s linear;
 
     > label {
+        pointer-events: none;
         color: $orange;
+        transition: all 0.05s linear;
     }
 
     &.bigger > label {
         font-size: 38px;
     }
 
+    &:hover {
+        sound-in: 'hover';
+    }
+
+    &:active {
+        sound-in: 'click';
+    }
+
+    &:hover > label {
+        color: $purple;
+        transform: scale(1.1);
+    }
+
+    &:active > label {
+        color: $dark-purple;
+        transform: scale(1);
+        transition: all 0.01s linear;
+    }
+
     &.left {
-        &:hover {
-            padding-left: 24px;
+        &:hover > label {
+            transform: translateX(24px) scale(1.1);
         }
 
-        &:active {
-            padding-left: 12px;
+        &:active > label {
+            transform: translateX(12px) scale(1);
         }
     }
 
     &.right {
-        &:hover {
-            padding-right: 24px;
+        &:hover > label {
+            transform: translateX(-24px) scale(1.1);
         }
 
-        &:active {
-            padding-right: 12px;
+        &:active > label {
+            transform: translateX(-12px) scale(1);
         }
-    }
-
-    &:hover > label {
-        sound-in: 'hover';
-        color: $purple;
-        transform: scale(1.1);
-        transition: all 0.05s linear;
-    }
-
-    &:active > label {
-        sound-in: 'click';
-        color: $dark-purple;
-        transform: scale(1);
-        transition: all 0.01s linear;
     }
 }

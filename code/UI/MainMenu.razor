@@ -25,16 +25,17 @@
         <Button class="left bigger" Text="Start Game" OnClick=@(() => OnStartGame()) />
         <Button class="left" Text="Customize" OnClick=@(() => OnCustomize()) />
         <Button class="left" Text="Options" OnClick=@(() => OnOptions()) />
-        <Button class="left" Text="Quit" OnClick=@(() => OnQuit()) />
     </div>
 
-    <img class="discord" src="ui/discord.png" OnClick=@(() => OpenDiscord()) />
+    <div class="discord" onclick=@(() => OpenDiscord())>
+        <img src="ui/discord.png" />
+    </div>
 
     <label class="kills">@GameManager.Instance.GlobalKills skeletons laid to rest</label>
     <div class="leaderboard">
         <label class="title">Leaderboard</label>
         <div class="content">
-            @foreach (Leaderboards.Board2.Entry entry in GameManager.Instance.GetLeaderboard().Result.Entries)
+            @foreach (Leaderboards.Board2.Entry entry in leaderboard?.Entries ?? [])
             {
                 <div class="row">
                     <img src="avatar:@entry.SteamId" />
@@ -58,6 +59,22 @@
 @code
 {
     private WebPanel webPanel = null;
+    private Leaderboards.Board2 leaderboard = null;
+
+    protected override void OnStart()
+    {
+        _ = RefreshLeaderboard();
+    }
+
+    // Fetched once in the background instead of blocking the UI rebuild on the request.
+    private async System.Threading.Tasks.Task RefreshLeaderboard()
+    {
+        Leaderboards.Board2 board = await GameManager.Instance.GetLeaderboard();
+        if (!this.IsValid())
+            return;
+        leaderboard = board;
+        StateHasChanged();
+    }
 
     private void OnStartGame()
     {
@@ -75,11 +92,6 @@
         GameManager.Instance.ToggleOptionsMenu();
     }
 
-    private void OnQuit()
-    {
-        Game.Close();
-    }
-
     private void OpenDiscord()
     {
         webPanel?.Delete();
@@ -95,5 +107,5 @@
         Papa.Instance.OffsetHatIndex(offset);
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.GlobalKills);
+    protected override int BuildHash() => System.HashCode.Combine(GameManager.Instance.GlobalKills, GameManager.Instance.IsCustomizing, leaderboard?.Entries?.Length ?? -1);
 }

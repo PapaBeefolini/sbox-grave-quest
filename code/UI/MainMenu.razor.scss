@@ -37,24 +37,36 @@ MainMenu {
         margin-bottom: 16px;
     }
 
-    .color {
+    // The swatch ignores the mouse; ColorButton's fixed box is the hit target,
+    // so the press animation can't move the swatch out from under the cursor.
+    ColorButton {
         cursor: pointer;
-        background-color: $white;
-        border: solid 4px black;
-        width: 38px;
-        height: 38px;
-        margin: 1px;
-        transition: all 0.05s linear;
+        padding: 1px;
 
         &:hover {
             sound-in: 'hover';
-            transform: scale(1.1);
         }
 
         &:active {
             sound-in: 'click';
+        }
+
+        &:hover > .color {
+            transform: scale(1.1);
+        }
+
+        &:active > .color {
             transform: scale(0.9);
         }
+    }
+
+    .color {
+        pointer-events: none;
+        background-color: $white;
+        border: solid 4px black;
+        width: 38px;
+        height: 38px;
+        transition: all 0.05s linear;
     }
 
     .leaderboard {
@@ -68,7 +80,7 @@ MainMenu {
         gap: 16px;
         padding: 24px;
         top: 17%;
-        right: 6%;
+        right: 2%;
         width: 440px;
         height: 780px;
 
@@ -172,20 +184,33 @@ MainMenu {
         position: absolute;
         top: 5%;
         right: 3%;
-        transition: all 0.025s linear;
-        animation: discord 0.5s ease infinite alternate;
+        cursor: pointer;
+
+        // Same idea as Button: the wrapper is the fixed hit target, the image only animates.
+        > img {
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            transition: all 0.025s linear;
+            animation: discord 0.5s ease infinite alternate;
+        }
 
         &:hover {
-            cursor: pointer;
             sound-in: 'hover';
-            transform: scale(1.2);
-            animation: none;
+
+            > img {
+                transform: scale(1.2);
+                animation: none;
+            }
         }
 
         &:active {
             sound-in: 'click';
-            transform: scale(1.0);
-            animation: none;
+
+            > img {
+                transform: scale(1.0);
+                animation: none;
+            }
         }
     }
 }

@@ -60,16 +60,28 @@
           "__guid": "a2344e3b-0169-48e7-b16f-718560c16aec",
           "__enabled": true,
           "Flags": 0,
-          "CountdownSound": "sounds/ui/beep.sound",
-          "EscapeMenuSound": "sounds/ui/pause.sound",
+          "CountdownSound": {
+            "Id": "4c9c5bd2-4c8c-4d4e-87e1-d95b0b5bda86",
+            "Path": "sounds/ui/beep.sound"
+          },
+          "EscapeMenuSound": {
+            "Id": "bd39f4ef-3c77-4467-9faa-6d63db45483c",
+            "Path": "sounds/ui/pause.sound"
+          },
           "FadeUI": {
             "_type": "component",
             "component_id": "5956cd8f-6e09-49fa-961c-f85bba2bd7e5",
             "go": "04b0327f-945c-474f-a066-e87208047ec1",
             "component_type": "Fader"
           },
-          "GameScene": "scenes/game-world.scene",
-          "GameStartSound": "sounds/ui/go.sound",
+          "GameScene": {
+            "Id": "ba31970c-e344-40f3-a614-9f746319b7f1",
+            "Path": "scenes/game-world.scene"
+          },
+          "GameStartSound": {
+            "Id": "398a49e0-afe0-490c-9f4c-43719112632c",
+            "Path": "sounds/ui/go.sound"
+          },
           "GameUI": {
             "_type": "component",
             "component_id": "ccf7533c-2c08-4aa2-a080-1bdda0870856",
@@ -82,7 +94,10 @@
             "go": "0f1780b6-15fc-4ccc-9c2a-3255e6868feb",
             "component_type": "HUD"
           },
-          "MainMenuScene": "scenes/main-menu.scene",
+          "MainMenuScene": {
+            "Id": "8adae66e-4475-4f9d-a944-d455b3b8f701",
+            "Path": "scenes/main-menu.scene"
+          },
           "MainMenuUI": {
             "_type": "component",
             "component_id": "8a217c27-5846-48a9-901a-84fcdb985b75",
@@ -415,9 +430,18 @@
               "__guid": "8d24b6ed-880d-4463-81a7-2d185d3cdd73",
               "__enabled": true,
               "Flags": 0,
-              "GameMusic": "sounds/music/spooker-action.sound",
-              "GameOverSound": "sounds/music/spooker-ending.sound",
-              "MenuMusic": "sounds/music/spooker.sound",
+              "GameMusic": {
+                "Id": "1a9104ec-41e9-4554-bc74-96824b31f49c",
+                "Path": "sounds/music/spooker-action.sound"
+              },
+              "GameOverSound": {
+                "Id": "2ef3c192-34bd-46d8-afbc-25d5b0ac56fd",
+                "Path": "sounds/music/spooker-ending.sound"
+              },
+              "MenuMusic": {
+                "Id": "997f6535-ae2a-4d8a-b9ca-76c096123be8",
+                "Path": "sounds/music/spooker.sound"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -453,6 +477,7 @@
           "Flags": 0,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
+          "DisableAntiAliasing": false,
           "EnablePostProcessing": true,
           "FieldOfView": 80,
           "FovAxis": "Horizontal",
@@ -605,7 +630,10 @@
     {
       "__guid": "c61477c2-0402-441c-8340-56f80363786d",
       "__version": 2,
-      "__Prefab": "prefabs/papa.prefab",
+      "__Prefab": {
+        "Id": "1a6d201c-523f-4066-a9e8-94629da9431d",
+        "Path": "prefabs/papa.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -631,9 +659,9 @@
       },
       "__PrefabIdToInstanceId": {
         "0e708c8f-7ff3-478b-aab5-dbd9f5eafc6e": "c61477c2-0402-441c-8340-56f80363786d",
+        "d8a38e08-1954-4001-9f49-f1b067e2b0c2": "9aa42b32-c973-41d7-b1eb-70879a357507",
         "8fa3e29b-4f34-4eeb-b788-bc88558cb7ee": "00bedcfe-1141-4978-9f08-208d11474a4d",
         "eb9d45ec-0d73-4416-a948-ef6415a4d765": "392e0c2b-c8da-47b2-b73e-1f6b6cef18fe",
-        "d8a38e08-1954-4001-9f49-f1b067e2b0c2": "9aa42b32-c973-41d7-b1eb-70879a357507",
         "88ab7d77-1c47-480e-be54-09bbe5f9b433": "7b2d038c-687f-4440-9c1e-0cd93b657a11"
       }
     },
@@ -664,7 +692,10 @@
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Materials": null,
-          "Model": "models/car.vmdl",
+          "Model": {
+            "Id": "4b2ce0af-5da4-42f9-aea7-41d6bb0aac62",
+            "Path": "models/car.vmdl"
+          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -703,14 +734,56 @@
               "__guid": "a9cf3183-2a14-45d5-b9f1-b38579c27f73",
               "__enabled": true,
               "Flags": 0,
+              "__version": 1,
+              "AnimationCurve": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 0.5,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                },
+                {
+                  "x": 1,
+                  "y": 0,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "AnimationDuration": 2,
+              "AnimationEnabled": false,
+              "AnimationGradient": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "1,1,1,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "AnimationPattern": "Flicker",
+              "AnimationSpeed": 1,
+              "AnimationTimeOffset": 0,
               "Attenuation": 1,
+              "BakeLightIndex": -1,
               "ConeInner": 15,
               "ConeOuter": 65,
               "Contribution": "Diffuse, Specular, Transmissive",
               "Cookie": null,
               "FogMode": "Enabled",
               "FogStrength": 2,
+              "Intensity": 1,
               "LightColor": "64,60.0707,24.70698,1",
+              "MixedShadows": false,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -720,7 +793,8 @@
               "Radius": 600,
               "ShadowBias": 0.0005,
               "ShadowHardness": 0,
-              "Shadows": true
+              "Shadows": true,
+              "Temperature": 6500
             }
           ],
           "Children": []
@@ -781,7 +855,10 @@
               "Repeat": false,
               "ReverbEnabled": false,
               "ReverbOverride": false,
-              "SoundEvent": "sounds/vehicle/engine.sound",
+              "SoundEvent": {
+                "Id": "0c8ff555-dce7-459e-a9da-4b583118b3ef",
+                "Path": "sounds/vehicle/engine.sound"
+              },
               "SoundOverride": true,
               "StopOnNew": false,
               "TargetMixer": {
@@ -820,7 +897,10 @@
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
-              "Model": "models/wheel_small.vmdl",
+              "Model": {
+                "Id": "764d508a-efa7-4475-9085-5b86076df0f5",
+                "Path": "models/wheel_small.vmdl"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -866,7 +946,10 @@
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
-              "Model": "models/wheel_small.vmdl",
+              "Model": {
+                "Id": "764d508a-efa7-4475-9085-5b86076df0f5",
+                "Path": "models/wheel_small.vmdl"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -912,7 +995,10 @@
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
-              "Model": "models/wheel_big.vmdl",
+              "Model": {
+                "Id": "65abc5ab-f78c-4581-b152-d31b7c1246a6",
+                "Path": "models/wheel_big.vmdl"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -958,7 +1044,10 @@
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
-              "Model": "models/wheel_big.vmdl",
+              "Model": {
+                "Id": "65abc5ab-f78c-4581-b152-d31b7c1246a6",
+                "Path": "models/wheel_big.vmdl"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -1004,7 +1093,10 @@
               "MaterialGroup": null,
               "MaterialOverride": null,
               "Materials": null,
-              "Model": "models/pizza.vmdl",
+              "Model": {
+                "Id": "3af994a1-e910-4ff3-b2f1-0f4df872ca24",
+                "Path": "models/pizza.vmdl"
+              },
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -1053,7 +1145,10 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "SkyIndirectLighting": true,
-          "SkyMaterial": "materials/sky.vmat",
+          "SkyMaterial": {
+            "Id": "182e9cf0-e1f1-4923-8ad7-65f767340cdf",
+            "Path": "materials/sky.vmat"
+          },
           "Tint": "4,4,4,1"
         },
         {
@@ -1138,11 +1233,54 @@
           "__guid": "28d294e0-aad8-4144-8803-731ec041e6d8",
           "__enabled": true,
           "Flags": 0,
+          "__version": 1,
+          "AnimationCurve": [
+            {
+              "x": 0,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 0.5,
+              "y": 1,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "AnimationDuration": 2,
+          "AnimationEnabled": false,
+          "AnimationGradient": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0.5,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
+          },
+          "AnimationPattern": "Flicker",
+          "AnimationSpeed": 1,
+          "AnimationTimeOffset": 0,
+          "BakeLightIndex": -1,
           "ContactShadows": true,
           "Contribution": "Diffuse, Specular, Transmissive",
           "FogMode": "Enabled",
           "FogStrength": 1,
+          "IncludeStaticShadowCasters": false,
+          "Intensity": 1,
           "LightColor": "0.47442,0.13681,0.40127,1",
+          "MixedShadows": false,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -1150,11 +1288,12 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "ShadowBias": 0.0005,
-          "ShadowCascadeCount": 4,
+          "ShadowCascadeCount": 2,
           "ShadowCascadeSplitRatio": 0.91,
           "ShadowHardness": 0,
           "Shadows": true,
           "SkyColor": "0.30698,0.14135,0.28489,1",
+          "Temperature": 6500,
           "Visualizer": {}
         }
       ],
@@ -1216,7 +1355,10 @@
               "RollingResistance": null,
               "Scale": "3200,50,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface",
+              "Surface": {
+                "Id": "0707d174-1488-4d38-9fb7-e2d2c19bc354",
+                "Path": "surfaces/fence.surface"
+              },
               "SurfaceVelocity": "0,0,0"
             }
           ],
@@ -1261,7 +1403,10 @@
               "RollingResistance": null,
               "Scale": "3200,50,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface",
+              "Surface": {
+                "Id": "0707d174-1488-4d38-9fb7-e2d2c19bc354",
+                "Path": "surfaces/fence.surface"
+              },
               "SurfaceVelocity": "0,0,0"
             }
           ],
@@ -1306,7 +1451,10 @@
               "RollingResistance": null,
               "Scale": "50,3200,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface",
+              "Surface": {
+                "Id": "0707d174-1488-4d38-9fb7-e2d2c19bc354",
+                "Path": "surfaces/fence.surface"
+              },
               "SurfaceVelocity": "0,0,0"
             }
           ],
@@ -1351,7 +1499,10 @@
               "RollingResistance": null,
               "Scale": "50,3200,600",
               "Static": true,
-              "Surface": "surfaces/fence.surface",
+              "Surface": {
+                "Id": "0707d174-1488-4d38-9fb7-e2d2c19bc354",
+                "Path": "surfaces/fence.surface"
+              },
               "SurfaceVelocity": "0,0,0"
             }
           ],
@@ -1362,7 +1513,10 @@
     {
       "__guid": "6e5da265-ae3d-4785-a90b-ff29505ace88",
       "__version": 2,
-      "__Prefab": "prefabs/terrain.prefab",
+      "__Prefab": {
+        "Id": "0a485514-585c-4034-853d-c9a205783ae7",
+        "Path": "prefabs/terrain.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -1378,7 +1532,10 @@
     {
       "__guid": "97e54bea-9873-40b0-b9ae-8d0389cce97c",
       "__version": 2,
-      "__Prefab": "prefabs/fireflies.prefab",
+      "__Prefab": {
+        "Id": "f2da2083-f64b-4723-8754-2256c3557732",
+        "Path": "prefabs/fireflies.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -1395,7 +1552,10 @@
     {
       "__guid": "1e84228b-9dbb-4707-923a-5043a847b53f",
       "__version": 2,
-      "__Prefab": "prefabs/fence.prefab",
+      "__Prefab": {
+        "Id": "226f890c-f9bc-4c89-97c8-e091415bd333",
+        "Path": "prefabs/fence.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -1413,9 +1573,9 @@
       },
       "__PrefabIdToInstanceId": {
         "1e84228b-9dbb-4707-923a-5043a847b53f": "1e84228b-9dbb-4707-923a-5043a847b53f",
+        "87de9595-6994-47f4-9e48-66f7d786fb3a": "b8dac768-f9e5-40d2-b6f9-40fb81bbaad0",
         "4f3eb9f6-0a0b-4637-8d6b-eeeb767774c9": "ab5676c9-9428-45b6-826f-2968223e1cc8",
         "9829d414-6729-4bca-b882-b76f8ac163db": "7a0e0fbf-8196-4823-a22c-04168da43dc1",
-        "87de9595-6994-47f4-9e48-66f7d786fb3a": "b8dac768-f9e5-40d2-b6f9-40fb81bbaad0",
         "bb0b021f-a13d-4c81-8f9c-893c23e20713": "727af89b-1a78-4453-b12d-d35d2ef49261",
         "fb4a5832-7b66-4944-a9b1-5210a057c9a9": "132c527e-d41f-4688-a185-b18872809e2c"
       }
@@ -1423,7 +1583,10 @@
     {
       "__guid": "3ee7ac60-e8c7-4e81-94ea-e9685d3a13a8",
       "__version": 2,
-      "__Prefab": "prefabs/barn.prefab",
+      "__Prefab": {
+        "Id": "b8227776-3308-4793-a62d-fa81f285f8ee",
+        "Path": "prefabs/barn.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -1448,7 +1611,10 @@
     {
       "__guid": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3",
       "__version": 2,
-      "__Prefab": "prefabs/graves_small.prefab",
+      "__Prefab": {
+        "Id": "c8472801-accf-4bf8-b44c-87b40efd5d22",
+        "Path": "prefabs/graves_small.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -1460,22 +1626,33 @@
             },
             "Property": "Position",
             "Value": "1880,-1080,0.0294393692"
+          },
+          {
+            "Target": {
+              "Type": "GameObject",
+              "IdValue": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3"
+            },
+            "Property": "Enabled",
+            "Value": false
           }
         ],
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
         "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3": "6f6baea9-80f9-49bc-aa74-9fe115e5c4d3",
+        "856a1de8-2df4-4c76-9ba2-e13c976c68ca": "dbee01e9-d067-42cb-8cf0-41efea6962a5",
         "1bd60c0a-9202-42db-8e5a-6d12996b6766": "718731df-fef6-4a9d-a0aa-ec112118d2de",
         "6f04b0a6-5e28-447c-8fea-5824fe5cc596": "a1321c3c-f1ab-4fc8-9735-a0b58f44f8af",
-        "856a1de8-2df4-4c76-9ba2-e13c976c68ca": "dbee01e9-d067-42cb-8cf0-41efea6962a5",
         "65fd4c1d-651a-4040-93d1-70e1443f88ae": "c9a1efcf-2c1c-4a16-8536-410bd80025a7"
       }
     },
     {
       "__guid": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96",
       "__version": 2,
-      "__Prefab": "prefabs/graves_large.prefab",
+      "__Prefab": {
+        "Id": "89a4fa0d-0687-462d-abce-81dcf170d7a6",
+        "Path": "prefabs/graves_large.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -1487,17 +1664,33 @@
             },
             "Property": "Position",
             "Value": "-368,2016,0.000233231505"
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "ba962947-270a-44e9-bb15-0dc587ba0b0b"
+            },
+            "Property": "Shadows",
+            "Value": false
+          },
+          {
+            "Target": {
+              "Type": "Component",
+              "IdValue": "83a4f5e6-2134-4351-b576-a6ef7146c0aa"
+            },
+            "Property": "Shadows",
+            "Value": false
           }
         ],
         "MovedObjects": []
       },
       "__PrefabIdToInstanceId": {
         "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96": "6e9141cb-7c1d-4d31-9e87-1c7f1f81fd96",
+        "1d1763c7-1dcc-45f7-9683-42ff832ab333": "1f875d9a-97e2-4565-b6a5-afad795d046f",
+        "bb33525e-3767-4703-927d-436b2c7861fc": "764d45ea-9bd6-47d3-99b8-20a8901dc9a0",
         "144854bb-8ae4-434e-8c4a-ace7c0de1160": "582dd969-a8cc-4638-938e-16364e986f85",
         "328c4459-c114-47f9-9100-bf01701e519e": "4d80135f-a011-497a-acc4-59962dc4e449",
-        "1d1763c7-1dcc-45f7-9683-42ff832ab333": "1f875d9a-97e2-4565-b6a5-afad795d046f",
         "ba962947-270a-44e9-bb15-0dc587ba0b0b": "783ff936-6726-4e78-be08-c40ba6df6d23",
-        "bb33525e-3767-4703-927d-436b2c7861fc": "764d45ea-9bd6-47d3-99b8-20a8901dc9a0",
         "83a4f5e6-2134-4351-b576-a6ef7146c0aa": "07ea8182-117f-468e-a9f4-b99ee5170256"
       }
     },
@@ -1557,7 +1750,10 @@
           "Repeat": false,
           "ReverbEnabled": false,
           "ReverbOverride": false,
-          "SoundEvent": "sounds/crickets.sound",
+          "SoundEvent": {
+            "Id": "27d070b7-ca55-45a8-b228-72f818aa1c3f",
+            "Path": "sounds/crickets.sound"
+          },
           "SoundOverride": false,
           "StopOnNew": false,
           "TargetMixer": {
@@ -1589,7 +1785,10 @@
         {
           "__guid": "f0b68fea-2058-4e00-ad46-14d5e329b37f",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1613,7 +1812,10 @@
         {
           "__guid": "2f14890b-9268-4e18-83e5-5ff7c0a16a34",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1645,7 +1847,10 @@
         {
           "__guid": "295b1f0a-c4ed-464f-ad4f-0d44f2857250",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1677,7 +1882,10 @@
         {
           "__guid": "cad0c904-cdda-4e49-a1f0-796c98a5dbad",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1709,7 +1917,10 @@
         {
           "__guid": "9b432eeb-4614-442e-bb3d-07b8b5278939",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1741,7 +1952,10 @@
         {
           "__guid": "1b3d5f70-7750-4d67-98bf-8c168d14bd71",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1773,7 +1987,10 @@
         {
           "__guid": "99a31a20-dc8d-4112-b405-cc41bd242ee4",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1805,7 +2022,10 @@
         {
           "__guid": "8ff5f92a-7113-435f-87f4-0bc399fffda2",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1837,7 +2057,10 @@
         {
           "__guid": "bb7d6e2d-5cfd-4d64-bfa2-c7f698dc8881",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field.prefab",
+          "__Prefab": {
+            "Id": "a4c7d97c-1f83-406e-95cc-33c553b1eca7",
+            "Path": "prefabs/corn_field.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1869,7 +2092,10 @@
         {
           "__guid": "7f20f7bf-49bc-439a-8df3-a8f56be0f656",
           "__version": 2,
-          "__Prefab": "prefabs/corn_field_crow.prefab",
+          "__Prefab": {
+            "Id": "710db695-bb0e-43da-90ef-d7c86a86d414",
+            "Path": "prefabs/corn_field_crow.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1912,7 +2138,10 @@
         {
           "__guid": "f8f82a29-65e8-4bdd-9ec1-fad4bba94ae5",
           "__version": 2,
-          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__Prefab": {
+            "Id": "3204d0d2-8561-41e2-ab72-bdc3d0d8fa7a",
+            "Path": "prefabs/pumpkin-patch.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1940,24 +2169,35 @@
                 },
                 "Property": "Rotation",
                 "Value": "-1.14048504E-08,2.75337602E-08,0.382683307,0.923879385"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
           },
           "__PrefabIdToInstanceId": {
             "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "f8f82a29-65e8-4bdd-9ec1-fad4bba94ae5",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "66dfb5e8-0ee6-4fec-aa60-3f255d1a0665",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "83fc06f6-8daa-47fe-8927-7e5b9114c665",
             "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "cece3846-dedc-41e1-9d2b-410933f23a2f",
             "570d309a-b8d0-40a5-9bff-85bedb49d978": "f65e1064-2d7c-4c93-95ca-f66effeb9e82",
-            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "66dfb5e8-0ee6-4fec-aa60-3f255d1a0665",
             "06a58812-f6c4-49ec-bd41-dc811f993039": "94cf0e63-2c0b-444a-b11c-61be46d22d4a",
-            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "83fc06f6-8daa-47fe-8927-7e5b9114c665",
             "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "e3d0b046-c3d3-4c19-8414-e63c7ccd62b1"
           }
         },
         {
           "__guid": "7a86ab3c-aa23-4df4-a9bf-a461f669d255",
           "__version": 2,
-          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__Prefab": {
+            "Id": "3204d0d2-8561-41e2-ab72-bdc3d0d8fa7a",
+            "Path": "prefabs/pumpkin-patch.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -1991,18 +2231,21 @@
           },
           "__PrefabIdToInstanceId": {
             "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "7a86ab3c-aa23-4df4-a9bf-a461f669d255",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "d355acb5-bf1a-4f8a-96fb-56071912532a",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "6180a5ae-861d-4e21-8046-9d3e0538951d",
             "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "0684afa0-ac52-4a77-899f-92e1c6c13c08",
             "570d309a-b8d0-40a5-9bff-85bedb49d978": "45a7e51d-3818-436e-a7aa-e5c22864fc6a",
-            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "d355acb5-bf1a-4f8a-96fb-56071912532a",
             "06a58812-f6c4-49ec-bd41-dc811f993039": "eb317ea5-04fe-4321-9b6f-e63de07f676c",
-            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "6180a5ae-861d-4e21-8046-9d3e0538951d",
             "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "21e27cf8-0e7c-4825-aafe-ce521334f01b"
           }
         },
         {
           "__guid": "bff23464-298a-44e3-87fe-6baaf6d08ef5",
           "__version": 2,
-          "__Prefab": "prefabs/pumpkins.prefab",
+          "__Prefab": {
+            "Id": "bd4bcf5c-f481-4340-a855-9486fca4d85e",
+            "Path": "prefabs/pumpkins.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2030,6 +2273,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,-0.866025329,0.500000119"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2043,7 +2294,10 @@
         {
           "__guid": "efa6abfc-fcbb-449f-8035-e0642f440e26",
           "__version": 2,
-          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__Prefab": {
+            "Id": "3204d0d2-8561-41e2-ab72-bdc3d0d8fa7a",
+            "Path": "prefabs/pumpkin-patch.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2055,24 +2309,35 @@
                 },
                 "Property": "Position",
                 "Value": "720,928,0.120129198"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "1795fe82-cbb9-4daa-9f41-b7d084e3e086"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
           },
           "__PrefabIdToInstanceId": {
             "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "efa6abfc-fcbb-449f-8035-e0642f440e26",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "57386c3b-c724-4929-83db-957d9970e243",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "8982007b-7495-4258-b955-8a059a5efd27",
             "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "ffe4da9f-c862-4895-9c43-914568c2f3a0",
             "570d309a-b8d0-40a5-9bff-85bedb49d978": "092de251-3118-418f-9a8b-6b22b40fa679",
-            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "57386c3b-c724-4929-83db-957d9970e243",
             "06a58812-f6c4-49ec-bd41-dc811f993039": "8d878123-4533-4ca0-b857-0b9bd718dfe0",
-            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "8982007b-7495-4258-b955-8a059a5efd27",
             "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "9b609d12-edc3-4255-bf1e-4ae0325e0e78"
           }
         },
         {
           "__guid": "4690838c-b432-4a2e-86a7-98713fb34659",
           "__version": 2,
-          "__Prefab": "prefabs/pumpkins.prefab",
+          "__Prefab": {
+            "Id": "bd4bcf5c-f481-4340-a855-9486fca4d85e",
+            "Path": "prefabs/pumpkins.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2100,6 +2365,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "7.71340769E-09,2.87868307E-08,0.258819014,0.965925694"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2113,7 +2386,10 @@
         {
           "__guid": "1240ef28-af8d-4bd1-9911-a3797797f57b",
           "__version": 2,
-          "__Prefab": "prefabs/pumpkin-patch.prefab",
+          "__Prefab": {
+            "Id": "3204d0d2-8561-41e2-ab72-bdc3d0d8fa7a",
+            "Path": "prefabs/pumpkin-patch.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2141,24 +2417,35 @@
                 },
                 "Property": "Rotation",
                 "Value": "2.5521669E-07,-9.54215977E-08,-0.0958457813,0.995396197"
+              },
+              {
+                "Target": {
+                  "Type": "Component",
+                  "IdValue": "06a58812-f6c4-49ec-bd41-dc811f993039"
+                },
+                "Property": "Shadows",
+                "Value": false
               }
             ],
             "MovedObjects": []
           },
           "__PrefabIdToInstanceId": {
             "1795fe82-cbb9-4daa-9f41-b7d084e3e086": "1240ef28-af8d-4bd1-9911-a3797797f57b",
+            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "a339a363-33fa-49c9-a308-41f095e14319",
+            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "e69d146d-611a-4d70-9656-c3aa214edbc7",
             "db07d7ae-17af-4fe6-a9ba-857c36dcb68d": "b47bb05e-b1f6-418f-9f30-d61d7ead97ef",
             "570d309a-b8d0-40a5-9bff-85bedb49d978": "55a1944e-96db-40c0-9bb1-39fe777bcbc2",
-            "78bb5902-fc1c-4b81-925c-979f4e2928ad": "a339a363-33fa-49c9-a308-41f095e14319",
             "06a58812-f6c4-49ec-bd41-dc811f993039": "af764b94-bfc1-43df-bc5d-e7c7541333f7",
-            "8100c987-fd6a-4171-8d63-c4c1154d49e3": "e69d146d-611a-4d70-9656-c3aa214edbc7",
             "5316d2ef-9f74-4a7c-ab65-80b3e9d87363": "1e5c1c65-c6ff-43eb-a654-41818da5a8d8"
           }
         },
         {
           "__guid": "a43ae81c-b0cd-4e03-8074-54e9284c7e75",
           "__version": 2,
-          "__Prefab": "prefabs/pumpkins.prefab",
+          "__Prefab": {
+            "Id": "bd4bcf5c-f481-4340-a855-9486fca4d85e",
+            "Path": "prefabs/pumpkins.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2178,6 +2465,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,-0.965925872,-0.258818895"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a43ae81c-b0cd-4e03-8074-54e9284c7e75"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2210,7 +2505,10 @@
         {
           "__guid": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
           "__version": 2,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": {
+            "Id": "eae41a36-57b3-45ae-94df-30de0ff71598",
+            "Path": "prefabs/lamp.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2230,22 +2528,33 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,-0.382683396,0.923879623"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
           },
           "__PrefabIdToInstanceId": {
             "a5c5e277-f370-4d5a-9092-b66cafaf515a": "a5c5e277-f370-4d5a-9092-b66cafaf515a",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "98be8738-bb4b-48f4-a070-7c0250a0e5fd",
             "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "77da1fa7-faa7-4006-ad99-3b822a64b032",
             "75039fed-3cbc-45f6-8997-ac77cfcd1772": "0461535e-bbdc-402f-a8fc-7bfb79a5db36",
-            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "98be8738-bb4b-48f4-a070-7c0250a0e5fd",
             "b78d7ee3-9e2e-4344-af28-ae460c486132": "12a0faaf-1616-425f-9531-a32ec3160b6d"
           }
         },
         {
           "__guid": "1fb49192-b796-45e6-a886-6945f3a14058",
           "__version": 2,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": {
+            "Id": "eae41a36-57b3-45ae-94df-30de0ff71598",
+            "Path": "prefabs/lamp.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2273,22 +2582,33 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.382683307,0.923879385"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
           },
           "__PrefabIdToInstanceId": {
             "a5c5e277-f370-4d5a-9092-b66cafaf515a": "1fb49192-b796-45e6-a886-6945f3a14058",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "35a5dfc5-eb7e-4fc9-b692-4d734effe9f5",
             "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "14c1f703-87fc-4b63-9ba8-52abab6221eb",
             "75039fed-3cbc-45f6-8997-ac77cfcd1772": "0742e59b-8a59-4c21-a13d-24f794670bc5",
-            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "35a5dfc5-eb7e-4fc9-b692-4d734effe9f5",
             "b78d7ee3-9e2e-4344-af28-ae460c486132": "a40e9286-dfe6-4886-95ff-bd6432fc4779"
           }
         },
         {
           "__guid": "2661048b-1bfc-4284-8bc1-cf0d5d7e9b28",
           "__version": 2,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": {
+            "Id": "eae41a36-57b3-45ae-94df-30de0ff71598",
+            "Path": "prefabs/lamp.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2322,16 +2642,19 @@
           },
           "__PrefabIdToInstanceId": {
             "a5c5e277-f370-4d5a-9092-b66cafaf515a": "2661048b-1bfc-4284-8bc1-cf0d5d7e9b28",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "d68fd919-19bf-4a4c-a5f2-e65890224974",
             "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "72f376c5-ad4a-413b-a723-872a4d9108a4",
             "75039fed-3cbc-45f6-8997-ac77cfcd1772": "be24a529-0369-4daa-8908-6e1bb54afbbe",
-            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "d68fd919-19bf-4a4c-a5f2-e65890224974",
             "b78d7ee3-9e2e-4344-af28-ae460c486132": "6d40c097-37a1-4385-942e-f2b91c0112a2"
           }
         },
         {
           "__guid": "507d331d-f3af-4773-8afb-ad518aafa4c6",
           "__version": 2,
-          "__Prefab": "prefabs/lamp.prefab",
+          "__Prefab": {
+            "Id": "eae41a36-57b3-45ae-94df-30de0ff71598",
+            "Path": "prefabs/lamp.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2359,15 +2682,23 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.382683486,0.923879504"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "a5c5e277-f370-4d5a-9092-b66cafaf515a"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
           },
           "__PrefabIdToInstanceId": {
             "a5c5e277-f370-4d5a-9092-b66cafaf515a": "507d331d-f3af-4773-8afb-ad518aafa4c6",
+            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "14178e8c-68c7-4f3e-b144-8f98c9b7bc82",
             "ddfdb4d0-a4c8-44f1-8d22-9250e4418af1": "8865111b-d6ec-4e79-b0dd-0bd00160f353",
             "75039fed-3cbc-45f6-8997-ac77cfcd1772": "8f36fb81-4839-45c2-bfa1-ec6c22fbf3d4",
-            "4f9b7ea5-c5fb-4738-9e2c-7889535f5ca3": "14178e8c-68c7-4f3e-b144-8f98c9b7bc82",
             "b78d7ee3-9e2e-4344-af28-ae460c486132": "5bd4dc31-cc94-4508-93a7-00399c22bb5d"
           }
         }
@@ -2393,7 +2724,10 @@
         {
           "__guid": "85306bf5-070e-4c7b-8df6-e755cbdf27ec",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2434,7 +2768,10 @@
         {
           "__guid": "81d9637e-07ef-48c8-9d27-090709cee06b",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2462,6 +2799,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "-6.83270907E-09,-8.9044967E-09,0.793351293,0.608764172"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2475,7 +2820,10 @@
         {
           "__guid": "eb9a5c12-0e0b-478f-9f84-33fc9b3eee78",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2503,6 +2851,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.258819014,0.965925872"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2516,7 +2872,10 @@
         {
           "__guid": "c5683bbe-c269-4c64-9edc-bf50ec5031f2",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2536,6 +2895,14 @@
                 },
                 "Property": "Position",
                 "Value": "1904,368,0.999520779"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2549,7 +2916,10 @@
         {
           "__guid": "7ed7c0ef-551b-4586-9657-7749de6078aa",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2577,6 +2947,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "-7.71340769E-09,2.87868307E-08,0.258819014,0.965925694"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2590,7 +2968,10 @@
         {
           "__guid": "b11e8b38-94cb-419b-b9c9-55790bf63ef7",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2631,7 +3012,10 @@
         {
           "__guid": "c5c82181-a1c8-4efc-a786-8a52c99597c8",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2672,7 +3056,10 @@
         {
           "__guid": "656ba419-1066-465f-bb75-1835a6081f8c",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2700,6 +3087,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.258819014,0.965925872"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2713,7 +3108,10 @@
         {
           "__guid": "69e2c387-3f94-4d11-8e0c-068c633b730a",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2741,6 +3139,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,-0.382683396,0.923879623"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2754,7 +3160,10 @@
         {
           "__guid": "6bd4cf80-7512-4625-b16d-ff73646a244f",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2787,7 +3196,10 @@
         {
           "__guid": "86504217-1e96-4464-b669-b96565309060",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2815,6 +3227,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.1305262,0.991444886"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2828,7 +3248,10 @@
         {
           "__guid": "8f9f0f2c-ec50-430d-8581-0cd2a4b6f091",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2856,6 +3279,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.60876143,0.793353379"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2869,7 +3300,10 @@
         {
           "__guid": "f8fd5b57-00c7-4dab-a337-792c3f57f511",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2897,6 +3331,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.866025388,0.500000119"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2910,7 +3352,10 @@
         {
           "__guid": "0e756b85-808f-4229-962a-9f500c6e75c1",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2930,6 +3375,14 @@
                 },
                 "Property": "Position",
                 "Value": "372.512512,-1914.78894,0.0132678198"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2943,7 +3396,10 @@
         {
           "__guid": "a4b68f1a-d563-473a-a5ed-8bcf5a59d363",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2971,6 +3427,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,0.5,0.866025388"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -2984,7 +3448,10 @@
         {
           "__guid": "82cf1e96-1eef-4265-95f1-5da544324a1e",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -2996,6 +3463,14 @@
                 },
                 "Property": "Position",
                 "Value": "1152,-1792,0.0132842204"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -3009,7 +3484,10 @@
         {
           "__guid": "f832860a-9bad-47df-869a-62e0b56242a6",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3029,6 +3507,14 @@
                 },
                 "Property": "Position",
                 "Value": "-1676.91101,-1152,1.000458"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -3042,7 +3528,10 @@
         {
           "__guid": "85a0958b-ec76-41af-bf68-1a319483b1ab",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3070,6 +3559,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0,0,-0.707106709,0.707106829"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -3083,7 +3580,10 @@
         {
           "__guid": "2d4b2dc0-7af6-43fb-9130-0bc98b59b7bc",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3111,6 +3611,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "2.87868307E-08,7.71341302E-09,0.965925694,0.258819193"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -3124,7 +3632,10 @@
         {
           "__guid": "c847da77-0b5c-4a31-b706-8a57f17af190",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3165,7 +3676,10 @@
         {
           "__guid": "769be497-0802-4b28-9e9e-6f166222dad2",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3206,7 +3720,10 @@
         {
           "__guid": "7e7ff25b-654f-4586-b9f5-b9ed0e891a1f",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3239,7 +3756,10 @@
         {
           "__guid": "ddde89f2-86e1-452e-a3b8-da1317dc9fee",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3280,7 +3800,10 @@
         {
           "__guid": "82387e82-1cd7-4c47-b118-eee4ba034c83",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3308,6 +3831,14 @@
                 },
                 "Property": "Rotation",
                 "Value": "0.00192478404,0.00147700601,-0.793337584,0.608777106"
+              },
+              {
+                "Target": {
+                  "Type": "GameObject",
+                  "IdValue": "82cf1e96-1eef-4265-95f1-5da544324a1e"
+                },
+                "Property": "Enabled",
+                "Value": false
               }
             ],
             "MovedObjects": []
@@ -3321,7 +3852,10 @@
         {
           "__guid": "1e09209a-f494-4360-b2f4-afb152defbcc",
           "__version": 2,
-          "__Prefab": "prefabs/tree.prefab",
+          "__Prefab": {
+            "Id": "77df72a9-a68a-4f3b-85e3-7be895ccefd6",
+            "Path": "prefabs/tree.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3354,7 +3888,10 @@
         {
           "__guid": "a011971b-ade5-4f85-ac0e-989541c3a84e",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3394,7 +3931,10 @@
         {
           "__guid": "030d38dd-8929-4162-97f3-7224f14f3f4d",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3434,7 +3974,10 @@
         {
           "__guid": "77502c8a-418a-482b-af31-3f4bd238f2f1",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3474,7 +4017,10 @@
         {
           "__guid": "4e6a9cc1-f82e-4feb-9581-4362c5cc7165",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3514,7 +4060,10 @@
         {
           "__guid": "66d40b46-3d02-4e97-9ada-e2410c75582b",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3554,7 +4103,10 @@
         {
           "__guid": "006f0015-e7ed-417f-abd1-fc940f513744",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3594,7 +4146,10 @@
         {
           "__guid": "3cdd6b2d-7efd-4450-aa86-1b8f3af0db1b",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3634,7 +4189,10 @@
         {
           "__guid": "48f77ed5-7903-4aea-9ef0-74a23416025b",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3674,7 +4232,10 @@
         {
           "__guid": "d111e88c-1027-4e96-b3a6-80a91f1f3649",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3714,7 +4275,10 @@
         {
           "__guid": "bc6f7f04-d36c-4276-b44a-2a69bd8ed7e5",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3754,7 +4318,10 @@
         {
           "__guid": "4b17d287-649c-42b7-9cf0-cda44ce9ad21",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3794,7 +4361,10 @@
         {
           "__guid": "461b1f08-576d-44c0-9a7d-711def72da5c",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3834,7 +4404,10 @@
         {
           "__guid": "002c105b-1564-45ba-9551-b1bb75de1413",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3874,7 +4447,10 @@
         {
           "__guid": "850b1919-5a9c-49b4-a43e-a2f9f36b17df",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3914,7 +4490,10 @@
         {
           "__guid": "46d157fe-05fe-4216-9b88-07e995a0d533",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3946,7 +4525,10 @@
         {
           "__guid": "7fd3198d-a67a-44ce-8f55-b1d35b61eda4",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -3986,7 +4568,10 @@
         {
           "__guid": "6d7985d4-b6c2-407c-bc39-fd76ff5f9f82",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4026,7 +4611,10 @@
         {
           "__guid": "cab0f741-0196-449e-b5e1-f56ad2499093",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4066,7 +4654,10 @@
         {
           "__guid": "e04a4fff-7955-4941-a76b-2e91ff8f2cf3",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4106,7 +4697,10 @@
         {
           "__guid": "1c345d69-1cd5-4055-804d-e7088cc35e05",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4146,7 +4740,10 @@
         {
           "__guid": "208ac1fa-8606-47e9-a4df-e4282c0aa992",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4186,7 +4783,10 @@
         {
           "__guid": "ccc356db-90b0-4ef4-896b-69003300a72c",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4226,7 +4826,10 @@
         {
           "__guid": "c957c6e5-51d0-446d-8f12-ffef5c878ab5",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4266,7 +4869,10 @@
         {
           "__guid": "2b85a2d6-6396-4480-8234-eab8e0224be6",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4306,7 +4912,10 @@
         {
           "__guid": "1b9792f9-ccd4-48b0-90b0-1c5622a53523",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4346,7 +4955,10 @@
         {
           "__guid": "b2483302-20e7-4ef3-8c50-89d87cce5d9a",
           "__version": 2,
-          "__Prefab": "prefabs/treeline.prefab",
+          "__Prefab": {
+            "Id": "786773ed-98da-4113-8567-9e5a528df0f1",
+            "Path": "prefabs/treeline.prefab"
+          },
           "__PrefabInstancePatch": {
             "AddedObjects": [],
             "RemovedObjects": [],
@@ -4380,7 +4992,10 @@
     {
       "__guid": "d08c8f18-bc0f-46c4-a0ff-e315f9590787",
       "__version": 2,
-      "__Prefab": "prefabs/skeleton.prefab",
+      "__Prefab": {
+        "Id": "2c7c31bc-cd8b-4ffb-8e6d-e97e00e698aa",
+        "Path": "prefabs/skeleton.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -4406,18 +5021,21 @@
       },
       "__PrefabIdToInstanceId": {
         "82300eea-715e-4f62-9b84-3ccd83223505": "d08c8f18-bc0f-46c4-a0ff-e315f9590787",
+        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "5de4e6eb-99a2-4bcc-b688-9f7d46dcfbe2",
         "96f7fe81-b15c-4893-bc6a-1870cdbc7470": "0932322e-b134-474d-ad36-01e5d794316c",
         "8f02848b-6812-4170-b58a-5f39f8cd0178": "dc8d8bac-1864-4076-94d3-ee3b1a94dbf5",
         "4a27e203-8b10-422d-a431-1f4f8a941b4d": "4af99108-fde4-4055-bcf4-0295d80ef423",
         "7a56482a-a4bd-447d-a326-4651ef4b2e5c": "9919e6e5-c912-47a0-8471-2fd932549caf",
-        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "5de4e6eb-99a2-4bcc-b688-9f7d46dcfbe2",
         "2d5324b1-b09f-4e36-95e7-489118b9ed0d": "e4511816-72d6-4998-a97e-bf91e03691a2"
       }
     },
     {
       "__guid": "c2d1d2c2-a499-41fc-aeb1-9d260320d169",
       "__version": 2,
-      "__Prefab": "prefabs/skeleton.prefab",
+      "__Prefab": {
+        "Id": "2c7c31bc-cd8b-4ffb-8e6d-e97e00e698aa",
+        "Path": "prefabs/skeleton.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -4443,18 +5061,21 @@
       },
       "__PrefabIdToInstanceId": {
         "82300eea-715e-4f62-9b84-3ccd83223505": "c2d1d2c2-a499-41fc-aeb1-9d260320d169",
+        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "84ebe732-32e8-490a-b8de-fb3607115740",
         "96f7fe81-b15c-4893-bc6a-1870cdbc7470": "76c6b274-b18b-4573-8a80-3ea30b14599d",
         "8f02848b-6812-4170-b58a-5f39f8cd0178": "33ffe452-3d81-4bcb-a745-2a82b11354ee",
         "4a27e203-8b10-422d-a431-1f4f8a941b4d": "6aa1331c-5c26-4f65-b409-ff6e9c576f27",
         "7a56482a-a4bd-447d-a326-4651ef4b2e5c": "45488e6b-6c90-4a2d-be2b-d44623ac207b",
-        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "84ebe732-32e8-490a-b8de-fb3607115740",
         "2d5324b1-b09f-4e36-95e7-489118b9ed0d": "fd645b20-b2b0-467f-b593-b93edcfb9035"
       }
     },
     {
       "__guid": "07734822-9b03-4159-a44f-1b342a85b34a",
       "__version": 2,
-      "__Prefab": "prefabs/skeleton.prefab",
+      "__Prefab": {
+        "Id": "2c7c31bc-cd8b-4ffb-8e6d-e97e00e698aa",
+        "Path": "prefabs/skeleton.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -4480,18 +5101,21 @@
       },
       "__PrefabIdToInstanceId": {
         "82300eea-715e-4f62-9b84-3ccd83223505": "07734822-9b03-4159-a44f-1b342a85b34a",
+        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "d002a4c1-37d3-476e-a5ac-d0779a686693",
         "96f7fe81-b15c-4893-bc6a-1870cdbc7470": "c170e3a7-3c57-4c8a-9b5a-127e45abd245",
         "8f02848b-6812-4170-b58a-5f39f8cd0178": "1aa59b70-34b8-4bfd-af5b-3852d7018d7b",
         "4a27e203-8b10-422d-a431-1f4f8a941b4d": "8e549334-1dec-4189-b568-f49eba7c3c61",
         "7a56482a-a4bd-447d-a326-4651ef4b2e5c": "60e6d840-c2b6-4f3a-a17b-cc68ba0f98e3",
-        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "d002a4c1-37d3-476e-a5ac-d0779a686693",
         "2d5324b1-b09f-4e36-95e7-489118b9ed0d": "67bcfdc2-5948-47c5-ab28-cad80b13b217"
       }
     },
     {
       "__guid": "901c864f-7d55-4d68-8a3f-9b18686741ec",
       "__version": 2,
-      "__Prefab": "prefabs/skeleton.prefab",
+      "__Prefab": {
+        "Id": "2c7c31bc-cd8b-4ffb-8e6d-e97e00e698aa",
+        "Path": "prefabs/skeleton.prefab"
+      },
       "__PrefabInstancePatch": {
         "AddedObjects": [],
         "RemovedObjects": [],
@@ -4517,17 +5141,18 @@
       },
       "__PrefabIdToInstanceId": {
         "82300eea-715e-4f62-9b84-3ccd83223505": "901c864f-7d55-4d68-8a3f-9b18686741ec",
+        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "afe60f04-6bc3-48b7-8de8-b9b86549380e",
         "96f7fe81-b15c-4893-bc6a-1870cdbc7470": "c1153980-6584-40e3-85e3-a052d2dcf174",
         "8f02848b-6812-4170-b58a-5f39f8cd0178": "8ea90c55-4f56-49bf-87f4-0cc2514eae39",
         "4a27e203-8b10-422d-a431-1f4f8a941b4d": "7e66490a-175c-46c7-ae93-4244b64f3f0a",
         "7a56482a-a4bd-447d-a326-4651ef4b2e5c": "816198d0-9a65-4ae4-9455-5f24688f2448",
-        "98e6aa0d-1ccf-48da-97a8-dfe5bc20c92a": "afe60f04-6bc3-48b7-8de8-b9b86549380e",
         "2d5324b1-b09f-4e36-95e7-489118b9ed0d": "523282c5-a48f-43f0-acf8-a79387605301"
       }
     }
   ],
   "SceneProperties": {
     "NetworkInterpolation": true,
+    "PhysicsMode": "Physics3D",
     "TimeScale": 1,
     "WantsSystemScene": true,
     "Metadata": {
@@ -4542,10 +5167,18 @@
       "AgentRadius": 24,
       "AgentStepSize": 16,
       "AgentMaxSlope": 48,
+      "GenerateLinks": false,
+      "AgentMaxDrop": 192,
+      "AgentMaxJumpDistance": 250,
+      "AgentMaxJumpHeight": 80,
       "ExcludedBodies": "enemy,world-border",
       "IncludedBodies": "",
       "DeferGeneration": false,
-      "CustomBounds": false
+      "CustomBounds": false,
+      "BakedDataPath": {
+        "$reference_type": "filereference",
+        "path": "scenes/main-menu_scene_data/navmesh/baked.navdata"
+      }
     },
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
